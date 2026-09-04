@@ -55,6 +55,25 @@ jobs:
       - name: Проверка каркаса
         run: node scripts/verify-foundation.mjs
 
+  api:
+    name: Go API
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: source/mobile-beta-foundation/services/api
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: "1.24"
+          cache-dependency-path: source/mobile-beta-foundation/services/api/go.sum
+      - name: Сборка
+        run: go build ./...
+      - name: Vet
+        run: go vet ./...
+      - name: Тесты
+        run: go test ./...
+
   contract:
     name: OpenAPI-контракт
     runs-on: ubuntu-latest
