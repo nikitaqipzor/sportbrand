@@ -1,34 +1,392 @@
 openapi: 3.1.0
 info:
   title: Athletica AI API
-  version: 0.1.0
+  version: 0.2.0
+  description: |
+    Sprint 1 surface of the Athletica AI backend: liveness, authentication and
+    the idempotent workout-set write.
+
+    Two rules hold across the whole contract:
+
+    * the caller's user ID always comes from the bearer access token, never from
+      a request body or a query parameter;
+    * a workout that belongs to another user answers exactly like a workout that
+      does not exist (`404`), so existence never leaks.
+
+servers:
+  - url: http://10.0.2.2:8080/api/v1
+    description: Android emulator against a local docker compose stack
+  - url: http://localhost:8080/api/v1
+    description: Local development
+
+tags:
+  - name: health
+  - name: auth
+  - name: workouts
+
+security:
+  - bearerAuth: []
+
 paths:
   /health:
     get:
+      tags: [health]
+      summary: Liveness of the service and reachability of the database
+      security: []
       responses:
-        '200': { description: API is healthy }
-  /workouts/{workoutId}/sets:
+        '200':
+          description: API and database are healthy
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Health' }
+        '503':
+          description: The database cannot be reached
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Health' }
+
+  /auth/register:
     post:
-      summary: Log one strength-training set idempotently
-      parameters:
-        - name: workoutId
-          in: path
-          required: true
-          schema: { type: string }
+      tags: [auth]
+      summary: Create an account and start a session
+      description: |
+        Rate limited per source IP and per e-mail address. A collision counts as
+        a failed attempt, so the endpoint cannot be used to enumerate accounts
+        cheaply.
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/Credentials' }
+      responses:
+        '201':
+          description: Account created
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Session' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '409':
+          description: The address cannot be registered
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Error' }
+        '422': { $ref: '#/components/responses/ValidationFailed' }
+        '429': { $ref: '#/components/responses/RateLimited' }
+
+  /auth/login:
+    post:
+      tags: [auth]
+      summary: Exchange credentials for a session
+      description: |
+        Every failure — unknown address, wrong password, malformed address —
+        answers with the identical `401 invalid_credentials` body, and costs
+        comparable server time. Throttled per source IP and per account, with
+        exponential backoff after repeated failures.
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/Credentials' }
+      responses:
+        '200':
+          description: Session issued
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Session' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/InvalidCredentials' }
+        '429': { $ref: '#/components/responses/RateLimited' }
+
+  /auth/refresh:
+    post:
+      tags: [auth]
+      summary: Rotate a refresh token
+      description: |
+        The presented refresh token is always revoked. Replaying an already
+        spent token is treated as a compromise and revokes every session of that
+        user.
+      security: []
       requestBody:
         required: true
         content:
           application/json:
             schema:
               type: object
-              required: [exerciseId, setNumber, weightKg, repetitions, rir, clientMutationId]
+              required: [refreshToken]
               properties:
-                exerciseId: { type: string }
-                setNumber: { type: integer, minimum: 1 }
-                weightKg: { type: number, minimum: 0 }
-                repetitions: { type: integer, minimum: 1 }
-                rir: { type: integer, minimum: 0, maximum: 10 }
-                clientMutationId: { type: string }
+                refreshToken: { type: string }
       responses:
-        '201': { description: Set logged }
-        '409': { description: Duplicate client mutation }
+        '200':
+          description: New session issued
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Session' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401':
+          description: The refresh token is unknown, expired or already spent
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Error' }
+        '429': { $ref: '#/components/responses/RateLimited' }
+
+  /auth/me:
+    get:
+      tags: [auth]
+      summary: The account behind the current access token
+      responses:
+        '200':
+          description: The authenticated account
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/User' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+
+  /workouts:
+    post:
+      tags: [workouts]
+      summary: Start a workout owned by the authenticated user
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                title: { type: string, maxLength: 200 }
+      responses:
+        '201':
+          description: Workout created
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Workout' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '422': { $ref: '#/components/responses/ValidationFailed' }
+
+  /workouts/{workoutId}/sets:
+    parameters:
+      - name: workoutId
+        in: path
+        required: true
+        schema: { type: string, format: uuid }
+    post:
+      tags: [workouts]
+      summary: Log one strength-training set idempotently
+      description: |
+        The set is stored under the user ID carried by the access token; a
+        `userId` field in the body is ignored.
+
+        Idempotency rests on a unique index on `(user_id, client_mutation_id)`
+        in PostgreSQL, so a retried outbox entry can never create a second row,
+        even when two requests race. Replaying a mutation ID returns `409` with
+        the originally stored set — including when the replayed payload differs.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/WorkoutSetInput' }
+      responses:
+        '201':
+          description: Set logged
+          headers:
+            Location:
+              schema: { type: string }
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/WorkoutSet' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '404': { $ref: '#/components/responses/WorkoutNotFound' }
+        '409':
+          description: |
+            Duplicate client mutation. The body carries the set that was stored
+            when this clientMutationId was first accepted.
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [error, set]
+                properties:
+                  error: { $ref: '#/components/schemas/ErrorPayload' }
+                  set: { $ref: '#/components/schemas/WorkoutSet' }
+        '422': { $ref: '#/components/responses/ValidationFailed' }
+    get:
+      tags: [workouts]
+      summary: List the sets of one of the caller's workouts
+      responses:
+        '200':
+          description: Sets of the workout, ordered by set number
+          content:
+            application/json:
+              schema:
+                type: object
+                required: [items]
+                properties:
+                  items:
+                    type: array
+                    items: { $ref: '#/components/schemas/WorkoutSet' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '404': { $ref: '#/components/responses/WorkoutNotFound' }
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+      description: Short-lived HS256 access token issued by /auth/login.
+
+  responses:
+    BadRequest:
+      description: The body is not a single well-formed JSON object
+      content:
+        application/json:
+          schema: { $ref: '#/components/schemas/Error' }
+    Unauthorized:
+      description: Missing, malformed or expired access token
+      content:
+        application/json:
+          schema: { $ref: '#/components/schemas/Error' }
+    InvalidCredentials:
+      description: |
+        Authentication failed. Deliberately identical for an unknown address and
+        for a wrong password.
+      content:
+        application/json:
+          schema: { $ref: '#/components/schemas/Error' }
+          example:
+            error:
+              code: invalid_credentials
+              message: invalid email or password
+    ValidationFailed:
+      description: The payload violates the shared domain rules
+      content:
+        application/json:
+          schema: { $ref: '#/components/schemas/Error' }
+    WorkoutNotFound:
+      description: |
+        The workout does not exist, or belongs to another user. The two cases
+        are indistinguishable by design.
+      content:
+        application/json:
+          schema: { $ref: '#/components/schemas/Error' }
+    RateLimited:
+      description: Too many attempts from this IP or against this account
+      headers:
+        Retry-After:
+          schema: { type: integer }
+          description: Seconds to wait before retrying
+      content:
+        application/json:
+          schema: { $ref: '#/components/schemas/Error' }
+
+  schemas:
+    Health:
+      type: object
+      required: [status, database, time]
+      properties:
+        status: { type: string, enum: [ok, degraded] }
+        database: { type: string, enum: [up, down] }
+        version: { type: string }
+        time: { type: string, format: date-time }
+
+    Credentials:
+      type: object
+      required: [email, password]
+      properties:
+        email: { type: string, format: email, maxLength: 254 }
+        password: { type: string, minLength: 10, maxLength: 72 }
+
+    User:
+      type: object
+      required: [id, email, createdAt]
+      properties:
+        id: { type: string, format: uuid }
+        email: { type: string, format: email }
+        createdAt: { type: string, format: date-time }
+
+    Session:
+      type: object
+      required: [user, accessToken, tokenType, expiresIn, refreshToken, refreshExpiresIn]
+      properties:
+        user: { $ref: '#/components/schemas/User' }
+        accessToken: { type: string }
+        tokenType: { type: string, enum: [Bearer] }
+        expiresIn: { type: integer, description: Access token lifetime in seconds }
+        refreshToken: { type: string }
+        refreshExpiresIn: { type: integer, description: Refresh token lifetime in seconds }
+
+    Workout:
+      type: object
+      required: [id, title, status, createdAt]
+      properties:
+        id: { type: string, format: uuid }
+        title: { type: string }
+        status: { type: string, enum: [active, paused, cancelled, completed] }
+        createdAt: { type: string, format: date-time }
+
+    WorkoutSetInput:
+      type: object
+      required: [exerciseId, setNumber, weightKg, repetitions, rir, clientMutationId]
+      description: |
+        Bounds mirror validateSet() in packages/domain/src/workout.ts. Any
+        additional property — `userId` in particular — is ignored by the server.
+      properties:
+        exerciseId: { type: string, minLength: 1, maxLength: 128 }
+        setNumber: { type: integer, minimum: 1 }
+        weightKg: { type: number, minimum: 0, maximum: 1000 }
+        repetitions: { type: integer, minimum: 1, maximum: 100 }
+        rir: { type: integer, minimum: 0, maximum: 10 }
+        clientMutationId:
+          type: string
+          minLength: 1
+          maxLength: 128
+          description: Stable per-mutation ID from the client outbox.
+
+    WorkoutSet:
+      type: object
+      required: [id, workoutId, exerciseId, setNumber, weightKg, repetitions, rir, clientMutationId, createdAt]
+      properties:
+        id: { type: string, format: uuid }
+        workoutId: { type: string, format: uuid }
+        exerciseId: { type: string }
+        setNumber: { type: integer }
+        weightKg: { type: number }
+        repetitions: { type: integer }
+        rir: { type: integer }
+        clientMutationId: { type: string }
+        createdAt: { type: string, format: date-time }
+
+    ErrorPayload:
+      type: object
+      required: [code, message]
+      properties:
+        code:
+          type: string
+          enum:
+            - invalid_request
+            - validation_failed
+            - unauthorized
+            - invalid_credentials
+            - email_taken
+            - not_found
+            - duplicate_client_mutation
+            - rate_limited
+            - internal_error
+        message: { type: string }
+        details:
+          type: array
+          items:
+            type: object
+            required: [field, message]
+            properties:
+              field: { type: string }
+              message: { type: string }
+
+    Error:
+      type: object
+      required: [error]
+      properties:
+        error: { $ref: '#/components/schemas/ErrorPayload' }

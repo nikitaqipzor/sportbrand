@@ -1,7 +1,11 @@
+// Проект вынесен из хостинга OpenAI Sites в собственный репозиторий, поэтому
+// платформенный плагин `./build/sites-vite-plugin` больше не подключается
+// (его исходники принадлежали билдеру Sites и в репозиторий не входили).
+// Всё остальное — vinext, Cloudflare-плагин и симуляция D1/R2 биндингов
+// из .openai/hosting.json — работает без него.
 import vinext from "vinext";
 import { defineConfig } from "vite";
 import hostingConfig from "./.openai/hosting.json";
-import { sites } from "./build/sites-vite-plugin";
 
 const SITE_CREATOR_PLACEHOLDER_DATABASE_ID =
   "00000000-0000-4000-8000-000000000000";
@@ -53,7 +57,6 @@ export default defineConfig(async () => {
     },
     plugins: [
       vinext(),
-      sites(),
       cloudflare({
         viteEnvironment: { name: "rsc", childEnvironments: ["ssr"] },
         inspectorPort: false,

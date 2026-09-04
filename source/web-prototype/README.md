@@ -1,93 +1,125 @@
-# vinext-starter
+# Athletica AI — веб-прототип
 
-A clean full-stack starter running on [vinext](https://github.com/cloudflare/vinext), with optional Cloudflare D1 and Drizzle support.
+Кликабельный дизайн-прототип мобильного приложения Athletica AI (мультиспортивный
+AI-фитнес-трекер). Открывается в браузере как «витрина»: слева сайдбар со списком
+экранов, справа — макет телефона, внутри которого рендерится выбранный экран.
+Экраны кликабельны между собой (переходы, кнопка «назад», нижняя навигация).
 
-## Prerequisites
+Это **прототип интерфейса, а не приложение**. Смотрите раздел
+[«Чего здесь нет»](#чего-здесь-нет) перед тем, как что-то на нём строить.
 
-- Node.js `>=22.13.0`
-- Linux with `flock`, `curl`, and GNU `timeout`
+## Стек
 
-## Sites Lifecycle
+- [Next.js 16](https://nextjs.org) (App Router) поверх [vinext](https://github.com/cloudflare/vinext) —
+  сборка и рантайм на Vite + Cloudflare Workers
+- React 19, TypeScript 5.9
+- Tailwind CSS 4 + компоненты shadcn/ui (вендорнуты в `components/ui/`)
+- Cloudflare Workers как целевая среда (`@cloudflare/vite-plugin`, wrangler/miniflare локально)
 
-The Sites lifecycle CLI runs the locked dependency install before returning this checkout. Edit the source under `app/`, then checkpoint when a coherent milestone is ready to inspect or share. The remote Sites builder runs `npm run build` against the pushed commit. Do not repeat install or build as a normal pre-checkpoint step.
+## Требования
 
-This starter does not use `wrangler.jsonc`.
+- Node.js `>= 22.13.0`
 
-`install:ci` is intentionally a single, non-retrying `npm ci`. It refuses a concurrent install for the same project, consumes a matching image-seeded npm cache with `--prefer-offline` while retaining registry fallback for a missing cache object, otherwise downloads and verifies the complete vinext tarball recorded in `package-lock.json`, limits npm to one socket, and terminates a stalled install. `build` applies a short timeout. These helpers target Linux and use GNU `timeout`; they are not native macOS scripts.
+## Быстрый старт
 
-Scripts that need writable project-scoped home, npm, XDG, and temporary paths use `scripts/sites-env.sh`. The `dev` and `start` scripts honor the caller's runtime environment and keep Wrangler logs inside the checkout. The generated `.sites-runtime/` directory is disposable and ignored by Git.
-
-## Included Shape
-
-- edit site code under `app/`
-- `app/chatgpt-auth.ts` provides optional dispatch-owned ChatGPT sign-in helpers
-- `.openai/hosting.json` declares optional Sites D1 and R2 bindings
-- `vite.config.ts` simulates declared bindings for local development
-- `db/index.ts` reads the D1 binding from the Cloudflare Worker environment
-- `db/schema.ts` starts intentionally empty
-- `examples/d1/` contains an optional D1 example surface
-- `drizzle.config.ts` supports local migration generation when needed
-
-## Workspace Auth Headers
-
-OpenAI workspace sites can read the current user's email from `oai-authenticated-user-email`.
-
-SIWC-authenticated workspace sites may also receive `oai-authenticated-user-full-name` when the user's SIWC profile has a non-empty `name` claim. The full-name value is percent-encoded UTF-8 and is accompanied by `oai-authenticated-user-full-name-encoding: percent-encoded-utf-8`.
-
-Treat the full name as optional and fall back to email when it is absent:
-
-```tsx
-import { headers } from "next/headers";
-
-export default async function Home() {
-  const requestHeaders = await headers();
-  const email = requestHeaders.get("oai-authenticated-user-email");
-  const encodedFullName = requestHeaders.get("oai-authenticated-user-full-name");
-  const fullName =
-    encodedFullName &&
-    requestHeaders.get("oai-authenticated-user-full-name-encoding") ===
-      "percent-encoded-utf-8"
-      ? decodeURIComponent(encodedFullName)
-      : null;
-
-  const displayName = fullName ?? email;
-  // ...
-}
+```bash
+npm ci          # установка зависимостей по package-lock.json
+npm run dev     # dev-сервер Vite/vinext (HMR)
 ```
 
-## Optional Dispatch-Owned ChatGPT Sign-In
+Остальные команды:
 
-Import the ready-to-use helpers from `app/chatgpt-auth.ts` when the site needs optional or required ChatGPT sign-in:
+| Команда | Что делает |
+| --- | --- |
+| `npm run dev` | dev-сервер с HMR |
+| `npm run build` | продакшен-сборка vinext в `dist/` |
+| `npm start` | запуск собранного воркера (`vinext start`) |
+| `npm test` | `npm run build` + `node --test tests/*.test.mjs` |
+| `npm run lint` | ESLint (`eslint-config-next`) |
+| `npx tsc --noEmit` | проверка типов, должна проходить без ошибок |
+| `npm run db:generate` | drizzle-kit generate (пока бессмысленно: схема пустая) |
 
-- Use `getChatGPTUser()` for optional signed-in UI.
-- Use `requireChatGPTUser(returnTo)` for server-rendered pages that should send anonymous visitors through Sign in with ChatGPT.
-- In a Server Component, start sign-in with `<a href={chatGPTSignInPath(returnTo)} target="_top">`. The auth helper module is server-only; do not import it into a Client Component.
-- Do not use `fetch`, XHR, a client-side router, or a framework link that can prefetch the sign-in route. SIWC must start as a top-level navigation.
-- Never request the AuthAPI authorization endpoint directly. The dispatch-owned `/signin-with-chatgpt` route must start the SIWC flow.
-- Use `chatGPTSignOutPath(returnTo)` for browser sign-out links or actions.
-- Pass a same-origin relative `returnTo` path for the destination after sign-in or sign-out. The helper validates and safely encodes it.
-- Mark protected pages with `export const dynamic = "force-dynamic"` because they depend on per-request identity headers.
+`npm test` требует сборки, потому что тесты грузят собранный воркер из
+`dist/server/index.js` и CSS из `dist/`.
 
-Dispatch owns `/signin-with-chatgpt`, `/signout-with-chatgpt`, `/callback`, the OAuth cookies, and identity header injection. Do not implement app routes for those reserved paths. Routes that do not import and call the helper remain anonymous-compatible.
+Известные предупреждения `npm run lint`: три `@next/next/no-img-element` в
+`app/page.tsx` (обычные `<img>` вместо `next/image`). Это warning, не error —
+lint завершается успешно.
 
-SIWC establishes identity only; it does not prove workspace membership. Use the Sites hosting platform's access policy controls for workspace-wide restrictions, or enforce explicit server-side membership or allowlist checks.
+## Структура
 
-Use SIWC for account pages, user-specific dashboards, saved records, and write actions tied to the current ChatGPT user. Leave public content anonymous.
+```
+app/
+  page.tsx        ← весь прототип: 26 экранов в одном файле (~460 строк)
+  layout.tsx      ← корневой layout, метаданные, favicon
+  globals.css     ← дизайн-система прототипа (токены, стили экранов)
+  chatgpt-auth.ts ← наследие хостинга OpenAI Sites, нигде не используется
+components/ui/    ← вендорнутые компоненты shadcn/ui (не править вручную)
+hooks/, lib/      ← use-mobile, cn()
+public/           ← иконки и картинка упражнения
+vendor/           ← вендорнутый CSS shadcn + его лицензия
+worker/index.ts   ← entry-point Cloudflare Worker (роутинг + оптимизация картинок)
+db/               ← заготовка Drizzle + D1 (см. ниже: не используется)
+examples/d1/      ← пример D1-роута из стартера, в сборку не входит
+tests/            ← два node:test файла: метаданные HTML и рендер UI-компонентов
+worker-env.d.ts   ← типы биндингов Cloudflare (ASSETS, DB)
+```
 
-## Diagnostic Commands
+### 26 экранов в `app/page.tsx`
 
-- `npm run install:ci`: perform the one bounded lockfile install
-- `npm run dev`: start the Vite/Vinext development server
-- `npm run build`: build the deployable Sites artifact
-- `npm run start`: start the built Vinext application
-- `npm test`: build and verify the rendered development-preview metadata
-- `npm run db:generate`: generate Drizzle migrations after schema changes
+Все экраны живут в одном файле, в компоненте `ScreenCanvas`, и перечислены в
+массиве `groups` шестью группами:
 
-Use build commands for targeted diagnosis after a remote failure, not as part of the normal checkpoint path.
+1. **Первый запуск** (5): Приветствие, Цель, Виды спорта, Ограничения, Первый план
+2. **Сегодня** (4): Главная, Готовность, Восстановление, Питание
+3. **План** (3): Неделя, День тренировки, Конструктор
+4. **Энциклопедия** (3): Каталог, Упражнение, Техника
+5. **Во время тренировки** (5): Зал, Плавание, Велосипед, Баскетбол, Итоги
+6. **Результаты и система** (6): Прогресс, По видам спорта, AI-коуч, Профиль,
+   Устройства, Подписка
 
-The timeout defaults can be overridden for a controlled canary with `SITES_INSTALL_TIMEOUT`, `SITES_INSTALL_KILL_AFTER`, `SITES_BUILD_TIMEOUT`, and `SITES_BUILD_KILL_AFTER`. A timeout fails the command; the helpers never retry an unchanged install or build.
+Идентификаторы экранов — это union-тип `ScreenId`; навигация внутри макета идёт
+через `navigate(id)` / `goBack()`. Чтобы добавить экран, нужно расширить
+`ScreenId`, добавить пункт в `groups` и ветку рендера в `ScreenCanvas`.
 
-## Learn More
+## Чего здесь нет
 
-- [vinext Documentation](https://github.com/cloudflare/vinext)
-- [Drizzle D1 Guide](https://orm.drizzle.team/docs/get-started/d1-new)
+Прототип нужен для демонстрации дизайна и потоков экранов, поэтому:
+
+- **Нет бэкенда и никаких сетевых запросов.** В `app/page.tsx` нет ни одного
+  `fetch` — все числа, тренировки, планы и графики захардкожены прямо в JSX.
+- **Нет состояния между сессиями.** Есть только React-стейт текущего экрана;
+  ничего не сохраняется.
+- **Нет базы данных.** `db/schema.ts` пустой (`export {}`), в `drizzle/` нет ни
+  одной миграции — только пустой `meta/_journal.json`. `db/index.ts` — заготовка,
+  которая бросит ошибку, если позвать `getDb()` без реального D1-биндинга.
+- **Нет авторизации.** `app/chatgpt-auth.ts` остался от платформы OpenAI Sites и
+  ни из чего не импортируется.
+- **Нет адаптива под реальный телефон**: страница рассчитана на десктопный
+  просмотр макета телефона, а не на запуск на устройстве.
+
+Всё это — отдельный этап работы, а не «недоделка», которую надо чинить по ходу
+правок дизайна.
+
+## Cloudflare-биндинги и конфигурация
+
+`vite.config.ts` собирает конфиг воркера прямо в коде (`wrangler.jsonc` в проекте
+нет) и подмешивает D1/R2 биндинги, объявленные в `.openai/hosting.json`. Сейчас
+там `"d1": null` и `"r2": null`, то есть биндинги не создаются.
+
+Проект переехал с хостинга OpenAI Sites в собственный репозиторий, поэтому из
+`vite.config.ts` убран платформенный плагин `./build/sites-vite-plugin` — его
+исходники принадлежали билдеру Sites и в репозиторий не входили. Скрипты
+`scripts/sites-env.sh`, `scripts/install-ci.sh` и `scripts/build-verified.sh`
+(project-scoped `HOME`, свой npm-кеш, `flock`, GNU `timeout`) по той же причине
+удалены — npm-скрипты вызывают `vinext`, `eslint` и `drizzle-kit` напрямую.
+
+Типы рантайма Workers подключены через `@cloudflare/workers-types`
+(`"types"` в `tsconfig.json`); конкретные биндинги описаны в `worker-env.d.ts` —
+при добавлении нового биндинга правьте `vite.config.ts` и этот файл вместе.
+
+## Полезные ссылки
+
+- [vinext](https://github.com/cloudflare/vinext)
+- [Cloudflare Vite plugin](https://developers.cloudflare.com/workers/vite-plugin/)
+- [shadcn/ui](https://ui.shadcn.com)

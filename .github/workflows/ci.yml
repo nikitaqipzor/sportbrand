@@ -1,0 +1,89 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  web-prototype:
+    name: Веб-прототип
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: source/web-prototype
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: source/web-prototype/package-lock.json
+      - run: npm ci
+      - name: Типы
+        run: npx tsc --noEmit
+      - name: Линт
+        run: npm run lint
+      - name: Сборка и тесты
+        run: npm test
+
+  mobile-foundation:
+    name: Мобильный каркас
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: source/mobile-beta-foundation
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.33.0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+          cache-dependency-path: source/mobile-beta-foundation/pnpm-lock.yaml
+      - run: pnpm install --frozen-lockfile
+      - name: Типы
+        run: pnpm typecheck
+      - name: Тесты
+        run: pnpm test
+      - name: Проверка каркаса
+        run: node scripts/verify-foundation.mjs
+
+  api:
+    name: Go API
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: source/mobile-beta-foundation/services/api
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version: "1.24"
+          cache-dependency-path: source/mobile-beta-foundation/services/api/go.sum
+      - name: Сборка
+        run: go build ./...
+      - name: Vet
+        run: go vet ./...
+      - name: Тесты
+        run: go test ./...
+
+  contract:
+    name: OpenAPI-контракт
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Контракт разбирается и содержит идемпотентную запись подхода
+        run: |
+          npx --yes js-yaml@4 source/mobile-beta-foundation/services/api/api/openapi.yaml > /dev/null
+          grep -q 'clientMutationId' source/mobile-beta-foundation/services/api/api/openapi.yaml
+          grep -q '/workouts/{workoutId}/sets' source/mobile-beta-foundation/services/api/api/openapi.yaml
