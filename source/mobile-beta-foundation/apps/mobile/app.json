@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "Athletica AI",
+    "slug": "athletica-ai",
+    "scheme": "athletica",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "android": { "package": "com.athletica.ai" }
+  }
+}

@@ -1,0 +1,34 @@
+openapi: 3.1.0
+info:
+  title: Athletica AI API
+  version: 0.1.0
+paths:
+  /health:
+    get:
+      responses:
+        '200': { description: API is healthy }
+  /workouts/{workoutId}/sets:
+    post:
+      summary: Log one strength-training set idempotently
+      parameters:
+        - name: workoutId
+          in: path
+          required: true
+          schema: { type: string }
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [exerciseId, setNumber, weightKg, repetitions, rir, clientMutationId]
+              properties:
+                exerciseId: { type: string }
+                setNumber: { type: integer, minimum: 1 }
+                weightKg: { type: number, minimum: 0 }
+                repetitions: { type: integer, minimum: 1 }
+                rir: { type: integer, minimum: 0, maximum: 10 }
+                clientMutationId: { type: string }
+      responses:
+        '201': { description: Set logged }
+        '409': { description: Duplicate client mutation }

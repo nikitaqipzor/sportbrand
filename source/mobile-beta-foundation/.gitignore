@@ -1,0 +1,8 @@
+node_modules/
+.turbo/
+dist/
+coverage/
+.env
+.env.*
+!.env.example
+apps/mobile/.expo/
