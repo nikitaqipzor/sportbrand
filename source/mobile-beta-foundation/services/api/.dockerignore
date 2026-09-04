@@ -1,0 +1,9 @@
+# Keep the build context to the Go service itself.
+.git
+.gitignore
+README.md
+*.md
+!api/openapi.yaml
+Dockerfile
+.dockerignore
+bin/
