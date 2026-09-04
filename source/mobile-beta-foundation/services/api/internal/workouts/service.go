@@ -49,6 +49,10 @@ func (s *Service) LogSet(ctx context.Context, userID string, in SetInput) (store
 	if strings.TrimSpace(userID) == "" {
 		return store.WorkoutSet{}, false, errors.New("workouts: user id is required")
 	}
+	// Round to the stored precision *before* validating, so a value such as
+	// 1000.004 cannot pass the bound check and then trip the numeric(6,2)
+	// CHECK constraint in the database.
+	in.WeightKg = roundWeight(in.WeightKg)
 	if verr := ValidateSet(in); verr != nil {
 		return store.WorkoutSet{}, false, verr
 	}
@@ -64,7 +68,7 @@ func (s *Service) LogSet(ctx context.Context, userID string, in SetInput) (store
 		WorkoutID:        in.WorkoutID,
 		ExerciseID:       in.ExerciseID,
 		SetNumber:        in.SetNumber,
-		WeightKg:         roundWeight(in.WeightKg),
+		WeightKg:         in.WeightKg,
 		Repetitions:      in.Repetitions,
 		RIR:              in.RIR,
 		ClientMutationID: in.ClientMutationID,

@@ -45,6 +45,13 @@ func main() {
 }
 
 func run(args []string) error {
+	// Printing the build version must not depend on the environment: it is the
+	// one command that answers before a database URL or a signing secret exists.
+	if len(args) > 0 && args[0] == "version" {
+		fmt.Println(version)
+		return nil
+	}
+
 	cfg, err := config.FromEnv()
 	if err != nil {
 		return err
@@ -66,9 +73,6 @@ func run(args []string) error {
 		return migrate(cfg, log, args[1:])
 	case "healthcheck":
 		return healthcheck(cfg)
-	case "version":
-		fmt.Println(version)
-		return nil
 	default:
 		return fmt.Errorf("unknown command %q (want serve, migrate, healthcheck or version)", command)
 	}
