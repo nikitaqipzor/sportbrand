@@ -32,6 +32,7 @@
         "equipment": [
           "training_stick"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_plechi_grud_shirochayshie",
         "anatomy": {
           "primary_muscles": [
@@ -101,16 +102,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -198,6 +213,7 @@
         "equipment": [
           "training_stick"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_plechevoy_poyas_kontrol_lopatok",
         "anatomy": {
           "primary_muscles": [
@@ -263,16 +279,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -360,6 +390,7 @@
         "equipment": [
           "training_stick"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_plechi_grudnoy_otdel_tazobedrennye_nogi_kor",
         "anatomy": {
           "primary_muscles": [
@@ -433,16 +464,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -530,6 +575,7 @@
         "equipment": [
           "training_stick"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_kvadritseps_yagoditsy_motornyy_kontrol",
         "anatomy": {
           "primary_muscles": [
@@ -597,16 +643,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -694,6 +754,7 @@
         "equipment": [
           "training_stick"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_zadnyaya_poverhnost_bedra_yagoditsy_pattern_naklona",
         "anatomy": {
           "primary_muscles": [
@@ -762,16 +823,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -859,6 +934,7 @@
         "equipment": [
           "training_stick"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_obuchenie_neytralnomu_pozvonochniku",
         "anatomy": {
           "primary_muscles": [],
@@ -921,16 +997,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -1018,6 +1108,7 @@
         "equipment": [
           "training_stick"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_zadnyaya_poverhnost_bedra_yagoditsy",
         "anatomy": {
           "primary_muscles": [
@@ -1085,16 +1176,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -1182,6 +1287,7 @@
         "equipment": [
           "training_stick"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_yagoditsy_nogi_spina_tehnika_tyagi",
         "anatomy": {
           "primary_muscles": [
@@ -1251,16 +1357,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -1348,6 +1468,7 @@
         "equipment": [
           "training_stick"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_kvadritseps_kor_mobilnost_plech",
         "anatomy": {
           "primary_muscles": [
@@ -1417,16 +1538,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -1514,6 +1649,7 @@
         "equipment": [
           "training_stick"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_kvadritseps_yagoditsy_balans",
         "anatomy": {
           "primary_muscles": [
@@ -1581,16 +1717,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -1678,6 +1828,7 @@
         "equipment": [
           "training_stick"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_nogi_plechi_kor",
         "anatomy": {
           "primary_muscles": [
@@ -1746,16 +1897,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -1843,6 +2008,7 @@
         "equipment": [
           "training_stick"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_nogi_plechevoy_poyas_koordinatsiya",
         "anatomy": {
           "primary_muscles": [
@@ -1910,16 +2076,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -2007,6 +2187,7 @@
         "equipment": [
           "training_stick"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_grudnoy_otdel_kosye",
         "anatomy": {
           "primary_muscles": [
@@ -2072,16 +2253,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -2169,6 +2364,7 @@
         "equipment": [
           "training_stick"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_bokovaya_liniya_korpusa_shirochayshie",
         "anatomy": {
           "primary_muscles": [
@@ -2235,16 +2431,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -2332,6 +2542,7 @@
         "equipment": [
           "training_stick"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_plechevoy_poyas_grudnoy_otdel",
         "anatomy": {
           "primary_muscles": [
@@ -2398,16 +2609,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -2495,6 +2720,7 @@
         "equipment": [
           "training_stick"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_kontrol_plech_i_lopatok",
         "anatomy": {
           "primary_muscles": [
@@ -2559,16 +2785,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -2656,6 +2896,7 @@
         "equipment": [
           "training_stick"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_plechi_verh_spiny",
         "anatomy": {
           "primary_muscles": [
@@ -2722,16 +2963,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -2819,6 +3074,7 @@
         "equipment": [
           "training_stick"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_plechevoy_poyas_tehnika_tyazheloy_atletiki",
         "anatomy": {
           "primary_muscles": [
@@ -2885,16 +3141,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -2982,6 +3252,7 @@
         "equipment": [
           "training_stick"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_plechi_trapetsiya_koordinatsiya",
         "anatomy": {
           "primary_muscles": [
@@ -3050,16 +3321,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -3147,6 +3432,7 @@
         "equipment": [
           "training_stick"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_mobilnost_i_kontrol_priseda",
         "anatomy": {
           "primary_muscles": [],
@@ -3209,16 +3495,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -3306,6 +3606,7 @@
         "equipment": [
           "training_stick"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_plechi_grudnoy_otdel_glubokiy_prised",
         "anatomy": {
           "primary_muscles": [
@@ -3373,16 +3674,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -3470,6 +3785,7 @@
         "equipment": [
           "training_stick"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_privodyaschie_yagoditsy_golenostop",
         "anatomy": {
           "primary_muscles": [
@@ -3538,16 +3854,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -3635,6 +3965,7 @@
         "equipment": [
           "training_stick"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_golenostop",
         "anatomy": {
           "primary_muscles": [
@@ -3698,16 +4029,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -3795,6 +4140,7 @@
         "equipment": [
           "training_stick"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_shirochayshie_plechi_grudnoy_otdel",
         "anatomy": {
           "primary_muscles": [
@@ -3843,14 +4189,14 @@
       },
       "programming": {
         "raw": "1–2×20–40 с",
-        "type": "mixed",
+        "type": "time",
         "sets": {
           "min": 1,
           "max": 2
         },
         "reps": {
-          "min": 20,
-          "max": 40
+          "min": null,
+          "max": null
         },
         "duration_seconds": {
           "min": 20,
@@ -3864,16 +4210,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -3961,6 +4321,7 @@
         "equipment": [
           "training_stick"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_grudnoy_otdel",
         "anatomy": {
           "primary_muscles": [
@@ -4025,16 +4386,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],

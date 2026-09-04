@@ -32,6 +32,7 @@
         "equipment": [
           "sled"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_nogi_yagoditsy_kor_konditsionirovanie",
         "anatomy": {
           "primary_muscles": [
@@ -80,14 +81,14 @@
       },
       "programming": {
         "raw": "4–10×10–30 м",
-        "type": "mixed",
+        "type": "distance",
         "sets": {
           "min": 4,
           "max": 10
         },
         "reps": {
-          "min": 10,
-          "max": 30
+          "min": null,
+          "max": null
         },
         "duration_seconds": {
           "min": null,
@@ -101,16 +102,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -198,6 +213,7 @@
         "equipment": [
           "sled"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_nogi_yagoditsy_kor_konditsionirovanie",
         "anatomy": {
           "primary_muscles": [
@@ -246,14 +262,14 @@
       },
       "programming": {
         "raw": "4–10×10–30 м",
-        "type": "mixed",
+        "type": "distance",
         "sets": {
           "min": 4,
           "max": 10
         },
         "reps": {
-          "min": 10,
-          "max": 30
+          "min": null,
+          "max": null
         },
         "duration_seconds": {
           "min": null,
@@ -267,16 +283,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -364,6 +394,7 @@
         "equipment": [
           "sled"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_nogi_yagoditsy_kor_konditsionirovanie",
         "anatomy": {
           "primary_muscles": [
@@ -412,14 +443,14 @@
       },
       "programming": {
         "raw": "4–10×10–30 м",
-        "type": "mixed",
+        "type": "distance",
         "sets": {
           "min": 4,
           "max": 10
         },
         "reps": {
-          "min": 10,
-          "max": 30
+          "min": null,
+          "max": null
         },
         "duration_seconds": {
           "min": null,
@@ -433,16 +464,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -530,6 +575,7 @@
         "equipment": [
           "sled"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_nogi_yagoditsy_kor_konditsionirovanie",
         "anatomy": {
           "primary_muscles": [
@@ -578,14 +624,14 @@
       },
       "programming": {
         "raw": "4–10×10–30 м",
-        "type": "mixed",
+        "type": "distance",
         "sets": {
           "min": 4,
           "max": 10
         },
         "reps": {
-          "min": 10,
-          "max": 30
+          "min": null,
+          "max": null
         },
         "duration_seconds": {
           "min": null,
@@ -599,16 +645,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -696,6 +756,7 @@
         "equipment": [
           "sled"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_nogi_yagoditsy_kor_konditsionirovanie",
         "anatomy": {
           "primary_muscles": [
@@ -744,14 +805,14 @@
       },
       "programming": {
         "raw": "4–10×10–30 м",
-        "type": "mixed",
+        "type": "distance",
         "sets": {
           "min": 4,
           "max": 10
         },
         "reps": {
-          "min": 10,
-          "max": 30
+          "min": null,
+          "max": null
         },
         "duration_seconds": {
           "min": null,
@@ -765,16 +826,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -862,6 +937,7 @@
         "equipment": [
           "sled"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_nogi_yagoditsy_kor_konditsionirovanie",
         "anatomy": {
           "primary_muscles": [
@@ -910,14 +986,14 @@
       },
       "programming": {
         "raw": "4–10×10–30 м",
-        "type": "mixed",
+        "type": "distance",
         "sets": {
           "min": 4,
           "max": 10
         },
         "reps": {
-          "min": 10,
-          "max": 30
+          "min": null,
+          "max": null
         },
         "duration_seconds": {
           "min": null,
@@ -931,16 +1007,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -1028,6 +1118,7 @@
         "equipment": [
           "sled"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_nogi_yagoditsy_kor_konditsionirovanie",
         "anatomy": {
           "primary_muscles": [
@@ -1076,14 +1167,14 @@
       },
       "programming": {
         "raw": "4–10×10–30 м",
-        "type": "mixed",
+        "type": "distance",
         "sets": {
           "min": 4,
           "max": 10
         },
         "reps": {
-          "min": 10,
-          "max": 30
+          "min": null,
+          "max": null
         },
         "duration_seconds": {
           "min": null,
@@ -1097,16 +1188,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -1194,6 +1299,7 @@
         "equipment": [
           "sled"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_nogi_yagoditsy_kor_konditsionirovanie",
         "anatomy": {
           "primary_muscles": [
@@ -1242,14 +1348,14 @@
       },
       "programming": {
         "raw": "4–10×10–30 м",
-        "type": "mixed",
+        "type": "distance",
         "sets": {
           "min": 4,
           "max": 10
         },
         "reps": {
-          "min": 10,
-          "max": 30
+          "min": null,
+          "max": null
         },
         "duration_seconds": {
           "min": null,
@@ -1263,16 +1369,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],

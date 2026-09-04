@@ -33,6 +33,7 @@
           "cable_machine",
           "strength_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_grud_tritseps_perednyaya_delta",
         "anatomy": {
           "primary_muscles": [
@@ -102,16 +103,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -200,6 +215,7 @@
           "cable_machine",
           "strength_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_grud_tritseps_perednyaya_delta",
         "anatomy": {
           "primary_muscles": [
@@ -268,16 +284,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -366,6 +396,7 @@
           "cable_machine",
           "strength_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_verh_grudi_perednyaya_delta_tritseps",
         "anatomy": {
           "primary_muscles": [
@@ -434,16 +465,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -531,6 +576,7 @@
         "equipment": [
           "strength_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_grud_tritseps",
         "anatomy": {
           "primary_muscles": [
@@ -597,16 +643,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -694,6 +754,7 @@
         "equipment": [
           "strength_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_grud_tritseps_kor",
         "anatomy": {
           "primary_muscles": [
@@ -762,16 +823,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -860,6 +935,7 @@
           "cable_machine",
           "strength_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_grudnye_myshtsy",
         "anatomy": {
           "primary_muscles": [
@@ -924,16 +1000,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -1021,6 +1111,7 @@
         "equipment": [
           "strength_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_grud_tritseps",
         "anatomy": {
           "primary_muscles": [
@@ -1087,16 +1178,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -1184,6 +1289,7 @@
         "equipment": [
           "cable_crossover"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_niz_seredina_grudi",
         "anatomy": {
           "primary_muscles": [
@@ -1249,16 +1355,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -1346,6 +1466,7 @@
         "equipment": [
           "cable_crossover"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_verh_grudi_perednyaya_delta",
         "anatomy": {
           "primary_muscles": [
@@ -1411,16 +1532,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -1508,6 +1643,7 @@
         "equipment": [
           "cable_crossover"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_grud",
         "anatomy": {
           "primary_muscles": [
@@ -1572,16 +1708,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -1669,6 +1819,7 @@
         "equipment": [
           "cable_crossover"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_grud_kor",
         "anatomy": {
           "primary_muscles": [
@@ -1735,16 +1886,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -1833,6 +1998,7 @@
           "smith_machine",
           "strength_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_grud_tritseps",
         "anatomy": {
           "primary_muscles": [
@@ -1899,16 +2065,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -1997,6 +2177,7 @@
           "smith_machine",
           "strength_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_verh_grudi_perednyaya_delta",
         "anatomy": {
           "primary_muscles": [
@@ -2064,16 +2245,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -2161,6 +2356,7 @@
         "equipment": [
           "assisted_pullup_dip_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_grud_tritseps",
         "anatomy": {
           "primary_muscles": [
@@ -2227,16 +2423,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -2325,6 +2535,7 @@
           "cable_machine",
           "strength_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_shirochayshie_verh_spiny_bitseps",
         "anatomy": {
           "primary_muscles": [
@@ -2393,16 +2604,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -2491,6 +2716,7 @@
           "cable_machine",
           "strength_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_shirochayshie_bitseps",
         "anatomy": {
           "primary_muscles": [
@@ -2558,16 +2784,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -2656,6 +2896,7 @@
           "cable_machine",
           "strength_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_shirochayshie_bitseps",
         "anatomy": {
           "primary_muscles": [
@@ -2722,16 +2963,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -2819,6 +3074,7 @@
         "equipment": [
           "strength_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_shirochayshie_kor",
         "anatomy": {
           "primary_muscles": [
@@ -2886,16 +3142,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -2984,6 +3254,7 @@
           "cable_machine",
           "strength_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_srednyaya_spina_shirochayshie_bitseps",
         "anatomy": {
           "primary_muscles": [
@@ -3053,16 +3324,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -3151,6 +3436,7 @@
           "cable_machine",
           "strength_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_rombovidnye_zadnyaya_delta_trapetsiya",
         "anatomy": {
           "primary_muscles": [
@@ -3219,16 +3505,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -3317,6 +3617,7 @@
           "cable_machine",
           "strength_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_shirochayshie_rombovidnye_kor",
         "anatomy": {
           "primary_muscles": [
@@ -3385,16 +3686,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -3482,6 +3797,7 @@
         "equipment": [
           "strength_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_srednyaya_spina_shirochayshie",
         "anatomy": {
           "primary_muscles": [
@@ -3548,16 +3864,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -3645,6 +3975,7 @@
         "equipment": [
           "strength_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_shirochayshie_bolshaya_kruglaya_bitseps",
         "anatomy": {
           "primary_muscles": [
@@ -3712,16 +4043,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -3809,6 +4154,7 @@
         "equipment": [
           "strength_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_shirochayshie_srednyaya_spina",
         "anatomy": {
           "primary_muscles": [
@@ -3876,16 +4222,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -3973,6 +4333,7 @@
         "equipment": [
           "strength_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_srednyaya_spina_shirochayshie",
         "anatomy": {
           "primary_muscles": [
@@ -4040,16 +4401,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -4138,6 +4513,7 @@
           "cable_machine",
           "strength_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_shirochayshie_bolshaya_kruglaya",
         "anatomy": {
           "primary_muscles": [
@@ -4203,16 +4579,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -4300,6 +4690,7 @@
         "equipment": [
           "strength_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_shirochayshie_dlinnaya_golovka_tritsepsa",
         "anatomy": {
           "primary_muscles": [
@@ -4366,16 +4757,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -4464,6 +4869,7 @@
           "cable_machine",
           "strength_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_zadnyaya_delta_rombovidnye_trapetsiya",
         "anatomy": {
           "primary_muscles": [
@@ -4533,16 +4939,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -4630,6 +5050,7 @@
         "equipment": [
           "strength_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_zadnyaya_delta_naruzhnye_rotatory_trapetsiya",
         "anatomy": {
           "primary_muscles": [
@@ -4699,16 +5120,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -4796,6 +5231,7 @@
         "equipment": [
           "assisted_pullup_dip_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_shirochayshie_bitseps_kor",
         "anatomy": {
           "primary_muscles": [
@@ -4864,16 +5300,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -4961,6 +5411,7 @@
         "equipment": [
           "assisted_pullup_dip_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_shirochayshie_bitseps",
         "anatomy": {
           "primary_muscles": [
@@ -5027,16 +5478,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -5125,6 +5590,7 @@
           "cable_machine",
           "strength_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_delty_tritseps",
         "anatomy": {
           "primary_muscles": [
@@ -5191,16 +5657,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -5289,6 +5769,7 @@
           "cable_machine",
           "strength_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_delty_tritseps",
         "anatomy": {
           "primary_muscles": [
@@ -5355,16 +5836,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -5452,6 +5947,7 @@
         "equipment": [
           "strength_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_delty_tritseps_kor",
         "anatomy": {
           "primary_muscles": [
@@ -5520,16 +6016,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -5618,6 +6128,7 @@
           "cable_machine",
           "strength_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_srednyaya_delta",
         "anatomy": {
           "primary_muscles": [
@@ -5683,16 +6194,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -5780,6 +6305,7 @@
         "equipment": [
           "strength_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_srednyaya_delta",
         "anatomy": {
           "primary_muscles": [
@@ -5844,16 +6370,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -5941,6 +6481,7 @@
         "equipment": [
           "strength_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_perednyaya_delta",
         "anatomy": {
           "primary_muscles": [
@@ -6005,16 +6546,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -6102,6 +6657,7 @@
         "equipment": [
           "cable_crossover"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_nizhnyaya_trapetsiya_delty_rotatory",
         "anatomy": {
           "primary_muscles": [
@@ -6170,16 +6726,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -6267,6 +6837,7 @@
         "equipment": [
           "strength_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_rotatornaya_manzheta",
         "anatomy": {
           "primary_muscles": [
@@ -6331,16 +6902,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -6428,6 +7013,7 @@
         "equipment": [
           "strength_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_podlopatochnaya_grud",
         "anatomy": {
           "primary_muscles": [
@@ -6493,16 +7079,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -6590,6 +7190,7 @@
         "equipment": [
           "strength_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_verh_trapetsii",
         "anatomy": {
           "primary_muscles": [
@@ -6654,16 +7255,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -6752,6 +7367,7 @@
           "smith_machine",
           "strength_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_verh_trapetsii",
         "anatomy": {
           "primary_muscles": [
@@ -6817,16 +7433,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -6915,6 +7545,7 @@
           "cable_machine",
           "strength_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_bitseps_brahialis",
         "anatomy": {
           "primary_muscles": [
@@ -6981,16 +7612,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -7078,6 +7723,7 @@
         "equipment": [
           "strength_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_bitseps",
         "anatomy": {
           "primary_muscles": [
@@ -7142,16 +7788,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -7239,6 +7899,7 @@
         "equipment": [
           "strength_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_bitseps_brahialis",
         "anatomy": {
           "primary_muscles": [
@@ -7304,16 +7965,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -7401,6 +8076,7 @@
         "equipment": [
           "strength_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_brahialis_bitseps_predpleche",
         "anatomy": {
           "primary_muscles": [
@@ -7468,16 +8144,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -7565,6 +8255,7 @@
         "equipment": [
           "strength_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_bitseps",
         "anatomy": {
           "primary_muscles": [
@@ -7629,16 +8320,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -7726,6 +8431,7 @@
         "equipment": [
           "cable_crossover"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_bitseps",
         "anatomy": {
           "primary_muscles": [
@@ -7790,16 +8496,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -7887,6 +8607,7 @@
         "equipment": [
           "strength_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_tritseps",
         "anatomy": {
           "primary_muscles": [
@@ -7951,16 +8672,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -8048,6 +8783,7 @@
         "equipment": [
           "strength_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_tritseps",
         "anatomy": {
           "primary_muscles": [
@@ -8112,16 +8848,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -8209,6 +8959,7 @@
         "equipment": [
           "strength_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_tritseps",
         "anatomy": {
           "primary_muscles": [
@@ -8274,16 +9025,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -8371,6 +9136,7 @@
         "equipment": [
           "strength_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_tritseps",
         "anatomy": {
           "primary_muscles": [
@@ -8435,16 +9201,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -8532,6 +9312,7 @@
         "equipment": [
           "strength_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_dlinnaya_golovka_tritsepsa",
         "anatomy": {
           "primary_muscles": [
@@ -8596,16 +9377,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -8693,6 +9488,7 @@
         "equipment": [
           "assisted_pullup_dip_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_tritseps_grud",
         "anatomy": {
           "primary_muscles": [
@@ -8760,16 +9556,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -8857,6 +9667,7 @@
         "equipment": [
           "strength_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_tritseps",
         "anatomy": {
           "primary_muscles": [
@@ -8921,16 +9732,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -9016,8 +9841,9 @@
         "movement_pattern": "push",
         "difficulty": "beginner",
         "equipment": [
-          "unspecified_equipment"
+          "leg_press_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_kvadritseps_yagoditsy_zadnyaya_poverhnost_bedra",
         "anatomy": {
           "primary_muscles": [
@@ -9087,16 +9913,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -9182,8 +10022,9 @@
         "movement_pattern": "push",
         "difficulty": "intermediate",
         "equipment": [
-          "unspecified_equipment"
+          "leg_press_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_yagoditsy_zadnyaya_poverhnost_bedra_kvadritseps",
         "anatomy": {
           "primary_muscles": [
@@ -9252,16 +10093,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -9347,8 +10202,9 @@
         "movement_pattern": "push",
         "difficulty": "intermediate",
         "equipment": [
-          "unspecified_equipment"
+          "leg_press_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_kvadritseps",
         "anatomy": {
           "primary_muscles": [
@@ -9413,16 +10269,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -9508,8 +10378,9 @@
         "movement_pattern": "push",
         "difficulty": "intermediate",
         "equipment": [
-          "unspecified_equipment"
+          "leg_press_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_kvadritseps_yagoditsy",
         "anatomy": {
           "primary_muscles": [
@@ -9577,16 +10448,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -9672,8 +10557,9 @@
         "movement_pattern": "squat",
         "difficulty": "intermediate",
         "equipment": [
-          "unspecified_equipment"
+          "hack_squat_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_kvadritseps_yagoditsy",
         "anatomy": {
           "primary_muscles": [
@@ -9741,16 +10627,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -9836,8 +10736,9 @@
         "movement_pattern": "squat",
         "difficulty": "intermediate",
         "equipment": [
-          "unspecified_equipment"
+          "hack_squat_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_yagoditsy_kvadritseps_razgibateli_spiny",
         "anatomy": {
           "primary_muscles": [
@@ -9907,16 +10808,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -10002,8 +10917,9 @@
         "movement_pattern": "squat",
         "difficulty": "intermediate",
         "equipment": [
-          "unspecified_equipment"
+          "pendulum_squat_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_kvadritseps_yagoditsy",
         "anatomy": {
           "primary_muscles": [
@@ -10070,16 +10986,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -10168,6 +11098,7 @@
           "smith_machine",
           "strength_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_kvadritseps_yagoditsy",
         "anatomy": {
           "primary_muscles": [
@@ -10234,16 +11165,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -10332,6 +11277,7 @@
           "smith_machine",
           "strength_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_kvadritseps_yagoditsy",
         "anatomy": {
           "primary_muscles": [
@@ -10399,16 +11345,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -10497,6 +11457,7 @@
           "smith_machine",
           "strength_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_yagoditsy_kvadritseps",
         "anatomy": {
           "primary_muscles": [
@@ -10564,16 +11525,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -10659,8 +11634,9 @@
         "movement_pattern": "other",
         "difficulty": "beginner",
         "equipment": [
-          "unspecified_equipment"
+          "leg_extension_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_kvadritseps",
         "anatomy": {
           "primary_muscles": [
@@ -10725,16 +11701,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -10820,8 +11810,9 @@
         "movement_pattern": "other",
         "difficulty": "intermediate",
         "equipment": [
-          "unspecified_equipment"
+          "leg_extension_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_kvadritseps",
         "anatomy": {
           "primary_muscles": [
@@ -10886,16 +11877,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -10981,8 +11986,9 @@
         "movement_pattern": "other",
         "difficulty": "beginner",
         "equipment": [
-          "unspecified_equipment"
+          "seated_leg_curl_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_zadnyaya_poverhnost_bedra",
         "anatomy": {
           "primary_muscles": [
@@ -11048,16 +12054,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -11143,8 +12163,9 @@
         "movement_pattern": "other",
         "difficulty": "beginner",
         "equipment": [
-          "unspecified_equipment"
+          "lying_leg_curl_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_zadnyaya_poverhnost_bedra",
         "anatomy": {
           "primary_muscles": [
@@ -11209,16 +12230,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -11304,8 +12339,9 @@
         "movement_pattern": "other",
         "difficulty": "intermediate",
         "equipment": [
-          "unspecified_equipment"
+          "standing_leg_curl_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_zadnyaya_poverhnost_bedra",
         "anatomy": {
           "primary_muscles": [
@@ -11370,16 +12406,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -11465,8 +12515,9 @@
         "movement_pattern": "other",
         "difficulty": "intermediate",
         "equipment": [
-          "unspecified_equipment"
+          "seated_leg_curl_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_zadnyaya_poverhnost_bedra",
         "anatomy": {
           "primary_muscles": [
@@ -11531,16 +12582,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -11626,8 +12691,9 @@
         "movement_pattern": "other",
         "difficulty": "beginner",
         "equipment": [
-          "unspecified_equipment"
+          "hip_abductor_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_srednyaya_malaya_yagodichnaya",
         "anatomy": {
           "primary_muscles": [
@@ -11693,16 +12759,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -11788,8 +12868,9 @@
         "movement_pattern": "other",
         "difficulty": "beginner",
         "equipment": [
-          "unspecified_equipment"
+          "hip_adductor_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_privodyaschie_myshtsy",
         "anatomy": {
           "primary_muscles": [
@@ -11854,16 +12935,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -11949,8 +13044,9 @@
         "movement_pattern": "other",
         "difficulty": "intermediate",
         "equipment": [
-          "unspecified_equipment"
+          "glute_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_bolshaya_yagodichnaya",
         "anatomy": {
           "primary_muscles": [
@@ -12015,16 +13111,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -12112,6 +13222,7 @@
         "equipment": [
           "cable_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_bolshaya_yagodichnaya",
         "anatomy": {
           "primary_muscles": [
@@ -12176,16 +13287,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -12273,6 +13398,7 @@
         "equipment": [
           "cable_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_srednyaya_yagodichnaya",
         "anatomy": {
           "primary_muscles": [
@@ -12337,16 +13463,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -12434,6 +13574,7 @@
         "equipment": [
           "cable_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_privodyaschie_myshtsy",
         "anatomy": {
           "primary_muscles": [
@@ -12498,16 +13639,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -12595,6 +13750,7 @@
         "equipment": [
           "cable_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_sgibateli_bedra",
         "anatomy": {
           "primary_muscles": [
@@ -12658,16 +13814,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -12753,8 +13923,9 @@
         "movement_pattern": "other",
         "difficulty": "intermediate",
         "equipment": [
-          "unspecified_equipment"
+          "hip_thrust_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_bolshaya_yagodichnaya_zadnyaya_poverhnost_bedra",
         "anatomy": {
           "primary_muscles": [
@@ -12821,16 +13992,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -12916,8 +14101,9 @@
         "movement_pattern": "other",
         "difficulty": "beginner",
         "equipment": [
-          "strength_machine"
+          "glute_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_bolshaya_yagodichnaya",
         "anatomy": {
           "primary_muscles": [
@@ -12982,16 +14168,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -13079,6 +14279,7 @@
         "equipment": [
           "cable_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_yagoditsy_zadnyaya_poverhnost_bedra",
         "anatomy": {
           "primary_muscles": [
@@ -13146,16 +14347,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -13241,8 +14456,9 @@
         "movement_pattern": "other",
         "difficulty": "intermediate",
         "equipment": [
-          "unspecified_equipment"
+          "back_extension_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_razgibateli_pozvonochnika_yagoditsy",
         "anatomy": {
           "primary_muscles": [
@@ -13308,16 +14524,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -13403,8 +14633,9 @@
         "movement_pattern": "pedal",
         "difficulty": "beginner",
         "equipment": [
-          "unspecified_equipment"
+          "standing_calf_raise_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_ikronozhnaya",
         "anatomy": {
           "primary_muscles": [
@@ -13469,16 +14700,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -13564,8 +14809,9 @@
         "movement_pattern": "pedal",
         "difficulty": "beginner",
         "equipment": [
-          "unspecified_equipment"
+          "seated_calf_raise_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_kambalovidnaya",
         "anatomy": {
           "primary_muscles": [],
@@ -13628,16 +14874,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -13723,8 +14983,9 @@
         "movement_pattern": "pedal",
         "difficulty": "intermediate",
         "equipment": [
-          "unspecified_equipment"
+          "leg_press_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_ikronozhnaya_kambalovidnaya",
         "anatomy": {
           "primary_muscles": [
@@ -13790,16 +15051,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -13885,8 +15160,9 @@
         "movement_pattern": "pedal",
         "difficulty": "intermediate",
         "equipment": [
-          "unspecified_equipment"
+          "calf_raise_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_ikronozhnaya",
         "anatomy": {
           "primary_muscles": [
@@ -13951,16 +15227,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -14046,8 +15336,9 @@
         "movement_pattern": "pedal",
         "difficulty": "intermediate",
         "equipment": [
-          "unspecified_equipment"
+          "tibialis_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_perednyaya_bolshebertsovaya",
         "anatomy": {
           "primary_muscles": [],
@@ -14110,16 +15401,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -14205,8 +15510,9 @@
         "movement_pattern": "other",
         "difficulty": "beginner",
         "equipment": [
-          "unspecified_equipment"
+          "ab_crunch_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_pryamaya_myshtsa_zhivota",
         "anatomy": {
           "primary_muscles": [
@@ -14271,16 +15577,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -14366,8 +15686,9 @@
         "movement_pattern": "rotate",
         "difficulty": "intermediate",
         "equipment": [
-          "unspecified_equipment"
+          "rotary_torso_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_kosye_myshtsy_glubokiy_kor",
         "anatomy": {
           "primary_muscles": [
@@ -14434,16 +15755,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -14531,6 +15866,7 @@
         "equipment": [
           "cable_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_pryamaya_myshtsa_zhivota",
         "anatomy": {
           "primary_muscles": [
@@ -14594,16 +15930,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -14691,6 +16041,7 @@
         "equipment": [
           "strength_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_antirotatsiya_kosye_poperechnaya_myshtsa",
         "anatomy": {
           "primary_muscles": [
@@ -14757,16 +16108,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -14854,6 +16219,7 @@
         "equipment": [
           "strength_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_antirotatsiya_kor",
         "anatomy": {
           "primary_muscles": [
@@ -14920,16 +16286,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -15017,6 +16397,7 @@
         "equipment": [
           "cable_crossover"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_kosye_kor_plechevoy_poyas",
         "anatomy": {
           "primary_muscles": [
@@ -15084,16 +16465,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -15181,6 +16576,7 @@
         "equipment": [
           "cable_crossover"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_kosye_kor_plechevoy_poyas",
         "anatomy": {
           "primary_muscles": [
@@ -15249,16 +16645,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],

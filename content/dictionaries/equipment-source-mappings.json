@@ -7,250 +7,423 @@
       "equipment_codes": [
         "cable_machine",
         "strength_machine"
-      ]
+      ],
+      "required_equipment_codes": [
+        "cable_machine",
+        "strength_machine"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Рычажный тренажёр",
       "equipment_codes": [
         "strength_machine"
-      ]
+      ],
+      "required_equipment_codes": [
+        "strength_machine"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Кроссовер",
       "equipment_codes": [
         "cable_crossover"
-      ]
+      ],
+      "required_equipment_codes": [
+        "cable_crossover"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Машина Смита",
       "equipment_codes": [
         "smith_machine",
         "strength_machine"
-      ]
+      ],
+      "required_equipment_codes": [
+        "smith_machine",
+        "strength_machine"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Гравитрон",
       "equipment_codes": [
         "assisted_pullup_dip_machine"
-      ]
+      ],
+      "required_equipment_codes": [
+        "assisted_pullup_dip_machine"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Блочный тренажёр",
       "equipment_codes": [
         "strength_machine"
-      ]
+      ],
+      "required_equipment_codes": [
+        "strength_machine"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "T-bar тренажёр",
       "equipment_codes": [
         "strength_machine"
-      ]
+      ],
+      "required_equipment_codes": [
+        "strength_machine"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Leg Press",
       "equipment_codes": [
-        "unspecified_equipment"
-      ]
+        "leg_press_machine"
+      ],
+      "required_equipment_codes": [
+        "leg_press_machine"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Hack Squat",
       "equipment_codes": [
-        "unspecified_equipment"
-      ]
+        "hack_squat_machine"
+      ],
+      "required_equipment_codes": [
+        "hack_squat_machine"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Маятниковый присед",
       "equipment_codes": [
-        "unspecified_equipment"
-      ]
+        "pendulum_squat_machine"
+      ],
+      "required_equipment_codes": [
+        "pendulum_squat_machine"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Leg Extension",
       "equipment_codes": [
-        "unspecified_equipment"
-      ]
+        "leg_extension_machine"
+      ],
+      "required_equipment_codes": [
+        "leg_extension_machine"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Seated Leg Curl",
       "equipment_codes": [
-        "unspecified_equipment"
-      ]
+        "seated_leg_curl_machine"
+      ],
+      "required_equipment_codes": [
+        "seated_leg_curl_machine"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Lying Leg Curl",
       "equipment_codes": [
-        "unspecified_equipment"
-      ]
+        "lying_leg_curl_machine"
+      ],
+      "required_equipment_codes": [
+        "lying_leg_curl_machine"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Standing Leg Curl",
       "equipment_codes": [
-        "unspecified_equipment"
-      ]
+        "standing_leg_curl_machine"
+      ],
+      "required_equipment_codes": [
+        "standing_leg_curl_machine"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Hip Abductor",
       "equipment_codes": [
-        "unspecified_equipment"
-      ]
+        "hip_abductor_machine"
+      ],
+      "required_equipment_codes": [
+        "hip_abductor_machine"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Hip Adductor",
       "equipment_codes": [
-        "unspecified_equipment"
-      ]
+        "hip_adductor_machine"
+      ],
+      "required_equipment_codes": [
+        "hip_adductor_machine"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Glute Machine",
       "equipment_codes": [
-        "unspecified_equipment"
-      ]
+        "glute_machine"
+      ],
+      "required_equipment_codes": [
+        "glute_machine"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Нижний блок + манжета",
       "equipment_codes": [
         "cable_machine"
-      ]
+      ],
+      "required_equipment_codes": [
+        "cable_machine"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Hip Thrust Machine",
       "equipment_codes": [
-        "unspecified_equipment"
-      ]
+        "hip_thrust_machine"
+      ],
+      "required_equipment_codes": [
+        "hip_thrust_machine"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Ягодичный тренажёр",
       "equipment_codes": [
-        "strength_machine"
-      ]
+        "glute_machine"
+      ],
+      "required_equipment_codes": [
+        "glute_machine"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Нижний блок + канат",
       "equipment_codes": [
         "cable_machine"
-      ]
+      ],
+      "required_equipment_codes": [
+        "cable_machine"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Back Extension Machine",
       "equipment_codes": [
-        "unspecified_equipment"
-      ]
+        "back_extension_machine"
+      ],
+      "required_equipment_codes": [
+        "back_extension_machine"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Standing Calf Raise",
       "equipment_codes": [
-        "unspecified_equipment"
-      ]
+        "standing_calf_raise_machine"
+      ],
+      "required_equipment_codes": [
+        "standing_calf_raise_machine"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Seated Calf Raise",
       "equipment_codes": [
-        "unspecified_equipment"
-      ]
+        "seated_calf_raise_machine"
+      ],
+      "required_equipment_codes": [
+        "seated_calf_raise_machine"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Calf Machine",
       "equipment_codes": [
-        "unspecified_equipment"
-      ]
+        "calf_raise_machine"
+      ],
+      "required_equipment_codes": [
+        "calf_raise_machine"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Tibialis Machine",
       "equipment_codes": [
-        "unspecified_equipment"
-      ]
+        "tibialis_machine"
+      ],
+      "required_equipment_codes": [
+        "tibialis_machine"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Ab Crunch Machine",
       "equipment_codes": [
-        "unspecified_equipment"
-      ]
+        "ab_crunch_machine"
+      ],
+      "required_equipment_codes": [
+        "ab_crunch_machine"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Rotary Torso",
       "equipment_codes": [
-        "unspecified_equipment"
-      ]
+        "rotary_torso_machine"
+      ],
+      "required_equipment_codes": [
+        "rotary_torso_machine"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Верхний блок",
       "equipment_codes": [
         "cable_machine"
-      ]
+      ],
+      "required_equipment_codes": [
+        "cable_machine"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Резиновая лента / эспандер",
       "equipment_codes": [
         "resistance_band"
-      ]
+      ],
+      "required_equipment_codes": [
+        "resistance_band"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Мини-бэнд",
       "equipment_codes": [
         "resistance_band"
-      ]
+      ],
+      "required_equipment_codes": [
+        "resistance_band"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Толстая резина/стропа",
       "equipment_codes": [
         "resistance_band",
         "strap"
-      ]
+      ],
+      "required_equipment_codes": [
+        "resistance_band",
+        "strap"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Мини-бэнд / лента",
       "equipment_codes": [
         "resistance_band"
-      ]
+      ],
+      "required_equipment_codes": [
+        "resistance_band"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "PVC / гимнастическая палка / швабра",
       "equipment_codes": [
         "training_stick"
-      ]
+      ],
+      "required_equipment_codes": [
+        "training_stick"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Собственный вес",
       "equipment_codes": [
-        "unspecified_equipment"
-      ]
+        "bodyweight"
+      ],
+      "required_equipment_codes": [
+        "bodyweight"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Слайдеры / TRX",
       "equipment_codes": [
         "suspension_trainer"
-      ]
+      ],
+      "required_equipment_codes": [
+        "suspension_trainer"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Ролик для пресса",
       "equipment_codes": [
         "ab_wheel"
-      ]
+      ],
+      "required_equipment_codes": [
+        "ab_wheel"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Фитбол",
       "equipment_codes": [
         "stability_ball"
-      ]
+      ],
+      "required_equipment_codes": [
+        "stability_ball"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Скамья",
       "equipment_codes": [
         "bench"
-      ]
+      ],
+      "required_equipment_codes": [
+        "bench"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Гантель / гиря",
       "equipment_codes": [
-        "kettlebell",
-        "dumbbell"
+        "dumbbell",
+        "kettlebell"
+      ],
+      "required_equipment_codes": [],
+      "equipment_alternatives": [
+        [
+          "dumbbell",
+          "kettlebell"
+        ]
       ]
     },
     {
       "source_label": "Гантели / гири",
       "equipment_codes": [
-        "kettlebell",
-        "dumbbell"
+        "dumbbell",
+        "kettlebell"
+      ],
+      "required_equipment_codes": [],
+      "equipment_alternatives": [
+        [
+          "dumbbell",
+          "kettlebell"
+        ]
       ]
     },
     {
@@ -258,113 +431,192 @@
       "equipment_codes": [
         "kettlebell",
         "dumbbell"
+      ],
+      "required_equipment_codes": [],
+      "equipment_alternatives": [
+        [
+          "kettlebell",
+          "dumbbell"
+        ]
       ]
     },
     {
       "source_label": "Медбол",
       "equipment_codes": [
         "medicine_ball"
-      ]
+      ],
+      "required_equipment_codes": [
+        "medicine_ball"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Турник",
       "equipment_codes": [
         "pull_up_bar"
-      ]
+      ],
+      "required_equipment_codes": [
+        "pull_up_bar"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Стойка для подъёма коленей",
       "equipment_codes": [
         "rack"
-      ]
+      ],
+      "required_equipment_codes": [
+        "rack"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Наклонная скамья",
       "equipment_codes": [
         "bench"
-      ]
+      ],
+      "required_equipment_codes": [
+        "bench"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Блок / резина",
       "equipment_codes": [
         "resistance_band",
         "cable_machine"
-      ]
+      ],
+      "required_equipment_codes": [
+        "resistance_band",
+        "cable_machine"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Гиперэкстензия",
       "equipment_codes": [
-        "unspecified_equipment"
-      ]
+        "back_extension_bench"
+      ],
+      "required_equipment_codes": [
+        "back_extension_bench"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Дорожка / зал",
       "equipment_codes": [
         "treadmill"
-      ]
+      ],
+      "required_equipment_codes": [
+        "treadmill"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Велотренажёр",
       "equipment_codes": [
         "exercise_bike",
         "strength_machine"
-      ]
+      ],
+      "required_equipment_codes": [
+        "exercise_bike",
+        "strength_machine"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Гребной тренажёр",
       "equipment_codes": [
         "rowing_machine",
         "strength_machine"
-      ]
+      ],
+      "required_equipment_codes": [
+        "rowing_machine",
+        "strength_machine"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Скакалка",
       "equipment_codes": [
         "jump_rope"
-      ]
+      ],
+      "required_equipment_codes": [
+        "jump_rope"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Без оборудования",
       "equipment_codes": [
-        "unspecified_equipment"
-      ]
+        "no_equipment"
+      ],
+      "required_equipment_codes": [
+        "no_equipment"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Лёгкая резина",
       "equipment_codes": [
         "resistance_band"
-      ]
+      ],
+      "required_equipment_codes": [
+        "resistance_band"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "PVC / палка",
       "equipment_codes": [
         "training_stick"
-      ]
+      ],
+      "required_equipment_codes": [
+        "training_stick"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Опционально мини-бэнд",
       "equipment_codes": [
         "resistance_band"
-      ]
+      ],
+      "required_equipment_codes": [
+        "resistance_band"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Планируемый снаряд",
       "equipment_codes": [
-        "unspecified_equipment"
-      ]
+        "planned_equipment"
+      ],
+      "required_equipment_codes": [
+        "planned_equipment"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Гиря / гири",
       "equipment_codes": [
         "kettlebell"
-      ]
+      ],
+      "required_equipment_codes": [
+        "kettlebell"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Гантели / скамья",
       "equipment_codes": [
         "dumbbell",
         "bench"
-      ]
+      ],
+      "required_equipment_codes": [
+        "dumbbell",
+        "bench"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Штанга / стойка / скамья",
@@ -372,25 +624,46 @@
         "barbell",
         "rack",
         "bench"
-      ]
+      ],
+      "required_equipment_codes": [
+        "barbell",
+        "rack",
+        "bench"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Вес тела / опора",
       "equipment_codes": [
         "support"
-      ]
+      ],
+      "required_equipment_codes": [
+        "support"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "TRX / петли",
       "equipment_codes": [
         "suspension_trainer"
-      ]
+      ],
+      "required_equipment_codes": [
+        "suspension_trainer"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Турник / брусья",
       "equipment_codes": [
         "pull_up_bar",
         "dip_bars"
+      ],
+      "required_equipment_codes": [],
+      "equipment_alternatives": [
+        [
+          "pull_up_bar",
+          "dip_bars"
+        ]
       ]
     },
     {
@@ -398,14 +671,24 @@
       "equipment_codes": [
         "exercise_mat",
         "training_stick"
-      ]
+      ],
+      "required_equipment_codes": [
+        "exercise_mat",
+        "training_stick"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Кардио-тренажёр / коврик",
       "equipment_codes": [
         "exercise_mat",
         "strength_machine"
-      ]
+      ],
+      "required_equipment_codes": [
+        "exercise_mat",
+        "strength_machine"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Коврик / стропа / опора",
@@ -413,7 +696,13 @@
         "strap",
         "exercise_mat",
         "support"
-      ]
+      ],
+      "required_equipment_codes": [
+        "strap",
+        "exercise_mat",
+        "support"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Foam roller / массажный мяч",
@@ -421,45 +710,77 @@
         "ball",
         "foam_roller",
         "massage_ball"
-      ]
+      ],
+      "required_equipment_codes": [
+        "ball",
+        "foam_roller",
+        "massage_ball"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Вес тела / короб / разметка",
       "equipment_codes": [
         "plyo_box"
-      ]
+      ],
+      "required_equipment_codes": [
+        "plyo_box"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "BOSU / balance pad / вес тела",
       "equipment_codes": [
         "bosu",
         "balance_pad"
-      ]
+      ],
+      "required_equipment_codes": [
+        "bosu",
+        "balance_pad"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Battle ropes",
       "equipment_codes": [
         "battle_ropes"
-      ]
+      ],
+      "required_equipment_codes": [
+        "battle_ropes"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Сани / трос / пояс",
       "equipment_codes": [
         "sled"
-      ]
+      ],
+      "required_equipment_codes": [
+        "sled"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Sandbag",
       "equipment_codes": [
         "sandbag"
-      ]
+      ],
+      "required_equipment_codes": [
+        "sandbag"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Штанга + landmine",
       "equipment_codes": [
         "landmine_attachment",
         "barbell"
-      ]
+      ],
+      "required_equipment_codes": [
+        "landmine_attachment",
+        "barbell"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Гантели / гири / блины / турник",
@@ -468,52 +789,90 @@
         "kettlebell",
         "dumbbell",
         "weight_plate"
-      ]
+      ],
+      "required_equipment_codes": [
+        "pull_up_bar",
+        "kettlebell",
+        "dumbbell",
+        "weight_plate"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Вес тела / резина / ступень",
       "equipment_codes": [
         "resistance_band",
         "step"
-      ]
+      ],
+      "required_equipment_codes": [
+        "resistance_band",
+        "step"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Agility ladder / конусы",
       "equipment_codes": [
         "cones",
         "agility_ladder"
-      ]
+      ],
+      "required_equipment_codes": [
+        "cones",
+        "agility_ladder"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Коврик / стена",
       "equipment_codes": [
         "exercise_mat",
         "wall"
-      ]
+      ],
+      "required_equipment_codes": [
+        "exercise_mat",
+        "wall"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Бассейн",
       "equipment_codes": [
         "pool"
-      ]
+      ],
+      "required_equipment_codes": [
+        "pool"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Бассейн + доска",
       "equipment_codes": [
         "pool"
-      ]
+      ],
+      "required_equipment_codes": [
+        "pool"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Бассейн + стартовая тумба/бортик по задаче",
       "equipment_codes": [
         "pool"
-      ]
+      ],
+      "required_equipment_codes": [
+        "pool"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Открытая вода / буй / безопасная акватория",
       "equipment_codes": [
         "open_water"
-      ]
+      ],
+      "required_equipment_codes": [
+        "open_water"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Баскетбольный мяч + кольцо/площадка",
@@ -522,7 +881,14 @@
         "ball",
         "basketball_hoop",
         "court_or_training_area"
-      ]
+      ],
+      "required_equipment_codes": [
+        "basketball",
+        "ball",
+        "basketball_hoop",
+        "court_or_training_area"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Мяч / конусы / площадка",
@@ -530,7 +896,13 @@
         "ball",
         "court_or_training_area",
         "cones"
-      ]
+      ],
+      "required_equipment_codes": [
+        "ball",
+        "court_or_training_area",
+        "cones"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Баскетбольный мяч + стена",
@@ -538,14 +910,25 @@
         "basketball",
         "ball",
         "wall"
-      ]
+      ],
+      "required_equipment_codes": [
+        "basketball",
+        "ball",
+        "wall"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Площадка + мяч + партнёр(ы)",
       "equipment_codes": [
         "ball",
         "court_or_training_area"
-      ]
+      ],
+      "required_equipment_codes": [
+        "ball",
+        "court_or_training_area"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Велосипед + шлем + безопасная площадка/маршрут",
@@ -553,7 +936,13 @@
         "bicycle",
         "court_or_training_area",
         "helmet"
-      ]
+      ],
+      "required_equipment_codes": [
+        "bicycle",
+        "court_or_training_area",
+        "helmet"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Велосипед + шлем + конусы/закрытая площадка",
@@ -562,14 +951,26 @@
         "court_or_training_area",
         "helmet",
         "cones"
-      ]
+      ],
+      "required_equipment_codes": [
+        "bicycle",
+        "court_or_training_area",
+        "helmet",
+        "cones"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Велосипед + шлем + группа + безопасный маршрут",
       "equipment_codes": [
         "bicycle",
         "helmet"
-      ]
+      ],
+      "required_equipment_codes": [
+        "bicycle",
+        "helmet"
+      ],
+      "equipment_alternatives": []
     },
     {
       "source_label": "Велосипед + станок/велотренажёр или безопасная дорога",
@@ -577,7 +978,13 @@
         "bicycle",
         "exercise_bike",
         "strength_machine"
-      ]
+      ],
+      "required_equipment_codes": [
+        "bicycle",
+        "exercise_bike",
+        "strength_machine"
+      ],
+      "equipment_alternatives": []
     }
   ]
 }

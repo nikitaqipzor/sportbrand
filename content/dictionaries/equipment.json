@@ -2,6 +2,13 @@
   "version": "1.1.0",
   "items": [
     {
+      "code": "ab_crunch_machine",
+      "label_ru": "ab crunch machine",
+      "source_labels": [
+        "Ab Crunch Machine"
+      ]
+    },
+    {
       "code": "ab_wheel",
       "label_ru": "ab wheel",
       "source_labels": [
@@ -20,6 +27,20 @@
       "label_ru": "assisted pullup dip machine",
       "source_labels": [
         "Гравитрон"
+      ]
+    },
+    {
+      "code": "back_extension_bench",
+      "label_ru": "back extension bench",
+      "source_labels": [
+        "Гиперэкстензия"
+      ]
+    },
+    {
+      "code": "back_extension_machine",
+      "label_ru": "back extension machine",
+      "source_labels": [
+        "Back Extension Machine"
       ]
     },
     {
@@ -91,6 +112,13 @@
       ]
     },
     {
+      "code": "bodyweight",
+      "label_ru": "bodyweight",
+      "source_labels": [
+        "Собственный вес"
+      ]
+    },
+    {
       "code": "bosu",
       "label_ru": "bosu",
       "source_labels": [
@@ -113,6 +141,13 @@
         "Нижний блок + канат",
         "Нижний блок + манжета",
         "Тренажёр / блок"
+      ]
+    },
+    {
+      "code": "calf_raise_machine",
+      "label_ru": "calf raise machine",
+      "source_labels": [
+        "Calf Machine"
       ]
     },
     {
@@ -179,12 +214,48 @@
       ]
     },
     {
+      "code": "glute_machine",
+      "label_ru": "glute machine",
+      "source_labels": [
+        "Glute Machine",
+        "Ягодичный тренажёр"
+      ]
+    },
+    {
+      "code": "hack_squat_machine",
+      "label_ru": "hack squat machine",
+      "source_labels": [
+        "Hack Squat"
+      ]
+    },
+    {
       "code": "helmet",
       "label_ru": "helmet",
       "source_labels": [
         "Велосипед + шлем + безопасная площадка/маршрут",
         "Велосипед + шлем + группа + безопасный маршрут",
         "Велосипед + шлем + конусы/закрытая площадка"
+      ]
+    },
+    {
+      "code": "hip_abductor_machine",
+      "label_ru": "hip abductor machine",
+      "source_labels": [
+        "Hip Abductor"
+      ]
+    },
+    {
+      "code": "hip_adductor_machine",
+      "label_ru": "hip adductor machine",
+      "source_labels": [
+        "Hip Adductor"
+      ]
+    },
+    {
+      "code": "hip_thrust_machine",
+      "label_ru": "hip thrust machine",
+      "source_labels": [
+        "Hip Thrust Machine"
       ]
     },
     {
@@ -213,6 +284,27 @@
       ]
     },
     {
+      "code": "leg_extension_machine",
+      "label_ru": "leg extension machine",
+      "source_labels": [
+        "Leg Extension"
+      ]
+    },
+    {
+      "code": "leg_press_machine",
+      "label_ru": "leg press machine",
+      "source_labels": [
+        "Leg Press"
+      ]
+    },
+    {
+      "code": "lying_leg_curl_machine",
+      "label_ru": "lying leg curl machine",
+      "source_labels": [
+        "Lying Leg Curl"
+      ]
+    },
+    {
       "code": "massage_ball",
       "label_ru": "massage ball",
       "source_labels": [
@@ -227,10 +319,31 @@
       ]
     },
     {
+      "code": "no_equipment",
+      "label_ru": "no equipment",
+      "source_labels": [
+        "Без оборудования"
+      ]
+    },
+    {
       "code": "open_water",
       "label_ru": "open water",
       "source_labels": [
         "Открытая вода / буй / безопасная акватория"
+      ]
+    },
+    {
+      "code": "pendulum_squat_machine",
+      "label_ru": "pendulum squat machine",
+      "source_labels": [
+        "Маятниковый присед"
+      ]
+    },
+    {
+      "code": "planned_equipment",
+      "label_ru": "planned equipment",
+      "source_labels": [
+        "Планируемый снаряд"
       ]
     },
     {
@@ -281,6 +394,13 @@
       ]
     },
     {
+      "code": "rotary_torso_machine",
+      "label_ru": "rotary torso machine",
+      "source_labels": [
+        "Rotary Torso"
+      ]
+    },
+    {
       "code": "rowing_machine",
       "label_ru": "rowing machine",
       "source_labels": [
@@ -292,6 +412,20 @@
       "label_ru": "sandbag",
       "source_labels": [
         "Sandbag"
+      ]
+    },
+    {
+      "code": "seated_calf_raise_machine",
+      "label_ru": "seated calf raise machine",
+      "source_labels": [
+        "Seated Calf Raise"
+      ]
+    },
+    {
+      "code": "seated_leg_curl_machine",
+      "label_ru": "seated leg curl machine",
+      "source_labels": [
+        "Seated Leg Curl"
       ]
     },
     {
@@ -313,6 +447,20 @@
       "label_ru": "stability ball",
       "source_labels": [
         "Фитбол"
+      ]
+    },
+    {
+      "code": "standing_calf_raise_machine",
+      "label_ru": "standing calf raise machine",
+      "source_labels": [
+        "Standing Calf Raise"
+      ]
+    },
+    {
+      "code": "standing_leg_curl_machine",
+      "label_ru": "standing leg curl machine",
+      "source_labels": [
+        "Standing Leg Curl"
       ]
     },
     {
@@ -342,8 +490,7 @@
         "Кардио-тренажёр / коврик",
         "Машина Смита",
         "Рычажный тренажёр",
-        "Тренажёр / блок",
-        "Ягодичный тренажёр"
+        "Тренажёр / блок"
       ]
     },
     {
@@ -360,6 +507,13 @@
       "source_labels": [
         "TRX / петли",
         "Слайдеры / TRX"
+      ]
+    },
+    {
+      "code": "tibialis_machine",
+      "label_ru": "tibialis machine",
+      "source_labels": [
+        "Tibialis Machine"
       ]
     },
     {
@@ -381,30 +535,7 @@
     {
       "code": "unspecified_equipment",
       "label_ru": "unspecified equipment",
-      "source_labels": [
-        "Ab Crunch Machine",
-        "Back Extension Machine",
-        "Calf Machine",
-        "Glute Machine",
-        "Hack Squat",
-        "Hip Abductor",
-        "Hip Adductor",
-        "Hip Thrust Machine",
-        "Leg Extension",
-        "Leg Press",
-        "Lying Leg Curl",
-        "Rotary Torso",
-        "Seated Calf Raise",
-        "Seated Leg Curl",
-        "Standing Calf Raise",
-        "Standing Leg Curl",
-        "Tibialis Machine",
-        "Без оборудования",
-        "Гиперэкстензия",
-        "Маятниковый присед",
-        "Планируемый снаряд",
-        "Собственный вес"
-      ]
+      "source_labels": []
     },
     {
       "code": "wall",

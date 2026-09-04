@@ -32,6 +32,7 @@
         "equipment": [
           "medicine_ball"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_kor_plechevoy_poyas_grud_moschnost",
         "anatomy": {
           "primary_muscles": [
@@ -101,16 +102,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -198,6 +213,7 @@
         "equipment": [
           "medicine_ball"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_kor_plechevoy_poyas_grud_moschnost",
         "anatomy": {
           "primary_muscles": [
@@ -267,16 +283,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -364,6 +394,7 @@
         "equipment": [
           "medicine_ball"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_kor_plechevoy_poyas_grud_moschnost",
         "anatomy": {
           "primary_muscles": [
@@ -433,16 +464,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -530,6 +575,7 @@
         "equipment": [
           "medicine_ball"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_kor_plechevoy_poyas_grud_moschnost",
         "anatomy": {
           "primary_muscles": [
@@ -599,16 +645,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -696,6 +756,7 @@
         "equipment": [
           "medicine_ball"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_kor_plechevoy_poyas_grud_moschnost",
         "anatomy": {
           "primary_muscles": [
@@ -765,16 +826,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -862,6 +937,7 @@
         "equipment": [
           "medicine_ball"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_kor_plechevoy_poyas_grud_moschnost",
         "anatomy": {
           "primary_muscles": [
@@ -931,16 +1007,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -1028,6 +1118,7 @@
         "equipment": [
           "medicine_ball"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_kosye_myshtsy_zhivota_kor",
         "anatomy": {
           "primary_muscles": [
@@ -1094,16 +1185,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -1191,6 +1296,7 @@
         "equipment": [
           "medicine_ball"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_kor_plechevoy_poyas_grud_moschnost",
         "anatomy": {
           "primary_muscles": [
@@ -1260,16 +1366,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -1357,6 +1477,7 @@
         "equipment": [
           "medicine_ball"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_kor_plechevoy_poyas_grud_moschnost",
         "anatomy": {
           "primary_muscles": [
@@ -1426,16 +1547,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -1523,6 +1658,7 @@
         "equipment": [
           "medicine_ball"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_kor_plechevoy_poyas_grud_moschnost",
         "anatomy": {
           "primary_muscles": [
@@ -1592,16 +1728,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -1689,6 +1839,7 @@
         "equipment": [
           "medicine_ball"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_kor_plechevoy_poyas_grud_moschnost",
         "anatomy": {
           "primary_muscles": [
@@ -1758,16 +1909,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -1855,6 +2020,7 @@
         "equipment": [
           "medicine_ball"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_kor_plechevoy_poyas_grud_moschnost",
         "anatomy": {
           "primary_muscles": [
@@ -1924,16 +2090,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -2021,6 +2201,7 @@
         "equipment": [
           "medicine_ball"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_kor_plechevoy_poyas_grud_moschnost",
         "anatomy": {
           "primary_muscles": [
@@ -2090,16 +2271,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -2187,6 +2382,7 @@
         "equipment": [
           "medicine_ball"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_kor_plechevoy_poyas_grud_moschnost",
         "anatomy": {
           "primary_muscles": [
@@ -2256,16 +2452,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -2353,6 +2563,7 @@
         "equipment": [
           "medicine_ball"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_nogi_yagoditsy_kor",
         "anatomy": {
           "primary_muscles": [
@@ -2421,16 +2632,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -2518,6 +2743,7 @@
         "equipment": [
           "medicine_ball"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_nogi_yagoditsy_kor",
         "anatomy": {
           "primary_muscles": [
@@ -2586,16 +2812,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -2683,6 +2923,7 @@
         "equipment": [
           "medicine_ball"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_nogi_yagoditsy_kor",
         "anatomy": {
           "primary_muscles": [
@@ -2751,16 +2992,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -2848,6 +3103,7 @@
         "equipment": [
           "medicine_ball"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_nogi_yagoditsy_kor",
         "anatomy": {
           "primary_muscles": [
@@ -2916,16 +3172,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -3013,6 +3283,7 @@
         "equipment": [
           "medicine_ball"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_kosye_myshtsy_zhivota_kor",
         "anatomy": {
           "primary_muscles": [
@@ -3079,16 +3350,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -3176,6 +3461,7 @@
         "equipment": [
           "medicine_ball"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_kor_plechevoy_poyas_grud_moschnost",
         "anatomy": {
           "primary_muscles": [
@@ -3245,16 +3531,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -3342,6 +3642,7 @@
         "equipment": [
           "medicine_ball"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_kor_stabilizatory_plech",
         "anatomy": {
           "primary_muscles": [
@@ -3408,16 +3709,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -3505,6 +3820,7 @@
         "equipment": [
           "medicine_ball"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_kor_stabilizatory_plech",
         "anatomy": {
           "primary_muscles": [
@@ -3571,16 +3887,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -3668,6 +3998,7 @@
         "equipment": [
           "medicine_ball"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_kor_stabilizatory_plech",
         "anatomy": {
           "primary_muscles": [
@@ -3734,16 +4065,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -3831,6 +4176,7 @@
         "equipment": [
           "medicine_ball"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_kor_vse_telo",
         "anatomy": {
           "primary_muscles": [
@@ -3897,16 +4243,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -3994,6 +4354,7 @@
         "equipment": [
           "medicine_ball"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_kor_vse_telo",
         "anatomy": {
           "primary_muscles": [
@@ -4060,16 +4421,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],

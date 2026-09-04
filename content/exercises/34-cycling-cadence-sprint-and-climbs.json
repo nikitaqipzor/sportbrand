@@ -34,6 +34,7 @@
           "exercise_bike",
           "strength_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_kadens_tehnika_pedalirovaniya",
         "anatomy": {
           "primary_muscles": [],
@@ -75,14 +76,14 @@
       },
       "programming": {
         "raw": "4–12 повторов / 10–120 с",
-        "type": "time",
+        "type": "mixed",
         "sets": {
           "min": null,
           "max": null
         },
         "reps": {
-          "min": null,
-          "max": null
+          "min": 4,
+          "max": 12
         },
         "duration_seconds": {
           "min": 10,
@@ -96,16 +97,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -195,6 +210,7 @@
           "exercise_bike",
           "strength_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_kadens_tehnika_pedalirovaniya",
         "anatomy": {
           "primary_muscles": [],
@@ -236,14 +252,14 @@
       },
       "programming": {
         "raw": "4–12 повторов / 10–120 с",
-        "type": "time",
+        "type": "mixed",
         "sets": {
           "min": null,
           "max": null
         },
         "reps": {
-          "min": null,
-          "max": null
+          "min": 4,
+          "max": 12
         },
         "duration_seconds": {
           "min": 10,
@@ -257,16 +273,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -356,6 +386,7 @@
           "exercise_bike",
           "strength_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_kadens_tehnika_pedalirovaniya",
         "anatomy": {
           "primary_muscles": [],
@@ -397,14 +428,14 @@
       },
       "programming": {
         "raw": "4–12 повторов / 10–120 с",
-        "type": "time",
+        "type": "mixed",
         "sets": {
           "min": null,
           "max": null
         },
         "reps": {
-          "min": null,
-          "max": null
+          "min": 4,
+          "max": 12
         },
         "duration_seconds": {
           "min": 10,
@@ -418,16 +449,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -517,6 +562,7 @@
           "exercise_bike",
           "strength_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_kadens_tehnika_pedalirovaniya",
         "anatomy": {
           "primary_muscles": [],
@@ -558,14 +604,14 @@
       },
       "programming": {
         "raw": "4–12 повторов / 10–120 с",
-        "type": "time",
+        "type": "mixed",
         "sets": {
           "min": null,
           "max": null
         },
         "reps": {
-          "min": null,
-          "max": null
+          "min": 4,
+          "max": 12
         },
         "duration_seconds": {
           "min": 10,
@@ -579,16 +625,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -678,6 +738,7 @@
           "exercise_bike",
           "strength_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_kadens_tehnika_pedalirovaniya",
         "anatomy": {
           "primary_muscles": [],
@@ -719,14 +780,14 @@
       },
       "programming": {
         "raw": "4–12 повторов / 10–120 с",
-        "type": "time",
+        "type": "mixed",
         "sets": {
           "min": null,
           "max": null
         },
         "reps": {
-          "min": null,
-          "max": null
+          "min": 4,
+          "max": 12
         },
         "duration_seconds": {
           "min": 10,
@@ -740,16 +801,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -839,6 +914,7 @@
           "exercise_bike",
           "strength_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_kadens_tehnika_pedalirovaniya",
         "anatomy": {
           "primary_muscles": [],
@@ -880,14 +956,14 @@
       },
       "programming": {
         "raw": "4–12 повторов / 10–120 с",
-        "type": "time",
+        "type": "mixed",
         "sets": {
           "min": null,
           "max": null
         },
         "reps": {
-          "min": null,
-          "max": null
+          "min": 4,
+          "max": 12
         },
         "duration_seconds": {
           "min": 10,
@@ -901,16 +977,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -1000,6 +1090,7 @@
           "court_or_training_area",
           "helmet"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_kadens_tehnika_pedalirovaniya",
         "anatomy": {
           "primary_muscles": [],
@@ -1041,14 +1132,14 @@
       },
       "programming": {
         "raw": "4–12 повторов / 10–120 с",
-        "type": "time",
+        "type": "mixed",
         "sets": {
           "min": null,
           "max": null
         },
         "reps": {
-          "min": null,
-          "max": null
+          "min": 4,
+          "max": 12
         },
         "duration_seconds": {
           "min": 10,
@@ -1062,16 +1153,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -1161,6 +1266,7 @@
           "court_or_training_area",
           "helmet"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_sprint_uskorenie_moschnost",
         "anatomy": {
           "primary_muscles": [
@@ -1206,14 +1312,14 @@
       },
       "programming": {
         "raw": "4–12 повторов / 10–120 с",
-        "type": "time",
+        "type": "mixed",
         "sets": {
           "min": null,
           "max": null
         },
         "reps": {
-          "min": null,
-          "max": null
+          "min": 4,
+          "max": 12
         },
         "duration_seconds": {
           "min": 10,
@@ -1227,16 +1333,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -1326,6 +1446,7 @@
           "court_or_training_area",
           "helmet"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_sprint_uskorenie_moschnost",
         "anatomy": {
           "primary_muscles": [
@@ -1371,14 +1492,14 @@
       },
       "programming": {
         "raw": "4–12 повторов / 10–120 с",
-        "type": "time",
+        "type": "mixed",
         "sets": {
           "min": null,
           "max": null
         },
         "reps": {
-          "min": null,
-          "max": null
+          "min": 4,
+          "max": 12
         },
         "duration_seconds": {
           "min": 10,
@@ -1392,16 +1513,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -1491,6 +1626,7 @@
           "court_or_training_area",
           "helmet"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_sprint_uskorenie_moschnost",
         "anatomy": {
           "primary_muscles": [
@@ -1557,16 +1693,32 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": [
+          "structured_volume"
+        ]
       },
       "safety": {
         "common_errors": [],
@@ -1656,6 +1808,7 @@
           "court_or_training_area",
           "helmet"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_sprint_uskorenie_moschnost",
         "anatomy": {
           "primary_muscles": [
@@ -1722,16 +1875,32 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": [
+          "structured_volume"
+        ]
       },
       "safety": {
         "common_errors": [],
@@ -1821,6 +1990,7 @@
           "court_or_training_area",
           "helmet"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_sprint_uskorenie_moschnost",
         "anatomy": {
           "primary_muscles": [
@@ -1887,16 +2057,32 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": [
+          "structured_volume"
+        ]
       },
       "safety": {
         "common_errors": [],
@@ -1986,6 +2172,7 @@
           "court_or_training_area",
           "helmet"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_sprint_uskorenie_moschnost",
         "anatomy": {
           "primary_muscles": [
@@ -2052,16 +2239,32 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": [
+          "structured_volume"
+        ]
       },
       "safety": {
         "common_errors": [],
@@ -2151,6 +2354,7 @@
           "court_or_training_area",
           "helmet"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_sprint_uskorenie_moschnost",
         "anatomy": {
           "primary_muscles": [
@@ -2196,14 +2400,14 @@
       },
       "programming": {
         "raw": "4–12 повторов / 10–120 с",
-        "type": "time",
+        "type": "mixed",
         "sets": {
           "min": null,
           "max": null
         },
         "reps": {
-          "min": null,
-          "max": null
+          "min": 4,
+          "max": 12
         },
         "duration_seconds": {
           "min": 10,
@@ -2217,16 +2421,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -2315,6 +2533,7 @@
           "bicycle",
           "helmet"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_gruppovaya_ezda_pozitsionirovanie",
         "anatomy": {
           "primary_muscles": [],
@@ -2356,14 +2575,14 @@
       },
       "programming": {
         "raw": "4–12 повторов / 10–120 с",
-        "type": "time",
+        "type": "mixed",
         "sets": {
           "min": null,
           "max": null
         },
         "reps": {
-          "min": null,
-          "max": null
+          "min": 4,
+          "max": 12
         },
         "duration_seconds": {
           "min": 10,
@@ -2377,16 +2596,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -2477,6 +2710,7 @@
           "helmet",
           "cones"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_povoroty_traektoriya_upravlenie",
         "anatomy": {
           "primary_muscles": [],
@@ -2519,7 +2753,7 @@
       },
       "programming": {
         "raw": "4–10 проходов / 5–20 мин навыка",
-        "type": "time",
+        "type": "mixed",
         "sets": {
           "min": null,
           "max": null
@@ -2540,16 +2774,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": 4,
+          "max": 10
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -2639,6 +2887,7 @@
           "court_or_training_area",
           "helmet"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_sprint_uskorenie_moschnost",
         "anatomy": {
           "primary_muscles": [
@@ -2684,14 +2933,14 @@
       },
       "programming": {
         "raw": "4–12 повторов / 10–120 с",
-        "type": "time",
+        "type": "mixed",
         "sets": {
           "min": null,
           "max": null
         },
         "reps": {
-          "min": null,
-          "max": null
+          "min": 4,
+          "max": 12
         },
         "duration_seconds": {
           "min": 10,
@@ -2705,16 +2954,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -2804,6 +3067,7 @@
           "court_or_training_area",
           "helmet"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_podem_silovaya_vynoslivost",
         "anatomy": {
           "primary_muscles": [],
@@ -2846,14 +3110,14 @@
       },
       "programming": {
         "raw": "4–12 повторов / 10–120 с",
-        "type": "time",
+        "type": "mixed",
         "sets": {
           "min": null,
           "max": null
         },
         "reps": {
-          "min": null,
-          "max": null
+          "min": 4,
+          "max": 12
         },
         "duration_seconds": {
           "min": 10,
@@ -2867,16 +3131,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -2966,6 +3244,7 @@
           "court_or_training_area",
           "helmet"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_podem_silovaya_vynoslivost",
         "anatomy": {
           "primary_muscles": [],
@@ -3008,14 +3287,14 @@
       },
       "programming": {
         "raw": "4–12 повторов / 10–120 с",
-        "type": "time",
+        "type": "mixed",
         "sets": {
           "min": null,
           "max": null
         },
         "reps": {
-          "min": null,
-          "max": null
+          "min": 4,
+          "max": 12
         },
         "duration_seconds": {
           "min": 10,
@@ -3029,16 +3308,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -3128,6 +3421,7 @@
           "court_or_training_area",
           "helmet"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_podem_silovaya_vynoslivost",
         "anatomy": {
           "primary_muscles": [],
@@ -3170,14 +3464,14 @@
       },
       "programming": {
         "raw": "4–12 повторов / 10–120 с",
-        "type": "time",
+        "type": "mixed",
         "sets": {
           "min": null,
           "max": null
         },
         "reps": {
-          "min": null,
-          "max": null
+          "min": 4,
+          "max": 12
         },
         "duration_seconds": {
           "min": 10,
@@ -3191,16 +3485,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -3290,6 +3598,7 @@
           "court_or_training_area",
           "helmet"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_podem_silovaya_vynoslivost",
         "anatomy": {
           "primary_muscles": [],
@@ -3332,14 +3641,14 @@
       },
       "programming": {
         "raw": "4–12 повторов / 10–120 с",
-        "type": "time",
+        "type": "mixed",
         "sets": {
           "min": null,
           "max": null
         },
         "reps": {
-          "min": null,
-          "max": null
+          "min": 4,
+          "max": 12
         },
         "duration_seconds": {
           "min": 10,
@@ -3353,16 +3662,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -3452,6 +3775,7 @@
           "exercise_bike",
           "strength_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_energosistema_vynoslivost",
         "anatomy": {
           "primary_muscles": [],
@@ -3494,7 +3818,7 @@
       },
       "programming": {
         "raw": "По зонам: 10 с – 30 мин на интервал",
-        "type": "mixed",
+        "type": "time",
         "sets": {
           "min": null,
           "max": null
@@ -3504,8 +3828,8 @@
           "max": null
         },
         "duration_seconds": {
-          "min": null,
-          "max": null
+          "min": 10,
+          "max": 1800
         },
         "distance_meters": {
           "min": null,
@@ -3515,16 +3839,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -3614,6 +3952,7 @@
           "exercise_bike",
           "strength_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_energosistema_vynoslivost",
         "anatomy": {
           "primary_muscles": [],
@@ -3656,7 +3995,7 @@
       },
       "programming": {
         "raw": "По зонам: 10 с – 30 мин на интервал",
-        "type": "mixed",
+        "type": "time",
         "sets": {
           "min": null,
           "max": null
@@ -3666,8 +4005,8 @@
           "max": null
         },
         "duration_seconds": {
-          "min": null,
-          "max": null
+          "min": 10,
+          "max": 1800
         },
         "distance_meters": {
           "min": null,
@@ -3677,16 +4016,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -3776,6 +4129,7 @@
           "exercise_bike",
           "strength_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_energosistema_vynoslivost",
         "anatomy": {
           "primary_muscles": [],
@@ -3818,7 +4172,7 @@
       },
       "programming": {
         "raw": "По зонам: 10 с – 30 мин на интервал",
-        "type": "mixed",
+        "type": "time",
         "sets": {
           "min": null,
           "max": null
@@ -3828,8 +4182,8 @@
           "max": null
         },
         "duration_seconds": {
-          "min": null,
-          "max": null
+          "min": 10,
+          "max": 1800
         },
         "distance_meters": {
           "min": null,
@@ -3839,16 +4193,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -3938,6 +4306,7 @@
           "exercise_bike",
           "strength_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_energosistema_vynoslivost",
         "anatomy": {
           "primary_muscles": [],
@@ -3980,7 +4349,7 @@
       },
       "programming": {
         "raw": "По зонам: 10 с – 30 мин на интервал",
-        "type": "mixed",
+        "type": "time",
         "sets": {
           "min": null,
           "max": null
@@ -3990,8 +4359,8 @@
           "max": null
         },
         "duration_seconds": {
-          "min": null,
-          "max": null
+          "min": 10,
+          "max": 1800
         },
         "distance_meters": {
           "min": null,
@@ -4001,16 +4370,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -4100,6 +4483,7 @@
           "exercise_bike",
           "strength_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_energosistema_vynoslivost",
         "anatomy": {
           "primary_muscles": [],
@@ -4142,7 +4526,7 @@
       },
       "programming": {
         "raw": "По зонам: 10 с – 30 мин на интервал",
-        "type": "mixed",
+        "type": "time",
         "sets": {
           "min": null,
           "max": null
@@ -4152,8 +4536,8 @@
           "max": null
         },
         "duration_seconds": {
-          "min": null,
-          "max": null
+          "min": 10,
+          "max": 1800
         },
         "distance_meters": {
           "min": null,
@@ -4163,16 +4547,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -4262,6 +4660,7 @@
           "court_or_training_area",
           "helmet"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_energosistema_vynoslivost",
         "anatomy": {
           "primary_muscles": [],
@@ -4304,7 +4703,7 @@
       },
       "programming": {
         "raw": "По зонам: 10 с – 30 мин на интервал",
-        "type": "mixed",
+        "type": "time",
         "sets": {
           "min": null,
           "max": null
@@ -4314,8 +4713,8 @@
           "max": null
         },
         "duration_seconds": {
-          "min": null,
-          "max": null
+          "min": 10,
+          "max": 1800
         },
         "distance_meters": {
           "min": null,
@@ -4325,16 +4724,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -4424,6 +4837,7 @@
           "court_or_training_area",
           "helmet"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_energosistema_vynoslivost",
         "anatomy": {
           "primary_muscles": [],
@@ -4466,7 +4880,7 @@
       },
       "programming": {
         "raw": "По зонам: 10 с – 30 мин на интервал",
-        "type": "mixed",
+        "type": "time",
         "sets": {
           "min": null,
           "max": null
@@ -4476,8 +4890,8 @@
           "max": null
         },
         "duration_seconds": {
-          "min": null,
-          "max": null
+          "min": 10,
+          "max": 1800
         },
         "distance_meters": {
           "min": null,
@@ -4487,16 +4901,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -4586,6 +5014,7 @@
           "exercise_bike",
           "strength_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_energosistema_vynoslivost",
         "anatomy": {
           "primary_muscles": [],
@@ -4628,7 +5057,7 @@
       },
       "programming": {
         "raw": "По зонам: 10 с – 30 мин на интервал",
-        "type": "mixed",
+        "type": "time",
         "sets": {
           "min": null,
           "max": null
@@ -4638,8 +5067,8 @@
           "max": null
         },
         "duration_seconds": {
-          "min": null,
-          "max": null
+          "min": 10,
+          "max": 1800
         },
         "distance_meters": {
           "min": null,
@@ -4649,16 +5078,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -4748,6 +5191,7 @@
           "exercise_bike",
           "strength_machine"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_kadens_tehnika_pedalirovaniya",
         "anatomy": {
           "primary_muscles": [],
@@ -4789,7 +5233,7 @@
       },
       "programming": {
         "raw": "По зонам: 10 с – 30 мин на интервал",
-        "type": "mixed",
+        "type": "time",
         "sets": {
           "min": null,
           "max": null
@@ -4799,8 +5243,8 @@
           "max": null
         },
         "duration_seconds": {
-          "min": null,
-          "max": null
+          "min": 10,
+          "max": 1800
         },
         "distance_meters": {
           "min": null,
@@ -4810,16 +5254,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],

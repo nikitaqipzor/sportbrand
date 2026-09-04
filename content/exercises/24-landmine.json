@@ -33,6 +33,7 @@
           "landmine_attachment",
           "barbell"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_plechi_grud_tritseps_kor_2",
         "anatomy": {
           "primary_muscles": [
@@ -103,16 +104,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -201,6 +216,7 @@
           "landmine_attachment",
           "barbell"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_plechi_grud_tritseps_kor_2",
         "anatomy": {
           "primary_muscles": [
@@ -271,16 +287,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -369,6 +399,7 @@
           "landmine_attachment",
           "barbell"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_plechi_grud_tritseps_kor_2",
         "anatomy": {
           "primary_muscles": [
@@ -439,16 +470,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -537,6 +582,7 @@
           "landmine_attachment",
           "barbell"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_nogi_yagoditsy_kor",
         "anatomy": {
           "primary_muscles": [
@@ -605,16 +651,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -703,6 +763,7 @@
           "landmine_attachment",
           "barbell"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_nogi_yagoditsy_kor",
         "anatomy": {
           "primary_muscles": [
@@ -771,16 +832,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -869,6 +944,7 @@
           "landmine_attachment",
           "barbell"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_nogi_yagoditsy_kor",
         "anatomy": {
           "primary_muscles": [
@@ -937,16 +1013,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -1035,6 +1125,7 @@
           "landmine_attachment",
           "barbell"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_nogi_yagoditsy_kor",
         "anatomy": {
           "primary_muscles": [
@@ -1103,16 +1194,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -1201,6 +1306,7 @@
           "landmine_attachment",
           "barbell"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_zadnyaya_tsep",
         "anatomy": {
           "primary_muscles": [],
@@ -1263,16 +1369,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -1361,6 +1481,7 @@
           "landmine_attachment",
           "barbell"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_spina_bitseps",
         "anatomy": {
           "primary_muscles": [
@@ -1427,16 +1548,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -1525,6 +1660,7 @@
           "landmine_attachment",
           "barbell"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_spina_bitseps",
         "anatomy": {
           "primary_muscles": [
@@ -1591,16 +1727,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -1689,6 +1839,7 @@
           "landmine_attachment",
           "barbell"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_kor_kosye_myshtsy_plechevoy_poyas",
         "anatomy": {
           "primary_muscles": [
@@ -1757,16 +1908,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -1855,6 +2020,7 @@
           "landmine_attachment",
           "barbell"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_plechi_grud_tritseps_kor_2",
         "anatomy": {
           "primary_muscles": [
@@ -1925,16 +2091,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],

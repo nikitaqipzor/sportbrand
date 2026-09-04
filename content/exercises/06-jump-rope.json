@@ -32,6 +32,7 @@
         "equipment": [
           "jump_rope"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_kardio_ikry_stopa_koordinatsiya",
         "anatomy": {
           "primary_muscles": [
@@ -101,16 +102,41 @@
           "min": null,
           "max": null
         },
-        "rest_seconds": {
+        "rounds": {
           "min": null,
           "max": null
         },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": 20,
+          "max": 60
+        },
+        "work_rest_intervals": [
+          {
+            "work_seconds": {
+              "min": 20,
+              "max": 60
+            },
+            "rest_seconds": {
+              "min": 20,
+              "max": 60
+            }
+          }
+        ],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -198,6 +224,7 @@
         "equipment": [
           "jump_rope"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_kardio_koordinatsiya_begovoy_ritm",
         "anatomy": {
           "primary_muscles": [],
@@ -261,16 +288,41 @@
           "min": null,
           "max": null
         },
-        "rest_seconds": {
+        "rounds": {
           "min": null,
           "max": null
         },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": 20,
+          "max": 60
+        },
+        "work_rest_intervals": [
+          {
+            "work_seconds": {
+              "min": 20,
+              "max": 60
+            },
+            "rest_seconds": {
+              "min": 20,
+              "max": 60
+            }
+          }
+        ],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -358,6 +410,7 @@
         "equipment": [
           "jump_rope"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_kardio_koordinatsiya_ikry",
         "anatomy": {
           "primary_muscles": [
@@ -423,16 +476,41 @@
           "min": null,
           "max": null
         },
-        "rest_seconds": {
+        "rounds": {
           "min": null,
           "max": null
         },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": 20,
+          "max": 60
+        },
+        "work_rest_intervals": [
+          {
+            "work_seconds": {
+              "min": 20,
+              "max": 60
+            },
+            "rest_seconds": {
+              "min": 20,
+              "max": 60
+            }
+          }
+        ],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -520,6 +598,7 @@
         "equipment": [
           "jump_rope"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_kardio_sgibateli_bedra_koordinatsiya",
         "anatomy": {
           "primary_muscles": [
@@ -585,16 +664,41 @@
           "min": null,
           "max": null
         },
-        "rest_seconds": {
+        "rounds": {
           "min": null,
           "max": null
         },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": 20,
+          "max": 60
+        },
+        "work_rest_intervals": [
+          {
+            "work_seconds": {
+              "min": 20,
+              "max": 60
+            },
+            "rest_seconds": {
+              "min": 20,
+              "max": 60
+            }
+          }
+        ],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -682,6 +786,7 @@
         "equipment": [
           "jump_rope"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_kardio_koordinatsiya",
         "anatomy": {
           "primary_muscles": [],
@@ -745,16 +850,41 @@
           "min": null,
           "max": null
         },
-        "rest_seconds": {
+        "rounds": {
           "min": null,
           "max": null
         },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": 20,
+          "max": 60
+        },
+        "work_rest_intervals": [
+          {
+            "work_seconds": {
+              "min": 20,
+              "max": 60
+            },
+            "rest_seconds": {
+              "min": 20,
+              "max": 60
+            }
+          }
+        ],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -842,6 +972,7 @@
         "equipment": [
           "jump_rope"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_kardio_privodyaschie_otvodyaschie",
         "anatomy": {
           "primary_muscles": [],
@@ -905,16 +1036,41 @@
           "min": null,
           "max": null
         },
-        "rest_seconds": {
+        "rounds": {
           "min": null,
           "max": null
         },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": 20,
+          "max": 60
+        },
+        "work_rest_intervals": [
+          {
+            "work_seconds": {
+              "min": 20,
+              "max": 60
+            },
+            "rest_seconds": {
+              "min": 20,
+              "max": 60
+            }
+          }
+        ],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -1002,6 +1158,7 @@
         "equipment": [
           "jump_rope"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_kardio_koordinatsiya_golen",
         "anatomy": {
           "primary_muscles": [
@@ -1067,16 +1224,41 @@
           "min": null,
           "max": null
         },
-        "rest_seconds": {
+        "rounds": {
           "min": null,
           "max": null
         },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": 20,
+          "max": 60
+        },
+        "work_rest_intervals": [
+          {
+            "work_seconds": {
+              "min": 20,
+              "max": 60
+            },
+            "rest_seconds": {
+              "min": 20,
+              "max": 60
+            }
+          }
+        ],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -1164,6 +1346,7 @@
         "equipment": [
           "jump_rope"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_kardio_koordinatsiya",
         "anatomy": {
           "primary_muscles": [],
@@ -1227,16 +1410,41 @@
           "min": null,
           "max": null
         },
-        "rest_seconds": {
+        "rounds": {
           "min": null,
           "max": null
         },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": 20,
+          "max": 60
+        },
+        "work_rest_intervals": [
+          {
+            "work_seconds": {
+              "min": 20,
+              "max": 60
+            },
+            "rest_seconds": {
+              "min": 20,
+              "max": 60
+            }
+          }
+        ],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -1324,6 +1532,7 @@
         "equipment": [
           "jump_rope"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_kardio_stopa_lateralnaya_koordinatsiya",
         "anatomy": {
           "primary_muscles": [
@@ -1389,16 +1598,41 @@
           "min": null,
           "max": null
         },
-        "rest_seconds": {
+        "rounds": {
           "min": null,
           "max": null
         },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": 20,
+          "max": 60
+        },
+        "work_rest_intervals": [
+          {
+            "work_seconds": {
+              "min": 20,
+              "max": 60
+            },
+            "rest_seconds": {
+              "min": 20,
+              "max": 60
+            }
+          }
+        ],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -1486,6 +1720,7 @@
         "equipment": [
           "jump_rope"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_kardio_stopa_koordinatsiya",
         "anatomy": {
           "primary_muscles": [
@@ -1551,16 +1786,41 @@
           "min": null,
           "max": null
         },
-        "rest_seconds": {
+        "rounds": {
           "min": null,
           "max": null
         },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": 20,
+          "max": 60
+        },
+        "work_rest_intervals": [
+          {
+            "work_seconds": {
+              "min": 20,
+              "max": 60
+            },
+            "rest_seconds": {
+              "min": 20,
+              "max": 60
+            }
+          }
+        ],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -1648,6 +1908,7 @@
         "equipment": [
           "jump_rope"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_kardio_kosye_koordinatsiya",
         "anatomy": {
           "primary_muscles": [],
@@ -1712,16 +1973,41 @@
           "min": null,
           "max": null
         },
-        "rest_seconds": {
+        "rounds": {
           "min": null,
           "max": null
         },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": 20,
+          "max": 60
+        },
+        "work_rest_intervals": [
+          {
+            "work_seconds": {
+              "min": 20,
+              "max": 60
+            },
+            "rest_seconds": {
+              "min": 20,
+              "max": 60
+            }
+          }
+        ],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -1809,6 +2095,7 @@
         "equipment": [
           "jump_rope"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_ikry_stopa_balans",
         "anatomy": {
           "primary_muscles": [
@@ -1876,16 +2163,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -1973,6 +2274,7 @@
         "equipment": [
           "jump_rope"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_koordinatsiya_golenostop",
         "anatomy": {
           "primary_muscles": [
@@ -2037,16 +2339,41 @@
           "min": null,
           "max": null
         },
-        "rest_seconds": {
+        "rounds": {
           "min": null,
           "max": null
         },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": 20,
+          "max": 60
+        },
+        "work_rest_intervals": [
+          {
+            "work_seconds": {
+              "min": 20,
+              "max": 60
+            },
+            "rest_seconds": {
+              "min": 20,
+              "max": 60
+            }
+          }
+        ],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -2134,6 +2461,7 @@
         "equipment": [
           "jump_rope"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_koordinatsiya_ruk_vosstanovlenie_ritma",
         "anatomy": {
           "primary_muscles": [
@@ -2199,16 +2527,41 @@
           "min": null,
           "max": null
         },
-        "rest_seconds": {
+        "rounds": {
           "min": null,
           "max": null
         },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": 20,
+          "max": 60
+        },
+        "work_rest_intervals": [
+          {
+            "work_seconds": {
+              "min": 20,
+              "max": 60
+            },
+            "rest_seconds": {
+              "min": 20,
+              "max": 60
+            }
+          }
+        ],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -2296,6 +2649,7 @@
         "equipment": [
           "jump_rope"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_koordinatsiya_kardio",
         "anatomy": {
           "primary_muscles": [],
@@ -2359,16 +2713,41 @@
           "min": null,
           "max": null
         },
-        "rest_seconds": {
+        "rounds": {
           "min": null,
           "max": null
         },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": 20,
+          "max": 60
+        },
+        "work_rest_intervals": [
+          {
+            "work_seconds": {
+              "min": 20,
+              "max": 60
+            },
+            "rest_seconds": {
+              "min": 20,
+              "max": 60
+            }
+          }
+        ],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -2456,6 +2835,7 @@
         "equipment": [
           "jump_rope"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_koordinatsiya_plech_kistey_kardio",
         "anatomy": {
           "primary_muscles": [
@@ -2521,16 +2901,41 @@
           "min": null,
           "max": null
         },
-        "rest_seconds": {
+        "rounds": {
           "min": null,
           "max": null
         },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": 20,
+          "max": 60
+        },
+        "work_rest_intervals": [
+          {
+            "work_seconds": {
+              "min": 20,
+              "max": 60
+            },
+            "rest_seconds": {
+              "min": 20,
+              "max": 60
+            }
+          }
+        ],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -2618,6 +3023,7 @@
         "equipment": [
           "jump_rope"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_koordinatsiya_kardio",
         "anatomy": {
           "primary_muscles": [],
@@ -2680,16 +3086,41 @@
           "min": null,
           "max": null
         },
-        "rest_seconds": {
+        "rounds": {
           "min": null,
           "max": null
         },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": 20,
+          "max": 60
+        },
+        "work_rest_intervals": [
+          {
+            "work_seconds": {
+              "min": 20,
+              "max": 60
+            },
+            "rest_seconds": {
+              "min": 20,
+              "max": 60
+            }
+          }
+        ],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -2777,6 +3208,7 @@
         "equipment": [
           "jump_rope"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_moschnost_koordinatsiya_kardio",
         "anatomy": {
           "primary_muscles": [],
@@ -2820,14 +3252,14 @@
       },
       "programming": {
         "raw": "10–40 повторов или интервалы 10–30 с",
-        "type": "time",
+        "type": "mixed",
         "sets": {
           "min": null,
           "max": null
         },
         "reps": {
-          "min": null,
-          "max": null
+          "min": 10,
+          "max": 40
         },
         "duration_seconds": {
           "min": 10,
@@ -2841,16 +3273,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -2938,6 +3384,7 @@
         "equipment": [
           "jump_rope"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_koordinatsiya_moschnost",
         "anatomy": {
           "primary_muscles": [],
@@ -2979,14 +3426,14 @@
       },
       "programming": {
         "raw": "Короткие серии 3–10 повторов",
-        "type": "mixed",
+        "type": "reps",
         "sets": {
           "min": null,
           "max": null
         },
         "reps": {
-          "min": null,
-          "max": null
+          "min": 3,
+          "max": 10
         },
         "duration_seconds": {
           "min": null,
@@ -3000,16 +3447,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -3097,6 +3558,7 @@
         "equipment": [
           "jump_rope"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_skorostnaya_vynoslivost",
         "anatomy": {
           "primary_muscles": [
@@ -3160,16 +3622,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -3257,6 +3733,7 @@
         "equipment": [
           "jump_rope"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_skorostnaya_vynoslivost_koordinatsiya",
         "anatomy": {
           "primary_muscles": [
@@ -3322,16 +3799,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -3419,6 +3910,7 @@
         "equipment": [
           "jump_rope"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_lateralnaya_reaktivnost_kardio",
         "anatomy": {
           "primary_muscles": [],
@@ -3482,16 +3974,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -3579,6 +4085,7 @@
         "equipment": [
           "jump_rope"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_peredne_zadnyaya_reaktivnost",
         "anatomy": {
           "primary_muscles": [],
@@ -3640,16 +4147,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -3737,6 +4258,7 @@
         "equipment": [
           "jump_rope"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_koordinatsiya_kosye",
         "anatomy": {
           "primary_muscles": [],
@@ -3799,16 +4321,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -3896,6 +4432,7 @@
         "equipment": [
           "jump_rope"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_koordinatsiya_kardio",
         "anatomy": {
           "primary_muscles": [],
@@ -3958,16 +4495,41 @@
           "min": null,
           "max": null
         },
-        "rest_seconds": {
+        "rounds": {
           "min": null,
           "max": null
         },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": 20,
+          "max": 60
+        },
+        "work_rest_intervals": [
+          {
+            "work_seconds": {
+              "min": 20,
+              "max": 60
+            },
+            "rest_seconds": {
+              "min": 20,
+              "max": 60
+            }
+          }
+        ],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],

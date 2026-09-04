@@ -111,6 +111,7 @@
         "movement_pattern",
         "difficulty",
         "equipment",
+        "equipment_alternatives",
         "load_profile",
         "anatomy"
       ],
@@ -133,9 +134,18 @@
         },
         "equipment": {
           "type": "array",
-          "minItems": 1,
           "items": {
             "type": "string"
+          }
+        },
+        "equipment_alternatives": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "string"
+            }
           }
         },
         "load_profile": {
@@ -283,9 +293,14 @@
         "duration_seconds",
         "distance_meters",
         "cycles",
+        "rounds",
+        "passes",
+        "attempts",
         "rest_seconds",
+        "work_rest_intervals",
         "intensity",
-        "completion_conditions"
+        "completion_conditions",
+        "unfilled_fields"
       ],
       "properties": {
         "raw": {
@@ -420,6 +435,78 @@
             }
           }
         },
+        "rounds": {
+          "type": "object",
+          "required": [
+            "min",
+            "max"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "min": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "max": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0
+            }
+          }
+        },
+        "passes": {
+          "type": "object",
+          "required": [
+            "min",
+            "max"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "min": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "max": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0
+            }
+          }
+        },
+        "attempts": {
+          "type": "object",
+          "required": [
+            "min",
+            "max"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "min": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "max": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0
+            }
+          }
+        },
         "rest_seconds": {
           "type": "object",
           "required": [
@@ -441,6 +528,67 @@
                 "null"
               ],
               "minimum": 0
+            }
+          }
+        },
+        "work_rest_intervals": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "work_seconds",
+              "rest_seconds"
+            ],
+            "properties": {
+              "work_seconds": {
+                "type": "object",
+                "required": [
+                  "min",
+                  "max"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "min": {
+                    "type": [
+                      "integer",
+                      "null"
+                    ],
+                    "minimum": 0
+                  },
+                  "max": {
+                    "type": [
+                      "integer",
+                      "null"
+                    ],
+                    "minimum": 0
+                  }
+                }
+              },
+              "rest_seconds": {
+                "type": "object",
+                "required": [
+                  "min",
+                  "max"
+                ],
+                "additionalProperties": false,
+                "properties": {
+                  "min": {
+                    "type": [
+                      "integer",
+                      "null"
+                    ],
+                    "minimum": 0
+                  },
+                  "max": {
+                    "type": [
+                      "integer",
+                      "null"
+                    ],
+                    "minimum": 0
+                  }
+                }
+              }
             }
           }
         },
@@ -478,6 +626,12 @@
             "string",
             "null"
           ]
+        },
+        "unfilled_fields": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         }
       }
     },

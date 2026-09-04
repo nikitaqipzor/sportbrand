@@ -29,9 +29,12 @@
         "section": "pull-up-bars-and-dips",
         "movement_pattern": "other",
         "difficulty": "beginner",
-        "equipment": [
-          "pull_up_bar",
-          "dip_bars"
+        "equipment": [],
+        "equipment_alternatives": [
+          [
+            "pull_up_bar",
+            "dip_bars"
+          ]
         ],
         "load_profile": "load_hvat_plechevoy_poyas_lopatochnye_stabilizatory",
         "anatomy": {
@@ -78,14 +81,14 @@
       },
       "programming": {
         "raw": "3–5×10–45 с",
-        "type": "mixed",
+        "type": "time",
         "sets": {
           "min": 3,
           "max": 5
         },
         "reps": {
-          "min": 10,
-          "max": 45
+          "min": null,
+          "max": null
         },
         "duration_seconds": {
           "min": 10,
@@ -99,16 +102,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -193,9 +210,12 @@
         "section": "pull-up-bars-and-dips",
         "movement_pattern": "other",
         "difficulty": "beginner",
-        "equipment": [
-          "pull_up_bar",
-          "dip_bars"
+        "equipment": [],
+        "equipment_alternatives": [
+          [
+            "pull_up_bar",
+            "dip_bars"
+          ]
         ],
         "load_profile": "load_hvat_plechevoy_poyas_lopatochnye_stabilizatory",
         "anatomy": {
@@ -242,14 +262,14 @@
       },
       "programming": {
         "raw": "3–5×10–45 с",
-        "type": "mixed",
+        "type": "time",
         "sets": {
           "min": 3,
           "max": 5
         },
         "reps": {
-          "min": 10,
-          "max": 45
+          "min": null,
+          "max": null
         },
         "duration_seconds": {
           "min": 10,
@@ -263,16 +283,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -357,9 +391,12 @@
         "section": "pull-up-bars-and-dips",
         "movement_pattern": "pull",
         "difficulty": "beginner",
-        "equipment": [
-          "pull_up_bar",
-          "dip_bars"
+        "equipment": [],
+        "equipment_alternatives": [
+          [
+            "pull_up_bar",
+            "dip_bars"
+          ]
         ],
         "load_profile": "load_shirochayshie_bitseps_lopatochnye_stabilizatory",
         "anatomy": {
@@ -428,16 +465,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -522,9 +573,12 @@
         "section": "pull-up-bars-and-dips",
         "movement_pattern": "pull",
         "difficulty": "beginner",
-        "equipment": [
-          "pull_up_bar",
-          "dip_bars"
+        "equipment": [],
+        "equipment_alternatives": [
+          [
+            "pull_up_bar",
+            "dip_bars"
+          ]
         ],
         "load_profile": "load_shirochayshie_bitseps_lopatochnye_stabilizatory",
         "anatomy": {
@@ -593,16 +647,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -687,9 +755,12 @@
         "section": "pull-up-bars-and-dips",
         "movement_pattern": "pull",
         "difficulty": "beginner",
-        "equipment": [
-          "pull_up_bar",
-          "dip_bars"
+        "equipment": [],
+        "equipment_alternatives": [
+          [
+            "pull_up_bar",
+            "dip_bars"
+          ]
         ],
         "load_profile": "load_shirochayshie_bitseps_lopatochnye_stabilizatory",
         "anatomy": {
@@ -758,16 +829,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -852,9 +937,12 @@
         "section": "pull-up-bars-and-dips",
         "movement_pattern": "other",
         "difficulty": "beginner",
-        "equipment": [
-          "pull_up_bar",
-          "dip_bars"
+        "equipment": [],
+        "equipment_alternatives": [
+          [
+            "pull_up_bar",
+            "dip_bars"
+          ]
         ],
         "load_profile": "load_shirochayshie_bitseps_lopatochnye_stabilizatory",
         "anatomy": {
@@ -923,16 +1011,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -1017,9 +1119,12 @@
         "section": "pull-up-bars-and-dips",
         "movement_pattern": "pull",
         "difficulty": "beginner",
-        "equipment": [
-          "pull_up_bar",
-          "dip_bars"
+        "equipment": [],
+        "equipment_alternatives": [
+          [
+            "pull_up_bar",
+            "dip_bars"
+          ]
         ],
         "load_profile": "load_shirochayshie_bitseps_lopatochnye_stabilizatory",
         "anatomy": {
@@ -1088,16 +1193,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -1182,9 +1301,12 @@
         "section": "pull-up-bars-and-dips",
         "movement_pattern": "pull",
         "difficulty": "beginner",
-        "equipment": [
-          "pull_up_bar",
-          "dip_bars"
+        "equipment": [],
+        "equipment_alternatives": [
+          [
+            "pull_up_bar",
+            "dip_bars"
+          ]
         ],
         "load_profile": "load_shirochayshie_bitseps_lopatochnye_stabilizatory",
         "anatomy": {
@@ -1253,16 +1375,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -1347,9 +1483,12 @@
         "section": "pull-up-bars-and-dips",
         "movement_pattern": "other",
         "difficulty": "beginner",
-        "equipment": [
-          "pull_up_bar",
-          "dip_bars"
+        "equipment": [],
+        "equipment_alternatives": [
+          [
+            "pull_up_bar",
+            "dip_bars"
+          ]
         ],
         "load_profile": "load_hvat_plechevoy_poyas_lopatochnye_stabilizatory",
         "anatomy": {
@@ -1396,14 +1535,14 @@
       },
       "programming": {
         "raw": "3–5×10–45 с",
-        "type": "mixed",
+        "type": "time",
         "sets": {
           "min": 3,
           "max": 5
         },
         "reps": {
-          "min": 10,
-          "max": 45
+          "min": null,
+          "max": null
         },
         "duration_seconds": {
           "min": 10,
@@ -1417,16 +1556,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -1511,9 +1664,12 @@
         "section": "pull-up-bars-and-dips",
         "movement_pattern": "other",
         "difficulty": "beginner",
-        "equipment": [
-          "pull_up_bar",
-          "dip_bars"
+        "equipment": [],
+        "equipment_alternatives": [
+          [
+            "pull_up_bar",
+            "dip_bars"
+          ]
         ],
         "load_profile": "load_press_sgibateli_bedra_hvat",
         "anatomy": {
@@ -1561,14 +1717,14 @@
       },
       "programming": {
         "raw": "3–5×10–45 с",
-        "type": "mixed",
+        "type": "time",
         "sets": {
           "min": 3,
           "max": 5
         },
         "reps": {
-          "min": 10,
-          "max": 45
+          "min": null,
+          "max": null
         },
         "duration_seconds": {
           "min": 10,
@@ -1582,16 +1738,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -1676,9 +1846,12 @@
         "section": "pull-up-bars-and-dips",
         "movement_pattern": "other",
         "difficulty": "beginner",
-        "equipment": [
-          "pull_up_bar",
-          "dip_bars"
+        "equipment": [],
+        "equipment_alternatives": [
+          [
+            "pull_up_bar",
+            "dip_bars"
+          ]
         ],
         "load_profile": "load_press_sgibateli_bedra_hvat",
         "anatomy": {
@@ -1726,14 +1899,14 @@
       },
       "programming": {
         "raw": "3–5×10–45 с",
-        "type": "mixed",
+        "type": "time",
         "sets": {
           "min": 3,
           "max": 5
         },
         "reps": {
-          "min": 10,
-          "max": 45
+          "min": null,
+          "max": null
         },
         "duration_seconds": {
           "min": 10,
@@ -1747,16 +1920,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -1841,9 +2028,12 @@
         "section": "pull-up-bars-and-dips",
         "movement_pattern": "other",
         "difficulty": "advanced",
-        "equipment": [
-          "pull_up_bar",
-          "dip_bars"
+        "equipment": [],
+        "equipment_alternatives": [
+          [
+            "pull_up_bar",
+            "dip_bars"
+          ]
         ],
         "load_profile": "load_press_sgibateli_bedra_hvat",
         "anatomy": {
@@ -1912,16 +2102,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -2006,9 +2210,12 @@
         "section": "pull-up-bars-and-dips",
         "movement_pattern": "push",
         "difficulty": "beginner",
-        "equipment": [
-          "pull_up_bar",
-          "dip_bars"
+        "equipment": [],
+        "equipment_alternatives": [
+          [
+            "pull_up_bar",
+            "dip_bars"
+          ]
         ],
         "load_profile": "load_grud_tritseps_plechi_2",
         "anatomy": {
@@ -2078,16 +2285,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -2172,9 +2393,12 @@
         "section": "pull-up-bars-and-dips",
         "movement_pattern": "other",
         "difficulty": "beginner",
-        "equipment": [
-          "pull_up_bar",
-          "dip_bars"
+        "equipment": [],
+        "equipment_alternatives": [
+          [
+            "pull_up_bar",
+            "dip_bars"
+          ]
         ],
         "load_profile": "load_grud_tritseps_plechi_2",
         "anatomy": {
@@ -2223,14 +2447,14 @@
       },
       "programming": {
         "raw": "3–5×10–45 с",
-        "type": "mixed",
+        "type": "time",
         "sets": {
           "min": 3,
           "max": 5
         },
         "reps": {
-          "min": 10,
-          "max": 45
+          "min": null,
+          "max": null
         },
         "duration_seconds": {
           "min": 10,
@@ -2244,16 +2468,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -2338,9 +2576,12 @@
         "section": "pull-up-bars-and-dips",
         "movement_pattern": "other",
         "difficulty": "advanced",
-        "equipment": [
-          "pull_up_bar",
-          "dip_bars"
+        "equipment": [],
+        "equipment_alternatives": [
+          [
+            "pull_up_bar",
+            "dip_bars"
+          ]
         ],
         "load_profile": "load_press_sgibateli_bedra_hvat",
         "anatomy": {
@@ -2388,14 +2629,14 @@
       },
       "programming": {
         "raw": "3–5×10–45 с",
-        "type": "mixed",
+        "type": "time",
         "sets": {
           "min": 3,
           "max": 5
         },
         "reps": {
-          "min": 10,
-          "max": 45
+          "min": null,
+          "max": null
         },
         "duration_seconds": {
           "min": 10,
@@ -2409,16 +2650,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],

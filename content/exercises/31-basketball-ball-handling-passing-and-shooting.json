@@ -35,6 +35,7 @@
           "basketball_hoop",
           "court_or_training_area"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_vedenie_kontrol_myacha_koordinatsiya",
         "anatomy": {
           "primary_muscles": [],
@@ -84,8 +85,8 @@
           "max": 6
         },
         "reps": {
-          "min": 20,
-          "max": 60
+          "min": null,
+          "max": null
         },
         "duration_seconds": {
           "min": 20,
@@ -99,16 +100,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": 4,
+          "max": 10
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -199,6 +214,7 @@
           "basketball_hoop",
           "court_or_training_area"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_vedenie_kontrol_myacha_koordinatsiya",
         "anatomy": {
           "primary_muscles": [],
@@ -248,8 +264,8 @@
           "max": 6
         },
         "reps": {
-          "min": 20,
-          "max": 60
+          "min": null,
+          "max": null
         },
         "duration_seconds": {
           "min": 20,
@@ -263,16 +279,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": 4,
+          "max": 10
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -363,6 +393,7 @@
           "basketball_hoop",
           "court_or_training_area"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_vedenie_kontrol_myacha_koordinatsiya",
         "anatomy": {
           "primary_muscles": [],
@@ -412,8 +443,8 @@
           "max": 6
         },
         "reps": {
-          "min": 20,
-          "max": 60
+          "min": null,
+          "max": null
         },
         "duration_seconds": {
           "min": 20,
@@ -427,16 +458,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": 4,
+          "max": 10
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -527,6 +572,7 @@
           "basketball_hoop",
           "court_or_training_area"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_vedenie_kontrol_myacha_koordinatsiya",
         "anatomy": {
           "primary_muscles": [],
@@ -576,8 +622,8 @@
           "max": 6
         },
         "reps": {
-          "min": 20,
-          "max": 60
+          "min": null,
+          "max": null
         },
         "duration_seconds": {
           "min": 20,
@@ -591,16 +637,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": 4,
+          "max": 10
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -691,6 +751,7 @@
           "basketball_hoop",
           "court_or_training_area"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_vedenie_kontrol_myacha_koordinatsiya",
         "anatomy": {
           "primary_muscles": [],
@@ -740,8 +801,8 @@
           "max": 6
         },
         "reps": {
-          "min": 20,
-          "max": 60
+          "min": null,
+          "max": null
         },
         "duration_seconds": {
           "min": 20,
@@ -755,16 +816,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": 4,
+          "max": 10
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -855,6 +930,7 @@
           "basketball_hoop",
           "court_or_training_area"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_vedenie_kontrol_myacha_koordinatsiya",
         "anatomy": {
           "primary_muscles": [],
@@ -904,8 +980,8 @@
           "max": 6
         },
         "reps": {
-          "min": 20,
-          "max": 60
+          "min": null,
+          "max": null
         },
         "duration_seconds": {
           "min": 20,
@@ -919,16 +995,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": 4,
+          "max": 10
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -1019,6 +1109,7 @@
           "basketball_hoop",
           "court_or_training_area"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_vedenie_kontrol_myacha_koordinatsiya",
         "anatomy": {
           "primary_muscles": [],
@@ -1068,8 +1159,8 @@
           "max": 6
         },
         "reps": {
-          "min": 20,
-          "max": 60
+          "min": null,
+          "max": null
         },
         "duration_seconds": {
           "min": 20,
@@ -1083,16 +1174,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": 4,
+          "max": 10
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -1183,6 +1288,7 @@
           "basketball_hoop",
           "court_or_training_area"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_vedenie_kontrol_myacha_koordinatsiya",
         "anatomy": {
           "primary_muscles": [],
@@ -1232,8 +1338,8 @@
           "max": 6
         },
         "reps": {
-          "min": 20,
-          "max": 60
+          "min": null,
+          "max": null
         },
         "duration_seconds": {
           "min": 20,
@@ -1247,16 +1353,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": 4,
+          "max": 10
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -1347,6 +1467,7 @@
           "basketball_hoop",
           "court_or_training_area"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_vedenie_kontrol_myacha_koordinatsiya",
         "anatomy": {
           "primary_muscles": [],
@@ -1396,8 +1517,8 @@
           "max": 6
         },
         "reps": {
-          "min": 20,
-          "max": 60
+          "min": null,
+          "max": null
         },
         "duration_seconds": {
           "min": 20,
@@ -1411,16 +1532,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": 4,
+          "max": 10
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -1511,6 +1646,7 @@
           "basketball_hoop",
           "court_or_training_area"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_vedenie_kontrol_myacha_koordinatsiya",
         "anatomy": {
           "primary_muscles": [],
@@ -1560,8 +1696,8 @@
           "max": 6
         },
         "reps": {
-          "min": 20,
-          "max": 60
+          "min": null,
+          "max": null
         },
         "duration_seconds": {
           "min": 20,
@@ -1575,16 +1711,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": 4,
+          "max": 10
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -1675,6 +1825,7 @@
           "basketball_hoop",
           "court_or_training_area"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_vedenie_kontrol_myacha_koordinatsiya",
         "anatomy": {
           "primary_muscles": [],
@@ -1724,8 +1875,8 @@
           "max": 6
         },
         "reps": {
-          "min": 20,
-          "max": 60
+          "min": null,
+          "max": null
         },
         "duration_seconds": {
           "min": 20,
@@ -1739,16 +1890,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": 4,
+          "max": 10
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -1839,6 +2004,7 @@
           "basketball_hoop",
           "court_or_training_area"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_vedenie_kontrol_myacha_koordinatsiya",
         "anatomy": {
           "primary_muscles": [],
@@ -1888,8 +2054,8 @@
           "max": 6
         },
         "reps": {
-          "min": 20,
-          "max": 60
+          "min": null,
+          "max": null
         },
         "duration_seconds": {
           "min": 20,
@@ -1903,16 +2069,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": 4,
+          "max": 10
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -2003,6 +2183,7 @@
           "basketball_hoop",
           "court_or_training_area"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_futvork_tormozhenie_smena_napravleniya",
         "anatomy": {
           "primary_muscles": [],
@@ -2067,16 +2248,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -2166,6 +2361,7 @@
           "court_or_training_area",
           "cones"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_skorost_nog_koordinatsiya_moschnost",
         "anatomy": {
           "primary_muscles": [
@@ -2232,16 +2428,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -2332,6 +2542,7 @@
           "basketball_hoop",
           "court_or_training_area"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_vedenie_kontrol_myacha_koordinatsiya",
         "anatomy": {
           "primary_muscles": [],
@@ -2381,8 +2592,8 @@
           "max": 6
         },
         "reps": {
-          "min": 20,
-          "max": 60
+          "min": null,
+          "max": null
         },
         "duration_seconds": {
           "min": 20,
@@ -2396,16 +2607,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": 4,
+          "max": 10
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -2496,6 +2721,7 @@
           "basketball_hoop",
           "court_or_training_area"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_vedenie_kontrol_myacha_koordinatsiya",
         "anatomy": {
           "primary_muscles": [],
@@ -2545,8 +2771,8 @@
           "max": 6
         },
         "reps": {
-          "min": 20,
-          "max": 60
+          "min": null,
+          "max": null
         },
         "duration_seconds": {
           "min": 20,
@@ -2560,16 +2786,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": 4,
+          "max": 10
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -2660,6 +2900,7 @@
           "basketball_hoop",
           "court_or_training_area"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_skorost_nog_koordinatsiya_moschnost",
         "anatomy": {
           "primary_muscles": [
@@ -2726,16 +2967,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -2826,6 +3081,7 @@
           "basketball_hoop",
           "court_or_training_area"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_vedenie_kontrol_myacha_koordinatsiya",
         "anatomy": {
           "primary_muscles": [],
@@ -2875,8 +3131,8 @@
           "max": 6
         },
         "reps": {
-          "min": 20,
-          "max": 60
+          "min": null,
+          "max": null
         },
         "duration_seconds": {
           "min": 20,
@@ -2890,16 +3146,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": 4,
+          "max": 10
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -2989,6 +3259,7 @@
           "ball",
           "wall"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_peredacha_tochnost_prinyatie_resheniya",
         "anatomy": {
           "primary_muscles": [],
@@ -3052,16 +3323,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -3151,6 +3436,7 @@
           "ball",
           "wall"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_peredacha_tochnost_prinyatie_resheniya",
         "anatomy": {
           "primary_muscles": [],
@@ -3214,16 +3500,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -3314,6 +3614,7 @@
           "basketball_hoop",
           "court_or_training_area"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_peredacha_tochnost_prinyatie_resheniya",
         "anatomy": {
           "primary_muscles": [],
@@ -3377,16 +3678,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -3477,6 +3792,7 @@
           "basketball_hoop",
           "court_or_training_area"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_peredacha_tochnost_prinyatie_resheniya",
         "anatomy": {
           "primary_muscles": [],
@@ -3540,16 +3856,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -3640,6 +3970,7 @@
           "basketball_hoop",
           "court_or_training_area"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_vedenie_kontrol_myacha_koordinatsiya",
         "anatomy": {
           "primary_muscles": [],
@@ -3689,8 +4020,8 @@
           "max": 6
         },
         "reps": {
-          "min": 20,
-          "max": 60
+          "min": null,
+          "max": null
         },
         "duration_seconds": {
           "min": 20,
@@ -3704,16 +4035,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": 4,
+          "max": 10
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -3804,6 +4149,7 @@
           "basketball_hoop",
           "court_or_training_area"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_peredacha_tochnost_prinyatie_resheniya",
         "anatomy": {
           "primary_muscles": [],
@@ -3867,16 +4213,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -3967,6 +4327,7 @@
           "basketball_hoop",
           "court_or_training_area"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_vedenie_kontrol_myacha_koordinatsiya",
         "anatomy": {
           "primary_muscles": [],
@@ -4030,16 +4391,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -4130,6 +4505,7 @@
           "basketball_hoop",
           "court_or_training_area"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_peredacha_tochnost_prinyatie_resheniya",
         "anatomy": {
           "primary_muscles": [],
@@ -4193,16 +4569,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -4293,6 +4683,7 @@
           "basketball_hoop",
           "court_or_training_area"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_peredacha_tochnost_prinyatie_resheniya",
         "anatomy": {
           "primary_muscles": [],
@@ -4356,16 +4747,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -4456,6 +4861,7 @@
           "basketball_hoop",
           "court_or_training_area"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_vedenie_kontrol_myacha_koordinatsiya",
         "anatomy": {
           "primary_muscles": [],
@@ -4505,8 +4911,8 @@
           "max": 6
         },
         "reps": {
-          "min": 20,
-          "max": 60
+          "min": null,
+          "max": null
         },
         "duration_seconds": {
           "min": 20,
@@ -4520,16 +4926,30 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": 4,
+          "max": 10
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": []
       },
       "safety": {
         "common_errors": [],
@@ -4620,6 +5040,7 @@
           "basketball_hoop",
           "court_or_training_area"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_brosok_zavershenie_balans",
         "anatomy": {
           "primary_muscles": [],
@@ -4684,16 +5105,32 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": [
+          "structured_volume"
+        ]
       },
       "safety": {
         "common_errors": [],
@@ -4784,6 +5221,7 @@
           "basketball_hoop",
           "court_or_training_area"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_brosok_zavershenie_balans",
         "anatomy": {
           "primary_muscles": [],
@@ -4848,16 +5286,32 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": [
+          "structured_volume"
+        ]
       },
       "safety": {
         "common_errors": [],
@@ -4948,6 +5402,7 @@
           "basketball_hoop",
           "court_or_training_area"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_brosok_zavershenie_balans",
         "anatomy": {
           "primary_muscles": [],
@@ -5012,16 +5467,32 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": [
+          "structured_volume"
+        ]
       },
       "safety": {
         "common_errors": [],
@@ -5112,6 +5583,7 @@
           "basketball_hoop",
           "court_or_training_area"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_brosok_zavershenie_balans",
         "anatomy": {
           "primary_muscles": [],
@@ -5176,16 +5648,32 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": [
+          "structured_volume"
+        ]
       },
       "safety": {
         "common_errors": [],
@@ -5276,6 +5764,7 @@
           "basketball_hoop",
           "court_or_training_area"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_brosok_zavershenie_balans",
         "anatomy": {
           "primary_muscles": [],
@@ -5340,16 +5829,32 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": [
+          "structured_volume"
+        ]
       },
       "safety": {
         "common_errors": [],
@@ -5440,6 +5945,7 @@
           "basketball_hoop",
           "court_or_training_area"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_brosok_zavershenie_balans",
         "anatomy": {
           "primary_muscles": [],
@@ -5504,16 +6010,32 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": [
+          "structured_volume"
+        ]
       },
       "safety": {
         "common_errors": [],
@@ -5604,6 +6126,7 @@
           "basketball_hoop",
           "court_or_training_area"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_brosok_zavershenie_balans",
         "anatomy": {
           "primary_muscles": [],
@@ -5668,16 +6191,32 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": [
+          "structured_volume"
+        ]
       },
       "safety": {
         "common_errors": [],
@@ -5768,6 +6307,7 @@
           "basketball_hoop",
           "court_or_training_area"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_brosok_zavershenie_balans",
         "anatomy": {
           "primary_muscles": [],
@@ -5832,16 +6372,32 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": [
+          "structured_volume"
+        ]
       },
       "safety": {
         "common_errors": [],
@@ -5932,6 +6488,7 @@
           "basketball_hoop",
           "court_or_training_area"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_brosok_zavershenie_balans",
         "anatomy": {
           "primary_muscles": [],
@@ -5996,16 +6553,32 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": [
+          "structured_volume"
+        ]
       },
       "safety": {
         "common_errors": [],
@@ -6096,6 +6669,7 @@
           "basketball_hoop",
           "court_or_training_area"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_brosok_zavershenie_balans",
         "anatomy": {
           "primary_muscles": [],
@@ -6160,16 +6734,32 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": [
+          "structured_volume"
+        ]
       },
       "safety": {
         "common_errors": [],
@@ -6260,6 +6850,7 @@
           "basketball_hoop",
           "court_or_training_area"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_brosok_zavershenie_balans",
         "anatomy": {
           "primary_muscles": [],
@@ -6324,16 +6915,32 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": [
+          "structured_volume"
+        ]
       },
       "safety": {
         "common_errors": [],
@@ -6424,6 +7031,7 @@
           "basketball_hoop",
           "court_or_training_area"
         ],
+        "equipment_alternatives": [],
         "load_profile": "load_brosok_zavershenie_balans",
         "anatomy": {
           "primary_muscles": [],
@@ -6488,16 +7096,32 @@
           "min": null,
           "max": null
         },
+        "rounds": {
+          "min": null,
+          "max": null
+        },
+        "passes": {
+          "min": null,
+          "max": null
+        },
+        "attempts": {
+          "min": null,
+          "max": null
+        },
         "rest_seconds": {
           "min": null,
           "max": null
         },
+        "work_rest_intervals": [],
         "intensity": {
           "type": null,
           "min": null,
           "max": null
         },
-        "completion_conditions": null
+        "completion_conditions": null,
+        "unfilled_fields": [
+          "structured_volume"
+        ]
       },
       "safety": {
         "common_errors": [],

@@ -102,6 +102,29 @@ EQUIPMENT_KEYWORDS = [
     ("тренаж", "strength_machine"), ("машина", "strength_machine"), ("ролик для пресса", "ab_wheel"),
 ]
 
+# These source labels are concrete apparatus names which cannot safely fall back
+# to a broad keyword such as "machine".  The mapping is deliberately explicit.
+EQUIPMENT_EXACT_CODES = {
+    "Leg Press": ["leg_press_machine"], "Hack Squat": ["hack_squat_machine"],
+    "Маятниковый присед": ["pendulum_squat_machine"], "Leg Extension": ["leg_extension_machine"],
+    "Seated Leg Curl": ["seated_leg_curl_machine"], "Lying Leg Curl": ["lying_leg_curl_machine"],
+    "Standing Leg Curl": ["standing_leg_curl_machine"], "Hip Abductor": ["hip_abductor_machine"],
+    "Hip Adductor": ["hip_adductor_machine"], "Glute Machine": ["glute_machine"],
+    "Hip Thrust Machine": ["hip_thrust_machine"], "Ягодичный тренажёр": ["glute_machine"],
+    "Back Extension Machine": ["back_extension_machine"], "Гиперэкстензия": ["back_extension_bench"],
+    "Standing Calf Raise": ["standing_calf_raise_machine"], "Seated Calf Raise": ["seated_calf_raise_machine"],
+    "Calf Machine": ["calf_raise_machine"], "Tibialis Machine": ["tibialis_machine"],
+    "Ab Crunch Machine": ["ab_crunch_machine"], "Rotary Torso": ["rotary_torso_machine"],
+    "Собственный вес": ["bodyweight"], "Без оборудования": ["no_equipment"],
+    "Планируемый снаряд": ["planned_equipment"],
+}
+EQUIPMENT_ALTERNATIVE_LABELS = {
+    "Турник / брусья": [["pull_up_bar", "dip_bars"]],
+    "Гантель / гиря": [["dumbbell", "kettlebell"]],
+    "Гантели / гири": [["dumbbell", "kettlebell"]],
+    "Гири / гантели": [["kettlebell", "dumbbell"]],
+}
+
 
 def write_json(path: Path, value: object) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -149,13 +172,20 @@ def extract_rows() -> list[dict[str, str]]:
     return rows
 
 
-def classify_equipment(raw: str) -> list[str]:
+def classify_equipment(raw: str) -> dict[str, list]:
+    if raw in EQUIPMENT_EXACT_CODES:
+        return {"required": EQUIPMENT_EXACT_CODES[raw], "alternatives": []}
+    if raw in EQUIPMENT_ALTERNATIVE_LABELS:
+        choices = EQUIPMENT_ALTERNATIVE_LABELS[raw]
+        return {"required": [], "alternatives": choices}
     lowered = raw.casefold()
     result: list[str] = []
     for needle, code in EQUIPMENT_KEYWORDS:
         if needle in lowered and code not in result:
             result.append(code)
-    return result or ["unspecified_equipment"]
+    # A source label may be an intentionally broad contextual requirement.  It
+    # still receives a deterministic code instead of a silent unspecified value.
+    return {"required": result or [f"source_equipment_{slugify(raw).replace('-', '_')}"], "alternatives": []}
 
 
 def movement_pattern(name: str, section_code: str) -> str:
@@ -202,33 +232,67 @@ def target_kind(label: str) -> str:
 
 
 def parse_volume(raw: str) -> dict:
-    text = raw.replace("–", "-").replace("×", "x").replace(" ", " ")
+    text = re.sub(r"\s+", " ", raw.replace("–", "-").replace("×", "x")).strip()
     result = {
         "raw": raw, "type": "mixed", "sets": {"min": None, "max": None},
         "reps": {"min": None, "max": None}, "duration_seconds": {"min": None, "max": None},
         "distance_meters": {"min": None, "max": None}, "cycles": {"min": None, "max": None},
-        "rest_seconds": {"min": None, "max": None}, "intensity": {"type": None, "min": None, "max": None},
-        "completion_conditions": None,
+        "rounds": {"min": None, "max": None}, "passes": {"min": None, "max": None},
+        "attempts": {"min": None, "max": None}, "rest_seconds": {"min": None, "max": None},
+        "work_rest_intervals": [], "intensity": {"type": None, "min": None, "max": None},
+        "completion_conditions": None, "unfilled_fields": [],
     }
     set_match = re.search(r"(\d+)\s*-\s*(\d+)\s*x", text, re.I)
     if set_match:
         result["sets"] = {"min": int(set_match.group(1)), "max": int(set_match.group(2))}
-    rep_match = re.search(r"x\s*(\d+)\s*-\s*(\d+)", text, re.I)
+    unit_pattern = r"(?P<unit>мин(?:ут(?:ы|а)?)?\.?|с(?:ек(?:унд(?:ы|а)?)?)?\.?|м\b|повтор(?:ов|а)?|цик(?:л(?:ов|а)?)?|раунд(?:ов|а)?|проход(?:ов|а)?|попыт(?:ок|ки)?)"
+    range_pattern = re.compile(rf"(?P<min>\d+)\s*-\s*(?P<max>\d+)(?!\d)\s*{unit_pattern}", re.I)
+    measurements = []
+    for match in range_pattern.finditer(text):
+        start, end = int(match.group("min")), int(match.group("max"))
+        unit = match.group("unit").casefold().rstrip(".")
+        before, after = text[max(0, match.start() - 16):match.start()].casefold(), text[match.end():match.end() + 16].casefold()
+        if unit.startswith("мин"):
+            key, values = "duration_seconds", {"min": start * 60, "max": end * 60}
+        elif unit.startswith("с"):
+            key, values = "duration_seconds", {"min": start, "max": end}
+        elif unit == "м":
+            key, values = "distance_meters", {"min": start, "max": end}
+        elif unit.startswith("повтор"):
+            key, values = "reps", {"min": start, "max": end}
+        elif unit.startswith("цик"):
+            key, values = "cycles", {"min": start, "max": end}
+        elif unit.startswith("раунд"):
+            key, values = "rounds", {"min": start, "max": end}
+        elif unit.startswith("проход"):
+            key, values = "passes", {"min": start, "max": end}
+        else:
+            key, values = "attempts", {"min": start, "max": end}
+        result[key] = values
+        measurements.append((key, values, before, after))
+    # An x-range without an explicit physical unit is the only case mapped to reps.
+    rep_match = re.search(r"x\s*(\d+)\s*-\s*(\d+)(?!\d)", text, re.I)
     if rep_match:
-        result["reps"] = {"min": int(rep_match.group(1)), "max": int(rep_match.group(2))}
-    time_match = re.search(r"(\d+)\s*-\s*(\d+)\s*(с|сек|мин)", text, re.I)
-    if time_match:
-        multiplier = 60 if time_match.group(3).startswith("мин") else 1
-        result["duration_seconds"] = {"min": int(time_match.group(1)) * multiplier, "max": int(time_match.group(2)) * multiplier}
-    distance_match = re.search(r"(\d+)\s*-\s*(\d+)\s*м\b", text, re.I)
-    if distance_match:
-        result["distance_meters"] = {"min": int(distance_match.group(1)), "max": int(distance_match.group(2))}
-    if result["reps"]["min"] is not None and result["duration_seconds"]["min"] is None and result["distance_meters"]["min"] is None:
-        result["type"] = "reps"
-    elif result["duration_seconds"]["min"] is not None and result["reps"]["min"] is None and result["distance_meters"]["min"] is None:
-        result["type"] = "time"
-    elif result["distance_meters"]["min"] is not None and result["reps"]["min"] is None and result["duration_seconds"]["min"] is None:
-        result["type"] = "distance"
+        following = text[rep_match.end():].lstrip().casefold()
+        explicit_unit = re.match(r"(?:мин|с(?:ек)?|м\b|повтор|цик|раунд|проход|попыт)", following)
+        if not explicit_unit:
+            result["reps"] = {"min": int(rep_match.group(1)), "max": int(rep_match.group(2))}
+    # Work/rest forms retain both values rather than turning rest into repetitions.
+    time_measurements = [(values, before, after) for key, values, before, after in measurements if key == "duration_seconds"]
+    work = next((values for values, before, after in time_measurements if "работ" in before + after), None)
+    rest = next((values for values, before, after in time_measurements if "отдых" in before + after), None)
+    if work and rest:
+        result["work_rest_intervals"] = [{"work_seconds": work, "rest_seconds": rest}]
+        result["rest_seconds"] = rest
+    # Mixed-unit range, e.g. "10 с - 30 мин", is common in cycling intervals.
+    mixed_time = re.search(r"(\d+)\s*с\s*-\s*(\d+)\s*мин", text, re.I)
+    if mixed_time:
+        result["duration_seconds"] = {"min": int(mixed_time.group(1)), "max": int(mixed_time.group(2)) * 60}
+    populated = [key for key in ["reps", "duration_seconds", "distance_meters", "cycles", "rounds", "passes", "attempts"] if result[key]["min"] is not None]
+    if len(populated) == 1:
+        result["type"] = {"reps": "reps", "duration_seconds": "time", "distance_meters": "distance", "cycles": "cycles"}.get(populated[0], "mixed")
+    elif not populated:
+        result["unfilled_fields"].append("structured_volume")
     return result
 
 
@@ -247,9 +311,9 @@ def schema() -> dict:
             "identity": {"type": "object", "additionalProperties": False, "required": ["exercise_id", "legacy_number", "slug", "schema_version", "content_version", "locale", "name", "aliases", "canonical_exercise_id", "variant_of", "publication_status"], "properties": {
                 "exercise_id": {"type": "string", "pattern": "^exercise_[0-9]{4}$"}, "legacy_number": {"type": "integer", "minimum": 1, "maximum": 918}, "slug": {"type": "string", "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"}, "schema_version": {"const": "1.1.0"}, "content_version": {"const": 1}, "locale": {"const": "ru-RU"}, "name": {"type": "object", "required": ["ru", "en"], "additionalProperties": False, "properties": {"ru": {"type": "string", "minLength": 1}, "en": nullable_string}}, "aliases": {"type": "array", "items": {"type": "string"}}, "canonical_exercise_id": nullable_string, "variant_of": nullable_string, "publication_status": {"enum": ["draft", "in_review", "ready", "published", "archived"]}
             }},
-            "classification": {"type": "object", "additionalProperties": False, "required": ["sport", "section", "movement_pattern", "difficulty", "equipment", "load_profile", "anatomy"], "properties": {"sport": {"type": "string"}, "section": {"type": "string"}, "movement_pattern": {"type": "string"}, "difficulty": {"enum": ["beginner", "intermediate", "advanced"]}, "equipment": {"type": "array", "minItems": 1, "items": {"type": "string"}}, "load_profile": {"type": "string"}, "anatomy": {"type": "object", "additionalProperties": False, "required": ["primary_muscles", "secondary_muscles", "primary_targets", "joints", "laterality", "unfilled_fields"], "properties": {"primary_muscles": {"type": "array", "items": {"type": "string"}}, "secondary_muscles": {"type": "array", "items": {"type": "string"}}, "primary_targets": {"type": "array", "items": {"type": "string"}}, "joints": {"type": "array", "items": {"type": "string"}}, "laterality": {"enum": ["bilateral", "left", "right", "alternating", "not_applicable", None]}, "unfilled_fields": {"type": "array", "items": {"type": "string"}}}}}},
+            "classification": {"type": "object", "additionalProperties": False, "required": ["sport", "section", "movement_pattern", "difficulty", "equipment", "equipment_alternatives", "load_profile", "anatomy"], "properties": {"sport": {"type": "string"}, "section": {"type": "string"}, "movement_pattern": {"type": "string"}, "difficulty": {"enum": ["beginner", "intermediate", "advanced"]}, "equipment": {"type": "array", "items": {"type": "string"}}, "equipment_alternatives": {"type": "array", "items": {"type": "array", "minItems": 1, "items": {"type": "string"}}}, "load_profile": {"type": "string"}, "anatomy": {"type": "object", "additionalProperties": False, "required": ["primary_muscles", "secondary_muscles", "primary_targets", "joints", "laterality", "unfilled_fields"], "properties": {"primary_muscles": {"type": "array", "items": {"type": "string"}}, "secondary_muscles": {"type": "array", "items": {"type": "string"}}, "primary_targets": {"type": "array", "items": {"type": "string"}}, "joints": {"type": "array", "items": {"type": "string"}}, "laterality": {"enum": ["bilateral", "left", "right", "alternating", "not_applicable", None]}, "unfilled_fields": {"type": "array", "items": {"type": "string"}}}}}},
             "technique": {"type": "object", "additionalProperties": False, "required": ["source_key_cue", "setup", "start_position", "steps", "key_cues", "breathing", "tempo", "range_of_motion", "finish", "unfilled_fields"], "properties": {"source_key_cue": {"type": "string"}, "setup": nullable_string, "start_position": nullable_string, "steps": {"type": "array", "items": {"type": "string"}}, "key_cues": {"type": "array", "items": {"type": "string"}}, "breathing": nullable_string, "tempo": nullable_string, "range_of_motion": nullable_string, "finish": nullable_string, "unfilled_fields": {"type": "array", "items": {"type": "string"}}}},
-            "programming": {"type": "object", "additionalProperties": False, "required": ["raw", "type", "sets", "reps", "duration_seconds", "distance_meters", "cycles", "rest_seconds", "intensity", "completion_conditions"], "properties": {"raw": {"type": "string"}, "type": {"enum": ["reps", "time", "distance", "cycles", "mixed"]}, "sets": range_schema, "reps": range_schema, "duration_seconds": range_schema, "distance_meters": range_schema, "cycles": range_schema, "rest_seconds": range_schema, "intensity": {"type": "object", "additionalProperties": False, "required": ["type", "min", "max"], "properties": {"type": nullable_string, "min": nullable_string, "max": nullable_string}}, "completion_conditions": nullable_string}},
+            "programming": {"type": "object", "additionalProperties": False, "required": ["raw", "type", "sets", "reps", "duration_seconds", "distance_meters", "cycles", "rounds", "passes", "attempts", "rest_seconds", "work_rest_intervals", "intensity", "completion_conditions", "unfilled_fields"], "properties": {"raw": {"type": "string"}, "type": {"enum": ["reps", "time", "distance", "cycles", "mixed"]}, "sets": range_schema, "reps": range_schema, "duration_seconds": range_schema, "distance_meters": range_schema, "cycles": range_schema, "rounds": range_schema, "passes": range_schema, "attempts": range_schema, "rest_seconds": range_schema, "work_rest_intervals": {"type": "array", "items": {"type": "object", "additionalProperties": False, "required": ["work_seconds", "rest_seconds"], "properties": {"work_seconds": range_schema, "rest_seconds": range_schema}}}, "intensity": {"type": "object", "additionalProperties": False, "required": ["type", "min", "max"], "properties": {"type": nullable_string, "min": nullable_string, "max": nullable_string}}, "completion_conditions": nullable_string, "unfilled_fields": {"type": "array", "items": {"type": "string"}}}},
             "safety": {"type": "object", "additionalProperties": False, "required": ["common_errors", "stop_signals", "limitations", "regressions", "progressions", "injury_notes", "unfilled_fields"], "properties": {"common_errors": {"type": "array", "items": {"type": "string"}}, "stop_signals": {"type": "array", "items": {"type": "string"}}, "limitations": {"type": "array", "items": {"type": "string"}}, "regressions": {"type": "array", "items": {"type": "string"}}, "progressions": {"type": "array", "items": {"type": "string"}}, "injury_notes": nullable_string, "unfilled_fields": {"type": "array", "items": {"type": "string"}}}},
             "media": {"type": "object", "additionalProperties": False, "required": ["main_asset_id", "phase_asset_ids", "muscle_layer_asset_id", "animation_asset_id", "video_url", "view", "crop", "alt_text", "license", "technique_version", "status", "unfilled_fields"], "properties": {"main_asset_id": nullable_string, "phase_asset_ids": {"type": "array", "items": {"type": "string"}}, "muscle_layer_asset_id": nullable_string, "animation_asset_id": nullable_string, "video_url": nullable_string, "view": nullable_string, "crop": {"type": ["object", "null"]}, "alt_text": nullable_string, "license": nullable_string, "technique_version": nullable_string, "status": {"enum": ["missing", "draft", "method_checked", "approved"]}, "unfilled_fields": {"type": "array", "items": {"type": "string"}}}},
             "review": {"type": "object", "additionalProperties": False, "required": ["sources", "reviewers", "author_id", "editor_id", "status", "reviewed_at", "comment", "rejection_reason", "unfilled_fields"], "properties": {"sources": {"type": "array", "items": {"type": "object"}}, "reviewers": {"type": "array", "items": {"type": "object"}}, "author_id": nullable_string, "editor_id": nullable_string, "status": {"enum": ["draft", "method_review", "medical_review", "approved", "rejected"]}, "reviewed_at": nullable_string, "comment": nullable_string, "rejection_reason": nullable_string, "unfilled_fields": {"type": "array", "items": {"type": "string"}}}}
@@ -271,9 +335,10 @@ def main() -> None:
     equipment_codes = {"unspecified_equipment"}
     source_mappings = []
     for raw in raw_equipment:
-        codes = classify_equipment(raw)
+        normalized = classify_equipment(raw)
+        codes = normalized["required"] + [code for group in normalized["alternatives"] for code in group]
         equipment_codes.update(codes)
-        source_mappings.append({"source_label": raw, "equipment_codes": codes})
+        source_mappings.append({"source_label": raw, "equipment_codes": codes, "required_equipment_codes": normalized["required"], "equipment_alternatives": normalized["alternatives"]})
     labels_by_code = defaultdict(list)
     for mapping in source_mappings:
         for code in mapping["equipment_codes"]:
@@ -342,7 +407,7 @@ def main() -> None:
             },
             "classification": {
                 "sport": sport, "section": section_code, "movement_pattern": movement_pattern(row["name"], section_code),
-                "difficulty": LEVEL_CODE[row["level"]], "equipment": equipment,
+                "difficulty": LEVEL_CODE[row["level"]], "equipment": equipment["required"], "equipment_alternatives": equipment["alternatives"],
                 "load_profile": load_profile_by_label[row["load"]],
                 "anatomy": {"primary_muscles": primary_muscles, "secondary_muscles": [], "primary_targets": targets, "joints": [], "laterality": None, "unfilled_fields": ["secondary_muscles", "joints", "laterality"]},
             },
@@ -371,16 +436,25 @@ def main() -> None:
         }
         sections[section_code].append(record)
 
+    catalog_index = {"by_exercise_id": {}, "by_legacy_number": {}, "by_slug": {}}
     for index, (section_code, label, sport) in enumerate(SECTION_DEFINITIONS, start=1):
         exercises = sections[section_code]
-        write_json(OUT / "exercises" / f"{index:02d}-{section_code}.json", {
+        filename = f"{index:02d}-{section_code}.json"
+        write_json(OUT / "exercises" / filename, {
             "schema_version": "1.1.0", "section": {"code": section_code, "legacy_section_number": index, "label_ru": label, "sport": sport}, "exercises": exercises,
         })
+        for offset, exercise in enumerate(exercises):
+            identity = exercise["identity"]
+            lookup = {"file": f"exercises/{filename}", "offset": offset, "legacy_number": identity["legacy_number"], "slug": identity["slug"], "section": section_code}
+            catalog_index["by_exercise_id"][identity["exercise_id"]] = lookup
+            catalog_index["by_legacy_number"][str(identity["legacy_number"])] = identity["exercise_id"]
+            catalog_index["by_slug"][identity["slug"]] = identity["exercise_id"]
 
     write_json(OUT / "catalog.json", {
         "schema_version": "1.1.0", "content_locale": "ru-RU", "exercise_count": len(rows), "section_count": len(SECTION_DEFINITIONS),
-        "source": {"document": SOURCE.name, "legacy_number_range": [1, 918]},
+        "lookup_index": "index.json", "source": {"document": SOURCE.name, "legacy_number_range": [1, 918]},
     })
+    write_json(OUT / "index.json", {"schema_version": "1.1.0", "exercise_count": len(rows), **catalog_index})
 
 
 if __name__ == "__main__":

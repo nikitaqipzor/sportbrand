@@ -9,6 +9,7 @@ const schema = await readJson("schema/exercise.schema.json");
 const exerciseFiles = (await readdir(path.join(root, "exercises"))).filter((file) => file.endsWith(".json")).sort();
 const sections = await Promise.all(exerciseFiles.map((file) => readJson(`exercises/${file}`)));
 const exercises = sections.flatMap((section) => section.exercises);
+const catalogIndex = await readJson("index.json");
 const dictionaries = {
   equipment: new Set((await readJson("dictionaries/equipment.json")).items.map((item) => item.code)),
   targets: new Set((await readJson("dictionaries/load-targets.json")).items.map((item) => item.code)),
@@ -82,6 +83,8 @@ function assertCard(card) {
   assert.ok(dictionaries.levels.has(classification.difficulty));
   assert.ok(dictionaries.profiles.has(classification.load_profile));
   for (const code of classification.equipment) assert.ok(dictionaries.equipment.has(code), `unknown equipment code ${code}`);
+  for (const group of classification.equipment_alternatives) for (const code of group) assert.ok(dictionaries.equipment.has(code), `unknown alternative equipment code ${code}`);
+  assert.ok(classification.equipment.length + classification.equipment_alternatives.flat().length > 0, "card must name required equipment or an alternative");
   for (const code of classification.anatomy.primary_muscles) assert.ok(dictionaries.muscles.has(code), `unknown muscle code ${code}`);
   for (const code of classification.anatomy.secondary_muscles) assert.ok(dictionaries.muscles.has(code), `unknown secondary muscle code ${code}`);
   for (const code of classification.anatomy.primary_targets) assert.ok(dictionaries.targets.has(code), `unknown target code ${code}`);
@@ -90,7 +93,11 @@ function assertCard(card) {
   assert.ok(Array.isArray(technique.unfilled_fields));
   assert.ok(Array.isArray(technique.key_cues));
   assert.ok(["reps", "time", "distance", "cycles", "mixed"].includes(programming.type));
-  for (const key of ["sets", "reps", "duration_seconds", "distance_meters", "cycles", "rest_seconds"]) assertRange(programming[key], `programming.${key}`);
+  for (const key of ["sets", "reps", "duration_seconds", "distance_meters", "cycles", "rounds", "passes", "attempts", "rest_seconds"]) assertRange(programming[key], `programming.${key}`);
+  for (const interval of programming.work_rest_intervals) {
+    assertRange(interval.work_seconds, "programming.work_rest_intervals.work_seconds");
+    assertRange(interval.rest_seconds, "programming.work_rest_intervals.rest_seconds");
+  }
   assert.ok(Array.isArray(safety.common_errors) && Array.isArray(safety.unfilled_fields));
   assert.equal(media.status, "missing");
   assert.ok(Array.isArray(media.phase_asset_ids) && Array.isArray(media.unfilled_fields));
@@ -125,10 +132,35 @@ test("all referenced dictionary codes and 89 source equipment mappings exist", a
   const sourceMappings = await readJson("dictionaries/equipment-source-mappings.json");
   assert.equal(sourceMappings.source_label_count, 89);
   assert.equal(sourceMappings.items.length, 89);
-  for (const mapping of sourceMappings.items) for (const code of mapping.equipment_codes) assert.ok(dictionaries.equipment.has(code));
+  for (const mapping of sourceMappings.items) {
+    assert.ok(!mapping.equipment_codes.includes("unspecified_equipment"), `${mapping.source_label} must not silently become unspecified equipment`);
+    for (const code of mapping.equipment_codes) assert.ok(dictionaries.equipment.has(code));
+  }
   const profiles = await readJson("dictionaries/load-profiles.json");
   assert.equal(profiles.source_label_count, 289);
   for (const profile of profiles.items) for (const code of profile.target_codes) assert.ok(dictionaries.targets.has(code));
+});
+
+test("unit-aware volume parser never stores time or distance as repetitions", () => {
+  const byLegacy = new Map(exercises.map((card) => [card.identity.legacy_number, card]));
+  for (const legacyNumber of [153, 500]) {
+    const volume = byLegacy.get(legacyNumber).programming;
+    assert.equal(volume.reps.min, null, `#${legacyNumber} time prescription must not become repetitions`);
+    assert.notEqual(volume.duration_seconds.min, null, `#${legacyNumber} must retain duration`);
+  }
+  const distance = byLegacy.get(212).programming;
+  assert.equal(distance.reps.min, null, "#212 distance prescription must not become repetitions");
+  assert.notEqual(distance.distance_meters.min, null, "#212 must retain distance");
+  assert.notEqual(byLegacy.get(700).programming.cycles.min, null, "#700 must retain cycles");
+  assert.notEqual(byLegacy.get(784).programming.passes.min, null, "#784 must retain passes");
+  assert.deepEqual(byLegacy.get(918).programming.duration_seconds, { min: 10, max: 1800 }, "#918 must retain the mixed-unit interval");
+});
+
+test("concrete equipment stays concrete and alternatives do not imply a required pair", () => {
+  const byLegacy = new Map(exercises.map((card) => [card.identity.legacy_number, card]));
+  assert.deepEqual(byLegacy.get(56).classification.equipment, ["leg_press_machine"]);
+  assert.deepEqual(byLegacy.get(499).classification.equipment, []);
+  assert.deepEqual(byLegacy.get(499).classification.equipment_alternatives, [["pull_up_bar", "dip_bars"]]);
 });
 
 test("all 28 duplicate names are retained as linked variants", () => {
@@ -138,5 +170,22 @@ test("all 28 duplicate names are retained as linked variants", () => {
   for (const card of variants) {
     assert.ok(ids.has(card.identity.variant_of));
     assert.equal(card.identity.canonical_exercise_id, card.identity.variant_of);
+  }
+});
+
+test("every card is retrievable from the content-only index", () => {
+  assert.equal(catalogIndex.exercise_count, 918);
+  assert.equal(Object.keys(catalogIndex.by_exercise_id).length, 918);
+  assert.equal(Object.keys(catalogIndex.by_legacy_number).length, 918);
+  assert.equal(Object.keys(catalogIndex.by_slug).length, 918);
+  for (const card of exercises) {
+    const { exercise_id, legacy_number, slug } = card.identity;
+    const lookup = catalogIndex.by_exercise_id[exercise_id];
+    assert.ok(lookup, `missing lookup for ${exercise_id}`);
+    assert.equal(catalogIndex.by_legacy_number[String(legacy_number)], exercise_id);
+    assert.equal(catalogIndex.by_slug[slug], exercise_id);
+    const section = sections.find((item) => `exercises/${exerciseFiles[sections.indexOf(item)]}` === lookup.file);
+    assert.ok(section, `${exercise_id} points to a known section file`);
+    assert.equal(section.exercises[lookup.offset].identity.exercise_id, exercise_id);
   }
 });
