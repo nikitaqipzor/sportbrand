@@ -35,10 +35,9 @@ type errorBody struct {
 }
 
 type errorPayload struct {
-	Code    string            `json:"code"`
-	Message string            `json:"message"`
-	Details []workouts.Issue  `json:"details,omitempty"`
-	Extra   map[string]string `json:"-"`
+	Code    string           `json:"code"`
+	Message string           `json:"message"`
+	Details []workouts.Issue `json:"details,omitempty"`
 }
 
 func writeJSON(w http.ResponseWriter, log *slog.Logger, status int, body any) {

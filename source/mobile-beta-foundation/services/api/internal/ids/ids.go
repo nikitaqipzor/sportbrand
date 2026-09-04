@@ -5,7 +5,6 @@ import (
 	"crypto/rand"
 	"encoding/base64"
 	"encoding/hex"
-	"fmt"
 )
 
 // NewUUID returns a random RFC 4122 version 4 UUID.
@@ -60,12 +59,4 @@ func IsUUID(s string) bool {
 
 func isHex(c byte) bool {
 	return (c >= '0' && c <= '9') || (c >= 'a' && c <= 'f') || (c >= 'A' && c <= 'F')
-}
-
-// MustUUID is a helper for tests and fixtures.
-func MustUUID(s string) string {
-	if !IsUUID(s) {
-		panic(fmt.Sprintf("ids: %q is not a UUID", s))
-	}
-	return s
 }

@@ -9,6 +9,7 @@ package store
 import (
 	"context"
 	"errors"
+	"strings"
 	"time"
 )
 
@@ -100,5 +101,5 @@ type Store interface {
 // NormalizeEmail lowercases and trims an address so that lookups and the
 // unique index agree on what "the same account" means.
 func NormalizeEmail(email string) string {
-	return trimLower(email)
+	return strings.ToLower(strings.TrimSpace(email))
 }
