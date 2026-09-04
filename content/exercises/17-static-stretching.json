@@ -1,0 +1,3231 @@
+{
+  "schema_version": "1.1.0",
+  "section": {
+    "code": "static-stretching",
+    "legacy_section_number": 17,
+    "label_ru": "Статическая растяжка",
+    "sport": "general_fitness"
+  },
+  "exercises": [
+    {
+      "identity": {
+        "exercise_id": "exercise_0551",
+        "legacy_number": 551,
+        "slug": "exercise-0551-rastyazhka-ikronozhnoy-u-steny-pryamaya-noga",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Растяжка икроножной у стены — прямая нога",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "static-stretching",
+        "movement_pattern": "stretch",
+        "difficulty": "beginner",
+        "equipment": [
+          "strap",
+          "exercise_mat",
+          "support"
+        ],
+        "load_profile": "load_gibkost_tselevoy_myshechnoy_gruppy",
+        "anatomy": {
+          "primary_muscles": [],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_gibkost_tselevoy_myshechnoy_gruppy"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Удерживайте ровное дыхание и мягкое натяжение; не пружиньте и не тяните через боль.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Удерживайте ровное дыхание и мягкое натяжение",
+          "не пружиньте и не тяните через боль."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "20–60 с × 1–3",
+        "type": "mixed",
+        "sets": {
+          "min": null,
+          "max": null
+        },
+        "reps": {
+          "min": 1,
+          "max": 3
+        },
+        "duration_seconds": {
+          "min": 20,
+          "max": 60
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0552",
+        "legacy_number": 552,
+        "slug": "exercise-0552-rastyazhka-soleus-u-steny-sognutoe-koleno",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Растяжка soleus у стены — согнутое колено",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "static-stretching",
+        "movement_pattern": "stretch",
+        "difficulty": "beginner",
+        "equipment": [
+          "strap",
+          "exercise_mat",
+          "support"
+        ],
+        "load_profile": "load_gibkost_tselevoy_myshechnoy_gruppy",
+        "anatomy": {
+          "primary_muscles": [],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_gibkost_tselevoy_myshechnoy_gruppy"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Удерживайте ровное дыхание и мягкое натяжение; не пружиньте и не тяните через боль.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Удерживайте ровное дыхание и мягкое натяжение",
+          "не пружиньте и не тяните через боль."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "20–60 с × 1–3",
+        "type": "mixed",
+        "sets": {
+          "min": null,
+          "max": null
+        },
+        "reps": {
+          "min": 1,
+          "max": 3
+        },
+        "duration_seconds": {
+          "min": 20,
+          "max": 60
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0553",
+        "legacy_number": 553,
+        "slug": "exercise-0553-rastyazhka-zadney-poverhnosti-bedra-sidya",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Растяжка задней поверхности бедра сидя",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "static-stretching",
+        "movement_pattern": "stretch",
+        "difficulty": "beginner",
+        "equipment": [
+          "strap",
+          "exercise_mat",
+          "support"
+        ],
+        "load_profile": "load_gibkost_tselevoy_myshechnoy_gruppy",
+        "anatomy": {
+          "primary_muscles": [],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_gibkost_tselevoy_myshechnoy_gruppy"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Удерживайте ровное дыхание и мягкое натяжение; не пружиньте и не тяните через боль.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Удерживайте ровное дыхание и мягкое натяжение",
+          "не пружиньте и не тяните через боль."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "20–60 с × 1–3",
+        "type": "mixed",
+        "sets": {
+          "min": null,
+          "max": null
+        },
+        "reps": {
+          "min": 1,
+          "max": 3
+        },
+        "duration_seconds": {
+          "min": 20,
+          "max": 60
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0554",
+        "legacy_number": 554,
+        "slug": "exercise-0554-rastyazhka-hamstring-lezha-so-stropoy",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Растяжка hamstring лёжа со стропой",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "static-stretching",
+        "movement_pattern": "stretch",
+        "difficulty": "beginner",
+        "equipment": [
+          "strap",
+          "exercise_mat",
+          "support"
+        ],
+        "load_profile": "load_gibkost_tselevoy_myshechnoy_gruppy",
+        "anatomy": {
+          "primary_muscles": [],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_gibkost_tselevoy_myshechnoy_gruppy"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Удерживайте ровное дыхание и мягкое натяжение; не пружиньте и не тяните через боль.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Удерживайте ровное дыхание и мягкое натяжение",
+          "не пружиньте и не тяните через боль."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "20–60 с × 1–3",
+        "type": "mixed",
+        "sets": {
+          "min": null,
+          "max": null
+        },
+        "reps": {
+          "min": 1,
+          "max": 3
+        },
+        "duration_seconds": {
+          "min": 20,
+          "max": 60
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0555",
+        "legacy_number": 555,
+        "slug": "exercise-0555-rastyazhka-kvadritsepsa-stoya",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Растяжка квадрицепса стоя",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "static-stretching",
+        "movement_pattern": "stretch",
+        "difficulty": "beginner",
+        "equipment": [
+          "strap",
+          "exercise_mat",
+          "support"
+        ],
+        "load_profile": "load_gibkost_tselevoy_myshechnoy_gruppy",
+        "anatomy": {
+          "primary_muscles": [],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_gibkost_tselevoy_myshechnoy_gruppy"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Удерживайте ровное дыхание и мягкое натяжение; не пружиньте и не тяните через боль.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Удерживайте ровное дыхание и мягкое натяжение",
+          "не пружиньте и не тяните через боль."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "20–60 с × 1–3",
+        "type": "mixed",
+        "sets": {
+          "min": null,
+          "max": null
+        },
+        "reps": {
+          "min": 1,
+          "max": 3
+        },
+        "duration_seconds": {
+          "min": 20,
+          "max": 60
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0556",
+        "legacy_number": 556,
+        "slug": "exercise-0556-rastyazhka-sgibateley-bedra-s-kolena",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Растяжка сгибателей бедра с колена",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "static-stretching",
+        "movement_pattern": "stretch",
+        "difficulty": "beginner",
+        "equipment": [
+          "strap",
+          "exercise_mat",
+          "support"
+        ],
+        "load_profile": "load_gibkost_tselevoy_myshechnoy_gruppy",
+        "anatomy": {
+          "primary_muscles": [],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_gibkost_tselevoy_myshechnoy_gruppy"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Удерживайте ровное дыхание и мягкое натяжение; не пружиньте и не тяните через боль.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Удерживайте ровное дыхание и мягкое натяжение",
+          "не пружиньте и не тяните через боль."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "20–60 с × 1–3",
+        "type": "mixed",
+        "sets": {
+          "min": null,
+          "max": null
+        },
+        "reps": {
+          "min": 1,
+          "max": 3
+        },
+        "duration_seconds": {
+          "min": 20,
+          "max": 60
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0557",
+        "legacy_number": 557,
+        "slug": "exercise-0557-couch-stretch",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Couch stretch",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "static-stretching",
+        "movement_pattern": "stretch",
+        "difficulty": "beginner",
+        "equipment": [
+          "strap",
+          "exercise_mat",
+          "support"
+        ],
+        "load_profile": "load_gibkost_tselevoy_myshechnoy_gruppy",
+        "anatomy": {
+          "primary_muscles": [],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_gibkost_tselevoy_myshechnoy_gruppy"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Удерживайте ровное дыхание и мягкое натяжение; не пружиньте и не тяните через боль.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Удерживайте ровное дыхание и мягкое натяжение",
+          "не пружиньте и не тяните через боль."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "20–60 с × 1–3",
+        "type": "mixed",
+        "sets": {
+          "min": null,
+          "max": null
+        },
+        "reps": {
+          "min": 1,
+          "max": 3
+        },
+        "duration_seconds": {
+          "min": 20,
+          "max": 60
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0558",
+        "legacy_number": 558,
+        "slug": "exercise-0558-figure-4-stretch",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Figure-4 stretch",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "static-stretching",
+        "movement_pattern": "stretch",
+        "difficulty": "beginner",
+        "equipment": [
+          "strap",
+          "exercise_mat",
+          "support"
+        ],
+        "load_profile": "load_gibkost_tselevoy_myshechnoy_gruppy",
+        "anatomy": {
+          "primary_muscles": [],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_gibkost_tselevoy_myshechnoy_gruppy"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Удерживайте ровное дыхание и мягкое натяжение; не пружиньте и не тяните через боль.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Удерживайте ровное дыхание и мягкое натяжение",
+          "не пружиньте и не тяните через боль."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "20–60 с × 1–3",
+        "type": "mixed",
+        "sets": {
+          "min": null,
+          "max": null
+        },
+        "reps": {
+          "min": 1,
+          "max": 3
+        },
+        "duration_seconds": {
+          "min": 20,
+          "max": 60
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0559",
+        "legacy_number": 559,
+        "slug": "exercise-0559-modified-pigeon-stretch",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Modified pigeon stretch",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "static-stretching",
+        "movement_pattern": "stretch",
+        "difficulty": "beginner",
+        "equipment": [
+          "strap",
+          "exercise_mat",
+          "support"
+        ],
+        "load_profile": "load_gibkost_tselevoy_myshechnoy_gruppy",
+        "anatomy": {
+          "primary_muscles": [],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_gibkost_tselevoy_myshechnoy_gruppy"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Удерживайте ровное дыхание и мягкое натяжение; не пружиньте и не тяните через боль.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Удерживайте ровное дыхание и мягкое натяжение",
+          "не пружиньте и не тяните через боль."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "20–60 с × 1–3",
+        "type": "mixed",
+        "sets": {
+          "min": null,
+          "max": null
+        },
+        "reps": {
+          "min": 1,
+          "max": 3
+        },
+        "duration_seconds": {
+          "min": 20,
+          "max": 60
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0560",
+        "legacy_number": 560,
+        "slug": "exercise-0560-butterfly-stretch",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Butterfly stretch",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "static-stretching",
+        "movement_pattern": "stretch",
+        "difficulty": "beginner",
+        "equipment": [
+          "strap",
+          "exercise_mat",
+          "support"
+        ],
+        "load_profile": "load_gibkost_tselevoy_myshechnoy_gruppy",
+        "anatomy": {
+          "primary_muscles": [],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_gibkost_tselevoy_myshechnoy_gruppy"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Удерживайте ровное дыхание и мягкое натяжение; не пружиньте и не тяните через боль.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Удерживайте ровное дыхание и мягкое натяжение",
+          "не пружиньте и не тяните через боль."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "20–60 с × 1–3",
+        "type": "mixed",
+        "sets": {
+          "min": null,
+          "max": null
+        },
+        "reps": {
+          "min": 1,
+          "max": 3
+        },
+        "duration_seconds": {
+          "min": 20,
+          "max": 60
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0561",
+        "legacy_number": 561,
+        "slug": "exercise-0561-bokovoy-vypad-uderzhanie-privodyaschih",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Боковой выпад — удержание приводящих",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "static-stretching",
+        "movement_pattern": "squat",
+        "difficulty": "beginner",
+        "equipment": [
+          "strap",
+          "exercise_mat",
+          "support"
+        ],
+        "load_profile": "load_gibkost_tselevoy_myshechnoy_gruppy",
+        "anatomy": {
+          "primary_muscles": [],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_gibkost_tselevoy_myshechnoy_gruppy"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Удерживайте ровное дыхание и мягкое натяжение; не пружиньте и не тяните через боль.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Удерживайте ровное дыхание и мягкое натяжение",
+          "не пружиньте и не тяните через боль."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "20–60 с × 1–3",
+        "type": "mixed",
+        "sets": {
+          "min": null,
+          "max": null
+        },
+        "reps": {
+          "min": 1,
+          "max": 3
+        },
+        "duration_seconds": {
+          "min": 20,
+          "max": 60
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0562",
+        "legacy_number": 562,
+        "slug": "exercise-0562-rastyazhka-grudi-v-dvernom-proeme",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Растяжка груди в дверном проёме",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "static-stretching",
+        "movement_pattern": "stretch",
+        "difficulty": "beginner",
+        "equipment": [
+          "strap",
+          "exercise_mat",
+          "support"
+        ],
+        "load_profile": "load_gibkost_tselevoy_myshechnoy_gruppy",
+        "anatomy": {
+          "primary_muscles": [],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_gibkost_tselevoy_myshechnoy_gruppy"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Удерживайте ровное дыхание и мягкое натяжение; не пружиньте и не тяните через боль.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Удерживайте ровное дыхание и мягкое натяжение",
+          "не пружиньте и не тяните через боль."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "20–60 с × 1–3",
+        "type": "mixed",
+        "sets": {
+          "min": null,
+          "max": null
+        },
+        "reps": {
+          "min": 1,
+          "max": 3
+        },
+        "duration_seconds": {
+          "min": 20,
+          "max": 60
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0563",
+        "legacy_number": 563,
+        "slug": "exercise-0563-rastyazhka-shirochayshih-v-childs-pose",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Растяжка широчайших в child’s pose",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "static-stretching",
+        "movement_pattern": "stretch",
+        "difficulty": "beginner",
+        "equipment": [
+          "strap",
+          "exercise_mat",
+          "support"
+        ],
+        "load_profile": "load_gibkost_tselevoy_myshechnoy_gruppy",
+        "anatomy": {
+          "primary_muscles": [],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_gibkost_tselevoy_myshechnoy_gruppy"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Удерживайте ровное дыхание и мягкое натяжение; не пружиньте и не тяните через боль.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Удерживайте ровное дыхание и мягкое натяжение",
+          "не пружиньте и не тяните через боль."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "20–60 с × 1–3",
+        "type": "mixed",
+        "sets": {
+          "min": null,
+          "max": null
+        },
+        "reps": {
+          "min": 1,
+          "max": 3
+        },
+        "duration_seconds": {
+          "min": 20,
+          "max": 60
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0564",
+        "legacy_number": 564,
+        "slug": "exercise-0564-rastyazhka-tritsepsa-nad-golovoy",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Растяжка трицепса над головой",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "static-stretching",
+        "movement_pattern": "stretch",
+        "difficulty": "beginner",
+        "equipment": [
+          "strap",
+          "exercise_mat",
+          "support"
+        ],
+        "load_profile": "load_gibkost_tselevoy_myshechnoy_gruppy",
+        "anatomy": {
+          "primary_muscles": [],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_gibkost_tselevoy_myshechnoy_gruppy"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Удерживайте ровное дыхание и мягкое натяжение; не пружиньте и не тяните через боль.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Удерживайте ровное дыхание и мягкое натяжение",
+          "не пружиньте и не тяните через боль."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "20–60 с × 1–3",
+        "type": "mixed",
+        "sets": {
+          "min": null,
+          "max": null
+        },
+        "reps": {
+          "min": 1,
+          "max": 3
+        },
+        "duration_seconds": {
+          "min": 20,
+          "max": 60
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0565",
+        "legacy_number": 565,
+        "slug": "exercise-0565-cross-body-shoulder-stretch",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Cross-body shoulder stretch",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "static-stretching",
+        "movement_pattern": "stretch",
+        "difficulty": "beginner",
+        "equipment": [
+          "strap",
+          "exercise_mat",
+          "support"
+        ],
+        "load_profile": "load_gibkost_tselevoy_myshechnoy_gruppy",
+        "anatomy": {
+          "primary_muscles": [],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_gibkost_tselevoy_myshechnoy_gruppy"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Удерживайте ровное дыхание и мягкое натяжение; не пружиньте и не тяните через боль.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Удерживайте ровное дыхание и мягкое натяжение",
+          "не пружиньте и не тяните через боль."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "20–60 с × 1–3",
+        "type": "mixed",
+        "sets": {
+          "min": null,
+          "max": null
+        },
+        "reps": {
+          "min": 1,
+          "max": 3
+        },
+        "duration_seconds": {
+          "min": 20,
+          "max": 60
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0566",
+        "legacy_number": 566,
+        "slug": "exercise-0566-rastyazhka-bitsepsa-u-steny",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Растяжка бицепса у стены",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "static-stretching",
+        "movement_pattern": "stretch",
+        "difficulty": "beginner",
+        "equipment": [
+          "strap",
+          "exercise_mat",
+          "support"
+        ],
+        "load_profile": "load_gibkost_tselevoy_myshechnoy_gruppy",
+        "anatomy": {
+          "primary_muscles": [],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_gibkost_tselevoy_myshechnoy_gruppy"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Удерживайте ровное дыхание и мягкое натяжение; не пружиньте и не тяните через боль.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Удерживайте ровное дыхание и мягкое натяжение",
+          "не пружиньте и не тяните через боль."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "20–60 с × 1–3",
+        "type": "mixed",
+        "sets": {
+          "min": null,
+          "max": null
+        },
+        "reps": {
+          "min": 1,
+          "max": 3
+        },
+        "duration_seconds": {
+          "min": 20,
+          "max": 60
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0567",
+        "legacy_number": 567,
+        "slug": "exercise-0567-rastyazhka-sgibateley-predplechya",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Растяжка сгибателей предплечья",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "static-stretching",
+        "movement_pattern": "stretch",
+        "difficulty": "beginner",
+        "equipment": [
+          "strap",
+          "exercise_mat",
+          "support"
+        ],
+        "load_profile": "load_gibkost_tselevoy_myshechnoy_gruppy",
+        "anatomy": {
+          "primary_muscles": [],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_gibkost_tselevoy_myshechnoy_gruppy"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Удерживайте ровное дыхание и мягкое натяжение; не пружиньте и не тяните через боль.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Удерживайте ровное дыхание и мягкое натяжение",
+          "не пружиньте и не тяните через боль."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "20–60 с × 1–3",
+        "type": "mixed",
+        "sets": {
+          "min": null,
+          "max": null
+        },
+        "reps": {
+          "min": 1,
+          "max": 3
+        },
+        "duration_seconds": {
+          "min": 20,
+          "max": 60
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0568",
+        "legacy_number": 568,
+        "slug": "exercise-0568-rastyazhka-razgibateley-predplechya",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Растяжка разгибателей предплечья",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "static-stretching",
+        "movement_pattern": "stretch",
+        "difficulty": "beginner",
+        "equipment": [
+          "strap",
+          "exercise_mat",
+          "support"
+        ],
+        "load_profile": "load_gibkost_tselevoy_myshechnoy_gruppy",
+        "anatomy": {
+          "primary_muscles": [],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_gibkost_tselevoy_myshechnoy_gruppy"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Удерживайте ровное дыхание и мягкое натяжение; не пружиньте и не тяните через боль.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Удерживайте ровное дыхание и мягкое натяжение",
+          "не пружиньте и не тяните через боль."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "20–60 с × 1–3",
+        "type": "mixed",
+        "sets": {
+          "min": null,
+          "max": null
+        },
+        "reps": {
+          "min": 1,
+          "max": 3
+        },
+        "duration_seconds": {
+          "min": 20,
+          "max": 60
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0569",
+        "legacy_number": 569,
+        "slug": "exercise-0569-rastyazhka-verhney-trapetsii",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Растяжка верхней трапеции",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "static-stretching",
+        "movement_pattern": "stretch",
+        "difficulty": "beginner",
+        "equipment": [
+          "strap",
+          "exercise_mat",
+          "support"
+        ],
+        "load_profile": "load_gibkost_tselevoy_myshechnoy_gruppy",
+        "anatomy": {
+          "primary_muscles": [],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_gibkost_tselevoy_myshechnoy_gruppy"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Удерживайте ровное дыхание и мягкое натяжение; не пружиньте и не тяните через боль.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Удерживайте ровное дыхание и мягкое натяжение",
+          "не пружиньте и не тяните через боль."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "20–60 с × 1–3",
+        "type": "mixed",
+        "sets": {
+          "min": null,
+          "max": null
+        },
+        "reps": {
+          "min": 1,
+          "max": 3
+        },
+        "duration_seconds": {
+          "min": 20,
+          "max": 60
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0570",
+        "legacy_number": 570,
+        "slug": "exercise-0570-rastyazhka-levator-scapulae",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Растяжка levator scapulae",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "static-stretching",
+        "movement_pattern": "stretch",
+        "difficulty": "beginner",
+        "equipment": [
+          "strap",
+          "exercise_mat",
+          "support"
+        ],
+        "load_profile": "load_gibkost_tselevoy_myshechnoy_gruppy",
+        "anatomy": {
+          "primary_muscles": [],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_gibkost_tselevoy_myshechnoy_gruppy"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Удерживайте ровное дыхание и мягкое натяжение; не пружиньте и не тяните через боль.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Удерживайте ровное дыхание и мягкое натяжение",
+          "не пружиньте и не тяните через боль."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "20–60 с × 1–3",
+        "type": "mixed",
+        "sets": {
+          "min": null,
+          "max": null
+        },
+        "reps": {
+          "min": 1,
+          "max": 3
+        },
+        "duration_seconds": {
+          "min": 20,
+          "max": 60
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    }
+  ]
+}

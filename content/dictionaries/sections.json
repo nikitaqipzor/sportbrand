@@ -1,0 +1,209 @@
+{
+  "version": "1.1.0",
+  "items": [
+    {
+      "code": "machines-and-cable-stations",
+      "legacy_section_number": 1,
+      "label_ru": "Тренажёры и блочные станции",
+      "sport": "general_fitness"
+    },
+    {
+      "code": "bands-and-resistance",
+      "legacy_section_number": 2,
+      "label_ru": "Упражнения с резинками и эспандерами",
+      "sport": "general_fitness"
+    },
+    {
+      "code": "pvc-and-stick",
+      "legacy_section_number": 3,
+      "label_ru": "Упражнения с гимнастической палкой / PVC",
+      "sport": "general_fitness"
+    },
+    {
+      "code": "core",
+      "legacy_section_number": 4,
+      "label_ru": "Пресс и кор",
+      "sport": "general_fitness"
+    },
+    {
+      "code": "warm-up-and-dynamic-mobility",
+      "legacy_section_number": 5,
+      "label_ru": "Разминка и динамическая мобильность",
+      "sport": "general_fitness"
+    },
+    {
+      "code": "jump-rope",
+      "legacy_section_number": 6,
+      "label_ru": "Скакалка: техника и варианты прыжков",
+      "sport": "general_fitness"
+    },
+    {
+      "code": "kettlebells",
+      "legacy_section_number": 7,
+      "label_ru": "Гири (kettlebell)",
+      "sport": "general_fitness"
+    },
+    {
+      "code": "medicine-balls",
+      "legacy_section_number": 8,
+      "label_ru": "Медболы (medicine ball)",
+      "sport": "general_fitness"
+    },
+    {
+      "code": "stability-ball",
+      "legacy_section_number": 9,
+      "label_ru": "Фитбол / stability ball",
+      "sport": "general_fitness"
+    },
+    {
+      "code": "dumbbells",
+      "legacy_section_number": 10,
+      "label_ru": "Гантели",
+      "sport": "general_fitness"
+    },
+    {
+      "code": "barbell",
+      "legacy_section_number": 11,
+      "label_ru": "Штанга",
+      "sport": "general_fitness"
+    },
+    {
+      "code": "bodyweight-and-calisthenics",
+      "legacy_section_number": 12,
+      "label_ru": "Собственный вес / калистеника",
+      "sport": "general_fitness"
+    },
+    {
+      "code": "trx-and-suspension",
+      "legacy_section_number": 13,
+      "label_ru": "TRX / подвесные петли",
+      "sport": "general_fitness"
+    },
+    {
+      "code": "pull-up-bars-and-dips",
+      "legacy_section_number": 14,
+      "label_ru": "Турник и брусья",
+      "sport": "general_fitness"
+    },
+    {
+      "code": "joint-mobility",
+      "legacy_section_number": 15,
+      "label_ru": "Мобильность суставов",
+      "sport": "general_fitness"
+    },
+    {
+      "code": "cool-down",
+      "legacy_section_number": 16,
+      "label_ru": "Заминка",
+      "sport": "general_fitness"
+    },
+    {
+      "code": "static-stretching",
+      "legacy_section_number": 17,
+      "label_ru": "Статическая растяжка",
+      "sport": "general_fitness"
+    },
+    {
+      "code": "self-myofascial-release",
+      "legacy_section_number": 18,
+      "label_ru": "МФР: foam roller и массажный мяч",
+      "sport": "general_fitness"
+    },
+    {
+      "code": "plyometrics-and-jumps",
+      "legacy_section_number": 19,
+      "label_ru": "Плиометрика и прыжки",
+      "sport": "general_fitness"
+    },
+    {
+      "code": "balance-and-proprioception",
+      "legacy_section_number": 20,
+      "label_ru": "Баланс, BOSU и проприоцепция",
+      "sport": "general_fitness"
+    },
+    {
+      "code": "battle-ropes",
+      "legacy_section_number": 21,
+      "label_ru": "Battle ropes / тяжёлые канаты",
+      "sport": "general_fitness"
+    },
+    {
+      "code": "sled",
+      "legacy_section_number": 22,
+      "label_ru": "Сани / sled",
+      "sport": "general_fitness"
+    },
+    {
+      "code": "sandbag",
+      "legacy_section_number": 23,
+      "label_ru": "Sandbag / тренировочный мешок",
+      "sport": "general_fitness"
+    },
+    {
+      "code": "landmine",
+      "legacy_section_number": 24,
+      "label_ru": "Landmine",
+      "sport": "general_fitness"
+    },
+    {
+      "code": "carries-grip-and-forearms",
+      "legacy_section_number": 25,
+      "label_ru": "Переноски, хват и предплечья",
+      "sport": "general_fitness"
+    },
+    {
+      "code": "foot-and-ankle",
+      "legacy_section_number": 26,
+      "label_ru": "Стопа и голеностоп",
+      "sport": "general_fitness"
+    },
+    {
+      "code": "agility-ladder-and-cones",
+      "legacy_section_number": 27,
+      "label_ru": "Лестница координации и конусы",
+      "sport": "general_fitness"
+    },
+    {
+      "code": "breathing-and-recovery",
+      "legacy_section_number": 28,
+      "label_ru": "Дыхание и восстановление",
+      "sport": "general_fitness"
+    },
+    {
+      "code": "swimming-technique-and-drills",
+      "legacy_section_number": 29,
+      "label_ru": "Плавание — техника и дриллы в воде",
+      "sport": "swimming"
+    },
+    {
+      "code": "swimming-starts-turns-and-open-water",
+      "legacy_section_number": 30,
+      "label_ru": "Плавание — старты, повороты, подводная фаза и открытая вода",
+      "sport": "swimming"
+    },
+    {
+      "code": "basketball-ball-handling-passing-and-shooting",
+      "legacy_section_number": 31,
+      "label_ru": "Баскетбол — владение мячом, передачи и бросок",
+      "sport": "basketball"
+    },
+    {
+      "code": "basketball-footwork-defense-and-game-drills",
+      "legacy_section_number": 32,
+      "label_ru": "Баскетбол — футворк, защита, подбор и игровые дриллы",
+      "sport": "basketball"
+    },
+    {
+      "code": "cycling-handling-and-group-technique",
+      "legacy_section_number": 33,
+      "label_ru": "Велоспорт — управление велосипедом и групповая техника",
+      "sport": "cycling"
+    },
+    {
+      "code": "cycling-cadence-sprint-and-climbs",
+      "legacy_section_number": 34,
+      "label_ru": "Велоспорт — каденс, спринт, подъёмы и тренировочные дриллы",
+      "sport": "cycling"
+    }
+  ]
+}

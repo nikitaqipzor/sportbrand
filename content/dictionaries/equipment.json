@@ -1,0 +1,425 @@
+{
+  "version": "1.1.0",
+  "items": [
+    {
+      "code": "ab_wheel",
+      "label_ru": "ab wheel",
+      "source_labels": [
+        "Ролик для пресса"
+      ]
+    },
+    {
+      "code": "agility_ladder",
+      "label_ru": "agility ladder",
+      "source_labels": [
+        "Agility ladder / конусы"
+      ]
+    },
+    {
+      "code": "assisted_pullup_dip_machine",
+      "label_ru": "assisted pullup dip machine",
+      "source_labels": [
+        "Гравитрон"
+      ]
+    },
+    {
+      "code": "balance_pad",
+      "label_ru": "balance pad",
+      "source_labels": [
+        "BOSU / balance pad / вес тела"
+      ]
+    },
+    {
+      "code": "ball",
+      "label_ru": "ball",
+      "source_labels": [
+        "Foam roller / массажный мяч",
+        "Баскетбольный мяч + кольцо/площадка",
+        "Баскетбольный мяч + стена",
+        "Мяч / конусы / площадка",
+        "Площадка + мяч + партнёр(ы)"
+      ]
+    },
+    {
+      "code": "barbell",
+      "label_ru": "barbell",
+      "source_labels": [
+        "Штанга + landmine",
+        "Штанга / стойка / скамья"
+      ]
+    },
+    {
+      "code": "basketball",
+      "label_ru": "basketball",
+      "source_labels": [
+        "Баскетбольный мяч + кольцо/площадка",
+        "Баскетбольный мяч + стена"
+      ]
+    },
+    {
+      "code": "basketball_hoop",
+      "label_ru": "basketball hoop",
+      "source_labels": [
+        "Баскетбольный мяч + кольцо/площадка"
+      ]
+    },
+    {
+      "code": "battle_ropes",
+      "label_ru": "battle ropes",
+      "source_labels": [
+        "Battle ropes"
+      ]
+    },
+    {
+      "code": "bench",
+      "label_ru": "bench",
+      "source_labels": [
+        "Гантели / скамья",
+        "Наклонная скамья",
+        "Скамья",
+        "Штанга / стойка / скамья"
+      ]
+    },
+    {
+      "code": "bicycle",
+      "label_ru": "bicycle",
+      "source_labels": [
+        "Велосипед + станок/велотренажёр или безопасная дорога",
+        "Велосипед + шлем + безопасная площадка/маршрут",
+        "Велосипед + шлем + группа + безопасный маршрут",
+        "Велосипед + шлем + конусы/закрытая площадка"
+      ]
+    },
+    {
+      "code": "bosu",
+      "label_ru": "bosu",
+      "source_labels": [
+        "BOSU / balance pad / вес тела"
+      ]
+    },
+    {
+      "code": "cable_crossover",
+      "label_ru": "cable crossover",
+      "source_labels": [
+        "Кроссовер"
+      ]
+    },
+    {
+      "code": "cable_machine",
+      "label_ru": "cable machine",
+      "source_labels": [
+        "Блок / резина",
+        "Верхний блок",
+        "Нижний блок + канат",
+        "Нижний блок + манжета",
+        "Тренажёр / блок"
+      ]
+    },
+    {
+      "code": "cones",
+      "label_ru": "cones",
+      "source_labels": [
+        "Agility ladder / конусы",
+        "Велосипед + шлем + конусы/закрытая площадка",
+        "Мяч / конусы / площадка"
+      ]
+    },
+    {
+      "code": "court_or_training_area",
+      "label_ru": "court or training area",
+      "source_labels": [
+        "Баскетбольный мяч + кольцо/площадка",
+        "Велосипед + шлем + безопасная площадка/маршрут",
+        "Велосипед + шлем + конусы/закрытая площадка",
+        "Мяч / конусы / площадка",
+        "Площадка + мяч + партнёр(ы)"
+      ]
+    },
+    {
+      "code": "dip_bars",
+      "label_ru": "dip bars",
+      "source_labels": [
+        "Турник / брусья"
+      ]
+    },
+    {
+      "code": "dumbbell",
+      "label_ru": "dumbbell",
+      "source_labels": [
+        "Гантели / гири",
+        "Гантели / гири / блины / турник",
+        "Гантели / скамья",
+        "Гантель / гиря",
+        "Гири / гантели"
+      ]
+    },
+    {
+      "code": "exercise_bike",
+      "label_ru": "exercise bike",
+      "source_labels": [
+        "Велосипед + станок/велотренажёр или безопасная дорога",
+        "Велотренажёр"
+      ]
+    },
+    {
+      "code": "exercise_mat",
+      "label_ru": "exercise mat",
+      "source_labels": [
+        "Вес тела / коврик / палка по ситуации",
+        "Кардио-тренажёр / коврик",
+        "Коврик / стена",
+        "Коврик / стропа / опора"
+      ]
+    },
+    {
+      "code": "foam_roller",
+      "label_ru": "foam roller",
+      "source_labels": [
+        "Foam roller / массажный мяч"
+      ]
+    },
+    {
+      "code": "helmet",
+      "label_ru": "helmet",
+      "source_labels": [
+        "Велосипед + шлем + безопасная площадка/маршрут",
+        "Велосипед + шлем + группа + безопасный маршрут",
+        "Велосипед + шлем + конусы/закрытая площадка"
+      ]
+    },
+    {
+      "code": "jump_rope",
+      "label_ru": "jump rope",
+      "source_labels": [
+        "Скакалка"
+      ]
+    },
+    {
+      "code": "kettlebell",
+      "label_ru": "kettlebell",
+      "source_labels": [
+        "Гантели / гири",
+        "Гантели / гири / блины / турник",
+        "Гантель / гиря",
+        "Гири / гантели",
+        "Гиря / гири"
+      ]
+    },
+    {
+      "code": "landmine_attachment",
+      "label_ru": "landmine attachment",
+      "source_labels": [
+        "Штанга + landmine"
+      ]
+    },
+    {
+      "code": "massage_ball",
+      "label_ru": "massage ball",
+      "source_labels": [
+        "Foam roller / массажный мяч"
+      ]
+    },
+    {
+      "code": "medicine_ball",
+      "label_ru": "medicine ball",
+      "source_labels": [
+        "Медбол"
+      ]
+    },
+    {
+      "code": "open_water",
+      "label_ru": "open water",
+      "source_labels": [
+        "Открытая вода / буй / безопасная акватория"
+      ]
+    },
+    {
+      "code": "plyo_box",
+      "label_ru": "plyo box",
+      "source_labels": [
+        "Вес тела / короб / разметка"
+      ]
+    },
+    {
+      "code": "pool",
+      "label_ru": "pool",
+      "source_labels": [
+        "Бассейн",
+        "Бассейн + доска",
+        "Бассейн + стартовая тумба/бортик по задаче"
+      ]
+    },
+    {
+      "code": "pull_up_bar",
+      "label_ru": "pull up bar",
+      "source_labels": [
+        "Гантели / гири / блины / турник",
+        "Турник",
+        "Турник / брусья"
+      ]
+    },
+    {
+      "code": "rack",
+      "label_ru": "rack",
+      "source_labels": [
+        "Стойка для подъёма коленей",
+        "Штанга / стойка / скамья"
+      ]
+    },
+    {
+      "code": "resistance_band",
+      "label_ru": "resistance band",
+      "source_labels": [
+        "Блок / резина",
+        "Вес тела / резина / ступень",
+        "Лёгкая резина",
+        "Мини-бэнд",
+        "Мини-бэнд / лента",
+        "Опционально мини-бэнд",
+        "Резиновая лента / эспандер",
+        "Толстая резина/стропа"
+      ]
+    },
+    {
+      "code": "rowing_machine",
+      "label_ru": "rowing machine",
+      "source_labels": [
+        "Гребной тренажёр"
+      ]
+    },
+    {
+      "code": "sandbag",
+      "label_ru": "sandbag",
+      "source_labels": [
+        "Sandbag"
+      ]
+    },
+    {
+      "code": "sled",
+      "label_ru": "sled",
+      "source_labels": [
+        "Сани / трос / пояс"
+      ]
+    },
+    {
+      "code": "smith_machine",
+      "label_ru": "smith machine",
+      "source_labels": [
+        "Машина Смита"
+      ]
+    },
+    {
+      "code": "stability_ball",
+      "label_ru": "stability ball",
+      "source_labels": [
+        "Фитбол"
+      ]
+    },
+    {
+      "code": "step",
+      "label_ru": "step",
+      "source_labels": [
+        "Вес тела / резина / ступень"
+      ]
+    },
+    {
+      "code": "strap",
+      "label_ru": "strap",
+      "source_labels": [
+        "Коврик / стропа / опора",
+        "Толстая резина/стропа"
+      ]
+    },
+    {
+      "code": "strength_machine",
+      "label_ru": "strength machine",
+      "source_labels": [
+        "T-bar тренажёр",
+        "Блочный тренажёр",
+        "Велосипед + станок/велотренажёр или безопасная дорога",
+        "Велотренажёр",
+        "Гребной тренажёр",
+        "Кардио-тренажёр / коврик",
+        "Машина Смита",
+        "Рычажный тренажёр",
+        "Тренажёр / блок",
+        "Ягодичный тренажёр"
+      ]
+    },
+    {
+      "code": "support",
+      "label_ru": "support",
+      "source_labels": [
+        "Вес тела / опора",
+        "Коврик / стропа / опора"
+      ]
+    },
+    {
+      "code": "suspension_trainer",
+      "label_ru": "suspension trainer",
+      "source_labels": [
+        "TRX / петли",
+        "Слайдеры / TRX"
+      ]
+    },
+    {
+      "code": "training_stick",
+      "label_ru": "training stick",
+      "source_labels": [
+        "PVC / гимнастическая палка / швабра",
+        "PVC / палка",
+        "Вес тела / коврик / палка по ситуации"
+      ]
+    },
+    {
+      "code": "treadmill",
+      "label_ru": "treadmill",
+      "source_labels": [
+        "Дорожка / зал"
+      ]
+    },
+    {
+      "code": "unspecified_equipment",
+      "label_ru": "unspecified equipment",
+      "source_labels": [
+        "Ab Crunch Machine",
+        "Back Extension Machine",
+        "Calf Machine",
+        "Glute Machine",
+        "Hack Squat",
+        "Hip Abductor",
+        "Hip Adductor",
+        "Hip Thrust Machine",
+        "Leg Extension",
+        "Leg Press",
+        "Lying Leg Curl",
+        "Rotary Torso",
+        "Seated Calf Raise",
+        "Seated Leg Curl",
+        "Standing Calf Raise",
+        "Standing Leg Curl",
+        "Tibialis Machine",
+        "Без оборудования",
+        "Гиперэкстензия",
+        "Маятниковый присед",
+        "Планируемый снаряд",
+        "Собственный вес"
+      ]
+    },
+    {
+      "code": "wall",
+      "label_ru": "wall",
+      "source_labels": [
+        "Баскетбольный мяч + стена",
+        "Коврик / стена"
+      ]
+    },
+    {
+      "code": "weight_plate",
+      "label_ru": "weight plate",
+      "source_labels": [
+        "Гантели / гири / блины / турник"
+      ]
+    }
+  ]
+}

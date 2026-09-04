@@ -1,0 +1,3290 @@
+{
+  "schema_version": "1.1.0",
+  "section": {
+    "code": "trx-and-suspension",
+    "legacy_section_number": 13,
+    "label_ru": "TRX / подвесные петли",
+    "sport": "general_fitness"
+  },
+  "exercises": [
+    {
+      "identity": {
+        "exercise_id": "exercise_0479",
+        "legacy_number": 479,
+        "slug": "exercise-0479-trx-row",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "TRX row",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "trx-and-suspension",
+        "movement_pattern": "pull",
+        "difficulty": "beginner",
+        "equipment": [
+          "suspension_trainer"
+        ],
+        "load_profile": "load_spina_zadnyaya_delta_bitseps",
+        "anatomy": {
+          "primary_muscles": [
+            "target_spina",
+            "target_zadnyaya_delta",
+            "target_bitseps"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_spina",
+            "target_zadnyaya_delta",
+            "target_bitseps"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Ремни натянуты; корпус остаётся единым блоком. Сложность регулируйте углом тела, а не рывками.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Ремни натянуты",
+          "корпус остаётся единым блоком. Сложность регулируйте углом тела, а не рывками."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "2–4×8–20 / 20–45 с",
+        "type": "mixed",
+        "sets": {
+          "min": 2,
+          "max": 4
+        },
+        "reps": {
+          "min": 8,
+          "max": 20
+        },
+        "duration_seconds": {
+          "min": 20,
+          "max": 45
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0480",
+        "legacy_number": 480,
+        "slug": "exercise-0480-trx-high-row",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "TRX high row",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "trx-and-suspension",
+        "movement_pattern": "pull",
+        "difficulty": "beginner",
+        "equipment": [
+          "suspension_trainer"
+        ],
+        "load_profile": "load_spina_zadnyaya_delta_bitseps",
+        "anatomy": {
+          "primary_muscles": [
+            "target_spina",
+            "target_zadnyaya_delta",
+            "target_bitseps"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_spina",
+            "target_zadnyaya_delta",
+            "target_bitseps"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Ремни натянуты; корпус остаётся единым блоком. Сложность регулируйте углом тела, а не рывками.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Ремни натянуты",
+          "корпус остаётся единым блоком. Сложность регулируйте углом тела, а не рывками."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "2–4×8–20 / 20–45 с",
+        "type": "mixed",
+        "sets": {
+          "min": 2,
+          "max": 4
+        },
+        "reps": {
+          "min": 8,
+          "max": 20
+        },
+        "duration_seconds": {
+          "min": 20,
+          "max": 45
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0481",
+        "legacy_number": 481,
+        "slug": "exercise-0481-trx-low-row",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "TRX low row",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "trx-and-suspension",
+        "movement_pattern": "pull",
+        "difficulty": "beginner",
+        "equipment": [
+          "suspension_trainer"
+        ],
+        "load_profile": "load_spina_zadnyaya_delta_bitseps",
+        "anatomy": {
+          "primary_muscles": [
+            "target_spina",
+            "target_zadnyaya_delta",
+            "target_bitseps"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_spina",
+            "target_zadnyaya_delta",
+            "target_bitseps"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Ремни натянуты; корпус остаётся единым блоком. Сложность регулируйте углом тела, а не рывками.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Ремни натянуты",
+          "корпус остаётся единым блоком. Сложность регулируйте углом тела, а не рывками."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "2–4×8–20 / 20–45 с",
+        "type": "mixed",
+        "sets": {
+          "min": 2,
+          "max": 4
+        },
+        "reps": {
+          "min": 8,
+          "max": 20
+        },
+        "duration_seconds": {
+          "min": 20,
+          "max": 45
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0482",
+        "legacy_number": 482,
+        "slug": "exercise-0482-trx-power-pull",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "TRX power pull",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "trx-and-suspension",
+        "movement_pattern": "pull",
+        "difficulty": "advanced",
+        "equipment": [
+          "suspension_trainer"
+        ],
+        "load_profile": "load_spina_zadnyaya_delta_bitseps",
+        "anatomy": {
+          "primary_muscles": [
+            "target_spina",
+            "target_zadnyaya_delta",
+            "target_bitseps"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_spina",
+            "target_zadnyaya_delta",
+            "target_bitseps"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Ремни натянуты; корпус остаётся единым блоком. Сложность регулируйте углом тела, а не рывками.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Ремни натянуты",
+          "корпус остаётся единым блоком. Сложность регулируйте углом тела, а не рывками."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "2–4×8–20 / 20–45 с",
+        "type": "mixed",
+        "sets": {
+          "min": 2,
+          "max": 4
+        },
+        "reps": {
+          "min": 8,
+          "max": 20
+        },
+        "duration_seconds": {
+          "min": 20,
+          "max": 45
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0483",
+        "legacy_number": 483,
+        "slug": "exercise-0483-trx-chest-press",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "TRX chest press",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "trx-and-suspension",
+        "movement_pattern": "other",
+        "difficulty": "beginner",
+        "equipment": [
+          "suspension_trainer"
+        ],
+        "load_profile": "load_grud_tritseps_plechi",
+        "anatomy": {
+          "primary_muscles": [
+            "target_grud",
+            "target_tritseps",
+            "target_plechi"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_grud",
+            "target_tritseps",
+            "target_plechi"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Ремни натянуты; корпус остаётся единым блоком. Сложность регулируйте углом тела, а не рывками.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Ремни натянуты",
+          "корпус остаётся единым блоком. Сложность регулируйте углом тела, а не рывками."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "2–4×8–20 / 20–45 с",
+        "type": "mixed",
+        "sets": {
+          "min": 2,
+          "max": 4
+        },
+        "reps": {
+          "min": 8,
+          "max": 20
+        },
+        "duration_seconds": {
+          "min": 20,
+          "max": 45
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0484",
+        "legacy_number": 484,
+        "slug": "exercise-0484-trx-push-up",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "TRX push-up",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "trx-and-suspension",
+        "movement_pattern": "push",
+        "difficulty": "beginner",
+        "equipment": [
+          "suspension_trainer"
+        ],
+        "load_profile": "load_grud_tritseps_plechi",
+        "anatomy": {
+          "primary_muscles": [
+            "target_grud",
+            "target_tritseps",
+            "target_plechi"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_grud",
+            "target_tritseps",
+            "target_plechi"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Ремни натянуты; корпус остаётся единым блоком. Сложность регулируйте углом тела, а не рывками.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Ремни натянуты",
+          "корпус остаётся единым блоком. Сложность регулируйте углом тела, а не рывками."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "2–4×8–20 / 20–45 с",
+        "type": "mixed",
+        "sets": {
+          "min": 2,
+          "max": 4
+        },
+        "reps": {
+          "min": 8,
+          "max": 20
+        },
+        "duration_seconds": {
+          "min": 20,
+          "max": 45
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0485",
+        "legacy_number": 485,
+        "slug": "exercise-0485-trx-triceps-press",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "TRX triceps press",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "trx-and-suspension",
+        "movement_pattern": "other",
+        "difficulty": "beginner",
+        "equipment": [
+          "suspension_trainer"
+        ],
+        "load_profile": "load_grud_tritseps_plechi",
+        "anatomy": {
+          "primary_muscles": [
+            "target_grud",
+            "target_tritseps",
+            "target_plechi"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_grud",
+            "target_tritseps",
+            "target_plechi"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Ремни натянуты; корпус остаётся единым блоком. Сложность регулируйте углом тела, а не рывками.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Ремни натянуты",
+          "корпус остаётся единым блоком. Сложность регулируйте углом тела, а не рывками."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "2–4×8–20 / 20–45 с",
+        "type": "mixed",
+        "sets": {
+          "min": 2,
+          "max": 4
+        },
+        "reps": {
+          "min": 8,
+          "max": 20
+        },
+        "duration_seconds": {
+          "min": 20,
+          "max": 45
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0486",
+        "legacy_number": 486,
+        "slug": "exercise-0486-trx-biceps-curl",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "TRX biceps curl",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "trx-and-suspension",
+        "movement_pattern": "other",
+        "difficulty": "beginner",
+        "equipment": [
+          "suspension_trainer"
+        ],
+        "load_profile": "load_bitseps",
+        "anatomy": {
+          "primary_muscles": [
+            "target_bitseps"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_bitseps"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Ремни натянуты; корпус остаётся единым блоком. Сложность регулируйте углом тела, а не рывками.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Ремни натянуты",
+          "корпус остаётся единым блоком. Сложность регулируйте углом тела, а не рывками."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "2–4×8–20 / 20–45 с",
+        "type": "mixed",
+        "sets": {
+          "min": 2,
+          "max": 4
+        },
+        "reps": {
+          "min": 8,
+          "max": 20
+        },
+        "duration_seconds": {
+          "min": 20,
+          "max": 45
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0487",
+        "legacy_number": 487,
+        "slug": "exercise-0487-trx-y-fly",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "TRX Y-fly",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "trx-and-suspension",
+        "movement_pattern": "other",
+        "difficulty": "beginner",
+        "equipment": [
+          "suspension_trainer"
+        ],
+        "load_profile": "load_spina_zadnyaya_delta_bitseps",
+        "anatomy": {
+          "primary_muscles": [
+            "target_spina",
+            "target_zadnyaya_delta",
+            "target_bitseps"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_spina",
+            "target_zadnyaya_delta",
+            "target_bitseps"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Ремни натянуты; корпус остаётся единым блоком. Сложность регулируйте углом тела, а не рывками.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Ремни натянуты",
+          "корпус остаётся единым блоком. Сложность регулируйте углом тела, а не рывками."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "2–4×8–20 / 20–45 с",
+        "type": "mixed",
+        "sets": {
+          "min": 2,
+          "max": 4
+        },
+        "reps": {
+          "min": 8,
+          "max": 20
+        },
+        "duration_seconds": {
+          "min": 20,
+          "max": 45
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0488",
+        "legacy_number": 488,
+        "slug": "exercise-0488-trx-t-fly",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "TRX T-fly",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "trx-and-suspension",
+        "movement_pattern": "other",
+        "difficulty": "beginner",
+        "equipment": [
+          "suspension_trainer"
+        ],
+        "load_profile": "load_spina_zadnyaya_delta_bitseps",
+        "anatomy": {
+          "primary_muscles": [
+            "target_spina",
+            "target_zadnyaya_delta",
+            "target_bitseps"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_spina",
+            "target_zadnyaya_delta",
+            "target_bitseps"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Ремни натянуты; корпус остаётся единым блоком. Сложность регулируйте углом тела, а не рывками.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Ремни натянуты",
+          "корпус остаётся единым блоком. Сложность регулируйте углом тела, а не рывками."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "2–4×8–20 / 20–45 с",
+        "type": "mixed",
+        "sets": {
+          "min": 2,
+          "max": 4
+        },
+        "reps": {
+          "min": 8,
+          "max": 20
+        },
+        "duration_seconds": {
+          "min": 20,
+          "max": 45
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0489",
+        "legacy_number": 489,
+        "slug": "exercise-0489-trx-squat",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "TRX squat",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "trx-and-suspension",
+        "movement_pattern": "squat",
+        "difficulty": "beginner",
+        "equipment": [
+          "suspension_trainer"
+        ],
+        "load_profile": "load_nogi_yagoditsy",
+        "anatomy": {
+          "primary_muscles": [
+            "target_nogi",
+            "target_yagoditsy"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_nogi",
+            "target_yagoditsy"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Ремни натянуты; корпус остаётся единым блоком. Сложность регулируйте углом тела, а не рывками.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Ремни натянуты",
+          "корпус остаётся единым блоком. Сложность регулируйте углом тела, а не рывками."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "2–4×8–20 / 20–45 с",
+        "type": "mixed",
+        "sets": {
+          "min": 2,
+          "max": 4
+        },
+        "reps": {
+          "min": 8,
+          "max": 20
+        },
+        "duration_seconds": {
+          "min": 20,
+          "max": 45
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0490",
+        "legacy_number": 490,
+        "slug": "exercise-0490-trx-assisted-single-leg-squat",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "TRX assisted single-leg squat",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "trx-and-suspension",
+        "movement_pattern": "squat",
+        "difficulty": "intermediate",
+        "equipment": [
+          "suspension_trainer"
+        ],
+        "load_profile": "load_nogi_yagoditsy",
+        "anatomy": {
+          "primary_muscles": [
+            "target_nogi",
+            "target_yagoditsy"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_nogi",
+            "target_yagoditsy"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Ремни натянуты; корпус остаётся единым блоком. Сложность регулируйте углом тела, а не рывками.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Ремни натянуты",
+          "корпус остаётся единым блоком. Сложность регулируйте углом тела, а не рывками."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "2–4×8–20 / 20–45 с",
+        "type": "mixed",
+        "sets": {
+          "min": 2,
+          "max": 4
+        },
+        "reps": {
+          "min": 8,
+          "max": 20
+        },
+        "duration_seconds": {
+          "min": 20,
+          "max": 45
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0491",
+        "legacy_number": 491,
+        "slug": "exercise-0491-trx-reverse-lunge",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "TRX reverse lunge",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "trx-and-suspension",
+        "movement_pattern": "squat",
+        "difficulty": "beginner",
+        "equipment": [
+          "suspension_trainer"
+        ],
+        "load_profile": "load_nogi_yagoditsy",
+        "anatomy": {
+          "primary_muscles": [
+            "target_nogi",
+            "target_yagoditsy"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_nogi",
+            "target_yagoditsy"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Ремни натянуты; корпус остаётся единым блоком. Сложность регулируйте углом тела, а не рывками.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Ремни натянуты",
+          "корпус остаётся единым блоком. Сложность регулируйте углом тела, а не рывками."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "2–4×8–20 / 20–45 с",
+        "type": "mixed",
+        "sets": {
+          "min": 2,
+          "max": 4
+        },
+        "reps": {
+          "min": 8,
+          "max": 20
+        },
+        "duration_seconds": {
+          "min": 20,
+          "max": 45
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0492",
+        "legacy_number": 492,
+        "slug": "exercise-0492-trx-curtsy-lunge",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "TRX curtsy lunge",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "trx-and-suspension",
+        "movement_pattern": "squat",
+        "difficulty": "intermediate",
+        "equipment": [
+          "suspension_trainer"
+        ],
+        "load_profile": "load_nogi_yagoditsy",
+        "anatomy": {
+          "primary_muscles": [
+            "target_nogi",
+            "target_yagoditsy"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_nogi",
+            "target_yagoditsy"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Ремни натянуты; корпус остаётся единым блоком. Сложность регулируйте углом тела, а не рывками.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Ремни натянуты",
+          "корпус остаётся единым блоком. Сложность регулируйте углом тела, а не рывками."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "2–4×8–20 / 20–45 с",
+        "type": "mixed",
+        "sets": {
+          "min": 2,
+          "max": 4
+        },
+        "reps": {
+          "min": 8,
+          "max": 20
+        },
+        "duration_seconds": {
+          "min": 20,
+          "max": 45
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0493",
+        "legacy_number": 493,
+        "slug": "exercise-0493-trx-hamstring-curl",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "TRX hamstring curl",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "trx-and-suspension",
+        "movement_pattern": "other",
+        "difficulty": "beginner",
+        "equipment": [
+          "suspension_trainer"
+        ],
+        "load_profile": "load_zadnyaya_tsep_yagoditsy",
+        "anatomy": {
+          "primary_muscles": [
+            "target_yagoditsy"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_zadnyaya_tsep",
+            "target_yagoditsy"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Ремни натянуты; корпус остаётся единым блоком. Сложность регулируйте углом тела, а не рывками.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Ремни натянуты",
+          "корпус остаётся единым блоком. Сложность регулируйте углом тела, а не рывками."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "2–4×8–20 / 20–45 с",
+        "type": "mixed",
+        "sets": {
+          "min": 2,
+          "max": 4
+        },
+        "reps": {
+          "min": 8,
+          "max": 20
+        },
+        "duration_seconds": {
+          "min": 20,
+          "max": 45
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0494",
+        "legacy_number": 494,
+        "slug": "exercise-0494-trx-hip-press",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "TRX hip press",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "trx-and-suspension",
+        "movement_pattern": "other",
+        "difficulty": "beginner",
+        "equipment": [
+          "suspension_trainer"
+        ],
+        "load_profile": "load_grud_tritseps_plechi",
+        "anatomy": {
+          "primary_muscles": [
+            "target_grud",
+            "target_tritseps",
+            "target_plechi"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_grud",
+            "target_tritseps",
+            "target_plechi"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Ремни натянуты; корпус остаётся единым блоком. Сложность регулируйте углом тела, а не рывками.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Ремни натянуты",
+          "корпус остаётся единым блоком. Сложность регулируйте углом тела, а не рывками."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "2–4×8–20 / 20–45 с",
+        "type": "mixed",
+        "sets": {
+          "min": 2,
+          "max": 4
+        },
+        "reps": {
+          "min": 8,
+          "max": 20
+        },
+        "duration_seconds": {
+          "min": 20,
+          "max": 45
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0495",
+        "legacy_number": 495,
+        "slug": "exercise-0495-trx-plank",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "TRX plank",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "trx-and-suspension",
+        "movement_pattern": "other",
+        "difficulty": "beginner",
+        "equipment": [
+          "suspension_trainer"
+        ],
+        "load_profile": "load_kor_plechevye_stabilizatory",
+        "anatomy": {
+          "primary_muscles": [
+            "target_kor",
+            "target_plechevye_stabilizatory"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_kor",
+            "target_plechevye_stabilizatory"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Ремни натянуты; корпус остаётся единым блоком. Сложность регулируйте углом тела, а не рывками.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Ремни натянуты",
+          "корпус остаётся единым блоком. Сложность регулируйте углом тела, а не рывками."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "2–4×8–20 / 20–45 с",
+        "type": "mixed",
+        "sets": {
+          "min": 2,
+          "max": 4
+        },
+        "reps": {
+          "min": 8,
+          "max": 20
+        },
+        "duration_seconds": {
+          "min": 20,
+          "max": 45
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0496",
+        "legacy_number": 496,
+        "slug": "exercise-0496-trx-body-saw",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "TRX body saw",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "trx-and-suspension",
+        "movement_pattern": "other",
+        "difficulty": "intermediate",
+        "equipment": [
+          "suspension_trainer"
+        ],
+        "load_profile": "load_kor_plechevye_stabilizatory",
+        "anatomy": {
+          "primary_muscles": [
+            "target_kor",
+            "target_plechevye_stabilizatory"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_kor",
+            "target_plechevye_stabilizatory"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Ремни натянуты; корпус остаётся единым блоком. Сложность регулируйте углом тела, а не рывками.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Ремни натянуты",
+          "корпус остаётся единым блоком. Сложность регулируйте углом тела, а не рывками."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "2–4×8–20 / 20–45 с",
+        "type": "mixed",
+        "sets": {
+          "min": 2,
+          "max": 4
+        },
+        "reps": {
+          "min": 8,
+          "max": 20
+        },
+        "duration_seconds": {
+          "min": 20,
+          "max": 45
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0497",
+        "legacy_number": 497,
+        "slug": "exercise-0497-trx-knee-tuck",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "TRX knee tuck",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "trx-and-suspension",
+        "movement_pattern": "other",
+        "difficulty": "advanced",
+        "equipment": [
+          "suspension_trainer"
+        ],
+        "load_profile": "load_kor_plechevye_stabilizatory",
+        "anatomy": {
+          "primary_muscles": [
+            "target_kor",
+            "target_plechevye_stabilizatory"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_kor",
+            "target_plechevye_stabilizatory"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Ремни натянуты; корпус остаётся единым блоком. Сложность регулируйте углом тела, а не рывками.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Ремни натянуты",
+          "корпус остаётся единым блоком. Сложность регулируйте углом тела, а не рывками."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "2–4×8–20 / 20–45 с",
+        "type": "mixed",
+        "sets": {
+          "min": 2,
+          "max": 4
+        },
+        "reps": {
+          "min": 8,
+          "max": 20
+        },
+        "duration_seconds": {
+          "min": 20,
+          "max": 45
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0498",
+        "legacy_number": 498,
+        "slug": "exercise-0498-trx-atomic-push-up",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "TRX atomic push-up",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "trx-and-suspension",
+        "movement_pattern": "push",
+        "difficulty": "advanced",
+        "equipment": [
+          "suspension_trainer"
+        ],
+        "load_profile": "load_grud_tritseps_plechi",
+        "anatomy": {
+          "primary_muscles": [
+            "target_grud",
+            "target_tritseps",
+            "target_plechi"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_grud",
+            "target_tritseps",
+            "target_plechi"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Ремни натянуты; корпус остаётся единым блоком. Сложность регулируйте углом тела, а не рывками.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Ремни натянуты",
+          "корпус остаётся единым блоком. Сложность регулируйте углом тела, а не рывками."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "2–4×8–20 / 20–45 с",
+        "type": "mixed",
+        "sets": {
+          "min": 2,
+          "max": 4
+        },
+        "reps": {
+          "min": 8,
+          "max": 20
+        },
+        "duration_seconds": {
+          "min": 20,
+          "max": 45
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,6463 @@
+{
+  "schema_version": "1.1.0",
+  "section": {
+    "code": "swimming-technique-and-drills",
+    "legacy_section_number": 29,
+    "label_ru": "Плавание — техника и дриллы в воде",
+    "sport": "swimming"
+  },
+  "exercises": [
+    {
+      "identity": {
+        "exercise_id": "exercise_0708",
+        "legacy_number": 708,
+        "slug": "exercise-0708-ottalkivanie-i-skolzhenie-v-streamline-na-grudi",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Отталкивание и скольжение в streamline на груди",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "swimming",
+        "section": "swimming-technique-and-drills",
+        "movement_pattern": "swim",
+        "difficulty": "beginner",
+        "equipment": [
+          "pool"
+        ],
+        "load_profile": "load_tehnika_grebka_koordinatsiya_polozhenie_tela",
+        "anatomy": {
+          "primary_muscles": [],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_tehnika_grebka",
+            "target_koordinatsiya",
+            "target_polozhenie_tela"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Плывите медленнее обычного и сохраняйте один технический акцент на всём отрезке; при распаде техники остановите дрилл.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Плывите медленнее обычного и сохраняйте один технический акцент на всём отрезке",
+          "при распаде техники остановите дрилл."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "4–12×25–50 м",
+        "type": "mixed",
+        "sets": {
+          "min": 4,
+          "max": 12
+        },
+        "reps": {
+          "min": 25,
+          "max": 50
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": 25,
+          "max": 50
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0709",
+        "legacy_number": 709,
+        "slug": "exercise-0709-ottalkivanie-i-skolzhenie-v-streamline-na-spine",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Отталкивание и скольжение в streamline на спине",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "swimming",
+        "section": "swimming-technique-and-drills",
+        "movement_pattern": "swim",
+        "difficulty": "beginner",
+        "equipment": [
+          "pool"
+        ],
+        "load_profile": "load_tehnika_grebka_koordinatsiya_polozhenie_tela",
+        "anatomy": {
+          "primary_muscles": [],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_tehnika_grebka",
+            "target_koordinatsiya",
+            "target_polozhenie_tela"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Плывите медленнее обычного и сохраняйте один технический акцент на всём отрезке; при распаде техники остановите дрилл.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Плывите медленнее обычного и сохраняйте один технический акцент на всём отрезке",
+          "при распаде техники остановите дрилл."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "4–12×25–50 м",
+        "type": "mixed",
+        "sets": {
+          "min": 4,
+          "max": 12
+        },
+        "reps": {
+          "min": 25,
+          "max": 50
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": 25,
+          "max": 50
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0710",
+        "legacy_number": 710,
+        "slug": "exercise-0710-krol-rabota-nog-s-doskoy",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Кроль: работа ног с доской",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "swimming",
+        "section": "swimming-technique-and-drills",
+        "movement_pattern": "swim",
+        "difficulty": "beginner",
+        "equipment": [
+          "pool"
+        ],
+        "load_profile": "load_rabota_nog_polozhenie_tela",
+        "anatomy": {
+          "primary_muscles": [
+            "target_rabota_nog"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_rabota_nog",
+            "target_polozhenie_tela"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Сохраняйте длинную линию тела; движение ног начинается от бедра, амплитуда ровно такая, чтобы не ломать положение корпуса.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Сохраняйте длинную линию тела",
+          "движение ног начинается от бедра, амплитуда ровно такая, чтобы не ломать положение корпуса."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "4–12×25–50 м",
+        "type": "mixed",
+        "sets": {
+          "min": 4,
+          "max": 12
+        },
+        "reps": {
+          "min": 25,
+          "max": 50
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": 25,
+          "max": 50
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0711",
+        "legacy_number": 711,
+        "slug": "exercise-0711-krol-rabota-nog-na-boku",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Кроль: работа ног на боку",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "swimming",
+        "section": "swimming-technique-and-drills",
+        "movement_pattern": "swim",
+        "difficulty": "beginner",
+        "equipment": [
+          "pool"
+        ],
+        "load_profile": "load_rabota_nog_polozhenie_tela",
+        "anatomy": {
+          "primary_muscles": [
+            "target_rabota_nog"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_rabota_nog",
+            "target_polozhenie_tela"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Сохраняйте длинную линию тела; движение ног начинается от бедра, амплитуда ровно такая, чтобы не ломать положение корпуса.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Сохраняйте длинную линию тела",
+          "движение ног начинается от бедра, амплитуда ровно такая, чтобы не ломать положение корпуса."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "4–12×25–50 м",
+        "type": "mixed",
+        "sets": {
+          "min": 4,
+          "max": 12
+        },
+        "reps": {
+          "min": 25,
+          "max": 50
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": 25,
+          "max": 50
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0712",
+        "legacy_number": 712,
+        "slug": "exercise-0712-krol-6-kick-switch",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Кроль: 6-kick switch",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "swimming",
+        "section": "swimming-technique-and-drills",
+        "movement_pattern": "swim",
+        "difficulty": "intermediate",
+        "equipment": [
+          "pool"
+        ],
+        "load_profile": "load_rabota_nog_polozhenie_tela",
+        "anatomy": {
+          "primary_muscles": [
+            "target_rabota_nog"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_rabota_nog",
+            "target_polozhenie_tela"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Сохраняйте длинную линию тела; движение ног начинается от бедра, амплитуда ровно такая, чтобы не ломать положение корпуса.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Сохраняйте длинную линию тела",
+          "движение ног начинается от бедра, амплитуда ровно такая, чтобы не ломать положение корпуса."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "4–12×25–50 м",
+        "type": "mixed",
+        "sets": {
+          "min": 4,
+          "max": 12
+        },
+        "reps": {
+          "min": 25,
+          "max": 50
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": 25,
+          "max": 50
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0713",
+        "legacy_number": 713,
+        "slug": "exercise-0713-krol-catch-up-drill",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Кроль: catch-up drill",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "swimming",
+        "section": "swimming-technique-and-drills",
+        "movement_pattern": "swim",
+        "difficulty": "beginner",
+        "equipment": [
+          "pool"
+        ],
+        "load_profile": "load_tehnika_grebka_koordinatsiya_polozhenie_tela",
+        "anatomy": {
+          "primary_muscles": [],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_tehnika_grebka",
+            "target_koordinatsiya",
+            "target_polozhenie_tela"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Плывите медленнее обычного и сохраняйте один технический акцент на всём отрезке; при распаде техники остановите дрилл.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Плывите медленнее обычного и сохраняйте один технический акцент на всём отрезке",
+          "при распаде техники остановите дрилл."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "4–12×25–50 м",
+        "type": "mixed",
+        "sets": {
+          "min": 4,
+          "max": 12
+        },
+        "reps": {
+          "min": 25,
+          "max": 50
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": 25,
+          "max": 50
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0714",
+        "legacy_number": 714,
+        "slug": "exercise-0714-krol-fingertip-drag",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Кроль: fingertip drag",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "swimming",
+        "section": "swimming-technique-and-drills",
+        "movement_pattern": "swim",
+        "difficulty": "beginner",
+        "equipment": [
+          "pool"
+        ],
+        "load_profile": "load_tehnika_grebka_koordinatsiya_polozhenie_tela",
+        "anatomy": {
+          "primary_muscles": [],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_tehnika_grebka",
+            "target_koordinatsiya",
+            "target_polozhenie_tela"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Плывите медленнее обычного и сохраняйте один технический акцент на всём отрезке; при распаде техники остановите дрилл.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Плывите медленнее обычного и сохраняйте один технический акцент на всём отрезке",
+          "при распаде техники остановите дрилл."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "4–12×25–50 м",
+        "type": "mixed",
+        "sets": {
+          "min": 4,
+          "max": 12
+        },
+        "reps": {
+          "min": 25,
+          "max": 50
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": 25,
+          "max": 50
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0715",
+        "legacy_number": 715,
+        "slug": "exercise-0715-krol-single-arm-s-nerabotayuschey-rukoy-vperedi",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Кроль: single-arm с неработающей рукой впереди",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "swimming",
+        "section": "swimming-technique-and-drills",
+        "movement_pattern": "swim",
+        "difficulty": "intermediate",
+        "equipment": [
+          "pool"
+        ],
+        "load_profile": "load_tehnika_grebka_koordinatsiya_polozhenie_tela",
+        "anatomy": {
+          "primary_muscles": [],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_tehnika_grebka",
+            "target_koordinatsiya",
+            "target_polozhenie_tela"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Плывите медленнее обычного и сохраняйте один технический акцент на всём отрезке; при распаде техники остановите дрилл.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Плывите медленнее обычного и сохраняйте один технический акцент на всём отрезке",
+          "при распаде техники остановите дрилл."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "4–12×25–50 м",
+        "type": "mixed",
+        "sets": {
+          "min": 4,
+          "max": 12
+        },
+        "reps": {
+          "min": 25,
+          "max": 50
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": 25,
+          "max": 50
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0716",
+        "legacy_number": 716,
+        "slug": "exercise-0716-krol-single-arm-s-nerabotayuschey-rukoy-u-bedra",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Кроль: single-arm с неработающей рукой у бедра",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "swimming",
+        "section": "swimming-technique-and-drills",
+        "movement_pattern": "swim",
+        "difficulty": "intermediate",
+        "equipment": [
+          "pool"
+        ],
+        "load_profile": "load_tehnika_grebka_koordinatsiya_polozhenie_tela",
+        "anatomy": {
+          "primary_muscles": [],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_tehnika_grebka",
+            "target_koordinatsiya",
+            "target_polozhenie_tela"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Плывите медленнее обычного и сохраняйте один технический акцент на всём отрезке; при распаде техники остановите дрилл.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Плывите медленнее обычного и сохраняйте один технический акцент на всём отрезке",
+          "при распаде техники остановите дрилл."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "4–12×25–50 м",
+        "type": "mixed",
+        "sets": {
+          "min": 4,
+          "max": 12
+        },
+        "reps": {
+          "min": 25,
+          "max": 50
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": 25,
+          "max": 50
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0717",
+        "legacy_number": 717,
+        "slug": "exercise-0717-krol-fist-drill",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Кроль: fist drill",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "swimming",
+        "section": "swimming-technique-and-drills",
+        "movement_pattern": "swim",
+        "difficulty": "intermediate",
+        "equipment": [
+          "pool"
+        ],
+        "load_profile": "load_tehnika_grebka_koordinatsiya_polozhenie_tela",
+        "anatomy": {
+          "primary_muscles": [],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_tehnika_grebka",
+            "target_koordinatsiya",
+            "target_polozhenie_tela"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Плывите медленнее обычного и сохраняйте один технический акцент на всём отрезке; при распаде техники остановите дрилл.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Плывите медленнее обычного и сохраняйте один технический акцент на всём отрезке",
+          "при распаде техники остановите дрилл."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "4–12×25–50 м",
+        "type": "mixed",
+        "sets": {
+          "min": 4,
+          "max": 12
+        },
+        "reps": {
+          "min": 25,
+          "max": 50
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": 25,
+          "max": 50
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0718",
+        "legacy_number": 718,
+        "slug": "exercise-0718-krol-front-scull",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Кроль: front scull",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "swimming",
+        "section": "swimming-technique-and-drills",
+        "movement_pattern": "swim",
+        "difficulty": "intermediate",
+        "equipment": [
+          "pool"
+        ],
+        "load_profile": "load_chuvstvo_vody_zahvat_tyaga",
+        "anatomy": {
+          "primary_muscles": [],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_chuvstvo_vody",
+            "target_zahvat",
+            "target_tyaga"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Работайте медленно, удерживая давление воды ладонью и предплечьем; задача — чувство опоры, а не скорость.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Работайте медленно, удерживая давление воды ладонью и предплечьем",
+          "задача — чувство опоры, а не скорость."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "4–12×25–50 м",
+        "type": "mixed",
+        "sets": {
+          "min": 4,
+          "max": 12
+        },
+        "reps": {
+          "min": 25,
+          "max": 50
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": 25,
+          "max": 50
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0719",
+        "legacy_number": 719,
+        "slug": "exercise-0719-krol-mid-scull",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Кроль: mid scull",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "swimming",
+        "section": "swimming-technique-and-drills",
+        "movement_pattern": "swim",
+        "difficulty": "intermediate",
+        "equipment": [
+          "pool"
+        ],
+        "load_profile": "load_chuvstvo_vody_zahvat_tyaga",
+        "anatomy": {
+          "primary_muscles": [],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_chuvstvo_vody",
+            "target_zahvat",
+            "target_tyaga"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Работайте медленно, удерживая давление воды ладонью и предплечьем; задача — чувство опоры, а не скорость.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Работайте медленно, удерживая давление воды ладонью и предплечьем",
+          "задача — чувство опоры, а не скорость."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "4–12×25–50 м",
+        "type": "mixed",
+        "sets": {
+          "min": 4,
+          "max": 12
+        },
+        "reps": {
+          "min": 25,
+          "max": 50
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": 25,
+          "max": 50
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0720",
+        "legacy_number": 720,
+        "slug": "exercise-0720-krol-finish-scull-u-bedra",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Кроль: finish scull у бедра",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "swimming",
+        "section": "swimming-technique-and-drills",
+        "movement_pattern": "swim",
+        "difficulty": "intermediate",
+        "equipment": [
+          "pool"
+        ],
+        "load_profile": "load_chuvstvo_vody_zahvat_tyaga",
+        "anatomy": {
+          "primary_muscles": [],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_chuvstvo_vody",
+            "target_zahvat",
+            "target_tyaga"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Работайте медленно, удерживая давление воды ладонью и предплечьем; задача — чувство опоры, а не скорость.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Работайте медленно, удерживая давление воды ладонью и предплечьем",
+          "задача — чувство опоры, а не скорость."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "4–12×25–50 м",
+        "type": "mixed",
+        "sets": {
+          "min": 4,
+          "max": 12
+        },
+        "reps": {
+          "min": 25,
+          "max": 50
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": 25,
+          "max": 50
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0721",
+        "legacy_number": 721,
+        "slug": "exercise-0721-krol-dog-paddle-catch-drill",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Кроль: dog-paddle catch drill",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "swimming",
+        "section": "swimming-technique-and-drills",
+        "movement_pattern": "swim",
+        "difficulty": "beginner",
+        "equipment": [
+          "pool"
+        ],
+        "load_profile": "load_chuvstvo_vody_zahvat_tyaga",
+        "anatomy": {
+          "primary_muscles": [],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_chuvstvo_vody",
+            "target_zahvat",
+            "target_tyaga"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Работайте медленно, удерживая давление воды ладонью и предплечьем; задача — чувство опоры, а не скорость.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Работайте медленно, удерживая давление воды ладонью и предплечьем",
+          "задача — чувство опоры, а не скорость."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "4–12×25–50 м",
+        "type": "mixed",
+        "sets": {
+          "min": 4,
+          "max": 12
+        },
+        "reps": {
+          "min": 25,
+          "max": 50
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": 25,
+          "max": 50
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0722",
+        "legacy_number": 722,
+        "slug": "exercise-0722-krol-bilateral-breathing-drill",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Кроль: bilateral breathing drill",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "swimming",
+        "section": "swimming-technique-and-drills",
+        "movement_pattern": "swim",
+        "difficulty": "beginner",
+        "equipment": [
+          "pool"
+        ],
+        "load_profile": "load_dyhanie_koordinatsiya",
+        "anatomy": {
+          "primary_muscles": [],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_dyhanie",
+            "target_koordinatsiya"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Поворачивайте голову вместе с ротацией корпуса и возвращайте её в нейтраль без подъёма вперёд.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Поворачивайте голову вместе с ротацией корпуса и возвращайте её в нейтраль без подъёма вперёд."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "4–12×25–50 м",
+        "type": "mixed",
+        "sets": {
+          "min": 4,
+          "max": 12
+        },
+        "reps": {
+          "min": 25,
+          "max": 50
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": 25,
+          "max": 50
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0723",
+        "legacy_number": 723,
+        "slug": "exercise-0723-krol-kontrol-rotatsii-plech-i-taza",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Кроль: контроль ротации плеч и таза",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "swimming",
+        "section": "swimming-technique-and-drills",
+        "movement_pattern": "swim",
+        "difficulty": "beginner",
+        "equipment": [
+          "pool"
+        ],
+        "load_profile": "load_tehnika_grebka_koordinatsiya_polozhenie_tela",
+        "anatomy": {
+          "primary_muscles": [],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_tehnika_grebka",
+            "target_koordinatsiya",
+            "target_polozhenie_tela"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Плывите медленнее обычного и сохраняйте один технический акцент на всём отрезке; при распаде техники остановите дрилл.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Плывите медленнее обычного и сохраняйте один технический акцент на всём отрезке",
+          "при распаде техники остановите дрилл."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "4–12×25–50 м",
+        "type": "mixed",
+        "sets": {
+          "min": 4,
+          "max": 12
+        },
+        "reps": {
+          "min": 25,
+          "max": 50
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": 25,
+          "max": 50
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0724",
+        "legacy_number": 724,
+        "slug": "exercise-0724-krol-plavanie-s-aktsentom-na-dlinnyy-grebok",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Кроль: плавание с акцентом на длинный гребок",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "swimming",
+        "section": "swimming-technique-and-drills",
+        "movement_pattern": "swim",
+        "difficulty": "beginner",
+        "equipment": [
+          "pool"
+        ],
+        "load_profile": "load_tehnika_grebka_koordinatsiya_polozhenie_tela",
+        "anatomy": {
+          "primary_muscles": [],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_tehnika_grebka",
+            "target_koordinatsiya",
+            "target_polozhenie_tela"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Плывите медленнее обычного и сохраняйте один технический акцент на всём отрезке; при распаде техники остановите дрилл.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Плывите медленнее обычного и сохраняйте один технический акцент на всём отрезке",
+          "при распаде техники остановите дрилл."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "4–12×25–50 м",
+        "type": "mixed",
+        "sets": {
+          "min": 4,
+          "max": 12
+        },
+        "reps": {
+          "min": 25,
+          "max": 50
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": 25,
+          "max": 50
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0725",
+        "legacy_number": 725,
+        "slug": "exercise-0725-krol-kick-pull-swim-progression",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Кроль: kick-pull-swim progression",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "swimming",
+        "section": "swimming-technique-and-drills",
+        "movement_pattern": "swim",
+        "difficulty": "beginner",
+        "equipment": [
+          "pool"
+        ],
+        "load_profile": "load_rabota_nog_polozhenie_tela",
+        "anatomy": {
+          "primary_muscles": [
+            "target_rabota_nog"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_rabota_nog",
+            "target_polozhenie_tela"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Сохраняйте длинную линию тела; движение ног начинается от бедра, амплитуда ровно такая, чтобы не ломать положение корпуса.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Сохраняйте длинную линию тела",
+          "движение ног начинается от бедра, амплитуда ровно такая, чтобы не ломать положение корпуса."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "4–12×25–50 м",
+        "type": "mixed",
+        "sets": {
+          "min": 4,
+          "max": 12
+        },
+        "reps": {
+          "min": 25,
+          "max": 50
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": 25,
+          "max": 50
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0726",
+        "legacy_number": 726,
+        "slug": "exercise-0726-spina-rabota-nog-v-streamline",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Спина: работа ног в streamline",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "swimming",
+        "section": "swimming-technique-and-drills",
+        "movement_pattern": "swim",
+        "difficulty": "beginner",
+        "equipment": [
+          "pool"
+        ],
+        "load_profile": "load_rabota_nog_polozhenie_tela",
+        "anatomy": {
+          "primary_muscles": [
+            "target_rabota_nog"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_rabota_nog",
+            "target_polozhenie_tela"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Сохраняйте длинную линию тела; движение ног начинается от бедра, амплитуда ровно такая, чтобы не ломать положение корпуса.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Сохраняйте длинную линию тела",
+          "движение ног начинается от бедра, амплитуда ровно такая, чтобы не ломать положение корпуса."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "4–12×25–50 м",
+        "type": "mixed",
+        "sets": {
+          "min": 4,
+          "max": 12
+        },
+        "reps": {
+          "min": 25,
+          "max": 50
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": 25,
+          "max": 50
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0727",
+        "legacy_number": 727,
+        "slug": "exercise-0727-spina-rabota-nog-s-rukami-vdol-tela",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Спина: работа ног с руками вдоль тела",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "swimming",
+        "section": "swimming-technique-and-drills",
+        "movement_pattern": "other",
+        "difficulty": "beginner",
+        "equipment": [
+          "pool"
+        ],
+        "load_profile": "load_rabota_nog_polozhenie_tela",
+        "anatomy": {
+          "primary_muscles": [
+            "target_rabota_nog"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_rabota_nog",
+            "target_polozhenie_tela"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Сохраняйте длинную линию тела; движение ног начинается от бедра, амплитуда ровно такая, чтобы не ломать положение корпуса.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Сохраняйте длинную линию тела",
+          "движение ног начинается от бедра, амплитуда ровно такая, чтобы не ломать положение корпуса."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "4–12×25–50 м",
+        "type": "mixed",
+        "sets": {
+          "min": 4,
+          "max": 12
+        },
+        "reps": {
+          "min": 25,
+          "max": 50
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": 25,
+          "max": 50
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0728",
+        "legacy_number": 728,
+        "slug": "exercise-0728-spina-single-arm-backstroke",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Спина: single-arm backstroke",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "swimming",
+        "section": "swimming-technique-and-drills",
+        "movement_pattern": "other",
+        "difficulty": "intermediate",
+        "equipment": [
+          "pool"
+        ],
+        "load_profile": "load_tehnika_grebka_koordinatsiya_polozhenie_tela",
+        "anatomy": {
+          "primary_muscles": [],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_tehnika_grebka",
+            "target_koordinatsiya",
+            "target_polozhenie_tela"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Плывите медленнее обычного и сохраняйте один технический акцент на всём отрезке; при распаде техники остановите дрилл.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Плывите медленнее обычного и сохраняйте один технический акцент на всём отрезке",
+          "при распаде техники остановите дрилл."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "4–12×25–50 м",
+        "type": "mixed",
+        "sets": {
+          "min": 4,
+          "max": 12
+        },
+        "reps": {
+          "min": 25,
+          "max": 50
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": 25,
+          "max": 50
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0729",
+        "legacy_number": 729,
+        "slug": "exercise-0729-spina-6-kick-switch",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Спина: 6-kick switch",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "swimming",
+        "section": "swimming-technique-and-drills",
+        "movement_pattern": "other",
+        "difficulty": "intermediate",
+        "equipment": [
+          "pool"
+        ],
+        "load_profile": "load_rabota_nog_polozhenie_tela",
+        "anatomy": {
+          "primary_muscles": [
+            "target_rabota_nog"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_rabota_nog",
+            "target_polozhenie_tela"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Сохраняйте длинную линию тела; движение ног начинается от бедра, амплитуда ровно такая, чтобы не ломать положение корпуса.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Сохраняйте длинную линию тела",
+          "движение ног начинается от бедра, амплитуда ровно такая, чтобы не ломать положение корпуса."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "4–12×25–50 м",
+        "type": "mixed",
+        "sets": {
+          "min": 4,
+          "max": 12
+        },
+        "reps": {
+          "min": 25,
+          "max": 50
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": 25,
+          "max": 50
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0730",
+        "legacy_number": 730,
+        "slug": "exercise-0730-spina-pauza-odnoy-rukoy-vverhu",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Спина: пауза одной рукой вверху",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "swimming",
+        "section": "swimming-technique-and-drills",
+        "movement_pattern": "other",
+        "difficulty": "beginner",
+        "equipment": [
+          "pool"
+        ],
+        "load_profile": "load_tehnika_grebka_koordinatsiya_polozhenie_tela",
+        "anatomy": {
+          "primary_muscles": [],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_tehnika_grebka",
+            "target_koordinatsiya",
+            "target_polozhenie_tela"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Плывите медленнее обычного и сохраняйте один технический акцент на всём отрезке; при распаде техники остановите дрилл.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Плывите медленнее обычного и сохраняйте один технический акцент на всём отрезке",
+          "при распаде техники остановите дрилл."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "4–12×25–50 м",
+        "type": "mixed",
+        "sets": {
+          "min": 4,
+          "max": 12
+        },
+        "reps": {
+          "min": 25,
+          "max": 50
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": 25,
+          "max": 50
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0731",
+        "legacy_number": 731,
+        "slug": "exercise-0731-spina-double-arm-backstroke-drill",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Спина: double-arm backstroke drill",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "swimming",
+        "section": "swimming-technique-and-drills",
+        "movement_pattern": "other",
+        "difficulty": "beginner",
+        "equipment": [
+          "pool"
+        ],
+        "load_profile": "load_tehnika_grebka_koordinatsiya_polozhenie_tela",
+        "anatomy": {
+          "primary_muscles": [],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_tehnika_grebka",
+            "target_koordinatsiya",
+            "target_polozhenie_tela"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Плывите медленнее обычного и сохраняйте один технический акцент на всём отрезке; при распаде техники остановите дрилл.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Плывите медленнее обычного и сохраняйте один технический акцент на всём отрезке",
+          "при распаде техники остановите дрилл."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "4–12×25–50 м",
+        "type": "mixed",
+        "sets": {
+          "min": 4,
+          "max": 12
+        },
+        "reps": {
+          "min": 25,
+          "max": 50
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": 25,
+          "max": 50
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0732",
+        "legacy_number": 732,
+        "slug": "exercise-0732-spina-scull-u-bedra",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Спина: scull у бедра",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "swimming",
+        "section": "swimming-technique-and-drills",
+        "movement_pattern": "other",
+        "difficulty": "intermediate",
+        "equipment": [
+          "pool"
+        ],
+        "load_profile": "load_chuvstvo_vody_zahvat_tyaga",
+        "anatomy": {
+          "primary_muscles": [],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_chuvstvo_vody",
+            "target_zahvat",
+            "target_tyaga"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Работайте медленно, удерживая давление воды ладонью и предплечьем; задача — чувство опоры, а не скорость.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Работайте медленно, удерживая давление воды ладонью и предплечьем",
+          "задача — чувство опоры, а не скорость."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "4–12×25–50 м",
+        "type": "mixed",
+        "sets": {
+          "min": 4,
+          "max": 12
+        },
+        "reps": {
+          "min": 25,
+          "max": 50
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": 25,
+          "max": 50
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0733",
+        "legacy_number": 733,
+        "slug": "exercise-0733-brass-rabota-nog-s-doskoy",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Брасс: работа ног с доской",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "swimming",
+        "section": "swimming-technique-and-drills",
+        "movement_pattern": "swim",
+        "difficulty": "beginner",
+        "equipment": [
+          "pool"
+        ],
+        "load_profile": "load_rabota_nog_polozhenie_tela",
+        "anatomy": {
+          "primary_muscles": [
+            "target_rabota_nog"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_rabota_nog",
+            "target_polozhenie_tela"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Сохраняйте длинную линию тела; движение ног начинается от бедра, амплитуда ровно такая, чтобы не ломать положение корпуса.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Сохраняйте длинную линию тела",
+          "движение ног начинается от бедра, амплитуда ровно такая, чтобы не ломать положение корпуса."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "4–12×25–50 м",
+        "type": "mixed",
+        "sets": {
+          "min": 4,
+          "max": 12
+        },
+        "reps": {
+          "min": 25,
+          "max": 50
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": 25,
+          "max": 50
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0734",
+        "legacy_number": 734,
+        "slug": "exercise-0734-brass-rabota-nog-na-spine",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Брасс: работа ног на спине",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "swimming",
+        "section": "swimming-technique-and-drills",
+        "movement_pattern": "swim",
+        "difficulty": "beginner",
+        "equipment": [
+          "pool"
+        ],
+        "load_profile": "load_rabota_nog_polozhenie_tela",
+        "anatomy": {
+          "primary_muscles": [
+            "target_rabota_nog"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_rabota_nog",
+            "target_polozhenie_tela"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Сохраняйте длинную линию тела; движение ног начинается от бедра, амплитуда ровно такая, чтобы не ломать положение корпуса.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Сохраняйте длинную линию тела",
+          "движение ног начинается от бедра, амплитуда ровно такая, чтобы не ломать положение корпуса."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "4–12×25–50 м",
+        "type": "mixed",
+        "sets": {
+          "min": 4,
+          "max": 12
+        },
+        "reps": {
+          "min": 25,
+          "max": 50
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": 25,
+          "max": 50
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0735",
+        "legacy_number": 735,
+        "slug": "exercise-0735-brass-2-kicks-1-pull",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Брасс: 2 kicks + 1 pull",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "swimming",
+        "section": "swimming-technique-and-drills",
+        "movement_pattern": "swim",
+        "difficulty": "beginner",
+        "equipment": [
+          "pool"
+        ],
+        "load_profile": "load_rabota_nog_polozhenie_tela",
+        "anatomy": {
+          "primary_muscles": [
+            "target_rabota_nog"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_rabota_nog",
+            "target_polozhenie_tela"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Сохраняйте длинную линию тела; движение ног начинается от бедра, амплитуда ровно такая, чтобы не ломать положение корпуса.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Сохраняйте длинную линию тела",
+          "движение ног начинается от бедра, амплитуда ровно такая, чтобы не ломать положение корпуса."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "4–12×25–50 м",
+        "type": "mixed",
+        "sets": {
+          "min": 4,
+          "max": 12
+        },
+        "reps": {
+          "min": 25,
+          "max": 50
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": 25,
+          "max": 50
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0736",
+        "legacy_number": 736,
+        "slug": "exercise-0736-brass-1-pull-2-kicks",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Брасс: 1 pull + 2 kicks",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "swimming",
+        "section": "swimming-technique-and-drills",
+        "movement_pattern": "swim",
+        "difficulty": "beginner",
+        "equipment": [
+          "pool"
+        ],
+        "load_profile": "load_rabota_nog_polozhenie_tela",
+        "anatomy": {
+          "primary_muscles": [
+            "target_rabota_nog"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_rabota_nog",
+            "target_polozhenie_tela"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Сохраняйте длинную линию тела; движение ног начинается от бедра, амплитуда ровно такая, чтобы не ломать положение корпуса.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Сохраняйте длинную линию тела",
+          "движение ног начинается от бедра, амплитуда ровно такая, чтобы не ломать положение корпуса."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "4–12×25–50 м",
+        "type": "mixed",
+        "sets": {
+          "min": 4,
+          "max": 12
+        },
+        "reps": {
+          "min": 25,
+          "max": 50
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": 25,
+          "max": 50
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0737",
+        "legacy_number": 737,
+        "slug": "exercise-0737-brass-glide-pause-drill",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Брасс: glide-pause drill",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "swimming",
+        "section": "swimming-technique-and-drills",
+        "movement_pattern": "swim",
+        "difficulty": "beginner",
+        "equipment": [
+          "pool"
+        ],
+        "load_profile": "load_tehnika_grebka_koordinatsiya_polozhenie_tela",
+        "anatomy": {
+          "primary_muscles": [],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_tehnika_grebka",
+            "target_koordinatsiya",
+            "target_polozhenie_tela"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Плывите медленнее обычного и сохраняйте один технический акцент на всём отрезке; при распаде техники остановите дрилл.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Плывите медленнее обычного и сохраняйте один технический акцент на всём отрезке",
+          "при распаде техники остановите дрилл."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "4–12×25–50 м",
+        "type": "mixed",
+        "sets": {
+          "min": 4,
+          "max": 12
+        },
+        "reps": {
+          "min": 25,
+          "max": 50
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": 25,
+          "max": 50
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0738",
+        "legacy_number": 738,
+        "slug": "exercise-0738-brass-scull-pull",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Брасс: scull + pull",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "swimming",
+        "section": "swimming-technique-and-drills",
+        "movement_pattern": "swim",
+        "difficulty": "intermediate",
+        "equipment": [
+          "pool"
+        ],
+        "load_profile": "load_chuvstvo_vody_zahvat_tyaga",
+        "anatomy": {
+          "primary_muscles": [],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_chuvstvo_vody",
+            "target_zahvat",
+            "target_tyaga"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Работайте медленно, удерживая давление воды ладонью и предплечьем; задача — чувство опоры, а не скорость.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Работайте медленно, удерживая давление воды ладонью и предплечьем",
+          "задача — чувство опоры, а не скорость."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "4–12×25–50 м",
+        "type": "mixed",
+        "sets": {
+          "min": 4,
+          "max": 12
+        },
+        "reps": {
+          "min": 25,
+          "max": 50
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": 25,
+          "max": 50
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0739",
+        "legacy_number": 739,
+        "slug": "exercise-0739-brass-pull-kick-timing-drill",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Брасс: pull-kick timing drill",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "swimming",
+        "section": "swimming-technique-and-drills",
+        "movement_pattern": "swim",
+        "difficulty": "beginner",
+        "equipment": [
+          "pool"
+        ],
+        "load_profile": "load_rabota_nog_polozhenie_tela",
+        "anatomy": {
+          "primary_muscles": [
+            "target_rabota_nog"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_rabota_nog",
+            "target_polozhenie_tela"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Сохраняйте длинную линию тела; движение ног начинается от бедра, амплитуда ровно такая, чтобы не ломать положение корпуса.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Сохраняйте длинную линию тела",
+          "движение ног начинается от бедра, амплитуда ровно такая, чтобы не ломать положение корпуса."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "4–12×25–50 м",
+        "type": "mixed",
+        "sets": {
+          "min": 4,
+          "max": 12
+        },
+        "reps": {
+          "min": 25,
+          "max": 50
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": 25,
+          "max": 50
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0740",
+        "legacy_number": 740,
+        "slug": "exercise-0740-batterflyay-body-dolphin-na-grudi",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Баттерфляй: body dolphin на груди",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "swimming",
+        "section": "swimming-technique-and-drills",
+        "movement_pattern": "swim",
+        "difficulty": "beginner",
+        "equipment": [
+          "pool"
+        ],
+        "load_profile": "load_tehnika_grebka_koordinatsiya_polozhenie_tela",
+        "anatomy": {
+          "primary_muscles": [],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_tehnika_grebka",
+            "target_koordinatsiya",
+            "target_polozhenie_tela"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Плывите медленнее обычного и сохраняйте один технический акцент на всём отрезке; при распаде техники остановите дрилл.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Плывите медленнее обычного и сохраняйте один технический акцент на всём отрезке",
+          "при распаде техники остановите дрилл."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "4–12×25–50 м",
+        "type": "mixed",
+        "sets": {
+          "min": 4,
+          "max": 12
+        },
+        "reps": {
+          "min": 25,
+          "max": 50
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": 25,
+          "max": 50
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0741",
+        "legacy_number": 741,
+        "slug": "exercise-0741-batterflyay-body-dolphin-na-spine",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Баттерфляй: body dolphin на спине",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "swimming",
+        "section": "swimming-technique-and-drills",
+        "movement_pattern": "swim",
+        "difficulty": "beginner",
+        "equipment": [
+          "pool"
+        ],
+        "load_profile": "load_tehnika_grebka_koordinatsiya_polozhenie_tela",
+        "anatomy": {
+          "primary_muscles": [],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_tehnika_grebka",
+            "target_koordinatsiya",
+            "target_polozhenie_tela"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Плывите медленнее обычного и сохраняйте один технический акцент на всём отрезке; при распаде техники остановите дрилл.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Плывите медленнее обычного и сохраняйте один технический акцент на всём отрезке",
+          "при распаде техники остановите дрилл."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "4–12×25–50 м",
+        "type": "mixed",
+        "sets": {
+          "min": 4,
+          "max": 12
+        },
+        "reps": {
+          "min": 25,
+          "max": 50
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": 25,
+          "max": 50
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0742",
+        "legacy_number": 742,
+        "slug": "exercise-0742-batterflyay-dolphin-kick-na-boku",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Баттерфляй: dolphin kick на боку",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "swimming",
+        "section": "swimming-technique-and-drills",
+        "movement_pattern": "swim",
+        "difficulty": "beginner",
+        "equipment": [
+          "pool"
+        ],
+        "load_profile": "load_rabota_nog_polozhenie_tela",
+        "anatomy": {
+          "primary_muscles": [
+            "target_rabota_nog"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_rabota_nog",
+            "target_polozhenie_tela"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Сохраняйте длинную линию тела; движение ног начинается от бедра, амплитуда ровно такая, чтобы не ломать положение корпуса.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Сохраняйте длинную линию тела",
+          "движение ног начинается от бедра, амплитуда ровно такая, чтобы не ломать положение корпуса."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "4–12×25–50 м",
+        "type": "mixed",
+        "sets": {
+          "min": 4,
+          "max": 12
+        },
+        "reps": {
+          "min": 25,
+          "max": 50
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": 25,
+          "max": 50
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0743",
+        "legacy_number": 743,
+        "slug": "exercise-0743-batterflyay-single-arm-butterfly",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Баттерфляй: single-arm butterfly",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "swimming",
+        "section": "swimming-technique-and-drills",
+        "movement_pattern": "swim",
+        "difficulty": "intermediate",
+        "equipment": [
+          "pool"
+        ],
+        "load_profile": "load_tehnika_grebka_koordinatsiya_polozhenie_tela",
+        "anatomy": {
+          "primary_muscles": [],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_tehnika_grebka",
+            "target_koordinatsiya",
+            "target_polozhenie_tela"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Плывите медленнее обычного и сохраняйте один технический акцент на всём отрезке; при распаде техники остановите дрилл.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Плывите медленнее обычного и сохраняйте один технический акцент на всём отрезке",
+          "при распаде техники остановите дрилл."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "4–12×25–50 м",
+        "type": "mixed",
+        "sets": {
+          "min": 4,
+          "max": 12
+        },
+        "reps": {
+          "min": 25,
+          "max": 50
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": 25,
+          "max": 50
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0744",
+        "legacy_number": 744,
+        "slug": "exercise-0744-batterflyay-3-3-3-drill",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Баттерфляй: 3-3-3 drill",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "swimming",
+        "section": "swimming-technique-and-drills",
+        "movement_pattern": "swim",
+        "difficulty": "beginner",
+        "equipment": [
+          "pool"
+        ],
+        "load_profile": "load_tehnika_grebka_koordinatsiya_polozhenie_tela",
+        "anatomy": {
+          "primary_muscles": [],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_tehnika_grebka",
+            "target_koordinatsiya",
+            "target_polozhenie_tela"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Плывите медленнее обычного и сохраняйте один технический акцент на всём отрезке; при распаде техники остановите дрилл.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Плывите медленнее обычного и сохраняйте один технический акцент на всём отрезке",
+          "при распаде техники остановите дрилл."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "4–12×25–50 м",
+        "type": "mixed",
+        "sets": {
+          "min": 4,
+          "max": 12
+        },
+        "reps": {
+          "min": 25,
+          "max": 50
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": 25,
+          "max": 50
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0745",
+        "legacy_number": 745,
+        "slug": "exercise-0745-batterflyay-3-sculls-1-full-stroke",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Баттерфляй: 3 sculls + 1 full stroke",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "swimming",
+        "section": "swimming-technique-and-drills",
+        "movement_pattern": "swim",
+        "difficulty": "intermediate",
+        "equipment": [
+          "pool"
+        ],
+        "load_profile": "load_chuvstvo_vody_zahvat_tyaga",
+        "anatomy": {
+          "primary_muscles": [],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_chuvstvo_vody",
+            "target_zahvat",
+            "target_tyaga"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Работайте медленно, удерживая давление воды ладонью и предплечьем; задача — чувство опоры, а не скорость.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Работайте медленно, удерживая давление воды ладонью и предплечьем",
+          "задача — чувство опоры, а не скорость."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "4–12×25–50 м",
+        "type": "mixed",
+        "sets": {
+          "min": 4,
+          "max": 12
+        },
+        "reps": {
+          "min": 25,
+          "max": 50
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": 25,
+          "max": 50
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0746",
+        "legacy_number": 746,
+        "slug": "exercise-0746-batterflyay-kick-kick-pull-coordination",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Баттерфляй: kick-kick-pull coordination",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "swimming",
+        "section": "swimming-technique-and-drills",
+        "movement_pattern": "swim",
+        "difficulty": "beginner",
+        "equipment": [
+          "pool"
+        ],
+        "load_profile": "load_rabota_nog_polozhenie_tela",
+        "anatomy": {
+          "primary_muscles": [
+            "target_rabota_nog"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_rabota_nog",
+            "target_polozhenie_tela"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Сохраняйте длинную линию тела; движение ног начинается от бедра, амплитуда ровно такая, чтобы не ломать положение корпуса.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Сохраняйте длинную линию тела",
+          "движение ног начинается от бедра, амплитуда ровно такая, чтобы не ломать положение корпуса."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "4–12×25–50 м",
+        "type": "mixed",
+        "sets": {
+          "min": 4,
+          "max": 12
+        },
+        "reps": {
+          "min": 25,
+          "max": 50
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": 25,
+          "max": 50
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0747",
+        "legacy_number": 747,
+        "slug": "exercise-0747-sculling-head-first-na-spine",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Sculling: head-first на спине",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "swimming",
+        "section": "swimming-technique-and-drills",
+        "movement_pattern": "swim",
+        "difficulty": "intermediate",
+        "equipment": [
+          "pool"
+        ],
+        "load_profile": "load_chuvstvo_vody_zahvat_tyaga",
+        "anatomy": {
+          "primary_muscles": [],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_chuvstvo_vody",
+            "target_zahvat",
+            "target_tyaga"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Работайте медленно, удерживая давление воды ладонью и предплечьем; задача — чувство опоры, а не скорость.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Работайте медленно, удерживая давление воды ладонью и предплечьем",
+          "задача — чувство опоры, а не скорость."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "4–12×25–50 м",
+        "type": "mixed",
+        "sets": {
+          "min": 4,
+          "max": 12
+        },
+        "reps": {
+          "min": 25,
+          "max": 50
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": 25,
+          "max": 50
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    }
+  ]
+}

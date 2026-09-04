@@ -1,0 +1,2485 @@
+{
+  "schema_version": "1.1.0",
+  "section": {
+    "code": "pull-up-bars-and-dips",
+    "legacy_section_number": 14,
+    "label_ru": "Турник и брусья",
+    "sport": "general_fitness"
+  },
+  "exercises": [
+    {
+      "identity": {
+        "exercise_id": "exercise_0499",
+        "legacy_number": 499,
+        "slug": "exercise-0499-dead-hang",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Dead hang",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "pull-up-bars-and-dips",
+        "movement_pattern": "other",
+        "difficulty": "beginner",
+        "equipment": [
+          "pull_up_bar",
+          "dip_bars"
+        ],
+        "load_profile": "load_hvat_plechevoy_poyas_lopatochnye_stabilizatory",
+        "anatomy": {
+          "primary_muscles": [
+            "target_plechevoy_poyas"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_hvat",
+            "target_plechevoy_poyas",
+            "target_lopatochnye_stabilizatory"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Начинайте из контролируемого плечевого положения; не раскачивайтесь, если упражнение не предполагает киппинг.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Начинайте из контролируемого плечевого положения",
+          "не раскачивайтесь, если упражнение не предполагает киппинг."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "3–5×10–45 с",
+        "type": "mixed",
+        "sets": {
+          "min": 3,
+          "max": 5
+        },
+        "reps": {
+          "min": 10,
+          "max": 45
+        },
+        "duration_seconds": {
+          "min": 10,
+          "max": 45
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0500",
+        "legacy_number": 500,
+        "slug": "exercise-0500-active-hang",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Active hang",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "pull-up-bars-and-dips",
+        "movement_pattern": "other",
+        "difficulty": "beginner",
+        "equipment": [
+          "pull_up_bar",
+          "dip_bars"
+        ],
+        "load_profile": "load_hvat_plechevoy_poyas_lopatochnye_stabilizatory",
+        "anatomy": {
+          "primary_muscles": [
+            "target_plechevoy_poyas"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_hvat",
+            "target_plechevoy_poyas",
+            "target_lopatochnye_stabilizatory"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Начинайте из контролируемого плечевого положения; не раскачивайтесь, если упражнение не предполагает киппинг.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Начинайте из контролируемого плечевого положения",
+          "не раскачивайтесь, если упражнение не предполагает киппинг."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "3–5×10–45 с",
+        "type": "mixed",
+        "sets": {
+          "min": 3,
+          "max": 5
+        },
+        "reps": {
+          "min": 10,
+          "max": 45
+        },
+        "duration_seconds": {
+          "min": 10,
+          "max": 45
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0501",
+        "legacy_number": 501,
+        "slug": "exercise-0501-scapular-pull-up",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Scapular pull-up",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": "exercise_0296",
+        "variant_of": "exercise_0296",
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "pull-up-bars-and-dips",
+        "movement_pattern": "pull",
+        "difficulty": "beginner",
+        "equipment": [
+          "pull_up_bar",
+          "dip_bars"
+        ],
+        "load_profile": "load_shirochayshie_bitseps_lopatochnye_stabilizatory",
+        "anatomy": {
+          "primary_muscles": [
+            "target_shirochayshie",
+            "target_bitseps"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_shirochayshie",
+            "target_bitseps",
+            "target_lopatochnye_stabilizatory"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Начинайте из контролируемого плечевого положения; не раскачивайтесь, если упражнение не предполагает киппинг.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Начинайте из контролируемого плечевого положения",
+          "не раскачивайтесь, если упражнение не предполагает киппинг."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "3–5×3–10",
+        "type": "reps",
+        "sets": {
+          "min": 3,
+          "max": 5
+        },
+        "reps": {
+          "min": 3,
+          "max": 10
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0502",
+        "legacy_number": 502,
+        "slug": "exercise-0502-podtyagivanie-s-rezinoy",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Подтягивание с резиной",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "pull-up-bars-and-dips",
+        "movement_pattern": "pull",
+        "difficulty": "beginner",
+        "equipment": [
+          "pull_up_bar",
+          "dip_bars"
+        ],
+        "load_profile": "load_shirochayshie_bitseps_lopatochnye_stabilizatory",
+        "anatomy": {
+          "primary_muscles": [
+            "target_shirochayshie",
+            "target_bitseps"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_shirochayshie",
+            "target_bitseps",
+            "target_lopatochnye_stabilizatory"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Начинайте из контролируемого плечевого положения; не раскачивайтесь, если упражнение не предполагает киппинг.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Начинайте из контролируемого плечевого положения",
+          "не раскачивайтесь, если упражнение не предполагает киппинг."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "3–5×3–10",
+        "type": "reps",
+        "sets": {
+          "min": 3,
+          "max": 5
+        },
+        "reps": {
+          "min": 3,
+          "max": 10
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0503",
+        "legacy_number": 503,
+        "slug": "exercise-0503-podtyagivanie-pryamym-hvatom",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Подтягивание прямым хватом",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "pull-up-bars-and-dips",
+        "movement_pattern": "pull",
+        "difficulty": "beginner",
+        "equipment": [
+          "pull_up_bar",
+          "dip_bars"
+        ],
+        "load_profile": "load_shirochayshie_bitseps_lopatochnye_stabilizatory",
+        "anatomy": {
+          "primary_muscles": [
+            "target_shirochayshie",
+            "target_bitseps"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_shirochayshie",
+            "target_bitseps",
+            "target_lopatochnye_stabilizatory"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Начинайте из контролируемого плечевого положения; не раскачивайтесь, если упражнение не предполагает киппинг.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Начинайте из контролируемого плечевого положения",
+          "не раскачивайтесь, если упражнение не предполагает киппинг."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "3–5×3–10",
+        "type": "reps",
+        "sets": {
+          "min": 3,
+          "max": 5
+        },
+        "reps": {
+          "min": 3,
+          "max": 10
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0504",
+        "legacy_number": 504,
+        "slug": "exercise-0504-chin-up-obratnym-hvatom",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Chin-up обратным хватом",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "pull-up-bars-and-dips",
+        "movement_pattern": "other",
+        "difficulty": "beginner",
+        "equipment": [
+          "pull_up_bar",
+          "dip_bars"
+        ],
+        "load_profile": "load_shirochayshie_bitseps_lopatochnye_stabilizatory",
+        "anatomy": {
+          "primary_muscles": [
+            "target_shirochayshie",
+            "target_bitseps"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_shirochayshie",
+            "target_bitseps",
+            "target_lopatochnye_stabilizatory"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Начинайте из контролируемого плечевого положения; не раскачивайтесь, если упражнение не предполагает киппинг.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Начинайте из контролируемого плечевого положения",
+          "не раскачивайтесь, если упражнение не предполагает киппинг."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "3–5×3–10",
+        "type": "reps",
+        "sets": {
+          "min": 3,
+          "max": 5
+        },
+        "reps": {
+          "min": 3,
+          "max": 10
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0505",
+        "legacy_number": 505,
+        "slug": "exercise-0505-podtyagivanie-neytralnym-hvatom",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Подтягивание нейтральным хватом",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "pull-up-bars-and-dips",
+        "movement_pattern": "pull",
+        "difficulty": "beginner",
+        "equipment": [
+          "pull_up_bar",
+          "dip_bars"
+        ],
+        "load_profile": "load_shirochayshie_bitseps_lopatochnye_stabilizatory",
+        "anatomy": {
+          "primary_muscles": [
+            "target_shirochayshie",
+            "target_bitseps"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_shirochayshie",
+            "target_bitseps",
+            "target_lopatochnye_stabilizatory"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Начинайте из контролируемого плечевого положения; не раскачивайтесь, если упражнение не предполагает киппинг.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Начинайте из контролируемого плечевого положения",
+          "не раскачивайтесь, если упражнение не предполагает киппинг."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "3–5×3–10",
+        "type": "reps",
+        "sets": {
+          "min": 3,
+          "max": 5
+        },
+        "reps": {
+          "min": 3,
+          "max": 10
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0506",
+        "legacy_number": 506,
+        "slug": "exercise-0506-ekstsentricheskoe-podtyagivanie",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Эксцентрическое подтягивание",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "pull-up-bars-and-dips",
+        "movement_pattern": "pull",
+        "difficulty": "beginner",
+        "equipment": [
+          "pull_up_bar",
+          "dip_bars"
+        ],
+        "load_profile": "load_shirochayshie_bitseps_lopatochnye_stabilizatory",
+        "anatomy": {
+          "primary_muscles": [
+            "target_shirochayshie",
+            "target_bitseps"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_shirochayshie",
+            "target_bitseps",
+            "target_lopatochnye_stabilizatory"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Начинайте из контролируемого плечевого положения; не раскачивайтесь, если упражнение не предполагает киппинг.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Начинайте из контролируемого плечевого положения",
+          "не раскачивайтесь, если упражнение не предполагает киппинг."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "3–5×3–10",
+        "type": "reps",
+        "sets": {
+          "min": 3,
+          "max": 5
+        },
+        "reps": {
+          "min": 3,
+          "max": 10
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0507",
+        "legacy_number": 507,
+        "slug": "exercise-0507-izometricheskoe-uderzhanie-v-verhney-tochke",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Изометрическое удержание в верхней точке",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "pull-up-bars-and-dips",
+        "movement_pattern": "other",
+        "difficulty": "beginner",
+        "equipment": [
+          "pull_up_bar",
+          "dip_bars"
+        ],
+        "load_profile": "load_hvat_plechevoy_poyas_lopatochnye_stabilizatory",
+        "anatomy": {
+          "primary_muscles": [
+            "target_plechevoy_poyas"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_hvat",
+            "target_plechevoy_poyas",
+            "target_lopatochnye_stabilizatory"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Начинайте из контролируемого плечевого положения; не раскачивайтесь, если упражнение не предполагает киппинг.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Начинайте из контролируемого плечевого положения",
+          "не раскачивайтесь, если упражнение не предполагает киппинг."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "3–5×10–45 с",
+        "type": "mixed",
+        "sets": {
+          "min": 3,
+          "max": 5
+        },
+        "reps": {
+          "min": 10,
+          "max": 45
+        },
+        "duration_seconds": {
+          "min": 10,
+          "max": 45
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0508",
+        "legacy_number": 508,
+        "slug": "exercise-0508-hanging-knee-raise",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Hanging knee raise",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": "exercise_0233",
+        "variant_of": "exercise_0233",
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "pull-up-bars-and-dips",
+        "movement_pattern": "other",
+        "difficulty": "beginner",
+        "equipment": [
+          "pull_up_bar",
+          "dip_bars"
+        ],
+        "load_profile": "load_press_sgibateli_bedra_hvat",
+        "anatomy": {
+          "primary_muscles": [
+            "target_press",
+            "target_sgibateli_bedra"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_press",
+            "target_sgibateli_bedra",
+            "target_hvat"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Начинайте из контролируемого плечевого положения; не раскачивайтесь, если упражнение не предполагает киппинг.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Начинайте из контролируемого плечевого положения",
+          "не раскачивайтесь, если упражнение не предполагает киппинг."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "3–5×10–45 с",
+        "type": "mixed",
+        "sets": {
+          "min": 3,
+          "max": 5
+        },
+        "reps": {
+          "min": 10,
+          "max": 45
+        },
+        "duration_seconds": {
+          "min": 10,
+          "max": 45
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0509",
+        "legacy_number": 509,
+        "slug": "exercise-0509-hanging-leg-raise",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Hanging leg raise",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": "exercise_0234",
+        "variant_of": "exercise_0234",
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "pull-up-bars-and-dips",
+        "movement_pattern": "other",
+        "difficulty": "beginner",
+        "equipment": [
+          "pull_up_bar",
+          "dip_bars"
+        ],
+        "load_profile": "load_press_sgibateli_bedra_hvat",
+        "anatomy": {
+          "primary_muscles": [
+            "target_press",
+            "target_sgibateli_bedra"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_press",
+            "target_sgibateli_bedra",
+            "target_hvat"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Начинайте из контролируемого плечевого положения; не раскачивайтесь, если упражнение не предполагает киппинг.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Начинайте из контролируемого плечевого положения",
+          "не раскачивайтесь, если упражнение не предполагает киппинг."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "3–5×10–45 с",
+        "type": "mixed",
+        "sets": {
+          "min": 3,
+          "max": 5
+        },
+        "reps": {
+          "min": 10,
+          "max": 45
+        },
+        "duration_seconds": {
+          "min": 10,
+          "max": 45
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0510",
+        "legacy_number": 510,
+        "slug": "exercise-0510-toes-to-bar",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Toes-to-bar",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "pull-up-bars-and-dips",
+        "movement_pattern": "other",
+        "difficulty": "advanced",
+        "equipment": [
+          "pull_up_bar",
+          "dip_bars"
+        ],
+        "load_profile": "load_press_sgibateli_bedra_hvat",
+        "anatomy": {
+          "primary_muscles": [
+            "target_press",
+            "target_sgibateli_bedra"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_press",
+            "target_sgibateli_bedra",
+            "target_hvat"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Начинайте из контролируемого плечевого положения; не раскачивайтесь, если упражнение не предполагает киппинг.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Начинайте из контролируемого плечевого положения",
+          "не раскачивайтесь, если упражнение не предполагает киппинг."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "3–5×3–10",
+        "type": "reps",
+        "sets": {
+          "min": 3,
+          "max": 5
+        },
+        "reps": {
+          "min": 3,
+          "max": 10
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0511",
+        "legacy_number": 511,
+        "slug": "exercise-0511-otzhimaniya-na-brusyah",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Отжимания на брусьях",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "pull-up-bars-and-dips",
+        "movement_pattern": "push",
+        "difficulty": "beginner",
+        "equipment": [
+          "pull_up_bar",
+          "dip_bars"
+        ],
+        "load_profile": "load_grud_tritseps_plechi_2",
+        "anatomy": {
+          "primary_muscles": [
+            "target_grud",
+            "target_tritseps",
+            "target_plechi"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_grud",
+            "target_tritseps",
+            "target_plechi"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Начинайте из контролируемого плечевого положения; не раскачивайтесь, если упражнение не предполагает киппинг.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Начинайте из контролируемого плечевого положения",
+          "не раскачивайтесь, если упражнение не предполагает киппинг."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "3–5×3–10",
+        "type": "reps",
+        "sets": {
+          "min": 3,
+          "max": 5
+        },
+        "reps": {
+          "min": 3,
+          "max": 10
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0512",
+        "legacy_number": 512,
+        "slug": "exercise-0512-support-hold-na-brusyah",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Support hold на брусьях",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "pull-up-bars-and-dips",
+        "movement_pattern": "other",
+        "difficulty": "beginner",
+        "equipment": [
+          "pull_up_bar",
+          "dip_bars"
+        ],
+        "load_profile": "load_grud_tritseps_plechi_2",
+        "anatomy": {
+          "primary_muscles": [
+            "target_grud",
+            "target_tritseps",
+            "target_plechi"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_grud",
+            "target_tritseps",
+            "target_plechi"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Начинайте из контролируемого плечевого положения; не раскачивайтесь, если упражнение не предполагает киппинг.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Начинайте из контролируемого плечевого положения",
+          "не раскачивайтесь, если упражнение не предполагает киппинг."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "3–5×10–45 с",
+        "type": "mixed",
+        "sets": {
+          "min": 3,
+          "max": 5
+        },
+        "reps": {
+          "min": 10,
+          "max": 45
+        },
+        "duration_seconds": {
+          "min": 10,
+          "max": 45
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0513",
+        "legacy_number": 513,
+        "slug": "exercise-0513-l-sit-na-brusyah",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "L-sit на брусьях",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "pull-up-bars-and-dips",
+        "movement_pattern": "other",
+        "difficulty": "advanced",
+        "equipment": [
+          "pull_up_bar",
+          "dip_bars"
+        ],
+        "load_profile": "load_press_sgibateli_bedra_hvat",
+        "anatomy": {
+          "primary_muscles": [
+            "target_press",
+            "target_sgibateli_bedra"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_press",
+            "target_sgibateli_bedra",
+            "target_hvat"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Начинайте из контролируемого плечевого положения; не раскачивайтесь, если упражнение не предполагает киппинг.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Начинайте из контролируемого плечевого положения",
+          "не раскачивайтесь, если упражнение не предполагает киппинг."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "3–5×10–45 с",
+        "type": "mixed",
+        "sets": {
+          "min": 3,
+          "max": 5
+        },
+        "reps": {
+          "min": 10,
+          "max": 45
+        },
+        "duration_seconds": {
+          "min": 10,
+          "max": 45
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "version": "1.1.0",
+  "items": [
+    {
+      "code": "squat",
+      "label_ru": "Присед"
+    },
+    {
+      "code": "hinge",
+      "label_ru": "Тазовый наклон / hinge"
+    },
+    {
+      "code": "push",
+      "label_ru": "Жим"
+    },
+    {
+      "code": "pull",
+      "label_ru": "Тяга"
+    },
+    {
+      "code": "carry",
+      "label_ru": "Переноска"
+    },
+    {
+      "code": "rotate",
+      "label_ru": "Ротация"
+    },
+    {
+      "code": "locomotion",
+      "label_ru": "Локомоция"
+    },
+    {
+      "code": "jump",
+      "label_ru": "Прыжок"
+    },
+    {
+      "code": "throw",
+      "label_ru": "Бросок"
+    },
+    {
+      "code": "swim",
+      "label_ru": "Плавательный дрилл"
+    },
+    {
+      "code": "pedal",
+      "label_ru": "Педалирование"
+    },
+    {
+      "code": "mobility",
+      "label_ru": "Мобильность"
+    },
+    {
+      "code": "stretch",
+      "label_ru": "Растяжка"
+    },
+    {
+      "code": "balance",
+      "label_ru": "Баланс"
+    },
+    {
+      "code": "breathing",
+      "label_ru": "Дыхание"
+    },
+    {
+      "code": "other",
+      "label_ru": "Другое"
+    }
+  ]
+}

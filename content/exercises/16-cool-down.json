@@ -1,0 +1,1931 @@
+{
+  "schema_version": "1.1.0",
+  "section": {
+    "code": "cool-down",
+    "legacy_section_number": 16,
+    "label_ru": "Заминка",
+    "sport": "general_fitness"
+  },
+  "exercises": [
+    {
+      "identity": {
+        "exercise_id": "exercise_0539",
+        "legacy_number": 539,
+        "slug": "exercise-0539-hodba-na-dorozhke-v-legkom-tempe",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Ходьба на дорожке в лёгком темпе",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "cool-down",
+        "movement_pattern": "carry",
+        "difficulty": "beginner",
+        "equipment": [
+          "exercise_mat",
+          "strength_machine"
+        ],
+        "load_profile": "load_vosstanovlenie_dyhaniya_i_postepennoe_snizhenie_intensivnosti",
+        "anatomy": {
+          "primary_muscles": [],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_vosstanovlenie_dyhaniya_i_postepennoe_snizhenie_intensivnosti"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Постепенно снижайте темп и частоту дыхания; задача — восстановиться, а не создать дополнительную усталость.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Постепенно снижайте темп и частоту дыхания",
+          "задача — восстановиться, а не создать дополнительную усталость."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "3–10 мин / 4–8 дых. циклов",
+        "type": "time",
+        "sets": {
+          "min": null,
+          "max": null
+        },
+        "reps": {
+          "min": null,
+          "max": null
+        },
+        "duration_seconds": {
+          "min": 180,
+          "max": 600
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0540",
+        "legacy_number": 540,
+        "slug": "exercise-0540-legkoe-vraschenie-pedaley-na-velotrenazhere",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Лёгкое вращение педалей на велотренажёре",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "cool-down",
+        "movement_pattern": "pedal",
+        "difficulty": "beginner",
+        "equipment": [
+          "exercise_mat",
+          "strength_machine"
+        ],
+        "load_profile": "load_vosstanovlenie_dyhaniya_i_postepennoe_snizhenie_intensivnosti",
+        "anatomy": {
+          "primary_muscles": [],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_vosstanovlenie_dyhaniya_i_postepennoe_snizhenie_intensivnosti"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Постепенно снижайте темп и частоту дыхания; задача — восстановиться, а не создать дополнительную усталость.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Постепенно снижайте темп и частоту дыхания",
+          "задача — восстановиться, а не создать дополнительную усталость."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "3–10 мин / 4–8 дых. циклов",
+        "type": "time",
+        "sets": {
+          "min": null,
+          "max": null
+        },
+        "reps": {
+          "min": null,
+          "max": null
+        },
+        "duration_seconds": {
+          "min": 180,
+          "max": 600
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0541",
+        "legacy_number": 541,
+        "slug": "exercise-0541-legkaya-rabota-na-ellipse",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Лёгкая работа на эллипсе",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "cool-down",
+        "movement_pattern": "mobility",
+        "difficulty": "beginner",
+        "equipment": [
+          "exercise_mat",
+          "strength_machine"
+        ],
+        "load_profile": "load_vosstanovlenie_dyhaniya_i_postepennoe_snizhenie_intensivnosti",
+        "anatomy": {
+          "primary_muscles": [],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_vosstanovlenie_dyhaniya_i_postepennoe_snizhenie_intensivnosti"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Постепенно снижайте темп и частоту дыхания; задача — восстановиться, а не создать дополнительную усталость.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Постепенно снижайте темп и частоту дыхания",
+          "задача — восстановиться, а не создать дополнительную усталость."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "3–10 мин / 4–8 дых. циклов",
+        "type": "time",
+        "sets": {
+          "min": null,
+          "max": null
+        },
+        "reps": {
+          "min": null,
+          "max": null
+        },
+        "duration_seconds": {
+          "min": 180,
+          "max": 600
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0542",
+        "legacy_number": 542,
+        "slug": "exercise-0542-legkaya-greblya-na-ergometre",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Лёгкая гребля на эргометре",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "cool-down",
+        "movement_pattern": "mobility",
+        "difficulty": "beginner",
+        "equipment": [
+          "exercise_mat",
+          "strength_machine"
+        ],
+        "load_profile": "load_vosstanovlenie_dyhaniya_i_postepennoe_snizhenie_intensivnosti",
+        "anatomy": {
+          "primary_muscles": [],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_vosstanovlenie_dyhaniya_i_postepennoe_snizhenie_intensivnosti"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Постепенно снижайте темп и частоту дыхания; задача — восстановиться, а не создать дополнительную усталость.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Постепенно снижайте темп и частоту дыхания",
+          "задача — восстановиться, а не создать дополнительную усталость."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "3–10 мин / 4–8 дых. циклов",
+        "type": "time",
+        "sets": {
+          "min": null,
+          "max": null
+        },
+        "reps": {
+          "min": null,
+          "max": null
+        },
+        "duration_seconds": {
+          "min": 180,
+          "max": 600
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0543",
+        "legacy_number": 543,
+        "slug": "exercise-0543-ochen-legkoe-plavanie-akva-vosstanovlenie",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Очень лёгкое плавание / аква-восстановление",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "cool-down",
+        "movement_pattern": "swim",
+        "difficulty": "beginner",
+        "equipment": [
+          "exercise_mat",
+          "strength_machine"
+        ],
+        "load_profile": "load_vosstanovlenie_dyhaniya_i_postepennoe_snizhenie_intensivnosti",
+        "anatomy": {
+          "primary_muscles": [],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_vosstanovlenie_dyhaniya_i_postepennoe_snizhenie_intensivnosti"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Постепенно снижайте темп и частоту дыхания; задача — восстановиться, а не создать дополнительную усталость.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Постепенно снижайте темп и частоту дыхания",
+          "задача — восстановиться, а не создать дополнительную усталость."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "3–10 мин / 4–8 дых. циклов",
+        "type": "time",
+        "sets": {
+          "min": null,
+          "max": null
+        },
+        "reps": {
+          "min": null,
+          "max": null
+        },
+        "duration_seconds": {
+          "min": 180,
+          "max": 600
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0544",
+        "legacy_number": 544,
+        "slug": "exercise-0544-diafragmalnoe-dyhanie-lezha",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Диафрагмальное дыхание лёжа",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": "exercise_0544",
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "cool-down",
+        "movement_pattern": "breathing",
+        "difficulty": "beginner",
+        "equipment": [
+          "exercise_mat",
+          "strength_machine"
+        ],
+        "load_profile": "load_vosstanovlenie_dyhaniya_i_postepennoe_snizhenie_intensivnosti",
+        "anatomy": {
+          "primary_muscles": [],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_vosstanovlenie_dyhaniya_i_postepennoe_snizhenie_intensivnosti"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Постепенно снижайте темп и частоту дыхания; задача — восстановиться, а не создать дополнительную усталость.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Постепенно снижайте темп и частоту дыхания",
+          "задача — восстановиться, а не создать дополнительную усталость."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "3–10 мин / 4–8 дых. циклов",
+        "type": "time",
+        "sets": {
+          "min": null,
+          "max": null
+        },
+        "reps": {
+          "min": null,
+          "max": null
+        },
+        "duration_seconds": {
+          "min": 180,
+          "max": 600
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0545",
+        "legacy_number": 545,
+        "slug": "exercise-0545-90-90-breathing",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "90/90 breathing",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "cool-down",
+        "movement_pattern": "breathing",
+        "difficulty": "beginner",
+        "equipment": [
+          "exercise_mat",
+          "strength_machine"
+        ],
+        "load_profile": "load_vosstanovlenie_dyhaniya_i_postepennoe_snizhenie_intensivnosti",
+        "anatomy": {
+          "primary_muscles": [],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_vosstanovlenie_dyhaniya_i_postepennoe_snizhenie_intensivnosti"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Постепенно снижайте темп и частоту дыхания; задача — восстановиться, а не создать дополнительную усталость.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Постепенно снижайте темп и частоту дыхания",
+          "задача — восстановиться, а не создать дополнительную усталость."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "3–10 мин / 4–8 дых. циклов",
+        "type": "time",
+        "sets": {
+          "min": null,
+          "max": null
+        },
+        "reps": {
+          "min": null,
+          "max": null
+        },
+        "duration_seconds": {
+          "min": 180,
+          "max": 600
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0546",
+        "legacy_number": 546,
+        "slug": "exercise-0546-childs-pose-s-dyhaniem",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Child’s pose с дыханием",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "cool-down",
+        "movement_pattern": "breathing",
+        "difficulty": "beginner",
+        "equipment": [
+          "exercise_mat",
+          "strength_machine"
+        ],
+        "load_profile": "load_vosstanovlenie_dyhaniya_i_postepennoe_snizhenie_intensivnosti",
+        "anatomy": {
+          "primary_muscles": [],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_vosstanovlenie_dyhaniya_i_postepennoe_snizhenie_intensivnosti"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Постепенно снижайте темп и частоту дыхания; задача — восстановиться, а не создать дополнительную усталость.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Постепенно снижайте темп и частоту дыхания",
+          "задача — восстановиться, а не создать дополнительную усталость."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "3–10 мин / 4–8 дых. циклов",
+        "type": "time",
+        "sets": {
+          "min": null,
+          "max": null
+        },
+        "reps": {
+          "min": null,
+          "max": null
+        },
+        "duration_seconds": {
+          "min": 180,
+          "max": 600
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0547",
+        "legacy_number": 547,
+        "slug": "exercise-0547-legs-up-the-wall-breathing",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Legs-up-the-wall breathing",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": "exercise_0547",
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "cool-down",
+        "movement_pattern": "breathing",
+        "difficulty": "beginner",
+        "equipment": [
+          "exercise_mat",
+          "strength_machine"
+        ],
+        "load_profile": "load_vosstanovlenie_dyhaniya_i_postepennoe_snizhenie_intensivnosti",
+        "anatomy": {
+          "primary_muscles": [],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_vosstanovlenie_dyhaniya_i_postepennoe_snizhenie_intensivnosti"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Постепенно снижайте темп и частоту дыхания; задача — восстановиться, а не создать дополнительную усталость.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Постепенно снижайте темп и частоту дыхания",
+          "задача — восстановиться, а не создать дополнительную усталость."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "3–10 мин / 4–8 дых. циклов",
+        "type": "time",
+        "sets": {
+          "min": null,
+          "max": null
+        },
+        "reps": {
+          "min": null,
+          "max": null
+        },
+        "duration_seconds": {
+          "min": 180,
+          "max": 600
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0548",
+        "legacy_number": 548,
+        "slug": "exercise-0548-koleno-k-grudi-lezha",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Колено к груди лёжа",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "cool-down",
+        "movement_pattern": "mobility",
+        "difficulty": "beginner",
+        "equipment": [
+          "exercise_mat",
+          "strength_machine"
+        ],
+        "load_profile": "load_vosstanovlenie_dyhaniya_i_postepennoe_snizhenie_intensivnosti",
+        "anatomy": {
+          "primary_muscles": [],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_vosstanovlenie_dyhaniya_i_postepennoe_snizhenie_intensivnosti"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Постепенно снижайте темп и частоту дыхания; задача — восстановиться, а не создать дополнительную усталость.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Постепенно снижайте темп и частоту дыхания",
+          "задача — восстановиться, а не создать дополнительную усталость."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "3–10 мин / 4–8 дых. циклов",
+        "type": "time",
+        "sets": {
+          "min": null,
+          "max": null
+        },
+        "reps": {
+          "min": null,
+          "max": null
+        },
+        "duration_seconds": {
+          "min": 180,
+          "max": 600
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0549",
+        "legacy_number": 549,
+        "slug": "exercise-0549-myagkaya-rotatsiya-lezha",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Мягкая ротация лёжа",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "cool-down",
+        "movement_pattern": "rotate",
+        "difficulty": "beginner",
+        "equipment": [
+          "exercise_mat",
+          "strength_machine"
+        ],
+        "load_profile": "load_vosstanovlenie_dyhaniya_i_postepennoe_snizhenie_intensivnosti",
+        "anatomy": {
+          "primary_muscles": [],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_vosstanovlenie_dyhaniya_i_postepennoe_snizhenie_intensivnosti"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Постепенно снижайте темп и частоту дыхания; задача — восстановиться, а не создать дополнительную усталость.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Постепенно снижайте темп и частоту дыхания",
+          "задача — восстановиться, а не создать дополнительную усталость."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "3–10 мин / 4–8 дых. циклов",
+        "type": "time",
+        "sets": {
+          "min": null,
+          "max": null
+        },
+        "reps": {
+          "min": null,
+          "max": null
+        },
+        "duration_seconds": {
+          "min": 180,
+          "max": 600
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0550",
+        "legacy_number": 550,
+        "slug": "exercise-0550-medlennyy-mobility-flow-vsego-tela",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Медленный mobility flow всего тела",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "cool-down",
+        "movement_pattern": "mobility",
+        "difficulty": "beginner",
+        "equipment": [
+          "exercise_mat",
+          "strength_machine"
+        ],
+        "load_profile": "load_vosstanovlenie_dyhaniya_i_postepennoe_snizhenie_intensivnosti",
+        "anatomy": {
+          "primary_muscles": [],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_vosstanovlenie_dyhaniya_i_postepennoe_snizhenie_intensivnosti"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Постепенно снижайте темп и частоту дыхания; задача — восстановиться, а не создать дополнительную усталость.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Постепенно снижайте темп и частоту дыхания",
+          "задача — восстановиться, а не создать дополнительную усталость."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "3–10 мин / 4–8 дых. циклов",
+        "type": "time",
+        "sets": {
+          "min": null,
+          "max": null
+        },
+        "reps": {
+          "min": null,
+          "max": null
+        },
+        "duration_seconds": {
+          "min": 180,
+          "max": 600
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    }
+  ]
+}

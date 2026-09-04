@@ -1,0 +1,4666 @@
+{
+  "schema_version": "1.1.0",
+  "section": {
+    "code": "barbell",
+    "legacy_section_number": 11,
+    "label_ru": "Штанга",
+    "sport": "general_fitness"
+  },
+  "exercises": [
+    {
+      "identity": {
+        "exercise_id": "exercise_0426",
+        "legacy_number": 426,
+        "slug": "exercise-0426-back-squat-high-bar",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Back squat high-bar",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "barbell",
+        "movement_pattern": "squat",
+        "difficulty": "beginner",
+        "equipment": [
+          "barbell",
+          "rack",
+          "bench"
+        ],
+        "load_profile": "load_kvadritseps_yagoditsy_kor",
+        "anatomy": {
+          "primary_muscles": [
+            "target_kvadritseps",
+            "target_yagoditsy",
+            "target_kor"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_kvadritseps",
+            "target_yagoditsy",
+            "target_kor"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Создайте жёсткий корпус, удерживайте штангу стабильно; колени следуют линии стоп, глубина без потери позиции.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Создайте жёсткий корпус, удерживайте штангу стабильно",
+          "колени следуют линии стоп, глубина без потери позиции."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "2–5×5–15",
+        "type": "reps",
+        "sets": {
+          "min": 2,
+          "max": 5
+        },
+        "reps": {
+          "min": 5,
+          "max": 15
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0427",
+        "legacy_number": 427,
+        "slug": "exercise-0427-back-squat-low-bar",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Back squat low-bar",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "barbell",
+        "movement_pattern": "squat",
+        "difficulty": "intermediate",
+        "equipment": [
+          "barbell",
+          "rack",
+          "bench"
+        ],
+        "load_profile": "load_kvadritseps_yagoditsy_kor",
+        "anatomy": {
+          "primary_muscles": [
+            "target_kvadritseps",
+            "target_yagoditsy",
+            "target_kor"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_kvadritseps",
+            "target_yagoditsy",
+            "target_kor"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Создайте жёсткий корпус, удерживайте штангу стабильно; колени следуют линии стоп, глубина без потери позиции.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Создайте жёсткий корпус, удерживайте штангу стабильно",
+          "колени следуют линии стоп, глубина без потери позиции."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "2–5×5–15",
+        "type": "reps",
+        "sets": {
+          "min": 2,
+          "max": 5
+        },
+        "reps": {
+          "min": 5,
+          "max": 15
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0428",
+        "legacy_number": 428,
+        "slug": "exercise-0428-front-squat",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Front squat",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "barbell",
+        "movement_pattern": "squat",
+        "difficulty": "intermediate",
+        "equipment": [
+          "barbell",
+          "rack",
+          "bench"
+        ],
+        "load_profile": "load_kvadritseps_yagoditsy_kor",
+        "anatomy": {
+          "primary_muscles": [
+            "target_kvadritseps",
+            "target_yagoditsy",
+            "target_kor"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_kvadritseps",
+            "target_yagoditsy",
+            "target_kor"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Создайте жёсткий корпус, удерживайте штангу стабильно; колени следуют линии стоп, глубина без потери позиции.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Создайте жёсткий корпус, удерживайте штангу стабильно",
+          "колени следуют линии стоп, глубина без потери позиции."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "2–5×5–15",
+        "type": "reps",
+        "sets": {
+          "min": 2,
+          "max": 5
+        },
+        "reps": {
+          "min": 5,
+          "max": 15
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0429",
+        "legacy_number": 429,
+        "slug": "exercise-0429-box-squat-so-shtangoy",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Box squat со штангой",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "barbell",
+        "movement_pattern": "squat",
+        "difficulty": "beginner",
+        "equipment": [
+          "barbell",
+          "rack",
+          "bench"
+        ],
+        "load_profile": "load_kvadritseps_yagoditsy_kor",
+        "anatomy": {
+          "primary_muscles": [
+            "target_kvadritseps",
+            "target_yagoditsy",
+            "target_kor"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_kvadritseps",
+            "target_yagoditsy",
+            "target_kor"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Создайте жёсткий корпус, удерживайте штангу стабильно; колени следуют линии стоп, глубина без потери позиции.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Создайте жёсткий корпус, удерживайте штангу стабильно",
+          "колени следуют линии стоп, глубина без потери позиции."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "2–5×5–15",
+        "type": "reps",
+        "sets": {
+          "min": 2,
+          "max": 5
+        },
+        "reps": {
+          "min": 5,
+          "max": 15
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0430",
+        "legacy_number": 430,
+        "slug": "exercise-0430-pause-squat",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Pause squat",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "barbell",
+        "movement_pattern": "squat",
+        "difficulty": "beginner",
+        "equipment": [
+          "barbell",
+          "rack",
+          "bench"
+        ],
+        "load_profile": "load_kvadritseps_yagoditsy_kor",
+        "anatomy": {
+          "primary_muscles": [
+            "target_kvadritseps",
+            "target_yagoditsy",
+            "target_kor"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_kvadritseps",
+            "target_yagoditsy",
+            "target_kor"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Создайте жёсткий корпус, удерживайте штангу стабильно; колени следуют линии стоп, глубина без потери позиции.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Создайте жёсткий корпус, удерживайте штангу стабильно",
+          "колени следуют линии стоп, глубина без потери позиции."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "2–5×5–15",
+        "type": "reps",
+        "sets": {
+          "min": 2,
+          "max": 5
+        },
+        "reps": {
+          "min": 5,
+          "max": 15
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0431",
+        "legacy_number": 431,
+        "slug": "exercise-0431-zercher-squat",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Zercher squat",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "barbell",
+        "movement_pattern": "squat",
+        "difficulty": "intermediate",
+        "equipment": [
+          "barbell",
+          "rack",
+          "bench"
+        ],
+        "load_profile": "load_kvadritseps_yagoditsy_kor",
+        "anatomy": {
+          "primary_muscles": [
+            "target_kvadritseps",
+            "target_yagoditsy",
+            "target_kor"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_kvadritseps",
+            "target_yagoditsy",
+            "target_kor"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Создайте жёсткий корпус, удерживайте штангу стабильно; колени следуют линии стоп, глубина без потери позиции.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Создайте жёсткий корпус, удерживайте штангу стабильно",
+          "колени следуют линии стоп, глубина без потери позиции."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "2–5×5–15",
+        "type": "reps",
+        "sets": {
+          "min": 2,
+          "max": 5
+        },
+        "reps": {
+          "min": 5,
+          "max": 15
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0432",
+        "legacy_number": 432,
+        "slug": "exercise-0432-conventional-deadlift",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Conventional deadlift",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "barbell",
+        "movement_pattern": "hinge",
+        "difficulty": "intermediate",
+        "equipment": [
+          "barbell",
+          "rack",
+          "bench"
+        ],
+        "load_profile": "load_yagoditsy_zadnyaya_poverhnost_bedra_spina",
+        "anatomy": {
+          "primary_muscles": [
+            "target_yagoditsy",
+            "target_zadnyaya_poverhnost_bedra",
+            "target_spina"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_yagoditsy",
+            "target_zadnyaya_poverhnost_bedra",
+            "target_spina"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Зафиксируйте позвоночник, создайте натяжение перед отрывом; штанга движется близко к ногам.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Зафиксируйте позвоночник, создайте натяжение перед отрывом",
+          "штанга движется близко к ногам."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "2–5×5–15",
+        "type": "reps",
+        "sets": {
+          "min": 2,
+          "max": 5
+        },
+        "reps": {
+          "min": 5,
+          "max": 15
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0433",
+        "legacy_number": 433,
+        "slug": "exercise-0433-sumo-deadlift",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Sumo deadlift",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "barbell",
+        "movement_pattern": "hinge",
+        "difficulty": "intermediate",
+        "equipment": [
+          "barbell",
+          "rack",
+          "bench"
+        ],
+        "load_profile": "load_yagoditsy_zadnyaya_poverhnost_bedra_spina",
+        "anatomy": {
+          "primary_muscles": [
+            "target_yagoditsy",
+            "target_zadnyaya_poverhnost_bedra",
+            "target_spina"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_yagoditsy",
+            "target_zadnyaya_poverhnost_bedra",
+            "target_spina"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Зафиксируйте позвоночник, создайте натяжение перед отрывом; штанга движется близко к ногам.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Зафиксируйте позвоночник, создайте натяжение перед отрывом",
+          "штанга движется близко к ногам."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "2–5×5–15",
+        "type": "reps",
+        "sets": {
+          "min": 2,
+          "max": 5
+        },
+        "reps": {
+          "min": 5,
+          "max": 15
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0434",
+        "legacy_number": 434,
+        "slug": "exercise-0434-romanian-deadlift",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Romanian deadlift",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "barbell",
+        "movement_pattern": "hinge",
+        "difficulty": "intermediate",
+        "equipment": [
+          "barbell",
+          "rack",
+          "bench"
+        ],
+        "load_profile": "load_yagoditsy_zadnyaya_poverhnost_bedra_spina",
+        "anatomy": {
+          "primary_muscles": [
+            "target_yagoditsy",
+            "target_zadnyaya_poverhnost_bedra",
+            "target_spina"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_yagoditsy",
+            "target_zadnyaya_poverhnost_bedra",
+            "target_spina"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Зафиксируйте позвоночник, создайте натяжение перед отрывом; штанга движется близко к ногам.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Зафиксируйте позвоночник, создайте натяжение перед отрывом",
+          "штанга движется близко к ногам."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "2–5×5–15",
+        "type": "reps",
+        "sets": {
+          "min": 2,
+          "max": 5
+        },
+        "reps": {
+          "min": 5,
+          "max": 15
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0435",
+        "legacy_number": 435,
+        "slug": "exercise-0435-rack-pull",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Rack pull",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "barbell",
+        "movement_pattern": "pull",
+        "difficulty": "beginner",
+        "equipment": [
+          "barbell",
+          "rack",
+          "bench"
+        ],
+        "load_profile": "load_yagoditsy_zadnyaya_poverhnost_bedra_spina",
+        "anatomy": {
+          "primary_muscles": [
+            "target_yagoditsy",
+            "target_zadnyaya_poverhnost_bedra",
+            "target_spina"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_yagoditsy",
+            "target_zadnyaya_poverhnost_bedra",
+            "target_spina"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Зафиксируйте позвоночник, создайте натяжение перед отрывом; штанга движется близко к ногам.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Зафиксируйте позвоночник, создайте натяжение перед отрывом",
+          "штанга движется близко к ногам."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "2–5×5–15",
+        "type": "reps",
+        "sets": {
+          "min": 2,
+          "max": 5
+        },
+        "reps": {
+          "min": 5,
+          "max": 15
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0436",
+        "legacy_number": 436,
+        "slug": "exercise-0436-good-morning",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Good morning",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "barbell",
+        "movement_pattern": "hinge",
+        "difficulty": "intermediate",
+        "equipment": [
+          "barbell",
+          "rack",
+          "bench"
+        ],
+        "load_profile": "load_yagoditsy_zadnyaya_poverhnost_bedra_spina",
+        "anatomy": {
+          "primary_muscles": [
+            "target_yagoditsy",
+            "target_zadnyaya_poverhnost_bedra",
+            "target_spina"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_yagoditsy",
+            "target_zadnyaya_poverhnost_bedra",
+            "target_spina"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Зафиксируйте позвоночник, создайте натяжение перед отрывом; штанга движется близко к ногам.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Зафиксируйте позвоночник, создайте натяжение перед отрывом",
+          "штанга движется близко к ногам."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "2–5×5–15",
+        "type": "reps",
+        "sets": {
+          "min": 2,
+          "max": 5
+        },
+        "reps": {
+          "min": 5,
+          "max": 15
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0437",
+        "legacy_number": 437,
+        "slug": "exercise-0437-hip-thrust-so-shtangoy",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Hip thrust со штангой",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "barbell",
+        "movement_pattern": "other",
+        "difficulty": "beginner",
+        "equipment": [
+          "barbell",
+          "rack",
+          "bench"
+        ],
+        "load_profile": "load_yagoditsy_zadnyaya_poverhnost_bedra_spina",
+        "anatomy": {
+          "primary_muscles": [
+            "target_yagoditsy",
+            "target_zadnyaya_poverhnost_bedra",
+            "target_spina"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_yagoditsy",
+            "target_zadnyaya_poverhnost_bedra",
+            "target_spina"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Контролируйте амплитуду и не используйте инерцию вместо работы целевых мышц.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Контролируйте амплитуду и не используйте инерцию вместо работы целевых мышц."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "2–5×5–15",
+        "type": "reps",
+        "sets": {
+          "min": 2,
+          "max": 5
+        },
+        "reps": {
+          "min": 5,
+          "max": 15
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0438",
+        "legacy_number": 438,
+        "slug": "exercise-0438-glute-bridge-so-shtangoy",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Glute bridge со штангой",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "barbell",
+        "movement_pattern": "other",
+        "difficulty": "beginner",
+        "equipment": [
+          "barbell",
+          "rack",
+          "bench"
+        ],
+        "load_profile": "load_yagoditsy_zadnyaya_poverhnost_bedra_spina",
+        "anatomy": {
+          "primary_muscles": [
+            "target_yagoditsy",
+            "target_zadnyaya_poverhnost_bedra",
+            "target_spina"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_yagoditsy",
+            "target_zadnyaya_poverhnost_bedra",
+            "target_spina"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Контролируйте амплитуду и не используйте инерцию вместо работы целевых мышц.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Контролируйте амплитуду и не используйте инерцию вместо работы целевых мышц."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "2–5×5–15",
+        "type": "reps",
+        "sets": {
+          "min": 2,
+          "max": 5
+        },
+        "reps": {
+          "min": 5,
+          "max": 15
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0439",
+        "legacy_number": 439,
+        "slug": "exercise-0439-bench-press",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Bench press",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "barbell",
+        "movement_pattern": "other",
+        "difficulty": "beginner",
+        "equipment": [
+          "barbell",
+          "rack",
+          "bench"
+        ],
+        "load_profile": "load_grud_tritseps_perednyaya_delta",
+        "anatomy": {
+          "primary_muscles": [
+            "target_grud",
+            "target_tritseps",
+            "target_perednyaya_delta"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_grud",
+            "target_tritseps",
+            "target_perednyaya_delta"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Стопы устойчивы, лопатки собраны; контролируйте касание и траекторию, используйте страховку при тяжёлом весе.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Стопы устойчивы, лопатки собраны",
+          "контролируйте касание и траекторию, используйте страховку при тяжёлом весе."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "2–5×5–15",
+        "type": "reps",
+        "sets": {
+          "min": 2,
+          "max": 5
+        },
+        "reps": {
+          "min": 5,
+          "max": 15
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0440",
+        "legacy_number": 440,
+        "slug": "exercise-0440-incline-bench-press",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Incline bench press",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "barbell",
+        "movement_pattern": "other",
+        "difficulty": "beginner",
+        "equipment": [
+          "barbell",
+          "rack",
+          "bench"
+        ],
+        "load_profile": "load_grud_tritseps_perednyaya_delta",
+        "anatomy": {
+          "primary_muscles": [
+            "target_grud",
+            "target_tritseps",
+            "target_perednyaya_delta"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_grud",
+            "target_tritseps",
+            "target_perednyaya_delta"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Стопы устойчивы, лопатки собраны; контролируйте касание и траекторию, используйте страховку при тяжёлом весе.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Стопы устойчивы, лопатки собраны",
+          "контролируйте касание и траекторию, используйте страховку при тяжёлом весе."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "2–5×5–15",
+        "type": "reps",
+        "sets": {
+          "min": 2,
+          "max": 5
+        },
+        "reps": {
+          "min": 5,
+          "max": 15
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0441",
+        "legacy_number": 441,
+        "slug": "exercise-0441-close-grip-bench-press",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Close-grip bench press",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "barbell",
+        "movement_pattern": "other",
+        "difficulty": "beginner",
+        "equipment": [
+          "barbell",
+          "rack",
+          "bench"
+        ],
+        "load_profile": "load_grud_tritseps_perednyaya_delta",
+        "anatomy": {
+          "primary_muscles": [
+            "target_grud",
+            "target_tritseps",
+            "target_perednyaya_delta"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_grud",
+            "target_tritseps",
+            "target_perednyaya_delta"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Стопы устойчивы, лопатки собраны; контролируйте касание и траекторию, используйте страховку при тяжёлом весе.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Стопы устойчивы, лопатки собраны",
+          "контролируйте касание и траекторию, используйте страховку при тяжёлом весе."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "2–5×5–15",
+        "type": "reps",
+        "sets": {
+          "min": 2,
+          "max": 5
+        },
+        "reps": {
+          "min": 5,
+          "max": 15
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0442",
+        "legacy_number": 442,
+        "slug": "exercise-0442-barbell-floor-press",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Barbell floor press",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "barbell",
+        "movement_pattern": "other",
+        "difficulty": "beginner",
+        "equipment": [
+          "barbell",
+          "rack",
+          "bench"
+        ],
+        "load_profile": "load_grud_tritseps_perednyaya_delta",
+        "anatomy": {
+          "primary_muscles": [
+            "target_grud",
+            "target_tritseps",
+            "target_perednyaya_delta"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_grud",
+            "target_tritseps",
+            "target_perednyaya_delta"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Стопы устойчивы, лопатки собраны; контролируйте касание и траекторию, используйте страховку при тяжёлом весе.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Стопы устойчивы, лопатки собраны",
+          "контролируйте касание и траекторию, используйте страховку при тяжёлом весе."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "2–5×5–15",
+        "type": "reps",
+        "sets": {
+          "min": 2,
+          "max": 5
+        },
+        "reps": {
+          "min": 5,
+          "max": 15
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0443",
+        "legacy_number": 443,
+        "slug": "exercise-0443-overhead-press",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Overhead press",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "barbell",
+        "movement_pattern": "other",
+        "difficulty": "intermediate",
+        "equipment": [
+          "barbell",
+          "rack",
+          "bench"
+        ],
+        "load_profile": "load_plechi_tritseps_kor",
+        "anatomy": {
+          "primary_muscles": [
+            "target_plechi",
+            "target_tritseps",
+            "target_kor"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_plechi",
+            "target_tritseps",
+            "target_kor"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Не переразгибайте поясницу; штанга проходит близко к лицу, вверху корпус под грифом.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Не переразгибайте поясницу",
+          "штанга проходит близко к лицу, вверху корпус под грифом."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "2–5×5–15",
+        "type": "reps",
+        "sets": {
+          "min": 2,
+          "max": 5
+        },
+        "reps": {
+          "min": 5,
+          "max": 15
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0444",
+        "legacy_number": 444,
+        "slug": "exercise-0444-push-press",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Push press",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "barbell",
+        "movement_pattern": "other",
+        "difficulty": "intermediate",
+        "equipment": [
+          "barbell",
+          "rack",
+          "bench"
+        ],
+        "load_profile": "load_plechi_tritseps_kor",
+        "anatomy": {
+          "primary_muscles": [
+            "target_plechi",
+            "target_tritseps",
+            "target_kor"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_plechi",
+            "target_tritseps",
+            "target_kor"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Не переразгибайте поясницу; штанга проходит близко к лицу, вверху корпус под грифом.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Не переразгибайте поясницу",
+          "штанга проходит близко к лицу, вверху корпус под грифом."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "2–5×5–15",
+        "type": "reps",
+        "sets": {
+          "min": 2,
+          "max": 5
+        },
+        "reps": {
+          "min": 5,
+          "max": 15
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0445",
+        "legacy_number": 445,
+        "slug": "exercise-0445-bent-over-barbell-row",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Bent-over barbell row",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "barbell",
+        "movement_pattern": "pull",
+        "difficulty": "beginner",
+        "equipment": [
+          "barbell",
+          "rack",
+          "bench"
+        ],
+        "load_profile": "load_spina_bitseps_zadnyaya_delta",
+        "anatomy": {
+          "primary_muscles": [
+            "target_spina",
+            "target_bitseps",
+            "target_zadnyaya_delta"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_spina",
+            "target_bitseps",
+            "target_zadnyaya_delta"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Корпус стабилен, штанга идёт к нижним рёбрам/животу; не тяните за счёт рывка поясницей.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Корпус стабилен, штанга идёт к нижним рёбрам/животу",
+          "не тяните за счёт рывка поясницей."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "2–5×5–15",
+        "type": "reps",
+        "sets": {
+          "min": 2,
+          "max": 5
+        },
+        "reps": {
+          "min": 5,
+          "max": 15
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0446",
+        "legacy_number": 446,
+        "slug": "exercise-0446-pendlay-row",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Pendlay row",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "barbell",
+        "movement_pattern": "pull",
+        "difficulty": "intermediate",
+        "equipment": [
+          "barbell",
+          "rack",
+          "bench"
+        ],
+        "load_profile": "load_spina_bitseps_zadnyaya_delta",
+        "anatomy": {
+          "primary_muscles": [
+            "target_spina",
+            "target_bitseps",
+            "target_zadnyaya_delta"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_spina",
+            "target_bitseps",
+            "target_zadnyaya_delta"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Корпус стабилен, штанга идёт к нижним рёбрам/животу; не тяните за счёт рывка поясницей.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Корпус стабилен, штанга идёт к нижним рёбрам/животу",
+          "не тяните за счёт рывка поясницей."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "2–5×5–15",
+        "type": "reps",
+        "sets": {
+          "min": 2,
+          "max": 5
+        },
+        "reps": {
+          "min": 5,
+          "max": 15
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0447",
+        "legacy_number": 447,
+        "slug": "exercise-0447-barbell-biceps-curl",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Barbell biceps curl",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "barbell",
+        "movement_pattern": "other",
+        "difficulty": "beginner",
+        "equipment": [
+          "barbell",
+          "rack",
+          "bench"
+        ],
+        "load_profile": "load_bitseps_predplechya",
+        "anatomy": {
+          "primary_muscles": [
+            "target_bitseps",
+            "target_predplechya"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_bitseps",
+            "target_predplechya"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Контролируйте амплитуду и не используйте инерцию вместо работы целевых мышц.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Контролируйте амплитуду и не используйте инерцию вместо работы целевых мышц."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "2–5×5–15",
+        "type": "reps",
+        "sets": {
+          "min": 2,
+          "max": 5
+        },
+        "reps": {
+          "min": 5,
+          "max": 15
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0448",
+        "legacy_number": 448,
+        "slug": "exercise-0448-skull-crusher-lying-triceps-extension",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Skull crusher / lying triceps extension",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "barbell",
+        "movement_pattern": "other",
+        "difficulty": "beginner",
+        "equipment": [
+          "barbell",
+          "rack",
+          "bench"
+        ],
+        "load_profile": "load_tritseps",
+        "anatomy": {
+          "primary_muscles": [
+            "target_tritseps"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_tritseps"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Контролируйте амплитуду и не используйте инерцию вместо работы целевых мышц.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Контролируйте амплитуду и не используйте инерцию вместо работы целевых мышц."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "2–5×5–15",
+        "type": "reps",
+        "sets": {
+          "min": 2,
+          "max": 5
+        },
+        "reps": {
+          "min": 5,
+          "max": 15
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0449",
+        "legacy_number": 449,
+        "slug": "exercise-0449-standing-calf-raise-so-shtangoy",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Standing calf raise со штангой",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "barbell",
+        "movement_pattern": "other",
+        "difficulty": "beginner",
+        "equipment": [
+          "barbell",
+          "rack",
+          "bench"
+        ],
+        "load_profile": "load_ikronozhnye",
+        "anatomy": {
+          "primary_muscles": [
+            "target_ikronozhnye"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_ikronozhnye"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Контролируйте амплитуду и не используйте инерцию вместо работы целевых мышц.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Контролируйте амплитуду и не используйте инерцию вместо работы целевых мышц."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "2–5×5–15",
+        "type": "reps",
+        "sets": {
+          "min": 2,
+          "max": 5
+        },
+        "reps": {
+          "min": 5,
+          "max": 15
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0450",
+        "legacy_number": 450,
+        "slug": "exercise-0450-walking-lunge-so-shtangoy",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Walking lunge со штангой",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "barbell",
+        "movement_pattern": "squat",
+        "difficulty": "intermediate",
+        "equipment": [
+          "barbell",
+          "rack",
+          "bench"
+        ],
+        "load_profile": "load_kvadritseps_yagoditsy_kor",
+        "anatomy": {
+          "primary_muscles": [
+            "target_kvadritseps",
+            "target_yagoditsy",
+            "target_kor"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_kvadritseps",
+            "target_yagoditsy",
+            "target_kor"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Контролируйте амплитуду и не используйте инерцию вместо работы целевых мышц.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Контролируйте амплитуду и не используйте инерцию вместо работы целевых мышц."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "2–5×5–15",
+        "type": "reps",
+        "sets": {
+          "min": 2,
+          "max": 5
+        },
+        "reps": {
+          "min": 5,
+          "max": 15
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0451",
+        "legacy_number": 451,
+        "slug": "exercise-0451-reverse-lunge-so-shtangoy",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Reverse lunge со штангой",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "barbell",
+        "movement_pattern": "squat",
+        "difficulty": "beginner",
+        "equipment": [
+          "barbell",
+          "rack",
+          "bench"
+        ],
+        "load_profile": "load_kvadritseps_yagoditsy_kor",
+        "anatomy": {
+          "primary_muscles": [
+            "target_kvadritseps",
+            "target_yagoditsy",
+            "target_kor"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_kvadritseps",
+            "target_yagoditsy",
+            "target_kor"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Контролируйте амплитуду и не используйте инерцию вместо работы целевых мышц.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Контролируйте амплитуду и не используйте инерцию вместо работы целевых мышц."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "2–5×5–15",
+        "type": "reps",
+        "sets": {
+          "min": 2,
+          "max": 5
+        },
+        "reps": {
+          "min": 5,
+          "max": 15
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0452",
+        "legacy_number": 452,
+        "slug": "exercise-0452-split-squat-so-shtangoy",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Split squat со штангой",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "barbell",
+        "movement_pattern": "squat",
+        "difficulty": "beginner",
+        "equipment": [
+          "barbell",
+          "rack",
+          "bench"
+        ],
+        "load_profile": "load_kvadritseps_yagoditsy_kor",
+        "anatomy": {
+          "primary_muscles": [
+            "target_kvadritseps",
+            "target_yagoditsy",
+            "target_kor"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_kvadritseps",
+            "target_yagoditsy",
+            "target_kor"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Создайте жёсткий корпус, удерживайте штангу стабильно; колени следуют линии стоп, глубина без потери позиции.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Создайте жёсткий корпус, удерживайте штангу стабильно",
+          "колени следуют линии стоп, глубина без потери позиции."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "2–5×5–15",
+        "type": "reps",
+        "sets": {
+          "min": 2,
+          "max": 5
+        },
+        "reps": {
+          "min": 5,
+          "max": 15
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0453",
+        "legacy_number": 453,
+        "slug": "exercise-0453-barbell-shrug",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Barbell shrug",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "barbell",
+        "movement_pattern": "other",
+        "difficulty": "beginner",
+        "equipment": [
+          "barbell",
+          "rack",
+          "bench"
+        ],
+        "load_profile": "load_trapetsiya_hvat",
+        "anatomy": {
+          "primary_muscles": [
+            "target_trapetsiya"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_trapetsiya",
+            "target_hvat"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Контролируйте амплитуду и не используйте инерцию вместо работы целевых мышц.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Контролируйте амплитуду и не используйте инерцию вместо работы целевых мышц."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "2–5×5–15",
+        "type": "reps",
+        "sets": {
+          "min": 2,
+          "max": 5
+        },
+        "reps": {
+          "min": 5,
+          "max": 15
+        },
+        "duration_seconds": {
+          "min": null,
+          "max": null
+        },
+        "distance_meters": {
+          "min": null,
+          "max": null
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    }
+  ]
+}

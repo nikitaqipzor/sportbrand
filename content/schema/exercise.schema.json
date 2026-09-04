@@ -1,0 +1,710 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://athletica.ai/content/schema/exercise.schema.json",
+  "title": "Athletica AI exercise card",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "identity",
+    "classification",
+    "technique",
+    "programming",
+    "safety",
+    "media",
+    "review"
+  ],
+  "properties": {
+    "identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "exercise_id",
+        "legacy_number",
+        "slug",
+        "schema_version",
+        "content_version",
+        "locale",
+        "name",
+        "aliases",
+        "canonical_exercise_id",
+        "variant_of",
+        "publication_status"
+      ],
+      "properties": {
+        "exercise_id": {
+          "type": "string",
+          "pattern": "^exercise_[0-9]{4}$"
+        },
+        "legacy_number": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 918
+        },
+        "slug": {
+          "type": "string",
+          "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+        },
+        "schema_version": {
+          "const": "1.1.0"
+        },
+        "content_version": {
+          "const": 1
+        },
+        "locale": {
+          "const": "ru-RU"
+        },
+        "name": {
+          "type": "object",
+          "required": [
+            "ru",
+            "en"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "ru": {
+              "type": "string",
+              "minLength": 1
+            },
+            "en": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "aliases": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "canonical_exercise_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "variant_of": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "publication_status": {
+          "enum": [
+            "draft",
+            "in_review",
+            "ready",
+            "published",
+            "archived"
+          ]
+        }
+      }
+    },
+    "classification": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sport",
+        "section",
+        "movement_pattern",
+        "difficulty",
+        "equipment",
+        "load_profile",
+        "anatomy"
+      ],
+      "properties": {
+        "sport": {
+          "type": "string"
+        },
+        "section": {
+          "type": "string"
+        },
+        "movement_pattern": {
+          "type": "string"
+        },
+        "difficulty": {
+          "enum": [
+            "beginner",
+            "intermediate",
+            "advanced"
+          ]
+        },
+        "equipment": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "load_profile": {
+          "type": "string"
+        },
+        "anatomy": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "primary_muscles",
+            "secondary_muscles",
+            "primary_targets",
+            "joints",
+            "laterality",
+            "unfilled_fields"
+          ],
+          "properties": {
+            "primary_muscles": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "secondary_muscles": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "primary_targets": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "joints": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "laterality": {
+              "enum": [
+                "bilateral",
+                "left",
+                "right",
+                "alternating",
+                "not_applicable",
+                null
+              ]
+            },
+            "unfilled_fields": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    },
+    "technique": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_key_cue",
+        "setup",
+        "start_position",
+        "steps",
+        "key_cues",
+        "breathing",
+        "tempo",
+        "range_of_motion",
+        "finish",
+        "unfilled_fields"
+      ],
+      "properties": {
+        "source_key_cue": {
+          "type": "string"
+        },
+        "setup": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "start_position": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "steps": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "key_cues": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "breathing": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "tempo": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "range_of_motion": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "finish": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "unfilled_fields": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "programming": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "raw",
+        "type",
+        "sets",
+        "reps",
+        "duration_seconds",
+        "distance_meters",
+        "cycles",
+        "rest_seconds",
+        "intensity",
+        "completion_conditions"
+      ],
+      "properties": {
+        "raw": {
+          "type": "string"
+        },
+        "type": {
+          "enum": [
+            "reps",
+            "time",
+            "distance",
+            "cycles",
+            "mixed"
+          ]
+        },
+        "sets": {
+          "type": "object",
+          "required": [
+            "min",
+            "max"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "min": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "max": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0
+            }
+          }
+        },
+        "reps": {
+          "type": "object",
+          "required": [
+            "min",
+            "max"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "min": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "max": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0
+            }
+          }
+        },
+        "duration_seconds": {
+          "type": "object",
+          "required": [
+            "min",
+            "max"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "min": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "max": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0
+            }
+          }
+        },
+        "distance_meters": {
+          "type": "object",
+          "required": [
+            "min",
+            "max"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "min": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "max": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0
+            }
+          }
+        },
+        "cycles": {
+          "type": "object",
+          "required": [
+            "min",
+            "max"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "min": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "max": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0
+            }
+          }
+        },
+        "rest_seconds": {
+          "type": "object",
+          "required": [
+            "min",
+            "max"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "min": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0
+            },
+            "max": {
+              "type": [
+                "integer",
+                "null"
+              ],
+              "minimum": 0
+            }
+          }
+        },
+        "intensity": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "type",
+            "min",
+            "max"
+          ],
+          "properties": {
+            "type": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "min": {
+              "type": [
+                "string",
+                "null"
+              ]
+            },
+            "max": {
+              "type": [
+                "string",
+                "null"
+              ]
+            }
+          }
+        },
+        "completion_conditions": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "safety": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "common_errors",
+        "stop_signals",
+        "limitations",
+        "regressions",
+        "progressions",
+        "injury_notes",
+        "unfilled_fields"
+      ],
+      "properties": {
+        "common_errors": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "stop_signals": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "limitations": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "regressions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "progressions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "injury_notes": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "unfilled_fields": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "media": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "main_asset_id",
+        "phase_asset_ids",
+        "muscle_layer_asset_id",
+        "animation_asset_id",
+        "video_url",
+        "view",
+        "crop",
+        "alt_text",
+        "license",
+        "technique_version",
+        "status",
+        "unfilled_fields"
+      ],
+      "properties": {
+        "main_asset_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "phase_asset_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "muscle_layer_asset_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "animation_asset_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "video_url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "view": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "crop": {
+          "type": [
+            "object",
+            "null"
+          ]
+        },
+        "alt_text": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "license": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "technique_version": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "status": {
+          "enum": [
+            "missing",
+            "draft",
+            "method_checked",
+            "approved"
+          ]
+        },
+        "unfilled_fields": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "review": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sources",
+        "reviewers",
+        "author_id",
+        "editor_id",
+        "status",
+        "reviewed_at",
+        "comment",
+        "rejection_reason",
+        "unfilled_fields"
+      ],
+      "properties": {
+        "sources": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "reviewers": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        },
+        "author_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "editor_id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "status": {
+          "enum": [
+            "draft",
+            "method_review",
+            "medical_review",
+            "approved",
+            "rejected"
+          ]
+        },
+        "reviewed_at": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "comment": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "rejection_reason": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "unfilled_fields": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

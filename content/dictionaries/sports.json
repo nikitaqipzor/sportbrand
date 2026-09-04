@@ -1,0 +1,21 @@
+{
+  "version": "1.1.0",
+  "items": [
+    {
+      "code": "general_fitness",
+      "label_ru": "Общая физическая подготовка"
+    },
+    {
+      "code": "swimming",
+      "label_ru": "Плавание"
+    },
+    {
+      "code": "basketball",
+      "label_ru": "Баскетбол"
+    },
+    {
+      "code": "cycling",
+      "label_ru": "Велоспорт"
+    }
+  ]
+}

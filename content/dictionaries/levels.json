@@ -1,0 +1,26 @@
+{
+  "version": "1.1.0",
+  "items": [
+    {
+      "code": "beginner",
+      "label_ru": "Начальный",
+      "source_labels": [
+        "Начальный"
+      ]
+    },
+    {
+      "code": "intermediate",
+      "label_ru": "Средний",
+      "source_labels": [
+        "Средний"
+      ]
+    },
+    {
+      "code": "advanced",
+      "label_ru": "Продвинутый",
+      "source_labels": [
+        "Продвинутый"
+      ]
+    }
+  ]
+}

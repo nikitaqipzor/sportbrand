@@ -1,0 +1,2546 @@
+{
+  "schema_version": "1.1.0",
+  "section": {
+    "code": "carries-grip-and-forearms",
+    "legacy_section_number": 25,
+    "label_ru": "Переноски, хват и предплечья",
+    "sport": "general_fitness"
+  },
+  "exercises": [
+    {
+      "identity": {
+        "exercise_id": "exercise_0658",
+        "legacy_number": 658,
+        "slug": "exercise-0658-farmer-carry",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Farmer carry",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": "exercise_0220",
+        "variant_of": "exercise_0220",
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "carries-grip-and-forearms",
+        "movement_pattern": "carry",
+        "difficulty": "intermediate",
+        "equipment": [
+          "pull_up_bar",
+          "kettlebell",
+          "dumbbell",
+          "weight_plate"
+        ],
+        "load_profile": "load_hvat_predplechya_kor_plechevoy_poyas",
+        "anatomy": {
+          "primary_muscles": [
+            "target_predplechya",
+            "target_kor",
+            "target_plechevoy_poyas"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_hvat",
+            "target_predplechya",
+            "target_kor",
+            "target_plechevoy_poyas"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Идите медленно и ровно; не наклоняйтесь под груз, держите плечи собранными и дышите под напряжением.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Идите медленно и ровно",
+          "не наклоняйтесь под груз, держите плечи собранными и дышите под напряжением."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "3–6×20–60 м / 20–60 с",
+        "type": "mixed",
+        "sets": {
+          "min": 3,
+          "max": 6
+        },
+        "reps": {
+          "min": 20,
+          "max": 60
+        },
+        "duration_seconds": {
+          "min": 20,
+          "max": 60
+        },
+        "distance_meters": {
+          "min": 20,
+          "max": 60
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0659",
+        "legacy_number": 659,
+        "slug": "exercise-0659-suitcase-carry",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Suitcase carry",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": "exercise_0219",
+        "variant_of": "exercise_0219",
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "carries-grip-and-forearms",
+        "movement_pattern": "carry",
+        "difficulty": "intermediate",
+        "equipment": [
+          "pull_up_bar",
+          "kettlebell",
+          "dumbbell",
+          "weight_plate"
+        ],
+        "load_profile": "load_hvat_predplechya_kor_plechevoy_poyas",
+        "anatomy": {
+          "primary_muscles": [
+            "target_predplechya",
+            "target_kor",
+            "target_plechevoy_poyas"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_hvat",
+            "target_predplechya",
+            "target_kor",
+            "target_plechevoy_poyas"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Идите медленно и ровно; не наклоняйтесь под груз, держите плечи собранными и дышите под напряжением.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Идите медленно и ровно",
+          "не наклоняйтесь под груз, держите плечи собранными и дышите под напряжением."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "3–6×20–60 м / 20–60 с",
+        "type": "mixed",
+        "sets": {
+          "min": 3,
+          "max": 6
+        },
+        "reps": {
+          "min": 20,
+          "max": 60
+        },
+        "duration_seconds": {
+          "min": 20,
+          "max": 60
+        },
+        "distance_meters": {
+          "min": 20,
+          "max": 60
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0660",
+        "legacy_number": 660,
+        "slug": "exercise-0660-front-rack-carry",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Front-rack carry",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "carries-grip-and-forearms",
+        "movement_pattern": "carry",
+        "difficulty": "intermediate",
+        "equipment": [
+          "pull_up_bar",
+          "kettlebell",
+          "dumbbell",
+          "weight_plate"
+        ],
+        "load_profile": "load_hvat_predplechya_kor_plechevoy_poyas",
+        "anatomy": {
+          "primary_muscles": [
+            "target_predplechya",
+            "target_kor",
+            "target_plechevoy_poyas"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_hvat",
+            "target_predplechya",
+            "target_kor",
+            "target_plechevoy_poyas"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Идите медленно и ровно; не наклоняйтесь под груз, держите плечи собранными и дышите под напряжением.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Идите медленно и ровно",
+          "не наклоняйтесь под груз, держите плечи собранными и дышите под напряжением."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "3–6×20–60 м / 20–60 с",
+        "type": "mixed",
+        "sets": {
+          "min": 3,
+          "max": 6
+        },
+        "reps": {
+          "min": 20,
+          "max": 60
+        },
+        "duration_seconds": {
+          "min": 20,
+          "max": 60
+        },
+        "distance_meters": {
+          "min": 20,
+          "max": 60
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0661",
+        "legacy_number": 661,
+        "slug": "exercise-0661-overhead-carry",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Overhead carry",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": "exercise_0222",
+        "variant_of": "exercise_0222",
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "carries-grip-and-forearms",
+        "movement_pattern": "carry",
+        "difficulty": "intermediate",
+        "equipment": [
+          "pull_up_bar",
+          "kettlebell",
+          "dumbbell",
+          "weight_plate"
+        ],
+        "load_profile": "load_hvat_predplechya_kor_plechevoy_poyas",
+        "anatomy": {
+          "primary_muscles": [
+            "target_predplechya",
+            "target_kor",
+            "target_plechevoy_poyas"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_hvat",
+            "target_predplechya",
+            "target_kor",
+            "target_plechevoy_poyas"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Идите медленно и ровно; не наклоняйтесь под груз, держите плечи собранными и дышите под напряжением.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Идите медленно и ровно",
+          "не наклоняйтесь под груз, держите плечи собранными и дышите под напряжением."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "3–6×20–60 м / 20–60 с",
+        "type": "mixed",
+        "sets": {
+          "min": 3,
+          "max": 6
+        },
+        "reps": {
+          "min": 20,
+          "max": 60
+        },
+        "duration_seconds": {
+          "min": 20,
+          "max": 60
+        },
+        "distance_meters": {
+          "min": 20,
+          "max": 60
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0662",
+        "legacy_number": 662,
+        "slug": "exercise-0662-waiter-carry",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Waiter carry",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "carries-grip-and-forearms",
+        "movement_pattern": "carry",
+        "difficulty": "intermediate",
+        "equipment": [
+          "pull_up_bar",
+          "kettlebell",
+          "dumbbell",
+          "weight_plate"
+        ],
+        "load_profile": "load_hvat_predplechya_kor_plechevoy_poyas",
+        "anatomy": {
+          "primary_muscles": [
+            "target_predplechya",
+            "target_kor",
+            "target_plechevoy_poyas"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_hvat",
+            "target_predplechya",
+            "target_kor",
+            "target_plechevoy_poyas"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Идите медленно и ровно; не наклоняйтесь под груз, держите плечи собранными и дышите под напряжением.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Идите медленно и ровно",
+          "не наклоняйтесь под груз, держите плечи собранными и дышите под напряжением."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "3–6×20–60 м / 20–60 с",
+        "type": "mixed",
+        "sets": {
+          "min": 3,
+          "max": 6
+        },
+        "reps": {
+          "min": 20,
+          "max": 60
+        },
+        "duration_seconds": {
+          "min": 20,
+          "max": 60
+        },
+        "distance_meters": {
+          "min": 20,
+          "max": 60
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0663",
+        "legacy_number": 663,
+        "slug": "exercise-0663-bottoms-up-kettlebell-carry",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Bottoms-up kettlebell carry",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "carries-grip-and-forearms",
+        "movement_pattern": "carry",
+        "difficulty": "advanced",
+        "equipment": [
+          "pull_up_bar",
+          "kettlebell",
+          "dumbbell",
+          "weight_plate"
+        ],
+        "load_profile": "load_hvat_predplechya_kor_plechevoy_poyas",
+        "anatomy": {
+          "primary_muscles": [
+            "target_predplechya",
+            "target_kor",
+            "target_plechevoy_poyas"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_hvat",
+            "target_predplechya",
+            "target_kor",
+            "target_plechevoy_poyas"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Идите медленно и ровно; не наклоняйтесь под груз, держите плечи собранными и дышите под напряжением.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Идите медленно и ровно",
+          "не наклоняйтесь под груз, держите плечи собранными и дышите под напряжением."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "3–6×20–60 м / 20–60 с",
+        "type": "mixed",
+        "sets": {
+          "min": 3,
+          "max": 6
+        },
+        "reps": {
+          "min": 20,
+          "max": 60
+        },
+        "duration_seconds": {
+          "min": 20,
+          "max": 60
+        },
+        "distance_meters": {
+          "min": 20,
+          "max": 60
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0664",
+        "legacy_number": 664,
+        "slug": "exercise-0664-bear-hug-carry",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Bear-hug carry",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": "exercise_0643",
+        "variant_of": "exercise_0643",
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "carries-grip-and-forearms",
+        "movement_pattern": "carry",
+        "difficulty": "intermediate",
+        "equipment": [
+          "pull_up_bar",
+          "kettlebell",
+          "dumbbell",
+          "weight_plate"
+        ],
+        "load_profile": "load_hvat_predplechya_kor_plechevoy_poyas",
+        "anatomy": {
+          "primary_muscles": [
+            "target_predplechya",
+            "target_kor",
+            "target_plechevoy_poyas"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_hvat",
+            "target_predplechya",
+            "target_kor",
+            "target_plechevoy_poyas"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Идите медленно и ровно; не наклоняйтесь под груз, держите плечи собранными и дышите под напряжением.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Идите медленно и ровно",
+          "не наклоняйтесь под груз, держите плечи собранными и дышите под напряжением."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "3–6×20–60 м / 20–60 с",
+        "type": "mixed",
+        "sets": {
+          "min": 3,
+          "max": 6
+        },
+        "reps": {
+          "min": 20,
+          "max": 60
+        },
+        "duration_seconds": {
+          "min": 20,
+          "max": 60
+        },
+        "distance_meters": {
+          "min": 20,
+          "max": 60
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0665",
+        "legacy_number": 665,
+        "slug": "exercise-0665-trap-bar-carry",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Trap-bar carry",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "carries-grip-and-forearms",
+        "movement_pattern": "carry",
+        "difficulty": "intermediate",
+        "equipment": [
+          "pull_up_bar",
+          "kettlebell",
+          "dumbbell",
+          "weight_plate"
+        ],
+        "load_profile": "load_hvat_predplechya_kor_plechevoy_poyas",
+        "anatomy": {
+          "primary_muscles": [
+            "target_predplechya",
+            "target_kor",
+            "target_plechevoy_poyas"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_hvat",
+            "target_predplechya",
+            "target_kor",
+            "target_plechevoy_poyas"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Идите медленно и ровно; не наклоняйтесь под груз, держите плечи собранными и дышите под напряжением.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Идите медленно и ровно",
+          "не наклоняйтесь под груз, держите плечи собранными и дышите под напряжением."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "3–6×20–60 м / 20–60 с",
+        "type": "mixed",
+        "sets": {
+          "min": 3,
+          "max": 6
+        },
+        "reps": {
+          "min": 20,
+          "max": 60
+        },
+        "duration_seconds": {
+          "min": 20,
+          "max": 60
+        },
+        "distance_meters": {
+          "min": 20,
+          "max": 60
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0666",
+        "legacy_number": 666,
+        "slug": "exercise-0666-plate-pinch-hold",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Plate pinch hold",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "carries-grip-and-forearms",
+        "movement_pattern": "other",
+        "difficulty": "beginner",
+        "equipment": [
+          "pull_up_bar",
+          "kettlebell",
+          "dumbbell",
+          "weight_plate"
+        ],
+        "load_profile": "load_hvat_predplechya_kor_plechevoy_poyas",
+        "anatomy": {
+          "primary_muscles": [
+            "target_predplechya",
+            "target_kor",
+            "target_plechevoy_poyas"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_hvat",
+            "target_predplechya",
+            "target_kor",
+            "target_plechevoy_poyas"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Идите медленно и ровно; не наклоняйтесь под груз, держите плечи собранными и дышите под напряжением.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Идите медленно и ровно",
+          "не наклоняйтесь под груз, держите плечи собранными и дышите под напряжением."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "3–6×20–60 м / 20–60 с",
+        "type": "mixed",
+        "sets": {
+          "min": 3,
+          "max": 6
+        },
+        "reps": {
+          "min": 20,
+          "max": 60
+        },
+        "duration_seconds": {
+          "min": 20,
+          "max": 60
+        },
+        "distance_meters": {
+          "min": 20,
+          "max": 60
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0667",
+        "legacy_number": 667,
+        "slug": "exercise-0667-plate-pinch-carry",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Plate pinch carry",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "carries-grip-and-forearms",
+        "movement_pattern": "carry",
+        "difficulty": "intermediate",
+        "equipment": [
+          "pull_up_bar",
+          "kettlebell",
+          "dumbbell",
+          "weight_plate"
+        ],
+        "load_profile": "load_hvat_predplechya_kor_plechevoy_poyas",
+        "anatomy": {
+          "primary_muscles": [
+            "target_predplechya",
+            "target_kor",
+            "target_plechevoy_poyas"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_hvat",
+            "target_predplechya",
+            "target_kor",
+            "target_plechevoy_poyas"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Идите медленно и ровно; не наклоняйтесь под груз, держите плечи собранными и дышите под напряжением.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Идите медленно и ровно",
+          "не наклоняйтесь под груз, держите плечи собранными и дышите под напряжением."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "3–6×20–60 м / 20–60 с",
+        "type": "mixed",
+        "sets": {
+          "min": 3,
+          "max": 6
+        },
+        "reps": {
+          "min": 20,
+          "max": 60
+        },
+        "duration_seconds": {
+          "min": 20,
+          "max": 60
+        },
+        "distance_meters": {
+          "min": 20,
+          "max": 60
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0668",
+        "legacy_number": 668,
+        "slug": "exercise-0668-dead-hang-na-vremya",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Dead hang на время",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "carries-grip-and-forearms",
+        "movement_pattern": "other",
+        "difficulty": "beginner",
+        "equipment": [
+          "pull_up_bar",
+          "kettlebell",
+          "dumbbell",
+          "weight_plate"
+        ],
+        "load_profile": "load_hvat_predplechya_kor_plechevoy_poyas",
+        "anatomy": {
+          "primary_muscles": [
+            "target_predplechya",
+            "target_kor",
+            "target_plechevoy_poyas"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_hvat",
+            "target_predplechya",
+            "target_kor",
+            "target_plechevoy_poyas"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Идите медленно и ровно; не наклоняйтесь под груз, держите плечи собранными и дышите под напряжением.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Идите медленно и ровно",
+          "не наклоняйтесь под груз, держите плечи собранными и дышите под напряжением."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "3–6×20–60 м / 20–60 с",
+        "type": "mixed",
+        "sets": {
+          "min": 3,
+          "max": 6
+        },
+        "reps": {
+          "min": 20,
+          "max": 60
+        },
+        "duration_seconds": {
+          "min": 20,
+          "max": 60
+        },
+        "distance_meters": {
+          "min": 20,
+          "max": 60
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0669",
+        "legacy_number": 669,
+        "slug": "exercise-0669-towel-hang",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Towel hang",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "carries-grip-and-forearms",
+        "movement_pattern": "other",
+        "difficulty": "intermediate",
+        "equipment": [
+          "pull_up_bar",
+          "kettlebell",
+          "dumbbell",
+          "weight_plate"
+        ],
+        "load_profile": "load_hvat_predplechya_kor_plechevoy_poyas",
+        "anatomy": {
+          "primary_muscles": [
+            "target_predplechya",
+            "target_kor",
+            "target_plechevoy_poyas"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_hvat",
+            "target_predplechya",
+            "target_kor",
+            "target_plechevoy_poyas"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Идите медленно и ровно; не наклоняйтесь под груз, держите плечи собранными и дышите под напряжением.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Идите медленно и ровно",
+          "не наклоняйтесь под груз, держите плечи собранными и дышите под напряжением."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "3–6×20–60 м / 20–60 с",
+        "type": "mixed",
+        "sets": {
+          "min": 3,
+          "max": 6
+        },
+        "reps": {
+          "min": 20,
+          "max": 60
+        },
+        "duration_seconds": {
+          "min": 20,
+          "max": 60
+        },
+        "distance_meters": {
+          "min": 20,
+          "max": 60
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0670",
+        "legacy_number": 670,
+        "slug": "exercise-0670-wrist-roller",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Wrist roller",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "carries-grip-and-forearms",
+        "movement_pattern": "other",
+        "difficulty": "beginner",
+        "equipment": [
+          "pull_up_bar",
+          "kettlebell",
+          "dumbbell",
+          "weight_plate"
+        ],
+        "load_profile": "load_hvat_predplechya_kor_plechevoy_poyas",
+        "anatomy": {
+          "primary_muscles": [
+            "target_predplechya",
+            "target_kor",
+            "target_plechevoy_poyas"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_hvat",
+            "target_predplechya",
+            "target_kor",
+            "target_plechevoy_poyas"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Идите медленно и ровно; не наклоняйтесь под груз, держите плечи собранными и дышите под напряжением.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Идите медленно и ровно",
+          "не наклоняйтесь под груз, держите плечи собранными и дышите под напряжением."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "3–6×20–60 м / 20–60 с",
+        "type": "mixed",
+        "sets": {
+          "min": 3,
+          "max": 6
+        },
+        "reps": {
+          "min": 20,
+          "max": 60
+        },
+        "duration_seconds": {
+          "min": 20,
+          "max": 60
+        },
+        "distance_meters": {
+          "min": 20,
+          "max": 60
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0671",
+        "legacy_number": 671,
+        "slug": "exercise-0671-wrist-curl",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Wrist curl",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "carries-grip-and-forearms",
+        "movement_pattern": "other",
+        "difficulty": "beginner",
+        "equipment": [
+          "pull_up_bar",
+          "kettlebell",
+          "dumbbell",
+          "weight_plate"
+        ],
+        "load_profile": "load_hvat_predplechya_kor_plechevoy_poyas",
+        "anatomy": {
+          "primary_muscles": [
+            "target_predplechya",
+            "target_kor",
+            "target_plechevoy_poyas"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_hvat",
+            "target_predplechya",
+            "target_kor",
+            "target_plechevoy_poyas"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Идите медленно и ровно; не наклоняйтесь под груз, держите плечи собранными и дышите под напряжением.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Идите медленно и ровно",
+          "не наклоняйтесь под груз, держите плечи собранными и дышите под напряжением."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "3–6×20–60 м / 20–60 с",
+        "type": "mixed",
+        "sets": {
+          "min": 3,
+          "max": 6
+        },
+        "reps": {
+          "min": 20,
+          "max": 60
+        },
+        "duration_seconds": {
+          "min": 20,
+          "max": 60
+        },
+        "distance_meters": {
+          "min": 20,
+          "max": 60
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    },
+    {
+      "identity": {
+        "exercise_id": "exercise_0672",
+        "legacy_number": 672,
+        "slug": "exercise-0672-reverse-wrist-curl",
+        "schema_version": "1.1.0",
+        "content_version": 1,
+        "locale": "ru-RU",
+        "name": {
+          "ru": "Reverse wrist curl",
+          "en": null
+        },
+        "aliases": [],
+        "canonical_exercise_id": null,
+        "variant_of": null,
+        "publication_status": "draft"
+      },
+      "classification": {
+        "sport": "general_fitness",
+        "section": "carries-grip-and-forearms",
+        "movement_pattern": "other",
+        "difficulty": "beginner",
+        "equipment": [
+          "pull_up_bar",
+          "kettlebell",
+          "dumbbell",
+          "weight_plate"
+        ],
+        "load_profile": "load_hvat_predplechya_kor_plechevoy_poyas",
+        "anatomy": {
+          "primary_muscles": [
+            "target_predplechya",
+            "target_kor",
+            "target_plechevoy_poyas"
+          ],
+          "secondary_muscles": [],
+          "primary_targets": [
+            "target_hvat",
+            "target_predplechya",
+            "target_kor",
+            "target_plechevoy_poyas"
+          ],
+          "joints": [],
+          "laterality": null,
+          "unfilled_fields": [
+            "secondary_muscles",
+            "joints",
+            "laterality"
+          ]
+        }
+      },
+      "technique": {
+        "source_key_cue": "Идите медленно и ровно; не наклоняйтесь под груз, держите плечи собранными и дышите под напряжением.",
+        "setup": null,
+        "start_position": null,
+        "steps": [],
+        "key_cues": [
+          "Идите медленно и ровно",
+          "не наклоняйтесь под груз, держите плечи собранными и дышите под напряжением."
+        ],
+        "breathing": null,
+        "tempo": null,
+        "range_of_motion": null,
+        "finish": null,
+        "unfilled_fields": [
+          "setup",
+          "start_position",
+          "steps",
+          "breathing",
+          "tempo",
+          "range_of_motion",
+          "finish"
+        ]
+      },
+      "programming": {
+        "raw": "3–6×20–60 м / 20–60 с",
+        "type": "mixed",
+        "sets": {
+          "min": 3,
+          "max": 6
+        },
+        "reps": {
+          "min": 20,
+          "max": 60
+        },
+        "duration_seconds": {
+          "min": 20,
+          "max": 60
+        },
+        "distance_meters": {
+          "min": 20,
+          "max": 60
+        },
+        "cycles": {
+          "min": null,
+          "max": null
+        },
+        "rest_seconds": {
+          "min": null,
+          "max": null
+        },
+        "intensity": {
+          "type": null,
+          "min": null,
+          "max": null
+        },
+        "completion_conditions": null
+      },
+      "safety": {
+        "common_errors": [],
+        "stop_signals": [],
+        "limitations": [],
+        "regressions": [],
+        "progressions": [],
+        "injury_notes": null,
+        "unfilled_fields": [
+          "common_errors",
+          "stop_signals",
+          "limitations",
+          "regressions",
+          "progressions",
+          "injury_notes"
+        ]
+      },
+      "media": {
+        "main_asset_id": null,
+        "phase_asset_ids": [],
+        "muscle_layer_asset_id": null,
+        "animation_asset_id": null,
+        "video_url": null,
+        "view": null,
+        "crop": null,
+        "alt_text": null,
+        "license": null,
+        "technique_version": null,
+        "status": "missing",
+        "unfilled_fields": [
+          "main_asset_id",
+          "phase_asset_ids",
+          "muscle_layer_asset_id",
+          "animation_asset_id",
+          "video_url",
+          "view",
+          "crop",
+          "alt_text",
+          "license",
+          "technique_version"
+        ]
+      },
+      "review": {
+        "sources": [],
+        "reviewers": [],
+        "author_id": null,
+        "editor_id": null,
+        "status": "draft",
+        "reviewed_at": null,
+        "comment": null,
+        "rejection_reason": null,
+        "unfilled_fields": [
+          "sources",
+          "reviewers",
+          "author_id",
+          "editor_id",
+          "reviewed_at",
+          "comment",
+          "rejection_reason"
+        ]
+      }
+    }
+  ]
+}

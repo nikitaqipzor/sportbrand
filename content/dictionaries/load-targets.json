@@ -1,0 +1,980 @@
+{
+  "version": "1.1.0",
+  "items": [
+    {
+      "code": "target_antilateralnoe_sgibanie",
+      "label_ru": "Антилатеральное сгибание",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_antirazgibanie",
+      "label_ru": "Антиразгибание",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_antirotatsiya",
+      "label_ru": "Антиротация",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_balans",
+      "label_ru": "баланс",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_begovaya_aktivatsiya",
+      "label_ru": "беговая активация",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_begovaya_mehanika",
+      "label_ru": "Беговая механика",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_begovoy_ritm",
+      "label_ru": "беговой ритм",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_bitseps",
+      "label_ru": "бицепс",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_bokovaya_liniya_korpusa",
+      "label_ru": "Боковая линия корпуса",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_bolshaya",
+      "label_ru": "Большая",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_bolshaya_kruglaya",
+      "label_ru": "большая круглая",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_bolshaya_yagodichnaya",
+      "label_ru": "Большая ягодичная",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_brahialis",
+      "label_ru": "Брахиалис",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_brosok",
+      "label_ru": "Бросок",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_chuvstvo_vody",
+      "label_ru": "Чувство воды",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_delty",
+      "label_ru": "дельты",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_dinamicheskaya_stabilizatsiya",
+      "label_ru": "динамическая стабилизация",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_dlinnaya_golovka_tritsepsa",
+      "label_ru": "Длинная головка трицепса",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_dyhanie",
+      "label_ru": "Дыхание",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_dyhatelnyy_kontrol_i_rasslablenie",
+      "label_ru": "Дыхательный контроль и расслабление",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_energosistema",
+      "label_ru": "Энергосистема",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_futvork",
+      "label_ru": "Футворк",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_gibkost_tselevoy_myshechnoy_gruppy",
+      "label_ru": "Гибкость целевой мышечной группы",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_glubokiy_kor",
+      "label_ru": "глубокий кор",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_glubokiy_prised",
+      "label_ru": "глубокий присед",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_golen",
+      "label_ru": "голень",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_golenostop",
+      "label_ru": "голеностоп",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_grud",
+      "label_ru": "грудь",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_grudnoy_otdel",
+      "label_ru": "грудной отдел",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_grudnye_myshtsy",
+      "label_ru": "Грудные мышцы",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_gruppovaya_ezda",
+      "label_ru": "Групповая езда",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_hvat",
+      "label_ru": "Хват",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_igrovoe_reshenie",
+      "label_ru": "Игровое решение",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_ikronozhnaya",
+      "label_ru": "Икроножная",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_ikronozhnye",
+      "label_ru": "икроножные",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_ikry",
+      "label_ru": "Икры",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_kadens",
+      "label_ru": "Каденс",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_kambalovidnaya",
+      "label_ru": "камбаловидная",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_kardio",
+      "label_ru": "кардио",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_kistey",
+      "label_ru": "кистей",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_kolena",
+      "label_ru": "колена",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_koleni",
+      "label_ru": "Колени",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_konditsionirovanie",
+      "label_ru": "кондиционирование",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_kontakt",
+      "label_ru": "контакт",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_kontrol_lopatok",
+      "label_ru": "контроль лопаток",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_kontrol_myacha",
+      "label_ru": "контроль мяча",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_kontrol_plech_i_lopatok",
+      "label_ru": "Контроль плеч и лопаток",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_kontrol_prizemleniya",
+      "label_ru": "контроль приземления",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_kontrol_skorosti",
+      "label_ru": "контроль скорости",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_kontrol_vrascheniya",
+      "label_ru": "контроль вращения",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_koordinatsiya",
+      "label_ru": "координация",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_koordinatsiya_plech",
+      "label_ru": "Координация плеч",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_koordinatsiya_ruk",
+      "label_ru": "Координация рук",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_kor",
+      "label_ru": "кор",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_kosye",
+      "label_ru": "косые",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_kosye_myshtsy",
+      "label_ru": "косые мышцы",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_kosye_myshtsy_zhivota",
+      "label_ru": "Косые мышцы живота",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_kvadratnaya_myshtsa_poyasnitsy",
+      "label_ru": "квадратная мышца поясницы",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_kvadritseps",
+      "label_ru": "Квадрицепс",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_lateralnaya_koordinatsiya",
+      "label_ru": "латеральная координация",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_lateralnaya_reaktivnost",
+      "label_ru": "Латеральная реактивность",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_lateralnoe_peremeschenie",
+      "label_ru": "латеральное перемещение",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_lopatki",
+      "label_ru": "Лопатки",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_lopatochnye_stabilizatory",
+      "label_ru": "лопаточные стабилизаторы",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_malaya_yagodichnaya",
+      "label_ru": "малая ягодичная",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_malobertsovye_myshtsy",
+      "label_ru": "Малоберцовые мышцы",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_mobilnost",
+      "label_ru": "мобильность",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_mobilnost_i_kontrol_priseda",
+      "label_ru": "Мобильность и контроль приседа",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_mobilnost_plech",
+      "label_ru": "мобильность плеч",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_moschnost",
+      "label_ru": "мощность",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_moschnost_nog",
+      "label_ru": "Мощность ног",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_motornyy_kontrol",
+      "label_ru": "моторный контроль",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_multifidus",
+      "label_ru": "Мультифидус",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_myagkie_tkani_vybrannoy_oblasti",
+      "label_ru": "Мягкие ткани выбранной области",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_myshtsy_goleni",
+      "label_ru": "Мышцы голени",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_naruzhnye_rotatory",
+      "label_ru": "наружные ротаторы",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_navigatsiya",
+      "label_ru": "навигация",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_nervno_myshechnaya_mobilnost",
+      "label_ru": "нервно-мышечная мобильность",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_niz",
+      "label_ru": "Низ",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_nizhnyaya_chast_pryamoy_myshtsy_zhivota",
+      "label_ru": "Нижняя часть прямой мышцы живота",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_nizhnyaya_trapetsiya",
+      "label_ru": "Нижняя трапеция",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_nogi",
+      "label_ru": "Ноги",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_obschaya_aktivatsiya",
+      "label_ru": "Общая активация",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_obschaya_aktivatsiya_tela",
+      "label_ru": "Общая активация тела",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_obschee_povyshenie_temperatury",
+      "label_ru": "Общее повышение температуры",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_obtekaemost",
+      "label_ru": "обтекаемость",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_obuchenie_neytralnomu_pozvonochniku",
+      "label_ru": "Обучение нейтральному позвоночнику",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_otkrytaya_voda",
+      "label_ru": "Открытая вода",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_ottalkivanie",
+      "label_ru": "отталкивание",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_otvodyaschie",
+      "label_ru": "отводящие",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_pattern_naklona",
+      "label_ru": "паттерн наклона",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_peredacha",
+      "label_ru": "Передача",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_peredne_zadnyaya_reaktivnost",
+      "label_ru": "Передне-задняя реактивность",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_peredniy_kor_s_neytralnoy_poyasnitsey",
+      "label_ru": "Передний кор с нейтральной поясницей",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_perednyaya_bolshebertsovaya",
+      "label_ru": "передняя большеберцовая",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_perednyaya_delta",
+      "label_ru": "передняя дельта",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_perednyaya_tsep_kora",
+      "label_ru": "Передняя цепь кора",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_perednyaya_zubchataya",
+      "label_ru": "Передняя зубчатая",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_plechevoy_poyas",
+      "label_ru": "плечевой пояс",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_plechevye_stabilizatory",
+      "label_ru": "плечевые стабилизаторы",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_plechi",
+      "label_ru": "Плечи",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_plechi_i_stabilizatory",
+      "label_ru": "Плечи и стабилизаторы",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_podbor",
+      "label_ru": "Подбор",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_podem",
+      "label_ru": "Подъём",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_podlopatochnaya",
+      "label_ru": "Подлопаточная",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_podvizhnost_sustavov_i_kontrol_amplitudy",
+      "label_ru": "Подвижность суставов и контроль амплитуды",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_polozhenie_tela",
+      "label_ru": "положение тела",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_poperechnaya_myshtsa",
+      "label_ru": "Поперечная мышца",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_poperechnaya_myshtsa_zhivota",
+      "label_ru": "Поперечная мышца живота",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_povorot",
+      "label_ru": "Поворот",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_povoroty",
+      "label_ru": "Повороты",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_pozitsionirovanie",
+      "label_ru": "позиционирование",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_pozvonochnik",
+      "label_ru": "Позвоночник",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_predpleche",
+      "label_ru": "предплечье",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_predplechya",
+      "label_ru": "предплечья",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_press",
+      "label_ru": "Пресс",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_press_i_glubokie_myshtsy_kora",
+      "label_ru": "Пресс и глубокие мышцы кора",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_prinyatie_resheniya",
+      "label_ru": "принятие решения",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_privodyaschie",
+      "label_ru": "приводящие",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_privodyaschie_myshtsy",
+      "label_ru": "Приводящие мышцы",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_prostranstvo",
+      "label_ru": "пространство",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_pryamaya_myshtsa_zhivota",
+      "label_ru": "прямая мышца живота",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_pryzhok",
+      "label_ru": "прыжок",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_rabota_nog",
+      "label_ru": "Работа ног",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_razgibateli_pozvonochnika",
+      "label_ru": "Разгибатели позвоночника",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_razgibateli_spiny",
+      "label_ru": "Разгибатели спины",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_reaktivnaya_sila",
+      "label_ru": "реактивная сила",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_reaktivnost",
+      "label_ru": "реактивность",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_reaktsiya",
+      "label_ru": "реакция",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_rombovidnye",
+      "label_ru": "ромбовидные",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_rotatornaya_manzheta",
+      "label_ru": "Ротаторная манжета",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_rotatory",
+      "label_ru": "ротаторы",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_rotatsiya",
+      "label_ru": "ротация",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_seredina_grudi",
+      "label_ru": "середина груди",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_sgibateli_bedra",
+      "label_ru": "сгибатели бедра",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_shirochayshie",
+      "label_ru": "Широчайшие",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_silovaya_vynoslivost",
+      "label_ru": "силовая выносливость",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_skorost",
+      "label_ru": "скорость",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_skorost_nog",
+      "label_ru": "Скорость ног",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_skorost_steny",
+      "label_ru": "скорость стены",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_skorostnaya_vynoslivost",
+      "label_ru": "Скоростная выносливость",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_smena_napravleniya",
+      "label_ru": "смена направления",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_spetsificheskaya_podgotovka_k_silovomu_uprazhneniyu",
+      "label_ru": "Специфическая подготовка к силовому упражнению",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_spina",
+      "label_ru": "Спина",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_sprint",
+      "label_ru": "Спринт",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_srednyaya",
+      "label_ru": "Средняя",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_srednyaya_delta",
+      "label_ru": "Средняя дельта",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_srednyaya_spina",
+      "label_ru": "Средняя спина",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_srednyaya_yagodichnaya",
+      "label_ru": "Средняя ягодичная",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_stabilizatory_lopatki",
+      "label_ru": "стабилизаторы лопатки",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_stabilizatory_plech",
+      "label_ru": "стабилизаторы плеч",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_stabilizatory_stopy",
+      "label_ru": "Стабилизаторы стопы",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_stabilizatsiya_kolena",
+      "label_ru": "стабилизация колена",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_stabilizatsiya_taza",
+      "label_ru": "стабилизация таза",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_stabilnost",
+      "label_ru": "стабильность",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_start",
+      "label_ru": "Старт",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_stopa",
+      "label_ru": "Стопа",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_stopy",
+      "label_ru": "стопы",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_taktika",
+      "label_ru": "тактика",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_taz",
+      "label_ru": "Таз",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_taza",
+      "label_ru": "таза",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_taza_i_korpusa",
+      "label_ru": "таза и корпуса",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_tazobedrennye",
+      "label_ru": "Тазобедренные",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_tazovyy_kontrol",
+      "label_ru": "тазовый контроль",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_tehnika_grebka",
+      "label_ru": "Техника гребка",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_tehnika_pedalirovaniya",
+      "label_ru": "техника педалирования",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_tehnika_tyagi",
+      "label_ru": "техника тяги",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_tehnika_tyazheloy_atletiki",
+      "label_ru": "техника тяжёлой атлетики",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_tochnost",
+      "label_ru": "точность",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_tormozhenie",
+      "label_ru": "Торможение",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_tormozhenie_i_smena_napravleniya",
+      "label_ru": "торможение и смена направления",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_traektoriya",
+      "label_ru": "траектория",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_trapetsiya",
+      "label_ru": "Трапеция",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_tritseps",
+      "label_ru": "трицепс",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_tyaga",
+      "label_ru": "тяга",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_upravlenie",
+      "label_ru": "управление",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_upravlenie_velosipedom",
+      "label_ru": "Управление велосипедом",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_uskorenie",
+      "label_ru": "ускорение",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_vedenie",
+      "label_ru": "Ведение",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_verh_grudi",
+      "label_ru": "Верх груди",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_verh_pressa",
+      "label_ru": "Верх пресса",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_verh_spiny",
+      "label_ru": "верх спины",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_verh_trapetsii",
+      "label_ru": "Верх трапеции",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_ves_kor",
+      "label_ru": "весь кор",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_vosstanovlenie_dyhaniya_i_postepennoe_snizhenie_intensivnosti",
+      "label_ru": "Восстановление дыхания и постепенное снижение интенсивности",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_vosstanovlenie_ritma",
+      "label_ru": "восстановление ритма",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_vse_telo",
+      "label_ru": "Всё тело",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_vynoslivost",
+      "label_ru": "выносливость",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_yagoditsy",
+      "label_ru": "ягодицы",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_zadnyaya_delta",
+      "label_ru": "задняя дельта",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_zadnyaya_poverhnost_bedra",
+      "label_ru": "задняя поверхность бедра",
+      "kind": "muscle_or_body_region"
+    },
+    {
+      "code": "target_zadnyaya_tsep",
+      "label_ru": "Задняя цепь",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_zahvat",
+      "label_ru": "захват",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_zaschita",
+      "label_ru": "Защита",
+      "kind": "training_target"
+    },
+    {
+      "code": "target_zavershenie",
+      "label_ru": "завершение",
+      "kind": "training_target"
+    }
+  ]
+}

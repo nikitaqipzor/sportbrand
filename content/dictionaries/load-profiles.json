@@ -1,0 +1,2409 @@
+{
+  "version": "1.1.0",
+  "source_label_count": 289,
+  "items": [
+    {
+      "code": "load_grud_tritseps_perednyaya_delta",
+      "label_ru": "Грудь, трицепс, передняя дельта",
+      "target_codes": [
+        "target_grud",
+        "target_tritseps",
+        "target_perednyaya_delta"
+      ]
+    },
+    {
+      "code": "load_verh_grudi_perednyaya_delta_tritseps",
+      "label_ru": "Верх груди, передняя дельта, трицепс",
+      "target_codes": [
+        "target_verh_grudi",
+        "target_perednyaya_delta",
+        "target_tritseps"
+      ]
+    },
+    {
+      "code": "load_grud_tritseps",
+      "label_ru": "Грудь, трицепс",
+      "target_codes": [
+        "target_grud",
+        "target_tritseps"
+      ]
+    },
+    {
+      "code": "load_grud_tritseps_kor",
+      "label_ru": "Грудь, трицепс, кор",
+      "target_codes": [
+        "target_grud",
+        "target_tritseps",
+        "target_kor"
+      ]
+    },
+    {
+      "code": "load_grudnye_myshtsy",
+      "label_ru": "Грудные мышцы",
+      "target_codes": [
+        "target_grudnye_myshtsy"
+      ]
+    },
+    {
+      "code": "load_niz_seredina_grudi",
+      "label_ru": "Низ/середина груди",
+      "target_codes": [
+        "target_niz",
+        "target_seredina_grudi"
+      ]
+    },
+    {
+      "code": "load_verh_grudi_perednyaya_delta",
+      "label_ru": "Верх груди, передняя дельта",
+      "target_codes": [
+        "target_verh_grudi",
+        "target_perednyaya_delta"
+      ]
+    },
+    {
+      "code": "load_grud",
+      "label_ru": "Грудь",
+      "target_codes": [
+        "target_grud"
+      ]
+    },
+    {
+      "code": "load_grud_kor",
+      "label_ru": "Грудь, кор",
+      "target_codes": [
+        "target_grud",
+        "target_kor"
+      ]
+    },
+    {
+      "code": "load_shirochayshie_verh_spiny_bitseps",
+      "label_ru": "Широчайшие, верх спины, бицепс",
+      "target_codes": [
+        "target_shirochayshie",
+        "target_verh_spiny",
+        "target_bitseps"
+      ]
+    },
+    {
+      "code": "load_shirochayshie_bitseps",
+      "label_ru": "Широчайшие, бицепс",
+      "target_codes": [
+        "target_shirochayshie",
+        "target_bitseps"
+      ]
+    },
+    {
+      "code": "load_shirochayshie_kor",
+      "label_ru": "Широчайшие, кор",
+      "target_codes": [
+        "target_shirochayshie",
+        "target_kor"
+      ]
+    },
+    {
+      "code": "load_srednyaya_spina_shirochayshie_bitseps",
+      "label_ru": "Средняя спина, широчайшие, бицепс",
+      "target_codes": [
+        "target_srednyaya_spina",
+        "target_shirochayshie",
+        "target_bitseps"
+      ]
+    },
+    {
+      "code": "load_rombovidnye_zadnyaya_delta_trapetsiya",
+      "label_ru": "Ромбовидные, задняя дельта, трапеция",
+      "target_codes": [
+        "target_rombovidnye",
+        "target_zadnyaya_delta",
+        "target_trapetsiya"
+      ]
+    },
+    {
+      "code": "load_shirochayshie_rombovidnye_kor",
+      "label_ru": "Широчайшие, ромбовидные, кор",
+      "target_codes": [
+        "target_shirochayshie",
+        "target_rombovidnye",
+        "target_kor"
+      ]
+    },
+    {
+      "code": "load_srednyaya_spina_shirochayshie",
+      "label_ru": "Средняя спина, широчайшие",
+      "target_codes": [
+        "target_srednyaya_spina",
+        "target_shirochayshie"
+      ]
+    },
+    {
+      "code": "load_shirochayshie_bolshaya_kruglaya_bitseps",
+      "label_ru": "Широчайшие, большая круглая, бицепс",
+      "target_codes": [
+        "target_shirochayshie",
+        "target_bolshaya_kruglaya",
+        "target_bitseps"
+      ]
+    },
+    {
+      "code": "load_shirochayshie_srednyaya_spina",
+      "label_ru": "Широчайшие, средняя спина",
+      "target_codes": [
+        "target_shirochayshie",
+        "target_srednyaya_spina"
+      ]
+    },
+    {
+      "code": "load_shirochayshie_bolshaya_kruglaya",
+      "label_ru": "Широчайшие, большая круглая",
+      "target_codes": [
+        "target_shirochayshie",
+        "target_bolshaya_kruglaya"
+      ]
+    },
+    {
+      "code": "load_shirochayshie_dlinnaya_golovka_tritsepsa",
+      "label_ru": "Широчайшие, длинная головка трицепса",
+      "target_codes": [
+        "target_shirochayshie",
+        "target_dlinnaya_golovka_tritsepsa"
+      ]
+    },
+    {
+      "code": "load_zadnyaya_delta_rombovidnye_trapetsiya",
+      "label_ru": "Задняя дельта, ромбовидные, трапеция",
+      "target_codes": [
+        "target_zadnyaya_delta",
+        "target_rombovidnye",
+        "target_trapetsiya"
+      ]
+    },
+    {
+      "code": "load_zadnyaya_delta_naruzhnye_rotatory_trapetsiya",
+      "label_ru": "Задняя дельта, наружные ротаторы, трапеция",
+      "target_codes": [
+        "target_zadnyaya_delta",
+        "target_naruzhnye_rotatory",
+        "target_trapetsiya"
+      ]
+    },
+    {
+      "code": "load_shirochayshie_bitseps_kor",
+      "label_ru": "Широчайшие, бицепс, кор",
+      "target_codes": [
+        "target_shirochayshie",
+        "target_bitseps",
+        "target_kor"
+      ]
+    },
+    {
+      "code": "load_delty_tritseps",
+      "label_ru": "Дельты, трицепс",
+      "target_codes": [
+        "target_delty",
+        "target_tritseps"
+      ]
+    },
+    {
+      "code": "load_delty_tritseps_kor",
+      "label_ru": "Дельты, трицепс, кор",
+      "target_codes": [
+        "target_delty",
+        "target_tritseps",
+        "target_kor"
+      ]
+    },
+    {
+      "code": "load_srednyaya_delta",
+      "label_ru": "Средняя дельта",
+      "target_codes": [
+        "target_srednyaya_delta"
+      ]
+    },
+    {
+      "code": "load_perednyaya_delta",
+      "label_ru": "Передняя дельта",
+      "target_codes": [
+        "target_perednyaya_delta"
+      ]
+    },
+    {
+      "code": "load_nizhnyaya_trapetsiya_delty_rotatory",
+      "label_ru": "Нижняя трапеция, дельты, ротаторы",
+      "target_codes": [
+        "target_nizhnyaya_trapetsiya",
+        "target_delty",
+        "target_rotatory"
+      ]
+    },
+    {
+      "code": "load_rotatornaya_manzheta",
+      "label_ru": "Ротаторная манжета",
+      "target_codes": [
+        "target_rotatornaya_manzheta"
+      ]
+    },
+    {
+      "code": "load_podlopatochnaya_grud",
+      "label_ru": "Подлопаточная, грудь",
+      "target_codes": [
+        "target_podlopatochnaya",
+        "target_grud"
+      ]
+    },
+    {
+      "code": "load_verh_trapetsii",
+      "label_ru": "Верх трапеции",
+      "target_codes": [
+        "target_verh_trapetsii"
+      ]
+    },
+    {
+      "code": "load_bitseps_brahialis",
+      "label_ru": "Бицепс, брахиалис",
+      "target_codes": [
+        "target_bitseps",
+        "target_brahialis"
+      ]
+    },
+    {
+      "code": "load_bitseps",
+      "label_ru": "Бицепс",
+      "target_codes": [
+        "target_bitseps"
+      ]
+    },
+    {
+      "code": "load_brahialis_bitseps_predpleche",
+      "label_ru": "Брахиалис, бицепс, предплечье",
+      "target_codes": [
+        "target_brahialis",
+        "target_bitseps",
+        "target_predpleche"
+      ]
+    },
+    {
+      "code": "load_tritseps",
+      "label_ru": "Трицепс",
+      "target_codes": [
+        "target_tritseps"
+      ]
+    },
+    {
+      "code": "load_dlinnaya_golovka_tritsepsa",
+      "label_ru": "Длинная головка трицепса",
+      "target_codes": [
+        "target_dlinnaya_golovka_tritsepsa"
+      ]
+    },
+    {
+      "code": "load_tritseps_grud",
+      "label_ru": "Трицепс, грудь",
+      "target_codes": [
+        "target_tritseps",
+        "target_grud"
+      ]
+    },
+    {
+      "code": "load_kvadritseps_yagoditsy_zadnyaya_poverhnost_bedra",
+      "label_ru": "Квадрицепс, ягодицы, задняя поверхность бедра",
+      "target_codes": [
+        "target_kvadritseps",
+        "target_yagoditsy",
+        "target_zadnyaya_poverhnost_bedra"
+      ]
+    },
+    {
+      "code": "load_yagoditsy_zadnyaya_poverhnost_bedra_kvadritseps",
+      "label_ru": "Ягодицы, задняя поверхность бедра, квадрицепс",
+      "target_codes": [
+        "target_yagoditsy",
+        "target_zadnyaya_poverhnost_bedra",
+        "target_kvadritseps"
+      ]
+    },
+    {
+      "code": "load_kvadritseps",
+      "label_ru": "Квадрицепс",
+      "target_codes": [
+        "target_kvadritseps"
+      ]
+    },
+    {
+      "code": "load_kvadritseps_yagoditsy",
+      "label_ru": "Квадрицепс, ягодицы",
+      "target_codes": [
+        "target_kvadritseps",
+        "target_yagoditsy"
+      ]
+    },
+    {
+      "code": "load_yagoditsy_kvadritseps_razgibateli_spiny",
+      "label_ru": "Ягодицы, квадрицепс, разгибатели спины",
+      "target_codes": [
+        "target_yagoditsy",
+        "target_kvadritseps",
+        "target_razgibateli_spiny"
+      ]
+    },
+    {
+      "code": "load_yagoditsy_kvadritseps",
+      "label_ru": "Ягодицы, квадрицепс",
+      "target_codes": [
+        "target_yagoditsy",
+        "target_kvadritseps"
+      ]
+    },
+    {
+      "code": "load_zadnyaya_poverhnost_bedra",
+      "label_ru": "Задняя поверхность бедра",
+      "target_codes": [
+        "target_zadnyaya_poverhnost_bedra"
+      ]
+    },
+    {
+      "code": "load_srednyaya_malaya_yagodichnaya",
+      "label_ru": "Средняя/малая ягодичная",
+      "target_codes": [
+        "target_srednyaya",
+        "target_malaya_yagodichnaya"
+      ]
+    },
+    {
+      "code": "load_privodyaschie_myshtsy",
+      "label_ru": "Приводящие мышцы",
+      "target_codes": [
+        "target_privodyaschie_myshtsy"
+      ]
+    },
+    {
+      "code": "load_bolshaya_yagodichnaya",
+      "label_ru": "Большая ягодичная",
+      "target_codes": [
+        "target_bolshaya_yagodichnaya"
+      ]
+    },
+    {
+      "code": "load_srednyaya_yagodichnaya",
+      "label_ru": "Средняя ягодичная",
+      "target_codes": [
+        "target_srednyaya_yagodichnaya"
+      ]
+    },
+    {
+      "code": "load_sgibateli_bedra",
+      "label_ru": "Сгибатели бедра",
+      "target_codes": [
+        "target_sgibateli_bedra"
+      ]
+    },
+    {
+      "code": "load_bolshaya_yagodichnaya_zadnyaya_poverhnost_bedra",
+      "label_ru": "Большая ягодичная, задняя поверхность бедра",
+      "target_codes": [
+        "target_bolshaya_yagodichnaya",
+        "target_zadnyaya_poverhnost_bedra"
+      ]
+    },
+    {
+      "code": "load_yagoditsy_zadnyaya_poverhnost_bedra",
+      "label_ru": "Ягодицы, задняя поверхность бедра",
+      "target_codes": [
+        "target_yagoditsy",
+        "target_zadnyaya_poverhnost_bedra"
+      ]
+    },
+    {
+      "code": "load_razgibateli_pozvonochnika_yagoditsy",
+      "label_ru": "Разгибатели позвоночника, ягодицы",
+      "target_codes": [
+        "target_razgibateli_pozvonochnika",
+        "target_yagoditsy"
+      ]
+    },
+    {
+      "code": "load_ikronozhnaya",
+      "label_ru": "Икроножная",
+      "target_codes": [
+        "target_ikronozhnaya"
+      ]
+    },
+    {
+      "code": "load_kambalovidnaya",
+      "label_ru": "Камбаловидная",
+      "target_codes": [
+        "target_kambalovidnaya"
+      ]
+    },
+    {
+      "code": "load_ikronozhnaya_kambalovidnaya",
+      "label_ru": "Икроножная, камбаловидная",
+      "target_codes": [
+        "target_ikronozhnaya",
+        "target_kambalovidnaya"
+      ]
+    },
+    {
+      "code": "load_perednyaya_bolshebertsovaya",
+      "label_ru": "Передняя большеберцовая",
+      "target_codes": [
+        "target_perednyaya_bolshebertsovaya"
+      ]
+    },
+    {
+      "code": "load_pryamaya_myshtsa_zhivota",
+      "label_ru": "Прямая мышца живота",
+      "target_codes": [
+        "target_pryamaya_myshtsa_zhivota"
+      ]
+    },
+    {
+      "code": "load_kosye_myshtsy_glubokiy_kor",
+      "label_ru": "Косые мышцы, глубокий кор",
+      "target_codes": [
+        "target_kosye_myshtsy",
+        "target_glubokiy_kor"
+      ]
+    },
+    {
+      "code": "load_antirotatsiya_kosye_poperechnaya_myshtsa",
+      "label_ru": "Антиротация, косые, поперечная мышца",
+      "target_codes": [
+        "target_antirotatsiya",
+        "target_kosye",
+        "target_poperechnaya_myshtsa"
+      ]
+    },
+    {
+      "code": "load_antirotatsiya_kor",
+      "label_ru": "Антиротация, кор",
+      "target_codes": [
+        "target_antirotatsiya",
+        "target_kor"
+      ]
+    },
+    {
+      "code": "load_kosye_kor_plechevoy_poyas",
+      "label_ru": "Косые, кор, плечевой пояс",
+      "target_codes": [
+        "target_kosye",
+        "target_kor",
+        "target_plechevoy_poyas"
+      ]
+    },
+    {
+      "code": "load_zadnyaya_delta_lopatochnye_stabilizatory",
+      "label_ru": "Задняя дельта, лопаточные стабилизаторы",
+      "target_codes": [
+        "target_zadnyaya_delta",
+        "target_lopatochnye_stabilizatory"
+      ]
+    },
+    {
+      "code": "load_zadnyaya_delta_naruzhnye_rotatory",
+      "label_ru": "Задняя дельта, наружные ротаторы",
+      "target_codes": [
+        "target_zadnyaya_delta",
+        "target_naruzhnye_rotatory"
+      ]
+    },
+    {
+      "code": "load_rotatornaya_manzheta_grud",
+      "label_ru": "Ротаторная манжета, грудь",
+      "target_codes": [
+        "target_rotatornaya_manzheta",
+        "target_grud"
+      ]
+    },
+    {
+      "code": "load_rotatornaya_manzheta_zadnyaya_delta",
+      "label_ru": "Ротаторная манжета, задняя дельта",
+      "target_codes": [
+        "target_rotatornaya_manzheta",
+        "target_zadnyaya_delta"
+      ]
+    },
+    {
+      "code": "load_perednyaya_zubchataya_nizhnyaya_trapetsiya",
+      "label_ru": "Передняя зубчатая, нижняя трапеция",
+      "target_codes": [
+        "target_perednyaya_zubchataya",
+        "target_nizhnyaya_trapetsiya"
+      ]
+    },
+    {
+      "code": "load_perednyaya_zubchataya",
+      "label_ru": "Передняя зубчатая",
+      "target_codes": [
+        "target_perednyaya_zubchataya"
+      ]
+    },
+    {
+      "code": "load_shirochayshie_rombovidnye_bitseps",
+      "label_ru": "Широчайшие, ромбовидные, бицепс",
+      "target_codes": [
+        "target_shirochayshie",
+        "target_rombovidnye",
+        "target_bitseps"
+      ]
+    },
+    {
+      "code": "load_spina_bitseps_kor",
+      "label_ru": "Спина, бицепс, кор",
+      "target_codes": [
+        "target_spina",
+        "target_bitseps",
+        "target_kor"
+      ]
+    },
+    {
+      "code": "load_shirochayshie",
+      "label_ru": "Широчайшие",
+      "target_codes": [
+        "target_shirochayshie"
+      ]
+    },
+    {
+      "code": "load_zadnyaya_delta_trapetsiya",
+      "label_ru": "Задняя дельта, трапеция",
+      "target_codes": [
+        "target_zadnyaya_delta",
+        "target_trapetsiya"
+      ]
+    },
+    {
+      "code": "load_nizhnyaya_trapetsiya_delty",
+      "label_ru": "Нижняя трапеция, дельты",
+      "target_codes": [
+        "target_nizhnyaya_trapetsiya",
+        "target_delty"
+      ]
+    },
+    {
+      "code": "load_brahialis_predpleche",
+      "label_ru": "Брахиалис, предплечье",
+      "target_codes": [
+        "target_brahialis",
+        "target_predpleche"
+      ]
+    },
+    {
+      "code": "load_kvadritseps_yagoditsy_kor",
+      "label_ru": "Квадрицепс, ягодицы, кор",
+      "target_codes": [
+        "target_kvadritseps",
+        "target_yagoditsy",
+        "target_kor"
+      ]
+    },
+    {
+      "code": "load_privodyaschie_yagoditsy_kvadritseps",
+      "label_ru": "Приводящие, ягодицы, квадрицепс",
+      "target_codes": [
+        "target_privodyaschie",
+        "target_yagoditsy",
+        "target_kvadritseps"
+      ]
+    },
+    {
+      "code": "load_zadnyaya_poverhnost_bedra_yagoditsy",
+      "label_ru": "Задняя поверхность бедра, ягодицы",
+      "target_codes": [
+        "target_zadnyaya_poverhnost_bedra",
+        "target_yagoditsy"
+      ]
+    },
+    {
+      "code": "load_zadnyaya_poverhnost_bedra_yagoditsy_razgibateli_spiny",
+      "label_ru": "Задняя поверхность бедра, ягодицы, разгибатели спины",
+      "target_codes": [
+        "target_zadnyaya_poverhnost_bedra",
+        "target_yagoditsy",
+        "target_razgibateli_spiny"
+      ]
+    },
+    {
+      "code": "load_bolshaya_srednyaya_yagodichnaya",
+      "label_ru": "Большая/средняя ягодичная",
+      "target_codes": [
+        "target_bolshaya",
+        "target_srednyaya_yagodichnaya"
+      ]
+    },
+    {
+      "code": "load_srednyaya_yagodichnaya_naruzhnye_rotatory",
+      "label_ru": "Средняя ягодичная, наружные ротаторы",
+      "target_codes": [
+        "target_srednyaya_yagodichnaya",
+        "target_naruzhnye_rotatory"
+      ]
+    },
+    {
+      "code": "load_srednyaya_yagodichnaya_kvadritseps",
+      "label_ru": "Средняя ягодичная, квадрицепс",
+      "target_codes": [
+        "target_srednyaya_yagodichnaya",
+        "target_kvadritseps"
+      ]
+    },
+    {
+      "code": "load_srednyaya_yagodichnaya_yagoditsy",
+      "label_ru": "Средняя ягодичная, ягодицы",
+      "target_codes": [
+        "target_srednyaya_yagodichnaya",
+        "target_yagoditsy"
+      ]
+    },
+    {
+      "code": "load_kvadritseps_stabilizatsiya_kolena",
+      "label_ru": "Квадрицепс, стабилизация колена",
+      "target_codes": [
+        "target_kvadritseps",
+        "target_stabilizatsiya_kolena"
+      ]
+    },
+    {
+      "code": "load_ikronozhnye",
+      "label_ru": "Икроножные",
+      "target_codes": [
+        "target_ikronozhnye"
+      ]
+    },
+    {
+      "code": "load_myshtsy_goleni_stopy",
+      "label_ru": "Мышцы голени/стопы",
+      "target_codes": [
+        "target_myshtsy_goleni",
+        "target_stopy"
+      ]
+    },
+    {
+      "code": "load_malobertsovye_myshtsy",
+      "label_ru": "Малоберцовые мышцы",
+      "target_codes": [
+        "target_malobertsovye_myshtsy"
+      ]
+    },
+    {
+      "code": "load_kor_yagoditsy",
+      "label_ru": "Кор, ягодицы",
+      "target_codes": [
+        "target_kor",
+        "target_yagoditsy"
+      ]
+    },
+    {
+      "code": "load_kor_stabilizatsiya_taza",
+      "label_ru": "Кор, стабилизация таза",
+      "target_codes": [
+        "target_kor",
+        "target_stabilizatsiya_taza"
+      ]
+    },
+    {
+      "code": "load_kosye_kor",
+      "label_ru": "Косые, кор",
+      "target_codes": [
+        "target_kosye",
+        "target_kor"
+      ]
+    },
+    {
+      "code": "load_poperechnaya_myshtsa_zhivota_glubokiy_kor",
+      "label_ru": "Поперечная мышца живота, глубокий кор",
+      "target_codes": [
+        "target_poperechnaya_myshtsa_zhivota",
+        "target_glubokiy_kor"
+      ]
+    },
+    {
+      "code": "load_kor_sgibateli_bedra",
+      "label_ru": "Кор, сгибатели бедра",
+      "target_codes": [
+        "target_kor",
+        "target_sgibateli_bedra"
+      ]
+    },
+    {
+      "code": "load_kor_shirochayshie_yagoditsy",
+      "label_ru": "Кор, широчайшие, ягодицы",
+      "target_codes": [
+        "target_kor",
+        "target_shirochayshie",
+        "target_yagoditsy"
+      ]
+    },
+    {
+      "code": "load_sgibateli_bedra_kor",
+      "label_ru": "Сгибатели бедра, кор",
+      "target_codes": [
+        "target_sgibateli_bedra",
+        "target_kor"
+      ]
+    },
+    {
+      "code": "load_yagoditsy_sgibateli_bedra_kor",
+      "label_ru": "Ягодицы, сгибатели бедра, кор",
+      "target_codes": [
+        "target_yagoditsy",
+        "target_sgibateli_bedra",
+        "target_kor"
+      ]
+    },
+    {
+      "code": "load_plechevoy_poyas_grud",
+      "label_ru": "Плечевой пояс, грудь",
+      "target_codes": [
+        "target_plechevoy_poyas",
+        "target_grud"
+      ]
+    },
+    {
+      "code": "load_mobilnost_plech_taza_nogi_kor",
+      "label_ru": "Мобильность плеч/таза, ноги, кор",
+      "target_codes": [
+        "target_mobilnost_plech",
+        "target_taza",
+        "target_nogi",
+        "target_kor"
+      ]
+    },
+    {
+      "code": "load_shirochayshie_plechi",
+      "label_ru": "Широчайшие, плечи",
+      "target_codes": [
+        "target_shirochayshie",
+        "target_plechi"
+      ]
+    },
+    {
+      "code": "load_zadnyaya_poverhnost_bedra_nervno_myshechnaya_mobilnost",
+      "label_ru": "Задняя поверхность бедра, нервно-мышечная мобильность",
+      "target_codes": [
+        "target_zadnyaya_poverhnost_bedra",
+        "target_nervno_myshechnaya_mobilnost"
+      ]
+    },
+    {
+      "code": "load_plechi_grud_shirochayshie",
+      "label_ru": "Плечи, грудь, широчайшие",
+      "target_codes": [
+        "target_plechi",
+        "target_grud",
+        "target_shirochayshie"
+      ]
+    },
+    {
+      "code": "load_plechevoy_poyas_kontrol_lopatok",
+      "label_ru": "Плечевой пояс, контроль лопаток",
+      "target_codes": [
+        "target_plechevoy_poyas",
+        "target_kontrol_lopatok"
+      ]
+    },
+    {
+      "code": "load_plechi_grudnoy_otdel_tazobedrennye_nogi_kor",
+      "label_ru": "Плечи, грудной отдел, тазобедренные, ноги, кор",
+      "target_codes": [
+        "target_plechi",
+        "target_grudnoy_otdel",
+        "target_tazobedrennye",
+        "target_nogi",
+        "target_kor"
+      ]
+    },
+    {
+      "code": "load_kvadritseps_yagoditsy_motornyy_kontrol",
+      "label_ru": "Квадрицепс, ягодицы, моторный контроль",
+      "target_codes": [
+        "target_kvadritseps",
+        "target_yagoditsy",
+        "target_motornyy_kontrol"
+      ]
+    },
+    {
+      "code": "load_zadnyaya_poverhnost_bedra_yagoditsy_pattern_naklona",
+      "label_ru": "Задняя поверхность бедра, ягодицы, паттерн наклона",
+      "target_codes": [
+        "target_zadnyaya_poverhnost_bedra",
+        "target_yagoditsy",
+        "target_pattern_naklona"
+      ]
+    },
+    {
+      "code": "load_obuchenie_neytralnomu_pozvonochniku",
+      "label_ru": "Обучение нейтральному позвоночнику",
+      "target_codes": [
+        "target_obuchenie_neytralnomu_pozvonochniku"
+      ]
+    },
+    {
+      "code": "load_yagoditsy_nogi_spina_tehnika_tyagi",
+      "label_ru": "Ягодицы, ноги, спина, техника тяги",
+      "target_codes": [
+        "target_yagoditsy",
+        "target_nogi",
+        "target_spina",
+        "target_tehnika_tyagi"
+      ]
+    },
+    {
+      "code": "load_kvadritseps_kor_mobilnost_plech",
+      "label_ru": "Квадрицепс, кор, мобильность плеч",
+      "target_codes": [
+        "target_kvadritseps",
+        "target_kor",
+        "target_mobilnost_plech"
+      ]
+    },
+    {
+      "code": "load_kvadritseps_yagoditsy_balans",
+      "label_ru": "Квадрицепс, ягодицы, баланс",
+      "target_codes": [
+        "target_kvadritseps",
+        "target_yagoditsy",
+        "target_balans"
+      ]
+    },
+    {
+      "code": "load_nogi_plechi_kor",
+      "label_ru": "Ноги, плечи, кор",
+      "target_codes": [
+        "target_nogi",
+        "target_plechi",
+        "target_kor"
+      ]
+    },
+    {
+      "code": "load_nogi_plechevoy_poyas_koordinatsiya",
+      "label_ru": "Ноги, плечевой пояс, координация",
+      "target_codes": [
+        "target_nogi",
+        "target_plechevoy_poyas",
+        "target_koordinatsiya"
+      ]
+    },
+    {
+      "code": "load_grudnoy_otdel_kosye",
+      "label_ru": "Грудной отдел, косые",
+      "target_codes": [
+        "target_grudnoy_otdel",
+        "target_kosye"
+      ]
+    },
+    {
+      "code": "load_bokovaya_liniya_korpusa_shirochayshie",
+      "label_ru": "Боковая линия корпуса, широчайшие",
+      "target_codes": [
+        "target_bokovaya_liniya_korpusa",
+        "target_shirochayshie"
+      ]
+    },
+    {
+      "code": "load_plechevoy_poyas_grudnoy_otdel",
+      "label_ru": "Плечевой пояс, грудной отдел",
+      "target_codes": [
+        "target_plechevoy_poyas",
+        "target_grudnoy_otdel"
+      ]
+    },
+    {
+      "code": "load_kontrol_plech_i_lopatok",
+      "label_ru": "Контроль плеч и лопаток",
+      "target_codes": [
+        "target_kontrol_plech_i_lopatok"
+      ]
+    },
+    {
+      "code": "load_plechi_verh_spiny",
+      "label_ru": "Плечи, верх спины",
+      "target_codes": [
+        "target_plechi",
+        "target_verh_spiny"
+      ]
+    },
+    {
+      "code": "load_plechevoy_poyas_tehnika_tyazheloy_atletiki",
+      "label_ru": "Плечевой пояс, техника тяжёлой атлетики",
+      "target_codes": [
+        "target_plechevoy_poyas",
+        "target_tehnika_tyazheloy_atletiki"
+      ]
+    },
+    {
+      "code": "load_plechi_trapetsiya_koordinatsiya",
+      "label_ru": "Плечи, трапеция, координация",
+      "target_codes": [
+        "target_plechi",
+        "target_trapetsiya",
+        "target_koordinatsiya"
+      ]
+    },
+    {
+      "code": "load_mobilnost_i_kontrol_priseda",
+      "label_ru": "Мобильность и контроль приседа",
+      "target_codes": [
+        "target_mobilnost_i_kontrol_priseda"
+      ]
+    },
+    {
+      "code": "load_plechi_grudnoy_otdel_glubokiy_prised",
+      "label_ru": "Плечи, грудной отдел, глубокий присед",
+      "target_codes": [
+        "target_plechi",
+        "target_grudnoy_otdel",
+        "target_glubokiy_prised"
+      ]
+    },
+    {
+      "code": "load_privodyaschie_yagoditsy_golenostop",
+      "label_ru": "Приводящие, ягодицы, голеностоп",
+      "target_codes": [
+        "target_privodyaschie",
+        "target_yagoditsy",
+        "target_golenostop"
+      ]
+    },
+    {
+      "code": "load_golenostop",
+      "label_ru": "Голеностоп",
+      "target_codes": [
+        "target_golenostop"
+      ]
+    },
+    {
+      "code": "load_shirochayshie_plechi_grudnoy_otdel",
+      "label_ru": "Широчайшие, плечи, грудной отдел",
+      "target_codes": [
+        "target_shirochayshie",
+        "target_plechi",
+        "target_grudnoy_otdel"
+      ]
+    },
+    {
+      "code": "load_grudnoy_otdel",
+      "label_ru": "Грудной отдел",
+      "target_codes": [
+        "target_grudnoy_otdel"
+      ]
+    },
+    {
+      "code": "load_nizhnyaya_chast_pryamoy_myshtsy_zhivota_tazovyy_kontrol",
+      "label_ru": "Нижняя часть прямой мышцы живота, тазовый контроль",
+      "target_codes": [
+        "target_nizhnyaya_chast_pryamoy_myshtsy_zhivota",
+        "target_tazovyy_kontrol"
+      ]
+    },
+    {
+      "code": "load_poperechnaya_myshtsa_glubokiy_kor",
+      "label_ru": "Поперечная мышца, глубокий кор",
+      "target_codes": [
+        "target_poperechnaya_myshtsa",
+        "target_glubokiy_kor"
+      ]
+    },
+    {
+      "code": "load_perednyaya_tsep_kora",
+      "label_ru": "Передняя цепь кора",
+      "target_codes": [
+        "target_perednyaya_tsep_kora"
+      ]
+    },
+    {
+      "code": "load_kor_dinamicheskaya_stabilizatsiya",
+      "label_ru": "Кор, динамическая стабилизация",
+      "target_codes": [
+        "target_kor",
+        "target_dinamicheskaya_stabilizatsiya"
+      ]
+    },
+    {
+      "code": "load_antirazgibanie_ves_kor",
+      "label_ru": "Антиразгибание, весь кор",
+      "target_codes": [
+        "target_antirazgibanie",
+        "target_ves_kor"
+      ]
+    },
+    {
+      "code": "load_kor_plechevoy_poyas",
+      "label_ru": "Кор, плечевой пояс",
+      "target_codes": [
+        "target_kor",
+        "target_plechevoy_poyas"
+      ]
+    },
+    {
+      "code": "load_antirotatsiya_plechi",
+      "label_ru": "Антиротация, плечи",
+      "target_codes": [
+        "target_antirotatsiya",
+        "target_plechi"
+      ]
+    },
+    {
+      "code": "load_antirotatsiya_plechi_kor",
+      "label_ru": "Антиротация, плечи, кор",
+      "target_codes": [
+        "target_antirotatsiya",
+        "target_plechi",
+        "target_kor"
+      ]
+    },
+    {
+      "code": "load_antirazgibanie_kor",
+      "label_ru": "Антиразгибание, кор",
+      "target_codes": [
+        "target_antirazgibanie",
+        "target_kor"
+      ]
+    },
+    {
+      "code": "load_pryamaya_myshtsa_zhivota_shirochayshie_kor",
+      "label_ru": "Прямая мышца живота, широчайшие, кор",
+      "target_codes": [
+        "target_pryamaya_myshtsa_zhivota",
+        "target_shirochayshie",
+        "target_kor"
+      ]
+    },
+    {
+      "code": "load_kor_shirochayshie",
+      "label_ru": "Кор, широчайшие",
+      "target_codes": [
+        "target_kor",
+        "target_shirochayshie"
+      ]
+    },
+    {
+      "code": "load_kor_plechi",
+      "label_ru": "Кор, плечи",
+      "target_codes": [
+        "target_kor",
+        "target_plechi"
+      ]
+    },
+    {
+      "code": "load_multifidus_yagoditsy_kor",
+      "label_ru": "Мультифидус, ягодицы, кор",
+      "target_codes": [
+        "target_multifidus",
+        "target_yagoditsy",
+        "target_kor"
+      ]
+    },
+    {
+      "code": "load_kor_koordinatsiya",
+      "label_ru": "Кор, координация",
+      "target_codes": [
+        "target_kor",
+        "target_koordinatsiya"
+      ]
+    },
+    {
+      "code": "load_kor_plechi_kvadritseps",
+      "label_ru": "Кор, плечи, квадрицепс",
+      "target_codes": [
+        "target_kor",
+        "target_plechi",
+        "target_kvadritseps"
+      ]
+    },
+    {
+      "code": "load_kor_plechi_nogi",
+      "label_ru": "Кор, плечи, ноги",
+      "target_codes": [
+        "target_kor",
+        "target_plechi",
+        "target_nogi"
+      ]
+    },
+    {
+      "code": "load_kosye_kvadratnaya_myshtsa_poyasnitsy_srednyaya_yagodichnaya",
+      "label_ru": "Косые, квадратная мышца поясницы, средняя ягодичная",
+      "target_codes": [
+        "target_kosye",
+        "target_kvadratnaya_myshtsa_poyasnitsy",
+        "target_srednyaya_yagodichnaya"
+      ]
+    },
+    {
+      "code": "load_kosye_srednyaya_yagodichnaya",
+      "label_ru": "Косые, средняя ягодичная",
+      "target_codes": [
+        "target_kosye",
+        "target_srednyaya_yagodichnaya"
+      ]
+    },
+    {
+      "code": "load_kosye_grudnoy_otdel",
+      "label_ru": "Косые, грудной отдел",
+      "target_codes": [
+        "target_kosye",
+        "target_grudnoy_otdel"
+      ]
+    },
+    {
+      "code": "load_privodyaschie_kosye_kor",
+      "label_ru": "Приводящие, косые, кор",
+      "target_codes": [
+        "target_privodyaschie",
+        "target_kosye",
+        "target_kor"
+      ]
+    },
+    {
+      "code": "load_antilateralnoe_sgibanie_hvat_kor",
+      "label_ru": "Антилатеральное сгибание, хват, кор",
+      "target_codes": [
+        "target_antilateralnoe_sgibanie",
+        "target_hvat",
+        "target_kor"
+      ]
+    },
+    {
+      "code": "load_kor_hvat_trapetsiya",
+      "label_ru": "Кор, хват, трапеция",
+      "target_codes": [
+        "target_kor",
+        "target_hvat",
+        "target_trapetsiya"
+      ]
+    },
+    {
+      "code": "load_kor_verh_spiny",
+      "label_ru": "Кор, верх спины",
+      "target_codes": [
+        "target_kor",
+        "target_verh_spiny"
+      ]
+    },
+    {
+      "code": "load_kor_plechi_stabilizatory_lopatki",
+      "label_ru": "Кор, плечи, стабилизаторы лопатки",
+      "target_codes": [
+        "target_kor",
+        "target_plechi",
+        "target_stabilizatory_lopatki"
+      ]
+    },
+    {
+      "code": "load_kosye_myshtsy_kontrol_vrascheniya",
+      "label_ru": "Косые мышцы, контроль вращения",
+      "target_codes": [
+        "target_kosye_myshtsy",
+        "target_kontrol_vrascheniya"
+      ]
+    },
+    {
+      "code": "load_kosye_sgibateli_bedra",
+      "label_ru": "Косые, сгибатели бедра",
+      "target_codes": [
+        "target_kosye",
+        "target_sgibateli_bedra"
+      ]
+    },
+    {
+      "code": "load_pryamaya_myshtsa_zhivota_sgibateli_bedra",
+      "label_ru": "Прямая мышца живота, сгибатели бедра",
+      "target_codes": [
+        "target_pryamaya_myshtsa_zhivota",
+        "target_sgibateli_bedra"
+      ]
+    },
+    {
+      "code": "load_verh_pressa",
+      "label_ru": "Верх пресса",
+      "target_codes": [
+        "target_verh_pressa"
+      ]
+    },
+    {
+      "code": "load_kosye_pryamaya_myshtsa_zhivota",
+      "label_ru": "Косые, прямая мышца живота",
+      "target_codes": [
+        "target_kosye",
+        "target_pryamaya_myshtsa_zhivota"
+      ]
+    },
+    {
+      "code": "load_kor_kardio",
+      "label_ru": "Кор, кардио",
+      "target_codes": [
+        "target_kor",
+        "target_kardio"
+      ]
+    },
+    {
+      "code": "load_kosye_kor_kardio",
+      "label_ru": "Косые, кор, кардио",
+      "target_codes": [
+        "target_kosye",
+        "target_kor",
+        "target_kardio"
+      ]
+    },
+    {
+      "code": "load_press_sgibateli_bedra_hvat",
+      "label_ru": "Пресс, сгибатели бедра, хват",
+      "target_codes": [
+        "target_press",
+        "target_sgibateli_bedra",
+        "target_hvat"
+      ]
+    },
+    {
+      "code": "load_press_sgibateli_bedra",
+      "label_ru": "Пресс, сгибатели бедра",
+      "target_codes": [
+        "target_press",
+        "target_sgibateli_bedra"
+      ]
+    },
+    {
+      "code": "load_antirotatsiya_taz_kor",
+      "label_ru": "Антиротация, таз, кор",
+      "target_codes": [
+        "target_antirotatsiya",
+        "target_taz",
+        "target_kor"
+      ]
+    },
+    {
+      "code": "load_razgibateli_spiny_yagoditsy_kor",
+      "label_ru": "Разгибатели спины, ягодицы, кор",
+      "target_codes": [
+        "target_razgibateli_spiny",
+        "target_yagoditsy",
+        "target_kor"
+      ]
+    },
+    {
+      "code": "load_peredniy_kor_s_neytralnoy_poyasnitsey",
+      "label_ru": "Передний кор с нейтральной поясницей",
+      "target_codes": [
+        "target_peredniy_kor_s_neytralnoy_poyasnitsey"
+      ]
+    },
+    {
+      "code": "load_antirazgibanie_press",
+      "label_ru": "Антиразгибание, пресс",
+      "target_codes": [
+        "target_antirazgibanie",
+        "target_press"
+      ]
+    },
+    {
+      "code": "load_obschee_povyshenie_temperatury",
+      "label_ru": "Общее повышение температуры",
+      "target_codes": [
+        "target_obschee_povyshenie_temperatury"
+      ]
+    },
+    {
+      "code": "load_obschaya_aktivatsiya_tela",
+      "label_ru": "Общая активация тела",
+      "target_codes": [
+        "target_obschaya_aktivatsiya_tela"
+      ]
+    },
+    {
+      "code": "load_obschaya_aktivatsiya_golenostop_koordinatsiya",
+      "label_ru": "Общая активация, голеностоп, координация",
+      "target_codes": [
+        "target_obschaya_aktivatsiya",
+        "target_golenostop",
+        "target_koordinatsiya"
+      ]
+    },
+    {
+      "code": "load_plechevoy_poyas",
+      "label_ru": "Плечевой пояс",
+      "target_codes": [
+        "target_plechevoy_poyas"
+      ]
+    },
+    {
+      "code": "load_plechi",
+      "label_ru": "Плечи",
+      "target_codes": [
+        "target_plechi"
+      ]
+    },
+    {
+      "code": "load_grud_plechi_lopatki",
+      "label_ru": "Грудь, плечи, лопатки",
+      "target_codes": [
+        "target_grud",
+        "target_plechi",
+        "target_lopatki"
+      ]
+    },
+    {
+      "code": "load_grud_zadnyaya_delta",
+      "label_ru": "Грудь, задняя дельта",
+      "target_codes": [
+        "target_grud",
+        "target_zadnyaya_delta"
+      ]
+    },
+    {
+      "code": "load_perednyaya_zubchataya_lopatki",
+      "label_ru": "Передняя зубчатая, лопатки",
+      "target_codes": [
+        "target_perednyaya_zubchataya",
+        "target_lopatki"
+      ]
+    },
+    {
+      "code": "load_zadnyaya_delta_lopatki",
+      "label_ru": "Задняя дельта, лопатки",
+      "target_codes": [
+        "target_zadnyaya_delta",
+        "target_lopatki"
+      ]
+    },
+    {
+      "code": "load_plechi_lopatki_grudnoy_otdel",
+      "label_ru": "Плечи, лопатки, грудной отдел",
+      "target_codes": [
+        "target_plechi",
+        "target_lopatki",
+        "target_grudnoy_otdel"
+      ]
+    },
+    {
+      "code": "load_pozvonochnik",
+      "label_ru": "Позвоночник",
+      "target_codes": [
+        "target_pozvonochnik"
+      ]
+    },
+    {
+      "code": "load_grudnoy_otdel_plechi",
+      "label_ru": "Грудной отдел, плечи",
+      "target_codes": [
+        "target_grudnoy_otdel",
+        "target_plechi"
+      ]
+    },
+    {
+      "code": "load_grudnoy_otdel_taz",
+      "label_ru": "Грудной отдел, таз",
+      "target_codes": [
+        "target_grudnoy_otdel",
+        "target_taz"
+      ]
+    },
+    {
+      "code": "load_zadnyaya_tsep_grudnoy_otdel",
+      "label_ru": "Задняя цепь, грудной отдел",
+      "target_codes": [
+        "target_zadnyaya_tsep",
+        "target_grudnoy_otdel"
+      ]
+    },
+    {
+      "code": "load_zadnyaya_poverhnost_bedra_plechi_kor",
+      "label_ru": "Задняя поверхность бедра, плечи, кор",
+      "target_codes": [
+        "target_zadnyaya_poverhnost_bedra",
+        "target_plechi",
+        "target_kor"
+      ]
+    },
+    {
+      "code": "load_tazobedrennye_grudnoy_otdel_privodyaschie",
+      "label_ru": "Тазобедренные, грудной отдел, приводящие",
+      "target_codes": [
+        "target_tazobedrennye",
+        "target_grudnoy_otdel",
+        "target_privodyaschie"
+      ]
+    },
+    {
+      "code": "load_tazobedrennye_privodyaschie",
+      "label_ru": "Тазобедренные, приводящие",
+      "target_codes": [
+        "target_tazobedrennye",
+        "target_privodyaschie"
+      ]
+    },
+    {
+      "code": "load_yagoditsy_kvadritseps_balans",
+      "label_ru": "Ягодицы, квадрицепс, баланс",
+      "target_codes": [
+        "target_yagoditsy",
+        "target_kvadritseps",
+        "target_balans"
+      ]
+    },
+    {
+      "code": "load_yagoditsy_sgibateli_bedra_shirochayshie",
+      "label_ru": "Ягодицы, сгибатели бедра, широчайшие",
+      "target_codes": [
+        "target_yagoditsy",
+        "target_sgibateli_bedra",
+        "target_shirochayshie"
+      ]
+    },
+    {
+      "code": "load_privodyaschie_yagoditsy",
+      "label_ru": "Приводящие, ягодицы",
+      "target_codes": [
+        "target_privodyaschie",
+        "target_yagoditsy"
+      ]
+    },
+    {
+      "code": "load_privodyaschie_golenostop_taz",
+      "label_ru": "Приводящие, голеностоп, таз",
+      "target_codes": [
+        "target_privodyaschie",
+        "target_golenostop",
+        "target_taz"
+      ]
+    },
+    {
+      "code": "load_koleni_taz_golenostop",
+      "label_ru": "Колени, таз, голеностоп",
+      "target_codes": [
+        "target_koleni",
+        "target_taz",
+        "target_golenostop"
+      ]
+    },
+    {
+      "code": "load_zadnyaya_poverhnost_bedra_taz_golenostop",
+      "label_ru": "Задняя поверхность бедра, таз, голеностоп",
+      "target_codes": [
+        "target_zadnyaya_poverhnost_bedra",
+        "target_taz",
+        "target_golenostop"
+      ]
+    },
+    {
+      "code": "load_tazobedrennye",
+      "label_ru": "Тазобедренные",
+      "target_codes": [
+        "target_tazobedrennye"
+      ]
+    },
+    {
+      "code": "load_tazobedrennye_naruzhnye_rotatory",
+      "label_ru": "Тазобедренные, наружные ротаторы",
+      "target_codes": [
+        "target_tazobedrennye",
+        "target_naruzhnye_rotatory"
+      ]
+    },
+    {
+      "code": "load_sgibateli_bedra_zadnyaya_poverhnost_bedra",
+      "label_ru": "Сгибатели бедра, задняя поверхность бедра",
+      "target_codes": [
+        "target_sgibateli_bedra",
+        "target_zadnyaya_poverhnost_bedra"
+      ]
+    },
+    {
+      "code": "load_privodyaschie_otvodyaschie",
+      "label_ru": "Приводящие, отводящие",
+      "target_codes": [
+        "target_privodyaschie",
+        "target_otvodyaschie"
+      ]
+    },
+    {
+      "code": "load_kvadritseps_zadnyaya_poverhnost_bedra_begovaya_aktivatsiya",
+      "label_ru": "Квадрицепс, задняя поверхность бедра, беговая активация",
+      "target_codes": [
+        "target_kvadritseps",
+        "target_zadnyaya_poverhnost_bedra",
+        "target_begovaya_aktivatsiya"
+      ]
+    },
+    {
+      "code": "load_sgibateli_bedra_stopa_koordinatsiya",
+      "label_ru": "Сгибатели бедра, стопа, координация",
+      "target_codes": [
+        "target_sgibateli_bedra",
+        "target_stopa",
+        "target_koordinatsiya"
+      ]
+    },
+    {
+      "code": "load_begovaya_mehanika_sgibateli_bedra_stopa",
+      "label_ru": "Беговая механика, сгибатели бедра, стопа",
+      "target_codes": [
+        "target_begovaya_mehanika",
+        "target_sgibateli_bedra",
+        "target_stopa"
+      ]
+    },
+    {
+      "code": "load_begovaya_mehanika_koordinatsiya",
+      "label_ru": "Беговая механика, координация",
+      "target_codes": [
+        "target_begovaya_mehanika",
+        "target_koordinatsiya"
+      ]
+    },
+    {
+      "code": "load_yagoditsy_privodyaschie_koordinatsiya",
+      "label_ru": "Ягодицы, приводящие, координация",
+      "target_codes": [
+        "target_yagoditsy",
+        "target_privodyaschie",
+        "target_koordinatsiya"
+      ]
+    },
+    {
+      "code": "load_taz_koordinatsiya_rotatsiya",
+      "label_ru": "Таз, координация, ротация",
+      "target_codes": [
+        "target_taz",
+        "target_koordinatsiya",
+        "target_rotatsiya"
+      ]
+    },
+    {
+      "code": "load_ikronozhnye_golenostop",
+      "label_ru": "Икроножные, голеностоп",
+      "target_codes": [
+        "target_ikronozhnye",
+        "target_golenostop"
+      ]
+    },
+    {
+      "code": "load_stopa_ikry_reaktivnost",
+      "label_ru": "Стопа, икры, реактивность",
+      "target_codes": [
+        "target_stopa",
+        "target_ikry",
+        "target_reaktivnost"
+      ]
+    },
+    {
+      "code": "load_yagoditsy_zadnyaya_tsep",
+      "label_ru": "Ягодицы, задняя цепь",
+      "target_codes": [
+        "target_yagoditsy",
+        "target_zadnyaya_tsep"
+      ]
+    },
+    {
+      "code": "load_lopatki_shirochayshie",
+      "label_ru": "Лопатки, широчайшие",
+      "target_codes": [
+        "target_lopatki",
+        "target_shirochayshie"
+      ]
+    },
+    {
+      "code": "load_spetsificheskaya_podgotovka_k_silovomu_uprazhneniyu",
+      "label_ru": "Специфическая подготовка к силовому упражнению",
+      "target_codes": [
+        "target_spetsificheskaya_podgotovka_k_silovomu_uprazhneniyu"
+      ]
+    },
+    {
+      "code": "load_kardio_ikry_stopa_koordinatsiya",
+      "label_ru": "Кардио, икры, стопа, координация",
+      "target_codes": [
+        "target_kardio",
+        "target_ikry",
+        "target_stopa",
+        "target_koordinatsiya"
+      ]
+    },
+    {
+      "code": "load_kardio_koordinatsiya_begovoy_ritm",
+      "label_ru": "Кардио, координация, беговой ритм",
+      "target_codes": [
+        "target_kardio",
+        "target_koordinatsiya",
+        "target_begovoy_ritm"
+      ]
+    },
+    {
+      "code": "load_kardio_koordinatsiya_ikry",
+      "label_ru": "Кардио, координация, икры",
+      "target_codes": [
+        "target_kardio",
+        "target_koordinatsiya",
+        "target_ikry"
+      ]
+    },
+    {
+      "code": "load_kardio_sgibateli_bedra_koordinatsiya",
+      "label_ru": "Кардио, сгибатели бедра, координация",
+      "target_codes": [
+        "target_kardio",
+        "target_sgibateli_bedra",
+        "target_koordinatsiya"
+      ]
+    },
+    {
+      "code": "load_kardio_koordinatsiya",
+      "label_ru": "Кардио, координация",
+      "target_codes": [
+        "target_kardio",
+        "target_koordinatsiya"
+      ]
+    },
+    {
+      "code": "load_kardio_privodyaschie_otvodyaschie",
+      "label_ru": "Кардио, приводящие/отводящие",
+      "target_codes": [
+        "target_kardio",
+        "target_privodyaschie",
+        "target_otvodyaschie"
+      ]
+    },
+    {
+      "code": "load_kardio_koordinatsiya_golen",
+      "label_ru": "Кардио, координация, голень",
+      "target_codes": [
+        "target_kardio",
+        "target_koordinatsiya",
+        "target_golen"
+      ]
+    },
+    {
+      "code": "load_kardio_stopa_lateralnaya_koordinatsiya",
+      "label_ru": "Кардио, стопа, латеральная координация",
+      "target_codes": [
+        "target_kardio",
+        "target_stopa",
+        "target_lateralnaya_koordinatsiya"
+      ]
+    },
+    {
+      "code": "load_kardio_stopa_koordinatsiya",
+      "label_ru": "Кардио, стопа, координация",
+      "target_codes": [
+        "target_kardio",
+        "target_stopa",
+        "target_koordinatsiya"
+      ]
+    },
+    {
+      "code": "load_kardio_kosye_koordinatsiya",
+      "label_ru": "Кардио, косые, координация",
+      "target_codes": [
+        "target_kardio",
+        "target_kosye",
+        "target_koordinatsiya"
+      ]
+    },
+    {
+      "code": "load_ikry_stopa_balans",
+      "label_ru": "Икры, стопа, баланс",
+      "target_codes": [
+        "target_ikry",
+        "target_stopa",
+        "target_balans"
+      ]
+    },
+    {
+      "code": "load_koordinatsiya_golenostop",
+      "label_ru": "Координация, голеностоп",
+      "target_codes": [
+        "target_koordinatsiya",
+        "target_golenostop"
+      ]
+    },
+    {
+      "code": "load_koordinatsiya_ruk_vosstanovlenie_ritma",
+      "label_ru": "Координация рук, восстановление ритма",
+      "target_codes": [
+        "target_koordinatsiya_ruk",
+        "target_vosstanovlenie_ritma"
+      ]
+    },
+    {
+      "code": "load_koordinatsiya_kardio",
+      "label_ru": "Координация, кардио",
+      "target_codes": [
+        "target_koordinatsiya",
+        "target_kardio"
+      ]
+    },
+    {
+      "code": "load_koordinatsiya_plech_kistey_kardio",
+      "label_ru": "Координация плеч/кистей, кардио",
+      "target_codes": [
+        "target_koordinatsiya_plech",
+        "target_kistey",
+        "target_kardio"
+      ]
+    },
+    {
+      "code": "load_moschnost_koordinatsiya_kardio",
+      "label_ru": "Мощность, координация, кардио",
+      "target_codes": [
+        "target_moschnost",
+        "target_koordinatsiya",
+        "target_kardio"
+      ]
+    },
+    {
+      "code": "load_koordinatsiya_moschnost",
+      "label_ru": "Координация, мощность",
+      "target_codes": [
+        "target_koordinatsiya",
+        "target_moschnost"
+      ]
+    },
+    {
+      "code": "load_skorostnaya_vynoslivost",
+      "label_ru": "Скоростная выносливость",
+      "target_codes": [
+        "target_skorostnaya_vynoslivost"
+      ]
+    },
+    {
+      "code": "load_skorostnaya_vynoslivost_koordinatsiya",
+      "label_ru": "Скоростная выносливость, координация",
+      "target_codes": [
+        "target_skorostnaya_vynoslivost",
+        "target_koordinatsiya"
+      ]
+    },
+    {
+      "code": "load_lateralnaya_reaktivnost_kardio",
+      "label_ru": "Латеральная реактивность, кардио",
+      "target_codes": [
+        "target_lateralnaya_reaktivnost",
+        "target_kardio"
+      ]
+    },
+    {
+      "code": "load_peredne_zadnyaya_reaktivnost",
+      "label_ru": "Передне-задняя реактивность",
+      "target_codes": [
+        "target_peredne_zadnyaya_reaktivnost"
+      ]
+    },
+    {
+      "code": "load_koordinatsiya_kosye",
+      "label_ru": "Координация, косые",
+      "target_codes": [
+        "target_koordinatsiya",
+        "target_kosye"
+      ]
+    },
+    {
+      "code": "load_yagoditsy_zadnyaya_poverhnost_bedra_spina",
+      "label_ru": "Ягодицы, задняя поверхность бедра, спина",
+      "target_codes": [
+        "target_yagoditsy",
+        "target_zadnyaya_poverhnost_bedra",
+        "target_spina"
+      ]
+    },
+    {
+      "code": "load_yagoditsy_zadnyaya_tsep_kor_plechevoy_poyas",
+      "label_ru": "Ягодицы, задняя цепь, кор, плечевой пояс",
+      "target_codes": [
+        "target_yagoditsy",
+        "target_zadnyaya_tsep",
+        "target_kor",
+        "target_plechevoy_poyas"
+      ]
+    },
+    {
+      "code": "load_plechi_tritseps_kor",
+      "label_ru": "Плечи, трицепс, кор",
+      "target_codes": [
+        "target_plechi",
+        "target_tritseps",
+        "target_kor"
+      ]
+    },
+    {
+      "code": "load_kor_plechevoy_poyas_mobilnost",
+      "label_ru": "Кор, плечевой пояс, мобильность",
+      "target_codes": [
+        "target_kor",
+        "target_plechevoy_poyas",
+        "target_mobilnost"
+      ]
+    },
+    {
+      "code": "load_hvat_kor_plechevoy_poyas",
+      "label_ru": "Хват, кор, плечевой пояс",
+      "target_codes": [
+        "target_hvat",
+        "target_kor",
+        "target_plechevoy_poyas"
+      ]
+    },
+    {
+      "code": "load_kor_plechevoy_poyas_grud_moschnost",
+      "label_ru": "Кор, плечевой пояс, грудь / мощность",
+      "target_codes": [
+        "target_kor",
+        "target_plechevoy_poyas",
+        "target_grud",
+        "target_moschnost"
+      ]
+    },
+    {
+      "code": "load_kosye_myshtsy_zhivota_kor",
+      "label_ru": "Косые мышцы живота, кор",
+      "target_codes": [
+        "target_kosye_myshtsy_zhivota",
+        "target_kor"
+      ]
+    },
+    {
+      "code": "load_nogi_yagoditsy_kor",
+      "label_ru": "Ноги, ягодицы, кор",
+      "target_codes": [
+        "target_nogi",
+        "target_yagoditsy",
+        "target_kor"
+      ]
+    },
+    {
+      "code": "load_kor_stabilizatory_plech",
+      "label_ru": "Кор, стабилизаторы плеч",
+      "target_codes": [
+        "target_kor",
+        "target_stabilizatory_plech"
+      ]
+    },
+    {
+      "code": "load_kor_vse_telo",
+      "label_ru": "Кор, всё тело",
+      "target_codes": [
+        "target_kor",
+        "target_vse_telo"
+      ]
+    },
+    {
+      "code": "load_press_i_glubokie_myshtsy_kora",
+      "label_ru": "Пресс и глубокие мышцы кора",
+      "target_codes": [
+        "target_press_i_glubokie_myshtsy_kora"
+      ]
+    },
+    {
+      "code": "load_zadnyaya_poverhnost_bedra_yagoditsy_kor",
+      "label_ru": "Задняя поверхность бедра, ягодицы, кор",
+      "target_codes": [
+        "target_zadnyaya_poverhnost_bedra",
+        "target_yagoditsy",
+        "target_kor"
+      ]
+    },
+    {
+      "code": "load_spina_plechevoy_poyas_kor",
+      "label_ru": "Спина, плечевой пояс, кор",
+      "target_codes": [
+        "target_spina",
+        "target_plechevoy_poyas",
+        "target_kor"
+      ]
+    },
+    {
+      "code": "load_plechi_grud_tritseps_kor",
+      "label_ru": "Плечи/грудь, трицепс, кор",
+      "target_codes": [
+        "target_plechi",
+        "target_grud",
+        "target_tritseps",
+        "target_kor"
+      ]
+    },
+    {
+      "code": "load_grud_plechi_tritseps",
+      "label_ru": "Грудь/плечи, трицепс",
+      "target_codes": [
+        "target_grud",
+        "target_plechi",
+        "target_tritseps"
+      ]
+    },
+    {
+      "code": "load_spina_zadnyaya_delta_bitseps",
+      "label_ru": "Спина, задняя дельта, бицепс",
+      "target_codes": [
+        "target_spina",
+        "target_zadnyaya_delta",
+        "target_bitseps"
+      ]
+    },
+    {
+      "code": "load_plechi_i_stabilizatory",
+      "label_ru": "Плечи и стабилизаторы",
+      "target_codes": [
+        "target_plechi_i_stabilizatory"
+      ]
+    },
+    {
+      "code": "load_bitseps_predplechya",
+      "label_ru": "Бицепс, предплечья",
+      "target_codes": [
+        "target_bitseps",
+        "target_predplechya"
+      ]
+    },
+    {
+      "code": "load_nogi_yagoditsy_zadnyaya_tsep",
+      "label_ru": "Ноги, ягодицы, задняя цепь",
+      "target_codes": [
+        "target_nogi",
+        "target_yagoditsy",
+        "target_zadnyaya_tsep"
+      ]
+    },
+    {
+      "code": "load_hvat_kor_trapetsiya",
+      "label_ru": "Хват, кор, трапеция",
+      "target_codes": [
+        "target_hvat",
+        "target_kor",
+        "target_trapetsiya"
+      ]
+    },
+    {
+      "code": "load_spina_bitseps_zadnyaya_delta",
+      "label_ru": "Спина, бицепс, задняя дельта",
+      "target_codes": [
+        "target_spina",
+        "target_bitseps",
+        "target_zadnyaya_delta"
+      ]
+    },
+    {
+      "code": "load_trapetsiya_hvat",
+      "label_ru": "Трапеция, хват",
+      "target_codes": [
+        "target_trapetsiya",
+        "target_hvat"
+      ]
+    },
+    {
+      "code": "load_nogi_yagoditsy",
+      "label_ru": "Ноги, ягодицы",
+      "target_codes": [
+        "target_nogi",
+        "target_yagoditsy"
+      ]
+    },
+    {
+      "code": "load_kor_vse_telo_2",
+      "label_ru": "Кор / всё тело",
+      "target_codes": [
+        "target_kor",
+        "target_vse_telo"
+      ]
+    },
+    {
+      "code": "load_grud_plechi_tritseps_kor",
+      "label_ru": "Грудь/плечи, трицепс, кор",
+      "target_codes": [
+        "target_grud",
+        "target_plechi",
+        "target_tritseps",
+        "target_kor"
+      ]
+    },
+    {
+      "code": "load_grud_tritseps_plechi",
+      "label_ru": "Грудь/трицепс/плечи",
+      "target_codes": [
+        "target_grud",
+        "target_tritseps",
+        "target_plechi"
+      ]
+    },
+    {
+      "code": "load_zadnyaya_tsep_yagoditsy",
+      "label_ru": "Задняя цепь, ягодицы",
+      "target_codes": [
+        "target_zadnyaya_tsep",
+        "target_yagoditsy"
+      ]
+    },
+    {
+      "code": "load_kor_plechevye_stabilizatory",
+      "label_ru": "Кор, плечевые стабилизаторы",
+      "target_codes": [
+        "target_kor",
+        "target_plechevye_stabilizatory"
+      ]
+    },
+    {
+      "code": "load_hvat_plechevoy_poyas_lopatochnye_stabilizatory",
+      "label_ru": "Хват, плечевой пояс, лопаточные стабилизаторы",
+      "target_codes": [
+        "target_hvat",
+        "target_plechevoy_poyas",
+        "target_lopatochnye_stabilizatory"
+      ]
+    },
+    {
+      "code": "load_shirochayshie_bitseps_lopatochnye_stabilizatory",
+      "label_ru": "Широчайшие, бицепс, лопаточные стабилизаторы",
+      "target_codes": [
+        "target_shirochayshie",
+        "target_bitseps",
+        "target_lopatochnye_stabilizatory"
+      ]
+    },
+    {
+      "code": "load_grud_tritseps_plechi_2",
+      "label_ru": "Грудь, трицепс, плечи",
+      "target_codes": [
+        "target_grud",
+        "target_tritseps",
+        "target_plechi"
+      ]
+    },
+    {
+      "code": "load_podvizhnost_sustavov_i_kontrol_amplitudy",
+      "label_ru": "Подвижность суставов и контроль амплитуды",
+      "target_codes": [
+        "target_podvizhnost_sustavov_i_kontrol_amplitudy"
+      ]
+    },
+    {
+      "code": "load_vosstanovlenie_dyhaniya_i_postepennoe_snizhenie_intensivnosti",
+      "label_ru": "Восстановление дыхания и постепенное снижение интенсивности",
+      "target_codes": [
+        "target_vosstanovlenie_dyhaniya_i_postepennoe_snizhenie_intensivnosti"
+      ]
+    },
+    {
+      "code": "load_gibkost_tselevoy_myshechnoy_gruppy",
+      "label_ru": "Гибкость целевой мышечной группы",
+      "target_codes": [
+        "target_gibkost_tselevoy_myshechnoy_gruppy"
+      ]
+    },
+    {
+      "code": "load_myagkie_tkani_vybrannoy_oblasti",
+      "label_ru": "Мягкие ткани выбранной области",
+      "target_codes": [
+        "target_myagkie_tkani_vybrannoy_oblasti"
+      ]
+    },
+    {
+      "code": "load_moschnost_nog_reaktivnaya_sila_kontrol_prizemleniya",
+      "label_ru": "Мощность ног, реактивная сила, контроль приземления",
+      "target_codes": [
+        "target_moschnost_nog",
+        "target_reaktivnaya_sila",
+        "target_kontrol_prizemleniya"
+      ]
+    },
+    {
+      "code": "load_stabilizatory_stopy_kolena_taza_i_korpusa",
+      "label_ru": "Стабилизаторы стопы, колена, таза и корпуса",
+      "target_codes": [
+        "target_stabilizatory_stopy",
+        "target_kolena",
+        "target_taza_i_korpusa"
+      ]
+    },
+    {
+      "code": "load_plechevoy_poyas_kor_konditsionirovanie",
+      "label_ru": "Плечевой пояс, кор, кондиционирование",
+      "target_codes": [
+        "target_plechevoy_poyas",
+        "target_kor",
+        "target_konditsionirovanie"
+      ]
+    },
+    {
+      "code": "load_nogi_yagoditsy_kor_konditsionirovanie",
+      "label_ru": "Ноги, ягодицы, кор, кондиционирование",
+      "target_codes": [
+        "target_nogi",
+        "target_yagoditsy",
+        "target_kor",
+        "target_konditsionirovanie"
+      ]
+    },
+    {
+      "code": "load_vse_telo_kor_hvat",
+      "label_ru": "Всё тело, кор, хват",
+      "target_codes": [
+        "target_vse_telo",
+        "target_kor",
+        "target_hvat"
+      ]
+    },
+    {
+      "code": "load_plechi_grud_tritseps_kor_2",
+      "label_ru": "Плечи, грудь, трицепс, кор",
+      "target_codes": [
+        "target_plechi",
+        "target_grud",
+        "target_tritseps",
+        "target_kor"
+      ]
+    },
+    {
+      "code": "load_zadnyaya_tsep",
+      "label_ru": "Задняя цепь",
+      "target_codes": [
+        "target_zadnyaya_tsep"
+      ]
+    },
+    {
+      "code": "load_spina_bitseps",
+      "label_ru": "Спина, бицепс",
+      "target_codes": [
+        "target_spina",
+        "target_bitseps"
+      ]
+    },
+    {
+      "code": "load_kor_kosye_myshtsy_plechevoy_poyas",
+      "label_ru": "Кор, косые мышцы, плечевой пояс",
+      "target_codes": [
+        "target_kor",
+        "target_kosye_myshtsy",
+        "target_plechevoy_poyas"
+      ]
+    },
+    {
+      "code": "load_hvat_predplechya_kor_plechevoy_poyas",
+      "label_ru": "Хват, предплечья, кор, плечевой пояс",
+      "target_codes": [
+        "target_hvat",
+        "target_predplechya",
+        "target_kor",
+        "target_plechevoy_poyas"
+      ]
+    },
+    {
+      "code": "load_stopa_ikronozhnye_perednyaya_bolshebertsovaya",
+      "label_ru": "Стопа, икроножные, передняя большеберцовая",
+      "target_codes": [
+        "target_stopa",
+        "target_ikronozhnye",
+        "target_perednyaya_bolshebertsovaya"
+      ]
+    },
+    {
+      "code": "load_koordinatsiya_skorost_nog_tormozhenie_i_smena_napravleniya",
+      "label_ru": "Координация, скорость ног, торможение и смена направления",
+      "target_codes": [
+        "target_koordinatsiya",
+        "target_skorost_nog",
+        "target_tormozhenie_i_smena_napravleniya"
+      ]
+    },
+    {
+      "code": "load_dyhatelnyy_kontrol_i_rasslablenie",
+      "label_ru": "Дыхательный контроль и расслабление",
+      "target_codes": [
+        "target_dyhatelnyy_kontrol_i_rasslablenie"
+      ]
+    },
+    {
+      "code": "load_tehnika_grebka_koordinatsiya_polozhenie_tela",
+      "label_ru": "Техника гребка / координация / положение тела",
+      "target_codes": [
+        "target_tehnika_grebka",
+        "target_koordinatsiya",
+        "target_polozhenie_tela"
+      ]
+    },
+    {
+      "code": "load_rabota_nog_polozhenie_tela",
+      "label_ru": "Работа ног / положение тела",
+      "target_codes": [
+        "target_rabota_nog",
+        "target_polozhenie_tela"
+      ]
+    },
+    {
+      "code": "load_chuvstvo_vody_zahvat_tyaga",
+      "label_ru": "Чувство воды / захват / тяга",
+      "target_codes": [
+        "target_chuvstvo_vody",
+        "target_zahvat",
+        "target_tyaga"
+      ]
+    },
+    {
+      "code": "load_dyhanie_koordinatsiya",
+      "label_ru": "Дыхание / координация",
+      "target_codes": [
+        "target_dyhanie",
+        "target_koordinatsiya"
+      ]
+    },
+    {
+      "code": "load_povorot_ottalkivanie_skorost_steny",
+      "label_ru": "Поворот / отталкивание / скорость стены",
+      "target_codes": [
+        "target_povorot",
+        "target_ottalkivanie",
+        "target_skorost_steny"
+      ]
+    },
+    {
+      "code": "load_start_reaktsiya_obtekaemost",
+      "label_ru": "Старт / реакция / обтекаемость",
+      "target_codes": [
+        "target_start",
+        "target_reaktsiya",
+        "target_obtekaemost"
+      ]
+    },
+    {
+      "code": "load_otkrytaya_voda_navigatsiya_taktika",
+      "label_ru": "Открытая вода / навигация / тактика",
+      "target_codes": [
+        "target_otkrytaya_voda",
+        "target_navigatsiya",
+        "target_taktika"
+      ]
+    },
+    {
+      "code": "load_vedenie_kontrol_myacha_koordinatsiya",
+      "label_ru": "Ведение / контроль мяча / координация",
+      "target_codes": [
+        "target_vedenie",
+        "target_kontrol_myacha",
+        "target_koordinatsiya"
+      ]
+    },
+    {
+      "code": "load_futvork_tormozhenie_smena_napravleniya",
+      "label_ru": "Футворк / торможение / смена направления",
+      "target_codes": [
+        "target_futvork",
+        "target_tormozhenie",
+        "target_smena_napravleniya"
+      ]
+    },
+    {
+      "code": "load_skorost_nog_koordinatsiya_moschnost",
+      "label_ru": "Скорость ног / координация / мощность",
+      "target_codes": [
+        "target_skorost_nog",
+        "target_koordinatsiya",
+        "target_moschnost"
+      ]
+    },
+    {
+      "code": "load_peredacha_tochnost_prinyatie_resheniya",
+      "label_ru": "Передача / точность / принятие решения",
+      "target_codes": [
+        "target_peredacha",
+        "target_tochnost",
+        "target_prinyatie_resheniya"
+      ]
+    },
+    {
+      "code": "load_brosok_zavershenie_balans",
+      "label_ru": "Бросок / завершение / баланс",
+      "target_codes": [
+        "target_brosok",
+        "target_zavershenie",
+        "target_balans"
+      ]
+    },
+    {
+      "code": "load_zaschita_lateralnoe_peremeschenie_reaktsiya",
+      "label_ru": "Защита / латеральное перемещение / реакция",
+      "target_codes": [
+        "target_zaschita",
+        "target_lateralnoe_peremeschenie",
+        "target_reaktsiya"
+      ]
+    },
+    {
+      "code": "load_podbor_kontakt_pryzhok",
+      "label_ru": "Подбор / контакт / прыжок",
+      "target_codes": [
+        "target_podbor",
+        "target_kontakt",
+        "target_pryzhok"
+      ]
+    },
+    {
+      "code": "load_igrovoe_reshenie_skorost_prostranstvo",
+      "label_ru": "Игровое решение / скорость / пространство",
+      "target_codes": [
+        "target_igrovoe_reshenie",
+        "target_skorost",
+        "target_prostranstvo"
+      ]
+    },
+    {
+      "code": "load_upravlenie_velosipedom_stabilnost",
+      "label_ru": "Управление велосипедом / стабильность",
+      "target_codes": [
+        "target_upravlenie_velosipedom",
+        "target_stabilnost"
+      ]
+    },
+    {
+      "code": "load_tormozhenie_kontrol_skorosti",
+      "label_ru": "Торможение / контроль скорости",
+      "target_codes": [
+        "target_tormozhenie",
+        "target_kontrol_skorosti"
+      ]
+    },
+    {
+      "code": "load_povoroty_traektoriya_upravlenie",
+      "label_ru": "Повороты / траектория / управление",
+      "target_codes": [
+        "target_povoroty",
+        "target_traektoriya",
+        "target_upravlenie"
+      ]
+    },
+    {
+      "code": "load_podem_silovaya_vynoslivost",
+      "label_ru": "Подъём / силовая выносливость",
+      "target_codes": [
+        "target_podem",
+        "target_silovaya_vynoslivost"
+      ]
+    },
+    {
+      "code": "load_gruppovaya_ezda_pozitsionirovanie",
+      "label_ru": "Групповая езда / позиционирование",
+      "target_codes": [
+        "target_gruppovaya_ezda",
+        "target_pozitsionirovanie"
+      ]
+    },
+    {
+      "code": "load_kadens_tehnika_pedalirovaniya",
+      "label_ru": "Каденс / техника педалирования",
+      "target_codes": [
+        "target_kadens",
+        "target_tehnika_pedalirovaniya"
+      ]
+    },
+    {
+      "code": "load_sprint_uskorenie_moschnost",
+      "label_ru": "Спринт / ускорение / мощность",
+      "target_codes": [
+        "target_sprint",
+        "target_uskorenie",
+        "target_moschnost"
+      ]
+    },
+    {
+      "code": "load_energosistema_vynoslivost",
+      "label_ru": "Энергосистема / выносливость",
+      "target_codes": [
+        "target_energosistema",
+        "target_vynoslivost"
+      ]
+    }
+  ]
+}
