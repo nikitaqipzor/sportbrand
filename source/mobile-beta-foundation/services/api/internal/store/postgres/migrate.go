@@ -190,7 +190,8 @@ func runOne(ctx context.Context, conn *pgxpool.Conn, m Migration, up bool, log *
 		return fmt.Errorf("migrate: commit %04d %s: %w", m.Version, direction, err)
 	}
 	if log != nil {
-		log.Info("migration applied", "version", m.Version, "name", m.Name, "direction", direction)
+		// Not "version": the root logger already carries the build version.
+		log.Info("migration applied", "migration", m.Version, "name", m.Name, "direction", direction)
 	}
 	return nil
 }
