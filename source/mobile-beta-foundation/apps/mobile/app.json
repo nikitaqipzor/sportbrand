@@ -5,6 +5,11 @@
     "scheme": "athletica",
     "orientation": "portrait",
     "userInterfaceStyle": "light",
-    "android": { "package": "com.athletica.ai" }
+    "newArchEnabled": true,
+    "plugins": ["expo-router"],
+    "android": {
+      "package": "com.athletica.ai",
+      "edgeToEdgeEnabled": true
+    }
   }
 }
