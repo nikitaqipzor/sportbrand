@@ -1,2 +1,2 @@
-export type { WorkoutSetInput, WorkoutStatus } from "./workout.ts";
-export { validateSet } from "./workout.ts";
+export type { WorkoutAction, WorkoutSetInput, WorkoutStatus, WorkoutTransition } from "./workout.ts";
+export { applyWorkoutAction, isDestructiveAction, isTerminalStatus, validateSet } from "./workout.ts";

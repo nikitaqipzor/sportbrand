@@ -1,6 +1,7 @@
 import { validateSet, type WorkoutSetInput } from "@athletica/domain";
 
-import { enqueue, type OutboxItem } from "../../platform/offline/outbox.ts";
+import { enqueue, type OutboxItem, type OutboxRecord } from "../../platform/offline/outbox.ts";
+import type { OutboxSync } from "../../platform/offline/sync.ts";
 
 export type LogSetResult =
   | { ok: true; outbox: OutboxItem<WorkoutSetInput>[] }
@@ -27,4 +28,24 @@ export function logSet(
       payload: input
     })
   };
+}
+
+export type SubmitSetResult =
+  | { ok: true; record: OutboxRecord<WorkoutSetInput> }
+  | { ok: false; issues: string[] };
+
+/**
+ * То же правило, но поверх персистентной очереди: невалидный подход не
+ * доезжает до хранилища, валидный сначала ложится на диск и только потом
+ * уходит на сервер.
+ */
+export async function submitSet(
+  sync: OutboxSync,
+  userId: string,
+  input: WorkoutSetInput,
+  now: Date = new Date()
+): Promise<SubmitSetResult> {
+  const issues = validateSet(input);
+  if (issues.length > 0) return { ok: false, issues };
+  return { ok: true, record: await sync.enqueue(userId, input, now) };
 }
