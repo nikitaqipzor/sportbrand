@@ -153,3 +153,58 @@ func TestBasePathIsNormalized(t *testing.T) {
 		t.Fatalf("base path = %q, want /api/v2", cfg.BasePath)
 	}
 }
+
+// The metrics listener must never be reachable from outside the host without a
+// token. Binding it wide open is a start-up failure, not a warning.
+func TestMetricsListenerRefusesAnonymousExposure(t *testing.T) {
+	cases := map[string]string{
+		"all interfaces": "0.0.0.0:9091",
+		"bare port":      ":9091",
+		"a routed ip":    "10.1.2.3:9091",
+	}
+	for name, addr := range cases {
+		t.Run(name, func(t *testing.T) {
+			_, err := config.Load(config.MapLookup(baseEnv(map[string]string{
+				"ATHLETICA_METRICS_ADDR": addr,
+			})))
+			if err == nil {
+				t.Fatalf("%s with no token was accepted", addr)
+			}
+			if !strings.Contains(err.Error(), "ATHLETICA_METRICS_TOKEN") {
+				t.Fatalf("error does not name the fix: %v", err)
+			}
+		})
+	}
+
+	// The same address with a token is fine.
+	if _, err := config.Load(config.MapLookup(baseEnv(map[string]string{
+		"ATHLETICA_METRICS_ADDR":  "0.0.0.0:9091",
+		"ATHLETICA_METRICS_TOKEN": "a-real-scrape-token",
+	}))); err != nil {
+		t.Fatalf("a token should permit a wider bind: %v", err)
+	}
+
+	// And so is loopback with none.
+	cfg, err := config.Load(config.MapLookup(baseEnv(nil)))
+	if err != nil {
+		t.Fatalf("defaults: %v", err)
+	}
+	if cfg.MetricsAddr != "127.0.0.1:9091" || !config.IsLoopbackAddr(cfg.MetricsAddr) {
+		t.Fatalf("metrics default = %q, want a loopback address", cfg.MetricsAddr)
+	}
+
+	// Metrics never share the public listener.
+	if _, err := config.Load(config.MapLookup(baseEnv(map[string]string{
+		"ATHLETICA_HTTP_ADDR":     "127.0.0.1:8080",
+		"ATHLETICA_METRICS_ADDR":  "127.0.0.1:8080",
+		"ATHLETICA_METRICS_TOKEN": "a-real-scrape-token",
+	}))); err == nil {
+		t.Fatal("metrics on the public listener address were accepted")
+	}
+
+	// An empty value disables the listener entirely.
+	cfg, err = config.Load(config.MapLookup(baseEnv(map[string]string{"ATHLETICA_METRICS_ADDR": ""})))
+	if err != nil || cfg.MetricsAddr != "" {
+		t.Fatalf("disabling metrics = (%q, %v)", cfg.MetricsAddr, err)
+	}
+}

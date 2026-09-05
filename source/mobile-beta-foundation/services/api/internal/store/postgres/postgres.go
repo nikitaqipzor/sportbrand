@@ -272,12 +272,12 @@ func (s *Store) InsertWorkoutSet(ctx context.Context, set store.WorkoutSet) (sto
 		set.CreatedAt = time.Now().UTC()
 	}
 
-	const insert = `INSERT INTO workout_sets (` + setColumns + `)
-	                VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10)
+	const insert = `INSERT INTO workout_sets (` + setColumns + `, updated_at)
+	                VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $10)
 	                ON CONFLICT (user_id, client_mutation_id) DO NOTHING
-	                RETURNING ` + setColumns
+	                RETURNING ` + setColumnsWithAudit
 
-	stored, err := scanSet(s.pool.QueryRow(ctx, insert,
+	stored, err := scanAuditedSet(s.pool.QueryRow(ctx, insert,
 		set.ID, set.UserID, set.WorkoutID, set.ExerciseID, set.SetNumber,
 		set.WeightKg, set.Repetitions, set.RIR, set.ClientMutationID, set.CreatedAt))
 	switch {
@@ -285,6 +285,8 @@ func (s *Store) InsertWorkoutSet(ctx context.Context, set store.WorkoutSet) (sto
 		return stored, true, nil
 	case errors.Is(err, pgx.ErrNoRows):
 		// The unique index rejected the insert: return the row already stored.
+		// A *deleted* set still holds its slot, so a replayed creation out of
+		// the outbox answers with the deleted row instead of resurrecting it.
 		existing, findErr := s.workoutSetByMutation(ctx, set.UserID, set.ClientMutationID)
 		if findErr != nil {
 			return store.WorkoutSet{}, false, findErr
@@ -301,9 +303,9 @@ func (s *Store) InsertWorkoutSet(ctx context.Context, set store.WorkoutSet) (sto
 }
 
 func (s *Store) workoutSetByMutation(ctx context.Context, userID, clientMutationID string) (store.WorkoutSet, error) {
-	const q = `SELECT ` + setColumns + ` FROM workout_sets
+	const q = `SELECT ` + setColumnsWithAudit + ` FROM workout_sets
 	           WHERE user_id = $1 AND client_mutation_id = $2`
-	set, err := scanSet(s.pool.QueryRow(ctx, q, userID, clientMutationID))
+	set, err := scanAuditedSet(s.pool.QueryRow(ctx, q, userID, clientMutationID))
 	switch {
 	case errors.Is(err, pgx.ErrNoRows):
 		return store.WorkoutSet{}, store.ErrNotFound
@@ -313,13 +315,15 @@ func (s *Store) workoutSetByMutation(ctx context.Context, userID, clientMutation
 	return set, nil
 }
 
-// ListWorkoutSets returns the sets of a workout, scoped to its owner.
+// ListWorkoutSets returns the live sets of a workout, scoped to its owner.
+// Deleted sets are filtered out by the partial index, so a removed set
+// disappears from the "Итоги" detail without a second query.
 func (s *Store) ListWorkoutSets(ctx context.Context, userID, workoutID string) ([]store.WorkoutSet, error) {
 	if _, err := s.WorkoutForUser(ctx, userID, workoutID); err != nil {
 		return nil, err
 	}
-	const q = `SELECT ` + setColumns + ` FROM workout_sets
-	           WHERE user_id = $1 AND workout_id = $2
+	const q = `SELECT ` + setColumnsWithAudit + ` FROM workout_sets
+	           WHERE user_id = $1 AND workout_id = $2 AND deleted_at IS NULL
 	           ORDER BY set_number, created_at`
 	rows, err := s.pool.Query(ctx, q, userID, workoutID)
 	if err != nil {
@@ -329,7 +333,7 @@ func (s *Store) ListWorkoutSets(ctx context.Context, userID, workoutID string) (
 
 	out := []store.WorkoutSet{}
 	for rows.Next() {
-		set, err := scanSet(rows)
+		set, err := scanAuditedSet(rows)
 		if err != nil {
 			return nil, fmt.Errorf("postgres: scan workout set: %w", err)
 		}
@@ -343,13 +347,6 @@ func (s *Store) ListWorkoutSets(ctx context.Context, userID, workoutID string) (
 
 type scanner interface {
 	Scan(dest ...any) error
-}
-
-func scanSet(row scanner) (store.WorkoutSet, error) {
-	var set store.WorkoutSet
-	err := row.Scan(&set.ID, &set.UserID, &set.WorkoutID, &set.ExerciseID, &set.SetNumber,
-		&set.WeightKg, &set.Repetitions, &set.RIR, &set.ClientMutationID, &set.CreatedAt)
-	return set, err
 }
 
 func isCode(err error, code string) bool {

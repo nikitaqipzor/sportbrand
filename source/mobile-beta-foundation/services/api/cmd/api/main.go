@@ -18,6 +18,7 @@ import (
 	"fmt"
 	"io"
 	"log/slog"
+	"net"
 	"net/http"
 	"os"
 	"os/signal"
@@ -28,6 +29,7 @@ import (
 
 	"athletica.ai/api/internal/config"
 	"athletica.ai/api/internal/httpapi"
+	"athletica.ai/api/internal/metrics"
 	"athletica.ai/api/internal/store"
 	"athletica.ai/api/internal/store/memory"
 	"athletica.ai/api/internal/store/postgres"
@@ -95,6 +97,15 @@ func serve(cfg config.Config, log *slog.Logger) error {
 	if err != nil {
 		return err
 	}
+	attachStoreMetrics(ctx, api.Metrics(), st, log)
+
+	// Metrics live on their own listener. The public port has no /metrics route
+	// at all, and config refuses a non-loopback bind without a bearer token.
+	stopMetrics, err := serveMetrics(cfg, api, log)
+	if err != nil {
+		return err
+	}
+	defer stopMetrics()
 
 	srv := &http.Server{
 		Addr:              cfg.Addr,
@@ -244,6 +255,85 @@ func healthcheck(cfg config.Config) error {
 	return nil
 }
 
+// serveMetrics starts the separate observability listener. It returns a stop
+// function; when metrics are disabled both are no-ops.
+func serveMetrics(cfg config.Config, api *httpapi.Server, log *slog.Logger) (func(), error) {
+	if cfg.MetricsAddr == "" {
+		log.Info("metrics listener disabled", "reason", "ATHLETICA_METRICS_ADDR is empty")
+		return func() {}, nil
+	}
+
+	listener, err := net.Listen("tcp", cfg.MetricsAddr)
+	if err != nil {
+		return nil, fmt.Errorf("metrics listener on %s: %w", cfg.MetricsAddr, err)
+	}
+
+	srv := &http.Server{
+		Handler:           api.MetricsHandler(),
+		ReadHeaderTimeout: 5 * time.Second,
+		ReadTimeout:       10 * time.Second,
+		WriteTimeout:      10 * time.Second,
+		ErrorLog:          slog.NewLogLogger(log.Handler(), slog.LevelWarn),
+	}
+	go func() {
+		log.Info("metrics listening",
+			"addr", cfg.MetricsAddr,
+			"loopback_only", config.IsLoopbackAddr(cfg.MetricsAddr),
+			"token_required", cfg.MetricsToken != "")
+		if err := srv.Serve(listener); err != nil && !errors.Is(err, http.ErrServerClosed) {
+			// Losing metrics must never take the API down with it.
+			log.Error("metrics listener stopped", "error", err.Error())
+		}
+	}()
+
+	return func() {
+		shutdownCtx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
+		defer cancel()
+		_ = srv.Shutdown(shutdownCtx)
+	}, nil
+}
+
+// attachStoreMetrics reports the database pool state and the migration queue.
+// Neither carries anything about a person.
+func attachStoreMetrics(ctx context.Context, registry *metrics.Registry, st store.Store, log *slog.Logger) {
+	pg, ok := st.(*postgres.Store)
+	if !ok {
+		// The in-memory store has no pool and no schema; the gauges are then
+		// simply absent rather than reported as a misleading zero.
+		return
+	}
+
+	registry.SetPoolSource(func() metrics.PoolStats {
+		stat := pg.Pool().Stat()
+		return metrics.PoolStats{
+			MaxConns:          stat.MaxConns(),
+			TotalConns:        stat.TotalConns(),
+			AcquiredConns:     stat.AcquiredConns(),
+			IdleConns:         stat.IdleConns(),
+			ConstructingConns: stat.ConstructingConns(),
+			AcquireCount:      stat.AcquireCount(),
+			EmptyAcquireCount: stat.EmptyAcquireCount(),
+			CanceledAcquire:   stat.CanceledAcquireCount(),
+		}
+	})
+
+	pendingCtx, cancel := context.WithTimeout(ctx, 10*time.Second)
+	defer cancel()
+	pending, err := postgres.PendingMigrations(pendingCtx, pg.Pool())
+	if err != nil {
+		log.Warn("could not measure the migration queue", "error", err.Error())
+		return
+	}
+	registry.SetMigrationQueue(pending, migrationsAppliedAtStart)
+	if pending > 0 {
+		log.Warn("migrations are pending", "pending", pending)
+	}
+}
+
+// migrationsAppliedAtStart is how many migrations this process ran during
+// start-up; openStore records it so the metrics page can report both halves.
+var migrationsAppliedAtStart int
+
 func openStore(ctx context.Context, cfg config.Config, log *slog.Logger, runMigrations bool) (store.Store, error) {
 	if cfg.Driver == config.DriverMemory {
 		log.Warn("using the in-memory store: all data is lost on restart")
@@ -262,6 +352,7 @@ func openStore(ctx context.Context, cfg config.Config, log *slog.Logger, runMigr
 			pg.Close()
 			return nil, err
 		}
+		migrationsAppliedAtStart = n
 		log.Info("migrations checked", "applied", n)
 	}
 	return pg, nil

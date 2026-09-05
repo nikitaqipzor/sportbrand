@@ -5,6 +5,7 @@ package config
 import (
 	"fmt"
 	"log/slog"
+	"net"
 	"os"
 	"strconv"
 	"strings"
@@ -84,6 +85,33 @@ type Config struct {
 
 	TrustProxyHeaders bool
 	ShutdownTimeout   time.Duration
+
+	// MetricsAddr is the *separate* listener the Prometheus page is served on;
+	// empty disables it entirely. It is never part of the public router: the
+	// public port answers /metrics with the same 404 as any unknown path.
+	MetricsAddr string
+	// MetricsToken, when set, is the bearer token /metrics demands. Binding the
+	// metrics listener anywhere but loopback without one is refused at start-up.
+	MetricsToken string
+}
+
+// IsLoopbackAddr reports whether addr binds only to the loopback interface.
+// A bare ":9091" or "0.0.0.0:9091" is not loopback: it is reachable from
+// outside the machine and therefore needs a token.
+func IsLoopbackAddr(addr string) bool {
+	host, _, err := net.SplitHostPort(strings.TrimSpace(addr))
+	if err != nil {
+		return false
+	}
+	host = strings.TrimSpace(host)
+	if host == "" {
+		return false
+	}
+	if host == "localhost" {
+		return true
+	}
+	ip := net.ParseIP(strings.Trim(host, "[]"))
+	return ip != nil && ip.IsLoopback()
 }
 
 // Lookup mirrors os.LookupEnv so tests can inject an environment.
@@ -165,6 +193,14 @@ func Load(look Lookup) (Config, error) {
 	if cfg.RefreshTokenRetention, err = duration(look, "ATHLETICA_REFRESH_TOKEN_RETENTION", 24*time.Hour); err != nil {
 		return Config{}, err
 	}
+	// Loopback by default: the metrics page carries operational data and must
+	// not be reachable from outside the host unless somebody says so — and
+	// then only with a token.
+	cfg.MetricsAddr = strings.TrimSpace(str(look, "ATHLETICA_METRICS_ADDR", "127.0.0.1:9091"))
+	if raw, ok := look("ATHLETICA_METRICS_ADDR"); ok && strings.TrimSpace(raw) == "" {
+		cfg.MetricsAddr = ""
+	}
+	cfg.MetricsToken = strings.TrimSpace(str(look, "ATHLETICA_METRICS_TOKEN", ""))
 
 	if err := cfg.validate(); err != nil {
 		return Config{}, err
@@ -207,6 +243,22 @@ func (c *Config) validate() error {
 	}
 	if c.AuthFailureLimit < 1 {
 		return fmt.Errorf("config: ATHLETICA_AUTH_FAILURE_LIMIT must be >= 1, got %d", c.AuthFailureLimit)
+	}
+	if c.MetricsAddr != "" {
+		if _, _, err := net.SplitHostPort(c.MetricsAddr); err != nil {
+			return fmt.Errorf("config: ATHLETICA_METRICS_ADDR must be host:port, got %q", c.MetricsAddr)
+		}
+		if c.MetricsToken == "" && !IsLoopbackAddr(c.MetricsAddr) {
+			return fmt.Errorf(
+				"config: ATHLETICA_METRICS_ADDR=%q is reachable from outside this host while "+
+					"ATHLETICA_METRICS_TOKEN is empty; refusing to serve metrics anonymously — "+
+					"either bind 127.0.0.1 or set a token", c.MetricsAddr)
+		}
+		if c.MetricsAddr == c.Addr {
+			return fmt.Errorf(
+				"config: ATHLETICA_METRICS_ADDR must not equal ATHLETICA_HTTP_ADDR (%q); "+
+					"metrics never share the public listener", c.Addr)
+		}
 	}
 	return c.validateSecret()
 }

@@ -12,10 +12,13 @@ import (
 // progressScope is shared by every aggregate: one user's sets inside the
 // window, excluding sets of cancelled workouts. The join on
 // (id, user_id) is what keeps a foreign row out even in the presence of a bug.
+// A deleted set counts towards nothing: the athlete removed it, so it must not
+// survive in a personal record or in a weekly volume figure.
 const progressScope = `
 	FROM workout_sets s
 	JOIN workouts w ON w.id = s.workout_id AND w.user_id = s.user_id
 	WHERE s.user_id = $1 AND s.created_at >= $2 AND s.created_at < $3
+	  AND s.deleted_at IS NULL
 	  AND w.status <> 'cancelled'`
 
 // ExerciseRecords aggregates strength records per exercise. Every value is

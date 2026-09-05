@@ -9,6 +9,7 @@ import (
 
 	"athletica.ai/api/internal/auth"
 	"athletica.ai/api/internal/config"
+	"athletica.ai/api/internal/metrics"
 	"athletica.ai/api/internal/ratelimit"
 	"athletica.ai/api/internal/store"
 	"athletica.ai/api/internal/workouts"
@@ -34,6 +35,10 @@ type Server struct {
 	workouts *workouts.Service
 	now      func() time.Time
 	version  string
+
+	// metrics is recorded into by every route and rendered on a separate
+	// listener; it never holds a user identifier or a raw request path.
+	metrics *metrics.Registry
 
 	// ipLimiter throttles by source address, accountLimiter by account or
 	// presented credential, so neither dimension alone can be abused.
@@ -80,6 +85,7 @@ func New(deps Deps) (*Server, error) {
 		workouts:       workouts.NewService(deps.Store, deps.Now),
 		now:            deps.Now,
 		version:        deps.Version,
+		metrics:        metrics.New(deps.Version),
 		ipLimiter:      ratelimit.New(limitCfg, deps.Now),
 		accountLimiter: ratelimit.New(limitCfg, deps.Now),
 	}
@@ -94,8 +100,10 @@ func (s *Server) routes() http.Handler {
 	mux := http.NewServeMux()
 	base := s.cfg.BasePath
 
+	// Every route is wrapped in the latency/status recorder under its own
+	// template, so a metric label can never be a URL a client chose.
 	register := func(pattern string, handler http.Handler) {
-		mux.Handle(pattern, handler)
+		mux.Handle(pattern, s.instrument(routeTemplate(pattern), handler))
 	}
 
 	// Health lives both under the versioned base path (for clients) and at the
@@ -116,12 +124,17 @@ func (s *Server) routes() http.Handler {
 	register("POST "+base+"/workouts", s.authenticated(s.handleCreateWorkout))
 	register("GET "+base+"/workouts", s.authenticated(s.handleListWorkouts))
 	register("GET "+base+"/workouts/{workoutId}", s.authenticated(s.handleGetWorkout))
+	register("PATCH "+base+"/workouts/{workoutId}", s.authenticated(s.handleRenameWorkout))
 	register("POST "+base+"/workouts/{workoutId}/status", s.authenticated(s.handleWorkoutStatus))
 	register("GET "+base+"/progress", s.authenticated(s.handleProgress))
 	register("POST "+base+"/workouts/{workoutId}/sets", s.authenticated(s.handleLogSet))
 	register("GET "+base+"/workouts/{workoutId}/sets", s.authenticated(s.handleListSets))
+	register("PATCH "+base+"/workouts/{workoutId}/sets/{setId}", s.authenticated(s.handleUpdateSet))
+	register("DELETE "+base+"/workouts/{workoutId}/sets/{setId}", s.authenticated(s.handleDeleteSet))
 
-	mux.HandleFunc("/", s.handleNotFound)
+	// Anything unrouted — /metrics on the public port included — is a 404 with
+	// the ordinary error body, counted under one fixed label.
+	mux.Handle("/", s.instrument("<unmatched>", http.HandlerFunc(s.handleNotFound)))
 
 	var handler http.Handler = mux
 	handler = withLogging(s.log, s.now)(handler)

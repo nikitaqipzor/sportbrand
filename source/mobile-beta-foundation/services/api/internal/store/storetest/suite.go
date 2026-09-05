@@ -35,6 +35,18 @@ func Run(t *testing.T, newStore Factory) {
 	t.Run("StatusTransitionsAreAtomic", func(t *testing.T) { testStatusTransitions(t, newStore) })
 	t.Run("WorkoutListingIsScopedFilteredAndPaged", func(t *testing.T) { testWorkoutListing(t, newStore) })
 	t.Run("ProgressAggregatesAreScoped", func(t *testing.T) { testProgressAggregates(t, newStore) })
+
+	// Correcting and removing a logged set, and naming a workout afterwards.
+	t.Run("SetCorrectionIsIdempotent", func(t *testing.T) { testSetCorrectionIsIdempotent(t, newStore) })
+	t.Run("ConcurrentCorrectionAppliesOnce", func(t *testing.T) { testConcurrentCorrectionAppliesOnce(t, newStore) })
+	t.Run("SetDeletionIsSoftAndRepeatable", func(t *testing.T) { testSetDeletionIsSoftAndRepeatable(t, newStore) })
+	t.Run("DeletedSetLeavesAggregates", func(t *testing.T) { testDeletedSetLeavesAggregates(t, newStore) })
+	t.Run("CorrectedSetIsReflectedInAggregates", func(t *testing.T) { testCorrectedSetIsReflectedInAggregates(t, newStore) })
+	t.Run("CorrectionsAreUserScoped", func(t *testing.T) { testCorrectionsAreUserScoped(t, newStore) })
+	t.Run("MutationIdCannotBeRecycled", func(t *testing.T) { testMutationIdCannotBeRecycled(t, newStore) })
+	t.Run("CorrectionStateRules", func(t *testing.T) { testCorrectionStateRules(t, newStore) })
+	t.Run("SetNumbersSurviveADeletion", func(t *testing.T) { testSetNumbersSurviveADeletion(t, newStore) })
+	t.Run("WorkoutRename", func(t *testing.T) { testWorkoutRename(t, newStore) })
 }
 
 func mustUser(t *testing.T, st store.Store, email string) store.User {

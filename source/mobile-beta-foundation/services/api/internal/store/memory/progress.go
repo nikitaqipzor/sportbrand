@@ -17,6 +17,11 @@ func (s *Store) progressSets(userID string, window store.ProgressWindow) []store
 		if set.UserID != userID {
 			continue
 		}
+		// A deleted set counts towards nothing: the athlete removed it, so it
+		// must not survive in a personal record or a weekly volume figure.
+		if !set.Live() {
+			continue
+		}
 		if set.CreatedAt.Before(window.From) || !set.CreatedAt.Before(window.To) {
 			continue
 		}

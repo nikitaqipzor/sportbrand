@@ -66,20 +66,28 @@ func ValidateSet(in SetInput) *ValidationError {
 	if in.SetNumber < MinSetNumber {
 		issues = append(issues, Issue{"setNumber", fmt.Sprintf("set number must be an integer >= %d", MinSetNumber)})
 	}
-	if math.IsNaN(in.WeightKg) || math.IsInf(in.WeightKg, 0) || in.WeightKg < MinWeightKg || in.WeightKg > MaxWeightKg {
-		issues = append(issues, Issue{"weightKg", fmt.Sprintf("weight must be between %.0f and %.0f kg", MinWeightKg, MaxWeightKg)})
-	}
-	if in.Repetitions < MinRepetitions || in.Repetitions > MaxRepetitions {
-		issues = append(issues, Issue{"repetitions", fmt.Sprintf("repetitions must be between %d and %d", MinRepetitions, MaxRepetitions)})
-	}
-	if in.RIR < MinRIR || in.RIR > MaxRIR {
-		issues = append(issues, Issue{"rir", fmt.Sprintf("RIR must be between %d and %d", MinRIR, MaxRIR)})
-	}
+	issues = appendValueIssues(issues, in.WeightKg, in.Repetitions, in.RIR)
 
 	if len(issues) == 0 {
 		return nil
 	}
 	return &ValidationError{Issues: issues}
+}
+
+// appendValueIssues holds the three measured values to the domain bounds. It is
+// shared by the original write and by a later correction, so a set can never be
+// edited out of a range it could not have been created in.
+func appendValueIssues(issues []Issue, weightKg float64, repetitions, rir int) []Issue {
+	if math.IsNaN(weightKg) || math.IsInf(weightKg, 0) || weightKg < MinWeightKg || weightKg > MaxWeightKg {
+		issues = append(issues, Issue{"weightKg", fmt.Sprintf("weight must be between %.0f and %.0f kg", MinWeightKg, MaxWeightKg)})
+	}
+	if repetitions < MinRepetitions || repetitions > MaxRepetitions {
+		issues = append(issues, Issue{"repetitions", fmt.Sprintf("repetitions must be between %d and %d", MinRepetitions, MaxRepetitions)})
+	}
+	if rir < MinRIR || rir > MaxRIR {
+		issues = append(issues, Issue{"rir", fmt.Sprintf("RIR must be between %d and %d", MinRIR, MaxRIR)})
+	}
+	return issues
 }
 
 func appendIdentifierIssues(issues []Issue, field, value string) []Issue {

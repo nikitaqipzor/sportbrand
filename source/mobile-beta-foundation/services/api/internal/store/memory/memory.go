@@ -21,6 +21,12 @@ type mutationKey struct {
 	clientMutationID string
 }
 
+// mutationRecord is one row of the client-mutation ledger.
+type mutationRecord struct {
+	kind     string
+	targetID string
+}
+
 // Store is a concurrency-safe in-memory Store.
 type Store struct {
 	mu sync.RWMutex
@@ -38,6 +44,11 @@ type Store struct {
 	setsByMutKey map[mutationKey]string      // unique index (user_id, client_mutation_id)
 	setOrder     []string
 
+	// mutations mirrors the client_mutations table: the unique index on
+	// (user_id, client_mutation_id) is what decides whether a queued edit,
+	// deletion or rename is new or a replay.
+	mutations map[mutationKey]mutationRecord
+
 	now func() time.Time
 }
 
@@ -51,6 +62,7 @@ func New() *Store {
 		workouts:      map[string]store.Workout{},
 		sets:          map[string]store.WorkoutSet{},
 		setsByMutKey:  map[mutationKey]string{},
+		mutations:     map[mutationKey]mutationRecord{},
 		now:           time.Now,
 	}
 }
@@ -276,6 +288,9 @@ func (s *Store) InsertWorkoutSet(_ context.Context, set store.WorkoutSet) (store
 	if set.CreatedAt.IsZero() {
 		set.CreatedAt = s.now().UTC()
 	}
+	if set.UpdatedAt.IsZero() {
+		set.UpdatedAt = set.CreatedAt
+	}
 	s.sets[set.ID] = set
 	s.setsByMutKey[key] = set.ID
 	s.setOrder = append(s.setOrder, set.ID)
@@ -295,7 +310,9 @@ func (s *Store) ListWorkoutSets(_ context.Context, userID, workoutID string) ([]
 	out := make([]store.WorkoutSet, 0, len(s.setOrder))
 	for _, id := range s.setOrder {
 		set := s.sets[id]
-		if set.UserID == userID && set.WorkoutID == workoutID {
+		// A deleted set is absent from the workout detail, exactly as the
+		// partial index `WHERE deleted_at IS NULL` makes it in SQL.
+		if set.UserID == userID && set.WorkoutID == workoutID && set.Live() {
 			out = append(out, set)
 		}
 	}
@@ -303,7 +320,8 @@ func (s *Store) ListWorkoutSets(_ context.Context, userID, workoutID string) ([]
 	return out, nil
 }
 
-// CountWorkoutSets is a test helper: how many rows exist in total for a user.
+// CountWorkoutSets is a test helper: how many rows exist in total for a user,
+// deleted ones included — it is what proves a replay stored nothing new.
 func (s *Store) CountWorkoutSets(userID string) int {
 	s.mu.RLock()
 	defer s.mu.RUnlock()
@@ -311,6 +329,20 @@ func (s *Store) CountWorkoutSets(userID string) int {
 	n := 0
 	for _, set := range s.sets {
 		if set.UserID == userID {
+			n++
+		}
+	}
+	return n
+}
+
+// CountClientMutations is a test helper: ledger rows held by one user.
+func (s *Store) CountClientMutations(userID string) int {
+	s.mu.RLock()
+	defer s.mu.RUnlock()
+
+	n := 0
+	for key := range s.mutations {
+		if key.userID == userID {
 			n++
 		}
 	}

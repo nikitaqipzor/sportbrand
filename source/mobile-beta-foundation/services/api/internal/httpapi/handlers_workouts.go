@@ -83,6 +83,8 @@ type logSetRequest struct {
 	ClientMutationID *string  `json:"clientMutationId"`
 }
 
+// setResponse gained updatedAt and deletedAt in contract 0.5.0. Both are
+// additive: a client built against 0.4.0 keeps working unchanged.
 type setResponse struct {
 	ID               string  `json:"id"`
 	WorkoutID        string  `json:"workoutId"`
@@ -93,6 +95,12 @@ type setResponse struct {
 	RIR              int     `json:"rir"`
 	ClientMutationID string  `json:"clientMutationId"`
 	CreatedAt        string  `json:"createdAt"`
+	UpdatedAt        string  `json:"updatedAt"`
+	// DeletedAt is null for every set the client can still see. It is non-null
+	// only in the answer to a deletion, and in the 409 that a replayed
+	// *creation* of an already-removed set gets — which is how the outbox
+	// learns that its retry must not resurrect anything.
+	DeletedAt *string `json:"deletedAt"`
 }
 
 type duplicateSetResponse struct {
@@ -105,7 +113,7 @@ type setListResponse struct {
 }
 
 func toSetResponse(s store.WorkoutSet) setResponse {
-	return setResponse{
+	out := setResponse{
 		ID:               s.ID,
 		WorkoutID:        s.WorkoutID,
 		ExerciseID:       s.ExerciseID,
@@ -115,7 +123,13 @@ func toSetResponse(s store.WorkoutSet) setResponse {
 		RIR:              s.RIR,
 		ClientMutationID: s.ClientMutationID,
 		CreatedAt:        s.CreatedAt.UTC().Format(time.RFC3339),
+		UpdatedAt:        s.UpdatedAt.UTC().Format(time.RFC3339),
 	}
+	if s.DeletedAt != nil {
+		deleted := s.DeletedAt.UTC().Format(time.RFC3339)
+		out.DeletedAt = &deleted
+	}
+	return out
 }
 
 // handleCreateWorkout starts a session for the authenticated user.

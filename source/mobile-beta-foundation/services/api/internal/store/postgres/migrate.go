@@ -89,6 +89,38 @@ func LoadMigrations(fsys fs.FS) ([]Migration, error) {
 // EmbeddedMigrations returns the migrations shipped inside the binary.
 func EmbeddedMigrations() ([]Migration, error) { return LoadMigrations(migrations.FS) }
 
+// PendingMigrations reports how many embedded migrations are not applied yet —
+// the migration queue an operator wants to see at start-up. It takes no lock
+// and changes nothing, so it is safe to call from a health or metrics path.
+func PendingMigrations(ctx context.Context, pool *pgxpool.Pool) (int, error) {
+	all, err := EmbeddedMigrations()
+	if err != nil {
+		return 0, err
+	}
+
+	conn, err := pool.Acquire(ctx)
+	if err != nil {
+		return 0, fmt.Errorf("migrate: acquire connection: %w", err)
+	}
+	defer conn.Release()
+
+	if err := ensureSchemaTable(ctx, conn); err != nil {
+		return 0, err
+	}
+	applied, err := appliedVersions(ctx, conn)
+	if err != nil {
+		return 0, err
+	}
+
+	pending := 0
+	for _, m := range all {
+		if !applied[m.Version] {
+			pending++
+		}
+	}
+	return pending, nil
+}
+
 // MigrateUp applies every pending migration in order and returns how many ran.
 func MigrateUp(ctx context.Context, pool *pgxpool.Pool, log *slog.Logger) (int, error) {
 	all, err := EmbeddedMigrations()

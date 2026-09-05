@@ -25,6 +25,16 @@ var (
 	// but its current state forbids the requested change — for example an
 	// attempt to complete a cancelled workout. It maps to HTTP 409, never 500.
 	ErrConflict = errors.New("store: conflicting state")
+	// ErrMutationReused is returned when a clientMutationId this user already
+	// spent is presented again for a *different* target or a different kind of
+	// change. It is the corrective twin of the idempotent replay: replaying the
+	// same mutation is a no-op, but recycling its ID for another row is not.
+	ErrMutationReused = errors.New("store: client mutation id already names another change")
+	// ErrGone is returned when the row exists and belongs to the caller but has
+	// been deleted. It is deliberately not ErrNotFound: a foreign row must stay
+	// indistinguishable from a missing one, while the caller's own deleted row
+	// is something they themselves removed and can be told about.
+	ErrGone = errors.New("store: row was deleted")
 )
 
 // Workout statuses. They mirror the domain model shared with the client and
@@ -85,6 +95,11 @@ type Workout struct {
 }
 
 // WorkoutSet is a single logged strength-training set.
+//
+// SetNumber is data the client chose, not a position in a list: it is never
+// renumbered by the server, because the client's deterministic mutation ID is
+// built as `workoutId:exerciseId:setNumber` and a shifted number would make an
+// already-spent ID name a different set.
 type WorkoutSet struct {
 	ID               string
 	UserID           string
@@ -96,6 +111,68 @@ type WorkoutSet struct {
 	RIR              int
 	ClientMutationID string
 	CreatedAt        time.Time
+	// UpdatedAt moves when a correction is applied; it equals CreatedAt for a
+	// set that was never edited. Added by migration 0004.
+	UpdatedAt time.Time
+	// DeletedAt is set when the athlete removed the set. Deletion is soft on
+	// purpose: the row keeps holding its (user_id, client_mutation_id) slot, so
+	// a replay of the *creation* out of the offline outbox cannot resurrect it,
+	// and a repeated deletion stays a safe no-op instead of a 404. A deleted
+	// set is absent from the workout detail, from the set list and from every
+	// progress aggregate.
+	DeletedAt *time.Time
+}
+
+// Live reports whether the set still counts: it exists and was not deleted.
+func (s WorkoutSet) Live() bool { return s.DeletedAt == nil }
+
+// Kinds of idempotent change recorded in the client-mutation ledger. The
+// creation of a set is *not* here: its idempotency slot is the unique index on
+// workout_sets (user_id, client_mutation_id), which the ledger mirrors for the
+// changes that do not insert a set row.
+const (
+	MutationSetUpdate     = "set_update"
+	MutationSetDelete     = "set_delete"
+	MutationWorkoutRename = "workout_rename"
+)
+
+// SetUpdate is a correction of an already-logged set.
+//
+// Only the three values a human mistypes are correctable. ExerciseID and
+// SetNumber are deliberately absent: they are what the client's deterministic
+// clientMutationId is derived from, so letting them move would break the
+// offline outbox. All three values are required, so a replayed edit is
+// byte-identical to the one that was applied.
+type SetUpdate struct {
+	UserID           string
+	WorkoutID        string
+	SetID            string
+	WeightKg         float64
+	Repetitions      int
+	RIR              int
+	ClientMutationID string
+	At               time.Time
+}
+
+// SetDeletion removes one of the caller's sets, softly.
+type SetDeletion struct {
+	UserID           string
+	WorkoutID        string
+	SetID            string
+	ClientMutationID string
+	At               time.Time
+}
+
+// WorkoutRename gives a workout — typically one started offline with no name —
+// its title. ClientMutationID is optional: a rename converges on the value it
+// carries, so an unlabelled one is last-write-wins, while a labelled one is
+// deduplicated through the same ledger as every other queued mutation.
+type WorkoutRename struct {
+	UserID           string
+	WorkoutID        string
+	Title            string
+	ClientMutationID string
+	At               time.Time
 }
 
 // WorkoutCursor is the keyset position used by GET /workouts. The list is
@@ -212,8 +289,32 @@ type Store interface {
 	// a read-then-write check in Go. It reports inserted=false and returns the
 	// previously stored row when the mutation ID was already used by this user.
 	InsertWorkoutSet(ctx context.Context, set WorkoutSet) (stored WorkoutSet, inserted bool, err error)
-	// ListWorkoutSets returns the sets of one workout owned by userID.
+	// ListWorkoutSets returns the live sets of one workout owned by userID.
+	// Deleted sets are not part of the answer.
 	ListWorkoutSets(ctx context.Context, userID, workoutID string) ([]WorkoutSet, error)
+
+	// UpdateWorkoutSet corrects one of the caller's sets, idempotently.
+	//
+	// The uniqueness of (user_id, client_mutation_id) in the client-mutation
+	// ledger — a database guarantee, not a read-then-write check in Go —
+	// decides whether this is the first application or a replay. A replay
+	// reports applied=false together with the set as it stands now.
+	//
+	// Errors: ErrNotFound when the workout or the set is missing, foreign, or
+	// not part of that workout; ErrGone when the caller already deleted the
+	// set; ErrConflict when the workout is cancelled; ErrMutationReused when
+	// the mutation ID was already spent on something else.
+	UpdateWorkoutSet(ctx context.Context, in SetUpdate) (stored WorkoutSet, applied bool, err error)
+
+	// DeleteWorkoutSet soft-deletes one of the caller's sets, idempotently.
+	// Deleting an already-deleted set is a safe no-op that reports
+	// applied=false and returns the stored row, never an error.
+	DeleteWorkoutSet(ctx context.Context, in SetDeletion) (stored WorkoutSet, applied bool, err error)
+
+	// RenameWorkout sets the title of one of the caller's workouts. When
+	// in.ClientMutationID is empty the rename is applied as last-write-wins;
+	// when it is present the ledger makes a replay a no-op.
+	RenameWorkout(ctx context.Context, in WorkoutRename) (stored Workout, applied bool, err error)
 
 	// ExerciseRecords aggregates the caller's strength records. The arithmetic
 	// happens in the storage engine; sets are never streamed into the service.

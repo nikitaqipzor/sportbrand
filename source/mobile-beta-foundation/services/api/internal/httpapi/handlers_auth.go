@@ -186,6 +186,9 @@ func (s *Server) handleMe(w http.ResponseWriter, _ *http.Request, user store.Use
 }
 
 func (s *Server) logThrottle(r *http.Request, endpoint, dimension, reason string) {
+	// The counter carries only the dimension and the reason — never the key,
+	// which is an IP address or an e-mail.
+	s.metrics.Throttled(dimension, reason)
 	s.log.Warn("auth request throttled",
 		"request_id", RequestIDFrom(r.Context()),
 		"endpoint", endpoint,

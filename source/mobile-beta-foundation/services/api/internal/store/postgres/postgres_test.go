@@ -68,7 +68,7 @@ func TestPostgresStoreConformance(t *testing.T) {
 
 func truncate(t *testing.T, pg *postgres.Store) {
 	t.Helper()
-	const q = `TRUNCATE workout_sets, workouts, refresh_tokens, users RESTART IDENTITY CASCADE`
+	const q = `TRUNCATE client_mutations, workout_sets, workouts, refresh_tokens, users RESTART IDENTITY CASCADE`
 	if _, err := pg.Pool().Exec(context.Background(), q); err != nil {
 		t.Fatalf("truncate: %v", err)
 	}

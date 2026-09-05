@@ -27,9 +27,14 @@ const (
 	codeInvalidTransition = "invalid_transition"
 	codeInvalidCursor     = "invalid_cursor"
 	codeWorkoutIDTaken    = "workout_id_taken"
-	codeRateLimited       = "rate_limited"
-	codeInternal          = "internal_error"
-	codeUnavailable       = "service_unavailable"
+	// codeSetDeleted answers an edit of a set the athlete already removed, and
+	// codeWorkoutNotEditable an edit inside a cancelled session. Both are 409:
+	// the row exists and is the caller's own, its state forbids the change.
+	codeSetDeleted         = "set_deleted"
+	codeWorkoutNotEditable = "workout_not_editable"
+	codeRateLimited        = "rate_limited"
+	codeInternal           = "internal_error"
+	codeUnavailable        = "service_unavailable"
 )
 
 // errorBody is the single error envelope used by every endpoint.

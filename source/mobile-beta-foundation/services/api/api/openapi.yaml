@@ -1,7 +1,7 @@
 openapi: 3.1.0
 info:
   title: Athletica AI API
-  version: 0.4.0
+  version: 0.5.0
   description: |
     Phase 1 surface of the Athletica AI backend: liveness, authentication with
     logout and token revocation, the idempotent workout-set write, the workout
@@ -16,6 +16,47 @@ info:
       does not exist (`404`), so existence never leaks;
     * a state change the lifecycle forbids answers `409 invalid_transition` —
       never `500`, and never a silent no-op.
+
+    ### Changes in 0.5.0 (all additive, 0.4.0 clients keep working)
+
+    * `PATCH /workouts/{workoutId}/sets/{setId}` corrects a logged set;
+    * `DELETE /workouts/{workoutId}/sets/{setId}` removes one, softly;
+    * `PATCH /workouts/{workoutId}` names a workout after it was started —
+      the session begun offline with no title is what it exists for;
+    * `WorkoutSet` gained the optional `updatedAt` and `deletedAt` fields;
+    * error codes `set_deleted` and `workout_not_editable` were added;
+    * metrics are exported in Prometheus text form on a **separate** listener
+      (`ATHLETICA_METRICS_ADDR`, loopback by default, `ATHLETICA_METRICS_TOKEN`
+      to require a bearer token). They are deliberately **not** part of this
+      contract: the public port answers `/metrics` with the ordinary `404`.
+
+    **The rules an edit and a deletion follow.** Both are mutations out of the
+    same offline outbox as the set write, so both carry their own
+    `clientMutationId` and both are settled by a unique index in the database
+    rather than by a check in application code. A replayed edit answers `409
+    duplicate_client_mutation` with the stored set and is *not* applied twice; a
+    repeated deletion answers `200` with the already-deleted set, because the
+    state it asks for is the state that already holds.
+
+    **Deletion is soft.** The row keeps holding its
+    `(user_id, clientMutationId)` slot, so replaying the *creation* of a removed
+    set out of the outbox answers `409` with `deletedAt` set instead of
+    resurrecting it. A deleted set is absent from `GET /workouts/{id}`, from
+    `GET /workouts/{id}/sets` and from every figure in `GET /progress`.
+
+    **Set numbers never shift.** Deleting the set in the middle leaves the
+    others numbered as they were — `1, 3, 4` — because the client derives its
+    mutation ID as `workoutId:exerciseId:setNumber`, and a renumbering would
+    make an already-spent ID name a different set. For the same reason
+    `exerciseId` and `setNumber` are not correctable: a set logged against the
+    wrong exercise is deleted and logged again.
+
+    **A finished workout is still correctable.** The athlete usually notices a
+    mistyped weight on the "Итоги" screen, which only exists once the session is
+    completed; refusing the edit there would leave the wrong number permanently
+    unfixable, which is the problem the endpoint solves. Only a `cancelled`
+    workout is closed to edits (`409 workout_not_editable`): that session was
+    thrown away, and its sets already count towards nothing.
 
     ### Changes in 0.3.0 (all additive, 0.2.0 clients keep working)
 
@@ -349,6 +390,53 @@ paths:
               schema: { $ref: '#/components/schemas/WorkoutDetail' }
         '401': { $ref: '#/components/responses/Unauthorized' }
         '404': { $ref: '#/components/responses/WorkoutNotFound' }
+    patch:
+      tags: [workouts]
+      summary: Name a workout after it was started
+      description: |
+        A session begun offline carries no title; this is how it gets one.
+        Only the title changes — the status, `createdAt` and `endedAt` are
+        untouched, and there is no way to reach the lifecycle from here.
+
+        `clientMutationId` is **optional**. A rename converges on the title it
+        carries, so one typed into a connected client needs no ID and is
+        last-write-wins. One queued in the offline outbox should carry an ID:
+        replaying it then answers `200` with the workout unchanged instead of
+        overwriting a newer title.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [title]
+              properties:
+                title:
+                  type: string
+                  maxLength: 200
+                  description: Trimmed before it is stored; an empty string clears the name.
+                clientMutationId:
+                  type: string
+                  minLength: 1
+                  maxLength: 128
+                  description: Optional; present for a rename queued offline.
+      responses:
+        '200':
+          description: The workout as it now stands
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Workout' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '404': { $ref: '#/components/responses/WorkoutNotFound' }
+        '409':
+          description: |
+            `duplicate_client_mutation` — this `clientMutationId` was already
+            spent on a different change; generate a new one.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Error' }
+        '422': { $ref: '#/components/responses/ValidationFailed' }
 
   /workouts/{workoutId}/status:
     parameters:
@@ -474,6 +562,129 @@ paths:
         '401': { $ref: '#/components/responses/Unauthorized' }
         '404': { $ref: '#/components/responses/WorkoutNotFound' }
 
+  /workouts/{workoutId}/sets/{setId}:
+    parameters:
+      - name: workoutId
+        in: path
+        required: true
+        schema: { type: string, format: uuid }
+      - name: setId
+        in: path
+        required: true
+        schema: { type: string, format: uuid }
+    patch:
+      tags: [workouts]
+      summary: Correct a logged set
+      description: |
+        The three values a human mistypes — `weightKg`, `repetitions`, `rir` —
+        and nothing else. They are **all required**: a replay out of the outbox
+        is then byte-identical to the mutation that was applied, and a partial
+        patch cannot silently reset the field it omitted.
+
+        `exerciseId` and `setNumber` are deliberately not correctable. The
+        client derives `clientMutationId` as `workoutId:exerciseId:setNumber`,
+        so those two are the identity of the queued write; a set logged against
+        the wrong exercise is deleted and logged again.
+
+        The correction is held to exactly the same domain bounds as the original
+        write, so editing is not a way around them.
+
+        Idempotency works as it does everywhere else in this contract: the pair
+        `(user, clientMutationId)` is unique in the database, a replay answers
+        `409 duplicate_client_mutation` with the stored set, and the edit is
+        never applied twice — not even when two retries race.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/WorkoutSetPatch' }
+      responses:
+        '200':
+          description: The correction was applied; the body is the set as it now stands
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/WorkoutSet' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '404': { $ref: '#/components/responses/SetNotFound' }
+        '409':
+          description: |
+            * `duplicate_client_mutation` — this `clientMutationId` was already
+              applied (the body then carries the stored `set`), or was spent on
+              a different change;
+            * `set_deleted` — the athlete already removed this set;
+            * `workout_not_editable` — the workout was cancelled.
+          content:
+            application/json:
+              schema:
+                oneOf:
+                  - type: object
+                    required: [error, set]
+                    properties:
+                      error: { $ref: '#/components/schemas/ErrorPayload' }
+                      set: { $ref: '#/components/schemas/WorkoutSet' }
+                  - $ref: '#/components/schemas/Error'
+        '422': { $ref: '#/components/responses/ValidationFailed' }
+    delete:
+      tags: [workouts]
+      summary: Remove a logged set
+      description: |
+        The deletion is **soft**. The row stays, keeping its
+        `(user, clientMutationId)` slot, so replaying the *creation* of this set
+        out of the outbox answers `409` with `deletedAt` set rather than
+        resurrecting it. The set disappears from the workout detail, from the
+        set list and from every progress aggregate.
+
+        Repeating a deletion is always safe and always answers `200` with the
+        already-deleted set — the state the caller asked for is the state that
+        holds. This is the one place a replay is not a `409`: a deletion
+        converges, an edit does not.
+
+        `clientMutationId` is required and may travel either in the JSON body or
+        as a query parameter, for clients and proxies that drop a body from a
+        `DELETE`; the body wins when both are present.
+
+        The remaining sets are **not** renumbered. Deleting set 2 of 4 leaves
+        1, 3 and 4 — a gap, not a shift, because the client's deterministic
+        mutation ID is built from the set number.
+      parameters:
+        - name: clientMutationId
+          in: query
+          required: false
+          description: |
+            The mutation ID, when it cannot be sent in the body. It carries no
+            identity: the owner still comes from the access token alone.
+          schema: { type: string, minLength: 1, maxLength: 128 }
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [clientMutationId]
+              properties:
+                clientMutationId: { type: string, minLength: 1, maxLength: 128 }
+      responses:
+        '200':
+          description: |
+            The set is deleted. Identical whether this call did the deleting or
+            found it already done.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/WorkoutSet' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '404': { $ref: '#/components/responses/SetNotFound' }
+        '409':
+          description: |
+            * `workout_not_editable` — the workout was cancelled;
+            * `duplicate_client_mutation` — this `clientMutationId` was spent on
+              a different change.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Error' }
+        '422': { $ref: '#/components/responses/ValidationFailed' }
+
   /progress:
     get:
       tags: [progress]
@@ -563,6 +774,14 @@ components:
       description: |
         The workout does not exist, or belongs to another user. The two cases
         are indistinguishable by design.
+      content:
+        application/json:
+          schema: { $ref: '#/components/schemas/Error' }
+    SetNotFound:
+      description: |
+        The set does not exist, is not part of this workout, or belongs to
+        another user — and the workout itself may be missing or foreign too.
+        Every one of those answers with this identical body by design.
       content:
         application/json:
           schema: { $ref: '#/components/schemas/Error' }
@@ -690,19 +909,61 @@ components:
           maxLength: 128
           description: Stable per-mutation ID from the client outbox.
 
+    WorkoutSetPatch:
+      type: object
+      required: [weightKg, repetitions, rir, clientMutationId]
+      description: |
+        A correction of an already-logged set. The bounds are the same ones the
+        original write was held to, so an edit cannot leave the domain.
+        `exerciseId` and `setNumber` are absent on purpose — see the endpoint
+        description.
+      properties:
+        weightKg: { type: number, minimum: 0, maximum: 1000 }
+        repetitions: { type: integer, minimum: 1, maximum: 100 }
+        rir: { type: integer, minimum: 0, maximum: 10 }
+        clientMutationId:
+          type: string
+          minLength: 1
+          maxLength: 128
+          description: |
+            A *new* ID for this correction, distinct from the one that created
+            the set. A client derives it deterministically, e.g.
+            `workoutId:exerciseId:setNumber:update:1`.
+
     WorkoutSet:
       type: object
-      required: [id, workoutId, exerciseId, setNumber, weightKg, repetitions, rir, clientMutationId, createdAt]
+      required: [id, workoutId, exerciseId, setNumber, weightKg, repetitions, rir, clientMutationId, createdAt, updatedAt, deletedAt]
       properties:
         id: { type: string, format: uuid }
         workoutId: { type: string, format: uuid }
         exerciseId: { type: string }
-        setNumber: { type: integer }
+        setNumber:
+          type: integer
+          description: |
+            The number the client gave the set, never reassigned by the server.
+            Gaps are normal after a deletion.
         weightKg: { type: number }
         repetitions: { type: integer }
         rir: { type: integer }
-        clientMutationId: { type: string }
+        clientMutationId:
+          type: string
+          description: |
+            The ID of the mutation that *created* the set. A correction does not
+            replace it.
         createdAt: { type: string, format: date-time }
+        updatedAt:
+          type: string
+          format: date-time
+          description: |
+            When the set was last corrected; equal to `createdAt` for a set that
+            was never edited. Added in 0.5.0.
+        deletedAt:
+          type: [string, 'null']
+          format: date-time
+          description: |
+            When the athlete removed the set; `null` for every set a client can
+            still see. It is non-null only in the answer to a deletion and in
+            the `409` a replayed creation of a removed set gets. Added in 0.5.0.
 
     ProgressWindow:
       type: object
@@ -833,6 +1094,9 @@ components:
             - duplicate_client_mutation
             - invalid_transition
             - invalid_cursor
+            - workout_id_taken
+            - set_deleted
+            - workout_not_editable
             - rate_limited
             - internal_error
         message: { type: string }

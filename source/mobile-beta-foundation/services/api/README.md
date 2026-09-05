@@ -23,9 +23,12 @@ how to run what the contract describes.
 | `POST /api/v1/workouts` | Starts a workout owned by the caller |
 | `GET /api/v1/workouts` | The caller's history: status/date filters, keyset pagination |
 | `GET /api/v1/workouts/{workoutId}` | One workout with its sets and totals — the "Итоги" screen |
+| `PATCH /api/v1/workouts/{workoutId}` | Names a workout started offline without one |
 | `POST /api/v1/workouts/{workoutId}/status` | The lifecycle: pause, resume, complete, **cancel** |
 | `POST /api/v1/workouts/{workoutId}/sets` | **The core write**: idempotent, user-scoped, domain-validated |
 | `GET /api/v1/workouts/{workoutId}/sets` | The caller's sets of the caller's workout |
+| `PATCH /api/v1/workouts/{workoutId}/sets/{setId}` | **Corrects** a mistyped weight, repetitions or RIR — idempotently |
+| `DELETE /api/v1/workouts/{workoutId}/sets/{setId}` | **Removes** a set, softly; repeating it is safe |
 | `GET /api/v1/progress` | Strength records, weekly volume and adherence — the "Прогресс" screen |
 
 The base path is configurable and defaults to `/api/v1`, which is what the Android client
@@ -49,6 +52,93 @@ expects at `http://10.0.2.2:8080/api/v1`.
 
 A fourth rule joined them with the lifecycle: **a forbidden state change is a `409`, never a
 `500` and never a silent no-op.**
+
+## Correcting what was logged
+
+A human regularly mistypes a weight or a rep count, and until the "Итоги" and "Прогресс"
+screens can be fixed they simply lie. `PATCH` and `DELETE` on a set are how they are fixed —
+and both are ordinary offline-outbox mutations, not admin operations:
+
+* **Both carry their own `clientMutationId`,** and both are settled by a unique index —
+  `client_mutations (user_id, client_mutation_id)`, which migration `0004` adds — rather than
+  by a read-then-write check in Go. Claiming the ID and applying the change happen in one
+  transaction, so sixteen concurrent retries of one queued edit apply it exactly once.
+  A replayed edit answers `409 duplicate_client_mutation` with the stored set; recycling an ID
+  for a *different* set, or for a different kind of change, is the same `409` and writes
+  nothing.
+* **Deletion is soft, and repeating it is safe.** The row stays and keeps holding its
+  `(user_id, client_mutation_id)` slot, which is what stops a replayed *creation* out of the
+  outbox from resurrecting a set the athlete removed — that replay answers `409` with
+  `deletedAt` set. A second `DELETE` answers `200` with the already-deleted set, because the
+  state it asks for is the state that already holds; that is the one place in this API where a
+  replay is not a `409`. A deleted set is absent from the workout detail, from the set list and
+  from every figure in `GET /progress` — a partial index `WHERE deleted_at IS NULL` is what
+  removes it, so no aggregate has to remember to.
+* **Set numbers never shift.** Deleting set 2 of 4 leaves `1, 3, 4`. The client's mutation ID
+  is `workoutId:exerciseId:setNumber`, so renumbering would make an already-spent ID name a
+  different set, and the next set logged as "max + 1" would collide with one already accepted.
+  The numbers are data the athlete produced, not positions in a list; gaps are normal. For the
+  same reason `exerciseId` and `setNumber` are not correctable at all — a set logged against
+  the wrong exercise is deleted and logged again.
+* **A completed workout is still correctable.** The typo is usually noticed *on* the "Итоги"
+  screen, which only exists once the session is finished; refusing the edit there would leave
+  the wrong number permanently unfixable, which is exactly the problem this endpoint solves.
+  An offline queue also delivers an edit after the completion it was queued behind. Only a
+  `cancelled` workout is closed to edits (`409 workout_not_editable`): that session was thrown
+  away and its sets already count towards nothing, so rewriting them would only add noise to a
+  discarded log.
+* A correction is held to the **same domain bounds** as the original write (weight 0–1000 kg,
+  1–100 repetitions, RIR 0–10), so editing is not a way around them — in the service *and* in
+  the `CHECK` constraints underneath.
+
+```bash
+SET=$(curl -s -X POST $BASE/workouts/$WORKOUT/sets -H "authorization: Bearer $TOKEN" \
+  -H 'content-type: application/json' -d "$BODY" | jq -r .id)
+
+# Correct it; the replay is a 409 and is not applied twice
+curl -s -X PATCH $BASE/workouts/$WORKOUT/sets/$SET -H "authorization: Bearer $TOKEN" \
+  -H 'content-type: application/json' \
+  -d '{"weightKg":65,"repetitions":9,"rir":1,"clientMutationId":"outbox-1:update:1"}' | jq .weightKg
+
+# Remove it; the second call answers 200 with the same deleted set
+curl -s -X DELETE $BASE/workouts/$WORKOUT/sets/$SET -H "authorization: Bearer $TOKEN" \
+  -H 'content-type: application/json' -d '{"clientMutationId":"outbox-1:delete"}' | jq .deletedAt
+
+# Name a session that was started offline
+curl -s -X PATCH $BASE/workouts/$WORKOUT -H "authorization: Bearer $TOKEN" \
+  -H 'content-type: application/json' -d '{"title":"Pull day"}' | jq -r .title
+```
+
+## Metrics
+
+Requests are still logged structurally; they are now also counted. The exposition is
+Prometheus text on a **separate listener** — the public port has no `/metrics` route and
+answers it with the ordinary `404`, so a misrouted proxy cannot expose it.
+
+```bash
+curl -s localhost:9091/metrics | head          # loopback by default
+```
+
+| Series | What it answers |
+| --- | --- |
+| `athletica_http_requests_total{route,method,status}` | Traffic and error rate per endpoint |
+| `athletica_http_request_duration_seconds{route,method}` | Latency, as a cumulative histogram |
+| `athletica_rate_limited_total{scope,reason}` | How often the auth throttle fires, by IP/account and rate/backoff |
+| `athletica_db_pool_connections{state}`, `_max_connections`, `_acquires_total`, `_empty_acquires_total` | Pool saturation — `empty_acquires_total` is the number that turns "the pool is fine" into a fact |
+| `athletica_migrations_pending`, `athletica_migrations_applied_total` | The migration queue seen at start-up |
+| `athletica_build_info{version}` | Which build is answering |
+
+**Nothing about a person is in there.** No e-mail, no user ID, no workout or set ID, no token,
+no IP. The `route` label is the registered *template* — `/api/v1/workouts/{workoutId}/sets` —
+never `r.URL.Path`, which carries UUIDs; every other label comes from a fixed compile-time
+vocabulary, so the series count is bounded and no request can invent a label. The gauges for a
+store that is not there (the in-memory driver has no pool and no schema) are simply absent
+rather than a misleading zero.
+
+`ATHLETICA_METRICS_ADDR` defaults to `127.0.0.1:9091`; set it empty to disable the listener.
+Binding it anywhere reachable from outside the host **without** `ATHLETICA_METRICS_TOKEN` is a
+start-up failure, and so is pointing it at the public listener's address. With a token set,
+`/metrics` demands `Authorization: Bearer …` and compares it in constant time.
 
 ## The workout lifecycle
 
@@ -206,6 +296,16 @@ page boundary, a cursor copied from another account, revocation after logout and
 logout-all, the refresh-token sweep, and the progress aggregates including their two exclusions
 (another athlete's sets, and the sets of a cancelled workout).
 
+Since the corrections landed the same suite also pins: a replayed edit that is *not* applied
+twice (including sixteen concurrent retries of one queued edit), a repeated deletion that stays
+safe, a deleted set vanishing from the detail **and** from the progress aggregates, a replayed
+creation that cannot resurrect it, set numbers keeping their gaps, another athlete's set being
+neither editable nor deletable behind a `404` byte-identical to a missing one, a correction
+being unable to leave the domain bounds, a `clientMutationId` that cannot be recycled for a
+second change — and, for the observability half, that `/metrics` is a plain `404` on the public
+port, that the metrics listener refuses an anonymous scrape when a token is configured, and that
+no workout ID, set ID, user ID, e-mail, token or IP appears anywhere on the page.
+
 ## Configuration
 
 Everything comes from the environment. Unknown or unsafe values fail the start, they never warn.
@@ -233,6 +333,8 @@ Everything comes from the environment. Unknown or unsafe values fail the start, 
 | `ATHLETICA_REFRESH_TOKEN_RETENTION` | `24h` | How long an expired or revoked row is kept before the sweep may delete it |
 | `ATHLETICA_TRUST_PROXY_HEADERS` | `false` | Honour `X-Forwarded-For` — only turn on behind a proxy you control |
 | `ATHLETICA_SHUTDOWN_TIMEOUT` | `15s` | Grace period for in-flight requests |
+| `ATHLETICA_METRICS_ADDR` | `127.0.0.1:9091` | Separate Prometheus listener; empty disables it |
+| `ATHLETICA_METRICS_TOKEN` | — | Bearer token `/metrics` demands; required for any non-loopback bind |
 
 **Production refuses to start** when the signing secret is empty, is a known placeholder such as
 `dev-only-change-me`, or is shorter than 32 characters. The message names the variable and how to
@@ -248,11 +350,12 @@ services/api
 ├── internal/auth               bcrypt hashing, HS256 tokens, register/login/refresh
 ├── internal/workouts           domain bounds (mirrors packages/domain) + use cases
 ├── internal/ratelimit          per-IP and per-account throttling with backoff
+├── internal/metrics            Prometheus text registry (no dependencies, no user data)
 ├── internal/store              Store interface + models
 │   ├── memory                  in-process implementation (tests, local runs)
 │   ├── postgres                pgx implementation + migration runner
 │   └── storetest               conformance suite both implementations must pass
-├── internal/httpapi            router, middleware, handlers
+├── internal/httpapi            router, middleware, handlers, the metrics listener
 ├── internal/ids                UUID and opaque-token generation
 ├── migrations                  NNNN_name.{up,down}.sql, embedded into the binary
 └── Dockerfile                  multi-stage, scratch, non-root (uid 10001)
@@ -268,12 +371,17 @@ ourselves).
 - Access-token revocation. Logout revokes the refresh token immediately, but the access token in
   the client's hands stays valid for its remaining lifetime (≤ 15 minutes); a denylist or short
   server-side session check is the next step if that window turns out to matter.
-- Editing or deleting a logged set, and editing a workout's title after creation.
 - A training *plan*: `adherence` therefore measures how many started sessions were finished,
   not conformance to a prescribed schedule. It gains the second meaning once plans exist.
 - Password reset, e-mail verification, account deletion.
 - Rate-limit state is per process, which is right for one container and needs Redis or an
   equivalent once the API is replicated.
-- Metrics and tracing: requests are logged structurally, but nothing is exported yet.
+- Tracing. Requests are logged structurally and counted (see [Metrics](#metrics)), but there
+  are no spans and no propagated trace context yet.
+- Hard-deleting a set. Removal is soft, which is what keeps the idempotency slot and the safe
+  repeat; a retention job that eventually purges rows deleted long ago is a later decision.
+- Undoing a deletion. The row is still there, so restoring it would be a small change, but it
+  needs its own mutation kind and its own place in the client's outbox, and nothing asks for
+  it yet.
 - The PostgreSQL conformance suite is opt-in through an environment variable; wiring a disposable
   database into CI is the remaining half of audit finding H3.
