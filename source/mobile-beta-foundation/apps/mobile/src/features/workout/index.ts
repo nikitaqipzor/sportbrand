@@ -1,14 +1,31 @@
-export type { ActiveWorkout, StartWorkoutInput, WorkoutActionResult } from "./active-workout.ts";
+export type {
+  ActiveExercise,
+  ActiveWorkout,
+  ExerciseSeed,
+  SetMeasures,
+  StartWorkoutInput,
+  WorkoutActionResult
+} from "./active-workout.ts";
 export {
   actOnWorkout,
   buildSetInput,
+  currentExercise,
+  findExercise,
   formatClock,
+  isResumable,
   restSeconds,
+  reviveActiveWorkout,
   mutationIdFor,
   nextSetNumber,
   startActiveWorkout,
+  totalCompletedSets,
+  withCurrentExercise,
+  withExercise,
   withRecordedSet
 } from "./active-workout.ts";
+
+export type { CatalogExercise } from "./exercise-catalog.ts";
+export { DEFAULT_EXERCISE_ID, EXERCISE_CATALOG, exerciseTitle, findCatalogExercise } from "./exercise-catalog.ts";
 
 export type { LogSetResult, SubmitSetResult } from "./log-set.ts";
 export { logSet, submitSet } from "./log-set.ts";

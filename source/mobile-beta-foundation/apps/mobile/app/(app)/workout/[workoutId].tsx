@@ -1,13 +1,13 @@
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { useEffect, useMemo, useState } from "react";
-import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
+import { Modal, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 
-import { formatClock, restSeconds } from "../../../src/features/workout/active-workout.ts";
+import { formatClock, restSeconds, totalCompletedSets } from "../../../src/features/workout/active-workout.ts";
 import { ConfirmDialog } from "../../../src/features/workout/confirm-dialog.tsx";
+import { DEFAULT_EXERCISE_ID, EXERCISE_CATALOG } from "../../../src/features/workout/exercise-catalog.ts";
 import { useActiveWorkout, type SetMeasures } from "../../../src/features/workout/use-workout.ts";
 
-const EXERCISE_ID = "lat-pulldown";
-const EXERCISE_TITLE = "Тяга верхнего блока";
+const WORKOUT_TITLE = "Силовая тренировка";
 
 type Pending = "complete" | "cancel" | null;
 
@@ -16,14 +16,32 @@ export default function WorkoutScreen() {
   const workoutId = params.workoutId;
   const router = useRouter();
 
+  // Тренировка начинается с одного упражнения, остальные добавляются на ходу.
+  // Если снимок этой тренировки уже лежит на диске, стартовый список не
+  // применяется: возврат поднимает все её упражнения со своими счётчиками.
   const start = useMemo(
-    () => ({ workoutId, title: EXERCISE_TITLE, exerciseId: EXERCISE_ID }),
+    () => ({ workoutId, title: WORKOUT_TITLE, exercises: [{ exerciseId: DEFAULT_EXERCISE_ID }] }),
     [workoutId]
   );
-  const { workout, setNumber, status, queue, issues, busy, recordSet, finish, syncNow } = useActiveWorkout(start);
+  const {
+    workout,
+    exercises,
+    exercise,
+    setNumber,
+    status,
+    queue,
+    issues,
+    busy,
+    recordSet,
+    selectExercise,
+    addExercise,
+    finish,
+    syncNow
+  } = useActiveWorkout(start);
 
   const [measures, setMeasures] = useState<SetMeasures>({ weightKg: 62.5, repetitions: 10, rir: 2 });
   const [pending, setPending] = useState<Pending>(null);
+  const [picker, setPicker] = useState(false);
   const [tick, setTick] = useState(0);
 
   // Таймер отдыха идёт от последнего записанного подхода, а не от константы.
@@ -38,6 +56,7 @@ export default function WorkoutScreen() {
     setMeasures((prev) => ({ ...prev, [field]: Math.max(0, Math.round((prev[field] + delta) * 10) / 10) }));
 
   const dead = queue.filter((record) => record.state === "dead");
+  const added = new Set(exercises.map((entry) => entry.exerciseId));
 
   async function applyFinish(action: "complete" | "cancel"): Promise<void> {
     setPending(null);
@@ -49,7 +68,40 @@ export default function WorkoutScreen() {
   return (
     <ScrollView style={styles.screen} contentContainerStyle={styles.content}>
       <Text style={styles.kicker}>АКТИВНАЯ ТРЕНИРОВКА · {workoutId}</Text>
-      <Text style={styles.title}>{EXERCISE_TITLE}</Text>
+      <Text style={styles.title}>{exercise?.title ?? WORKOUT_TITLE}</Text>
+      <Text testID="workout-total-sets" style={styles.kicker}>
+        {exercises.length} упражнени{exercises.length === 1 ? "е" : "й"} ·{" "}
+        {workout ? totalCompletedSets(workout) : 0} подходов всего
+      </Text>
+
+      {/* Переключение упражнений. У каждого своя нумерация подходов, поэтому
+          на вкладке видно, сколько записано именно в нём. */}
+      <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={styles.tabs}>
+        {exercises.map((entry) => {
+          const active = entry.exerciseId === workout?.currentExerciseId;
+          return (
+            <Pressable
+              key={entry.exerciseId}
+              testID={`workout-exercise-tab-${entry.exerciseId}`}
+              accessibilityRole="button"
+              accessibilityState={{ selected: active }}
+              style={[styles.tab, active ? styles.tabActive : null]}
+              onPress={() => void selectExercise(entry.exerciseId)}
+            >
+              <Text style={[styles.tabText, active ? styles.tabTextActive : null]}>{entry.title}</Text>
+              <Text style={styles.tabCount}>{entry.completedSets}</Text>
+            </Pressable>
+          );
+        })}
+        <Pressable
+          testID="workout-add-exercise"
+          accessibilityRole="button"
+          style={styles.tabAdd}
+          onPress={() => setPicker(true)}
+        >
+          <Text style={styles.tabTextActive}>+ Упражнение</Text>
+        </Pressable>
+      </ScrollView>
 
       <View style={styles.timer}>
         <Text style={styles.kicker}>ОТДЫХ</Text>
@@ -149,6 +201,47 @@ export default function WorkoutScreen() {
         <Text style={styles.secondaryText}>Отменить тренировку</Text>
       </Pressable>
 
+      {/* Временный список упражнений: настоящий справочник приедет отдельно. */}
+      <Modal visible={picker} transparent animationType="slide" onRequestClose={() => setPicker(false)}>
+        <View testID="workout-exercise-picker" style={styles.pickerBackdrop}>
+          <View style={styles.pickerCard}>
+            <Text style={styles.pickerTitle}>Добавить упражнение</Text>
+            <ScrollView style={styles.pickerList}>
+              {EXERCISE_CATALOG.map((entry) => {
+                const already = added.has(entry.id);
+                return (
+                  <Pressable
+                    key={entry.id}
+                    testID={`workout-exercise-option-${entry.id}`}
+                    accessibilityRole="button"
+                    accessibilityState={{ disabled: already }}
+                    disabled={already}
+                    style={styles.pickerRow}
+                    onPress={() => {
+                      setPicker(false);
+                      void addExercise({ exerciseId: entry.id, title: entry.title });
+                    }}
+                  >
+                    <Text style={[styles.pickerRowText, already ? styles.pickerRowDisabled : null]}>
+                      {entry.title}
+                    </Text>
+                    {already ? <Text style={styles.pickerRowDisabled}>уже в тренировке</Text> : null}
+                  </Pressable>
+                );
+              })}
+            </ScrollView>
+            <Pressable
+              testID="workout-exercise-picker-close"
+              accessibilityRole="button"
+              style={styles.secondary}
+              onPress={() => setPicker(false)}
+            >
+              <Text style={styles.secondaryText}>Назад</Text>
+            </Pressable>
+          </View>
+        </View>
+      </Modal>
+
       <ConfirmDialog
         testIDPrefix="workout-finish-confirm"
         visible={pending === "complete"}
@@ -215,6 +308,28 @@ const styles = StyleSheet.create({
   content: { padding: 24, gap: 16 },
   kicker: { fontSize: 12, fontWeight: "700", color: "#AAB3AE" },
   title: { fontSize: 32, fontWeight: "800", color: "#F8F7F3" },
+  tabs: { gap: 8, paddingVertical: 4 },
+  tab: {
+    minHeight: 44,
+    paddingHorizontal: 14,
+    borderRadius: 14,
+    backgroundColor: "#1A201E",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: 2
+  },
+  tabActive: { backgroundColor: "#C64B2C" },
+  tabText: { fontWeight: "700", color: "#AAB3AE" },
+  tabTextActive: { color: "#F8F7F3", fontWeight: "800" },
+  tabCount: { fontSize: 11, fontWeight: "700", color: "#E5D9D4" },
+  tabAdd: {
+    minHeight: 44,
+    paddingHorizontal: 14,
+    borderRadius: 14,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "#2A322F"
+  },
   timer: { padding: 20, borderRadius: 24, backgroundColor: "#1A201E" },
   time: { fontSize: 56, fontWeight: "800", color: "#F8F7F3" },
   set: { padding: 20, borderRadius: 18, backgroundColor: "#1A201E", gap: 12 },
@@ -252,5 +367,12 @@ const styles = StyleSheet.create({
   },
   finishText: { fontWeight: "800", color: "#F8F7F3" },
   secondary: { minHeight: 48, alignItems: "center", justifyContent: "center", borderRadius: 16 },
-  secondaryText: { fontWeight: "700", color: "#AAB3AE" }
+  secondaryText: { fontWeight: "700", color: "#AAB3AE" },
+  pickerBackdrop: { flex: 1, padding: 24, justifyContent: "flex-end", backgroundColor: "rgba(10,12,11,0.6)" },
+  pickerCard: { padding: 20, gap: 12, borderRadius: 24, backgroundColor: "#1A201E", maxHeight: "80%" },
+  pickerTitle: { fontSize: 20, fontWeight: "800", color: "#F8F7F3" },
+  pickerList: { flexGrow: 0 },
+  pickerRow: { minHeight: 48, justifyContent: "center", paddingHorizontal: 4 },
+  pickerRowText: { fontWeight: "700", color: "#F8F7F3" },
+  pickerRowDisabled: { color: "#6C7671", fontWeight: "700" }
 });

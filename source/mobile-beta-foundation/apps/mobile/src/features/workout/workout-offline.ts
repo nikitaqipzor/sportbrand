@@ -8,10 +8,16 @@ import { registerSessionCleanup, type SessionCleanupEvent } from "../auth/sessio
 import {
   actOnWorkout,
   buildSetInput,
+  isResumable,
   nextSetNumber,
+  reviveActiveWorkout,
   startActiveWorkout,
+  withCurrentExercise,
+  withExercise,
   withRecordedSet,
   type ActiveWorkout,
+  type ExerciseSeed,
+  type SetMeasures,
   type StartWorkoutInput
 } from "./active-workout.ts";
 import { submitSet } from "./log-set.ts";
@@ -37,8 +43,16 @@ export type WorkoutOffline = {
   recordSet: (
     userId: string,
     workout: ActiveWorkout,
-    measures: { weightKg: number; repetitions: number; rir: number }
+    measures: SetMeasures,
+    /** По умолчанию — открытое упражнение снимка. */
+    exerciseId?: string
   ) => Promise<RecordSetResult>;
+  /** Переключение между упражнениями тренировки; снимок сохраняется. */
+  selectExercise: (userId: string, workout: ActiveWorkout, exerciseId: string) => Promise<ActiveWorkout>;
+  /** Добавление упражнения в идущую тренировку; оно сразу становится текущим. */
+  addExercise: (userId: string, workout: ActiveWorkout, seed: ExerciseSeed) => Promise<ActiveWorkout>;
+  /** Незавершённая тренировка предыдущего запуска, если она есть (П3). */
+  resumable: (userId: string | null) => Promise<ActiveWorkout | null>;
   /** cancel и complete — разрушительные действия, экран спрашивает confirm. */
   finish: (userId: string, workout: ActiveWorkout, action: WorkoutAction) => Promise<FinishResult>;
   flush: (userId: string | null) => Promise<FlushSummary>;
@@ -68,15 +82,29 @@ export function createWorkoutOffline(deps: WorkoutOfflineDeps): WorkoutOffline {
 
     start: async (userId, input) => {
       await deps.registry?.remember(userId, input.workoutId, input.title);
-      const existing = await deps.snapshots.load(userId);
-      if (existing && existing.workoutId === input.workoutId && existing.status !== "cancelled") return existing;
+      const existing = reviveActiveWorkout(await deps.snapshots.load(userId));
+      // Возврат в ту же тренировку поднимает её снимок целиком: все
+      // упражнения со своими счётчиками, а не пустую сессию заново.
+      if (existing && existing.workoutId === input.workoutId && existing.status !== "cancelled") {
+        return persist(userId, existing);
+      }
       return persist(userId, startActiveWorkout(input, now()));
     },
 
-    load: (userId) => deps.snapshots.load(userId),
+    load: async (userId) => reviveActiveWorkout(await deps.snapshots.load(userId)),
 
-    recordSet: async (userId, workout, measures) => {
-      const input = buildSetInput(workout, measures, nextSetNumber(workout));
+    resumable: async (userId) => {
+      if (!userId) return null;
+      const snapshot = reviveActiveWorkout(await deps.snapshots.load(userId));
+      return isResumable(snapshot) ? snapshot : null;
+    },
+
+    selectExercise: (userId, workout, exerciseId) => persist(userId, withCurrentExercise(workout, exerciseId)),
+
+    addExercise: (userId, workout, seed) => persist(userId, withExercise(workout, seed)),
+
+    recordSet: async (userId, workout, measures, exerciseId = workout.currentExerciseId) => {
+      const input = buildSetInput(workout, measures, nextSetNumber(workout, exerciseId), exerciseId);
       const result = await submitSet(deps.sync, userId, input, now());
       if (!result.ok) return result;
       const updated = await persist(userId, withRecordedSet(workout, input, now()));
