@@ -14,6 +14,7 @@
     "@athletica/domain": "workspace:*",
     "expo": "~54.0.37",
     "expo-constants": "~18.0.14",
+    "expo-crypto": "^57.0.2",
     "expo-linking": "~8.0.12",
     "expo-router": "~6.0.24",
     "expo-secure-store": "~15.0.8",

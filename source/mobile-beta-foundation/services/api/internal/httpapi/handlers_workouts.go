@@ -13,6 +13,9 @@ import (
 )
 
 type createWorkoutRequest struct {
+	// ID lets the client name the workout it is starting, so a session begun
+	// offline keeps one identity from the first set onwards.
+	ID    *string `json:"id"`
 	Title *string `json:"title"`
 }
 
@@ -125,13 +128,20 @@ func (s *Server) handleCreateWorkout(w http.ResponseWriter, r *http.Request, use
 		}
 	}
 
-	workout, err := s.workouts.CreateWorkout(r.Context(), user.ID, deref(req.Title))
+	workout, created, err := s.workouts.CreateWorkout(r.Context(), user.ID, deref(req.ID), deref(req.Title))
 	var verr *workouts.ValidationError
 	switch {
-	case err == nil:
+	case err == nil && created:
 		writeJSON(w, s.log, http.StatusCreated, toWorkoutResponse(workout))
+	case err == nil:
+		// The client already started this workout: 200 with the stored row, so
+		// a retry after a lost response settles instead of failing.
+		writeJSON(w, s.log, http.StatusOK, toWorkoutResponse(workout))
 	case errors.As(err, &verr):
 		writeValidationError(w, s.log, verr)
+	case errors.Is(err, store.ErrNotFound):
+		// The ID belongs to somebody else. Refuse without admitting it exists.
+		writeError(w, s.log, http.StatusConflict, codeWorkoutIDTaken, "workout id is already in use")
 	default:
 		s.internal(w, r, "create workout failed", err)
 	}

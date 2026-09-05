@@ -190,7 +190,12 @@ type Store interface {
 	// and never a row, so it cannot leak anybody's data.
 	DeleteExpiredRefreshTokens(ctx context.Context, before time.Time) (int64, error)
 
-	CreateWorkout(ctx context.Context, workout Workout) (Workout, error)
+	// CreateWorkout stores a workout idempotently. A client generates the ID
+	// so a session can be started with no connection, exactly as a set carries
+	// its own mutation ID; replaying the same (user_id, id) returns the stored
+	// row with created=false instead of a second workout. Uniqueness is the
+	// database's guarantee, not a read-then-write check in Go.
+	CreateWorkout(ctx context.Context, workout Workout) (stored Workout, created bool, err error)
 	// WorkoutForUser returns ErrNotFound both for a missing workout and for a
 	// workout owned by somebody else, so existence never leaks.
 	WorkoutForUser(ctx context.Context, userID, workoutID string) (Workout, error)

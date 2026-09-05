@@ -15,3 +15,4 @@ export { logSet, submitSet } from "./log-set.ts";
 
 export type { FinishResult, RecordSetResult, WorkoutOffline, WorkoutOfflineDeps } from "./workout-offline.ts";
 export { createWorkoutOffline } from "./workout-offline.ts";
+export { newWorkoutId } from "./new-workout-id.ts";

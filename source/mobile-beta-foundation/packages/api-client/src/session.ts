@@ -1,6 +1,20 @@
 import { createApiClient, type ApiClient, type ApiClientOptions } from "./endpoints.ts";
 import { fail, ok, redactSecrets, type ApiError, type ApiResult } from "./errors.ts";
-import type { Credentials, LogSetOutcome, Session, User, Workout, WorkoutSet, WorkoutSetInput } from "./types.ts";
+import type {
+  Credentials,
+  LogSetOutcome,
+  Progress,
+  ProgressQuery,
+  Session,
+  User,
+  Workout,
+  WorkoutDetail,
+  WorkoutListQuery,
+  WorkoutPage,
+  WorkoutSet,
+  WorkoutSetInput,
+  WorkoutStatus
+} from "./types.ts";
 
 /** Почему сессия закончилась. Для аналитики и для очистки локальных данных. */
 export type SignOutReason = "user" | "refresh_failed";
@@ -40,9 +54,13 @@ export type AuthClient = {
   refreshNow: () => Promise<ApiResult<Session>>;
   subscribe: (listener: SessionListener) => () => void;
   me: () => Promise<ApiResult<User>>;
-  createWorkout: (input?: { title?: string }) => Promise<ApiResult<Workout>>;
+  createWorkout: (input?: { id?: string; title?: string }) => Promise<ApiResult<Workout>>;
   logSet: (workoutId: string, input: WorkoutSetInput) => Promise<ApiResult<LogSetOutcome>>;
   listSets: (workoutId: string) => Promise<ApiResult<WorkoutSet[]>>;
+  listWorkouts: (query?: WorkoutListQuery) => Promise<ApiResult<WorkoutPage>>;
+  getWorkout: (workoutId: string) => Promise<ApiResult<WorkoutDetail>>;
+  setWorkoutStatus: (workoutId: string, status: WorkoutStatus) => Promise<ApiResult<Workout>>;
+  progress: (query?: ProgressQuery) => Promise<ApiResult<Progress>>;
 };
 
 const isUnauthorized = (error: ApiError): boolean => error.kind === "client" && error.status === 401;
@@ -168,6 +186,10 @@ export function createAuthClient(options: AuthClientOptions): AuthClient {
     me: () => authorized((token) => api.me(token)),
     createWorkout: (input) => authorized((token) => api.createWorkout(token, input)),
     logSet: (workoutId, input) => authorized((token) => api.logSet(token, workoutId, input)),
-    listSets: (workoutId) => authorized((token) => api.listSets(token, workoutId))
+    listSets: (workoutId) => authorized((token) => api.listSets(token, workoutId)),
+    listWorkouts: (query) => authorized((token) => api.listWorkouts(token, query)),
+    getWorkout: (workoutId) => authorized((token) => api.getWorkout(token, workoutId)),
+    setWorkoutStatus: (workoutId, status) => authorized((token) => api.setWorkoutStatus(token, workoutId, status)),
+    progress: (query) => authorized((token) => api.progress(token, query))
   };
 }

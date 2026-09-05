@@ -23,3 +23,6 @@ export { createMemorySnapshotStore, createSnapshotMemoryDb } from "./snapshot-st
 
 export type { FlushReason, FlushSummary, LogSetSender, OutboxSync, OutboxSyncDeps, OutboxSyncStatus } from "./sync.ts";
 export { createOutboxSync, toApiSetInput } from "./sync.ts";
+
+export type { WorkoutRegistry, WorkoutRegistryEntry, WorkoutRegistryMemoryDb } from "./workout-registry.ts";
+export { createMemoryWorkoutRegistry, createWorkoutRegistryMemoryDb } from "./workout-registry.ts";

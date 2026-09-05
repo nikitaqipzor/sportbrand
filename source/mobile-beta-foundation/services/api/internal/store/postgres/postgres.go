@@ -194,7 +194,7 @@ func scanWorkout(row scanner) (store.Workout, error) {
 }
 
 // CreateWorkout inserts a workout owned by workout.UserID.
-func (s *Store) CreateWorkout(ctx context.Context, workout store.Workout) (store.Workout, error) {
+func (s *Store) CreateWorkout(ctx context.Context, workout store.Workout) (store.Workout, bool, error) {
 	if workout.ID == "" {
 		workout.ID = ids.NewUUID()
 	}
@@ -221,13 +221,25 @@ func (s *Store) CreateWorkout(ctx context.Context, workout store.Workout) (store
 
 	const q = `INSERT INTO workouts (` + workoutColumns + `)
 	           VALUES ($1, $2, $3, $4, $5, $6, $7)
+	           ON CONFLICT (id) DO NOTHING
 	           RETURNING ` + workoutColumns
 	out, err := scanWorkout(s.pool.QueryRow(ctx, q, workout.ID, workout.UserID, workout.Title,
 		workout.Status, workout.CreatedAt, workout.UpdatedAt, workout.EndedAt))
-	if err != nil {
-		return store.Workout{}, fmt.Errorf("postgres: create workout: %w", err)
+	switch {
+	case err == nil:
+		return out, true, nil
+	case errors.Is(err, pgx.ErrNoRows):
+		// The ID is already taken. It is the caller's own workout only when the
+		// owner matches; a collision with somebody else's row must not hand it
+		// over, and must not reveal that it exists either.
+		existing, findErr := s.WorkoutForUser(ctx, workout.UserID, workout.ID)
+		if findErr != nil {
+			return store.Workout{}, false, findErr
+		}
+		return existing, false, nil
+	default:
+		return store.Workout{}, false, fmt.Errorf("postgres: create workout: %w", err)
 	}
-	return out, nil
 }
 
 // WorkoutForUser scopes the lookup by owner, so a foreign workout is

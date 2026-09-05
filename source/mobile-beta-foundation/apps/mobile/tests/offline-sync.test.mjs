@@ -266,3 +266,136 @@ test("детерминированный clientMutationId: тот же подх�
   const again = buildSetInput(workout, { weightKg: 60, repetitions: 10, rir: 2 }, 1);
   assert.equal(first.clientMutationId, again.clientMutationId);
 });
+
+// --- Тренировка на сервере раньше своих подходов ---
+//
+// До этого приложение писало подходы в тренировку, которой на сервере не
+// существовало: POST /workouts/{id}/sets отвечал 404, а 404 — это 4xx, то есть
+// очередь уводила КАЖДЫЙ подход в «мёртвые». Петля была разорвана целиком.
+
+import { createMemoryWorkoutRegistry, createWorkoutRegistryMemoryDb } from "../src/platform/offline/index.ts";
+
+/** Пишет порядок вызовов, чтобы поймать создание после подхода. */
+function tracedDeps({ createReply = () => ({ ok: true, value: { id: "w-1" } }), sendReply = created } = {}) {
+  const order = [];
+  const registryDb = createWorkoutRegistryMemoryDb();
+  const registry = createMemoryWorkoutRegistry(registryDb);
+  const deps = {
+    store: createMemoryOutboxStore(),
+    registry,
+    createWorkout: async (workoutId, title) => {
+      order.push({ call: "create", workoutId, title });
+      return createReply(workoutId, title);
+    },
+    send: async (workoutId, input) => {
+      order.push({ call: "send", workoutId, mutationId: input.clientMutationId });
+      return typeof sendReply === "function" ? sendReply(input) : sendReply;
+    },
+    now: at("2026-09-05T10:00:00.000Z")
+  };
+  return { deps, order, registry };
+}
+
+test("тренировка создаётся на сервере раньше первого подхода", async () => {
+  const { deps, order, registry } = tracedDeps();
+  await registry.remember(ALICE, "w-1", "Тяга верхнего блока");
+  const sync = createOutboxSync(deps);
+  await sync.enqueue(ALICE, setInput(1));
+
+  await sync.flush(ALICE);
+
+  assert.equal(order[0].call, "create", "подход в несуществующую тренировку вернул бы 404");
+  assert.equal(order[0].title, "Тяга верхнего блока", "название обязано доехать вместе с тренировкой");
+  assert.equal(order[1].call, "send");
+});
+
+test("создание не повторяется перед каждым подходом", async () => {
+  const { deps, order, registry } = tracedDeps();
+  await registry.remember(ALICE, "w-1", "Тяга");
+  const sync = createOutboxSync(deps);
+  for (const n of [1, 2, 3]) await sync.enqueue(ALICE, setInput(n));
+
+  await sync.flush(ALICE);
+
+  assert.equal(order.filter((entry) => entry.call === "create").length, 1);
+  assert.equal(order.filter((entry) => entry.call === "send").length, 3);
+});
+
+test("не удалось создать тренировку — подходы ждут, а не гибнут", async () => {
+  const { deps, order, registry } = tracedDeps({ createReply: offline });
+  await registry.remember(ALICE, "w-1", "Тяга");
+  const sync = createOutboxSync(deps);
+  await sync.enqueue(ALICE, setInput(1));
+
+  const summary = await sync.flush(ALICE);
+  const queue = await sync.list(ALICE);
+
+  assert.equal(summary.reason, "retry");
+  assert.equal(order.filter((entry) => entry.call === "send").length, 0, "нельзя писать подход в несозданную тренировку");
+  assert.equal(pendingRecords(queue).length, 1, "подход обязан дождаться, а не уйти в «мёртвые»");
+  assert.equal(deadRecords(queue).length, 0);
+});
+
+test("подтверждённая тренировка больше не создаётся при следующем проходе", async () => {
+  const { deps, order, registry } = tracedDeps();
+  await registry.remember(ALICE, "w-1", "Тяга");
+  const sync = createOutboxSync(deps);
+
+  await sync.enqueue(ALICE, setInput(1));
+  await sync.flush(ALICE);
+  await sync.enqueue(ALICE, setInput(2));
+  await sync.flush(ALICE);
+
+  assert.equal(order.filter((entry) => entry.call === "create").length, 1);
+});
+
+test("название переживает завершение тренировки: снимок стёрт, реестр помнит", async () => {
+  const registryDb = createWorkoutRegistryMemoryDb();
+  const registry = createMemoryWorkoutRegistry(registryDb);
+  const spy = spySender();
+  const queue = createWorkoutOffline({
+    sync: createOutboxSync({ store: createMemoryOutboxStore(), send: spy.send, now: at("2026-09-05T10:00:00.000Z") }),
+    snapshots: createMemorySnapshotStore(),
+    registry,
+    now: at("2026-09-05T10:00:00.000Z")
+  });
+
+  let workout = await queue.start(ALICE, { workoutId: "w-1", title: "Тяга верхнего блока", exerciseId: "lat-pulldown" });
+  workout = (await queue.recordSet(ALICE, workout, { weightKg: 60, repetitions: 10, rir: 2 })).workout;
+  await queue.finish(ALICE, workout, "complete");
+
+  assert.equal(await queue.load(ALICE), null, "снимок завершённой тренировки стёрт");
+  const remembered = await registry.get(ALICE, "w-1");
+  assert.equal(remembered?.title, "Тяга верхнего блока", "иначе тренировка доехала бы на сервер безымянной");
+});
+
+test("выход из аккаунта стирает и реестр тренировок ушедшего", async () => {
+  const registry = createMemoryWorkoutRegistry();
+  const queue = createWorkoutOffline({
+    sync: createOutboxSync({ store: createMemoryOutboxStore(), send: spySender().send, now: at("2026-09-05T10:00:00.000Z") }),
+    snapshots: createMemorySnapshotStore(),
+    registry,
+    now: at("2026-09-05T10:00:00.000Z")
+  });
+  await queue.start(ALICE, { workoutId: "w-1", title: "Тяга", exerciseId: "lat-pulldown" });
+
+  await queue.onSessionEnded({ userId: ALICE, reason: "user" });
+
+  assert.equal(await registry.get(ALICE, "w-1"), null);
+});
+
+test("отменённая тренировка забывается: её незачем создавать на сервере", async () => {
+  const registry = createMemoryWorkoutRegistry();
+  const queue = createWorkoutOffline({
+    sync: createOutboxSync({ store: createMemoryOutboxStore(), send: spySender().send, now: at("2026-09-05T10:00:00.000Z") }),
+    snapshots: createMemorySnapshotStore(),
+    registry,
+    now: at("2026-09-05T10:00:00.000Z")
+  });
+  let workout = await queue.start(ALICE, { workoutId: "w-1", title: "Тяга", exerciseId: "lat-pulldown" });
+  workout = (await queue.recordSet(ALICE, workout, { weightKg: 60, repetitions: 10, rir: 2 })).workout;
+
+  await queue.finish(ALICE, workout, "cancel");
+
+  assert.equal(await registry.get(ALICE, "w-1"), null);
+});

@@ -1,16 +1,18 @@
-import { Link } from "expo-router";
+import { useRouter } from "expo-router";
 import { useState } from "react";
 import { Pressable, StyleSheet, Text, View } from "react-native";
 
 import { readApiConfig } from "../../src/config/env.ts";
 import { useAuth } from "../../src/features/auth/auth-context.tsx";
 import { ConfirmDialog } from "../../src/features/workout/confirm-dialog.tsx";
+import { newWorkoutId } from "../../src/features/workout/new-workout-id.ts";
 import { useSyncStatus } from "../../src/features/workout/use-workout.ts";
 
 const api = readApiConfig();
 
 export default function TodayScreen() {
   const { session, signOut } = useAuth();
+  const router = useRouter();
   const status = useSyncStatus();
   const [confirmSignOut, setConfirmSignOut] = useState(false);
 
@@ -45,11 +47,25 @@ export default function TodayScreen() {
         ) : null}
       </View>
 
-      <Link href="/workout/demo-strength" asChild>
-        <Pressable testID="today-start-workout" accessibilityRole="button" style={styles.action}>
-          <Text style={styles.actionText}>Начать силовую тренировку</Text>
-        </Pressable>
-      </Link>
+      {/* Идентификатор рождается здесь, до всякой сети: тренировку можно
+          начать в зале без связи, и подходам будет к чему привязаться. */}
+      <Pressable
+        testID="today-start-workout"
+        accessibilityRole="button"
+        style={styles.action}
+        onPress={() => router.push(`/workout/${newWorkoutId()}`)}
+      >
+        <Text style={styles.actionText}>Начать силовую тренировку</Text>
+      </Pressable>
+
+      <Pressable
+        testID="today-open-progress"
+        accessibilityRole="button"
+        style={styles.secondary}
+        onPress={() => router.push("/progress")}
+      >
+        <Text style={styles.secondaryText}>Прогресс и история</Text>
+      </Pressable>
 
       <Pressable
         testID="today-sign-out"

@@ -13,7 +13,7 @@ type Pending = "complete" | "cancel" | null;
 
 export default function WorkoutScreen() {
   const params = useLocalSearchParams<{ workoutId: string }>();
-  const workoutId = params.workoutId ?? "demo-strength";
+  const workoutId = params.workoutId;
   const router = useRouter();
 
   const start = useMemo(
@@ -42,7 +42,8 @@ export default function WorkoutScreen() {
   async function applyFinish(action: "complete" | "cancel"): Promise<void> {
     setPending(null);
     await finish(action);
-    router.replace("/");
+    // Завершённая тренировка ведёт на свои итоги, отменённая — обратно.
+    router.replace(action === "complete" ? `/summary/${workoutId}` : "/");
   }
 
   return (

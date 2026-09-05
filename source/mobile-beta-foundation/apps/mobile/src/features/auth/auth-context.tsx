@@ -14,6 +14,11 @@ export type AuthState = {
 };
 
 export type AuthContextValue = AuthState & {
+  /**
+   * Клиент с автообновлением токена. Экраны чтения ходят через него, а не
+   * собирают свой: обновление сессии обязано оставаться single-flight.
+   */
+  client: AuthClient;
   signIn: (credentials: Credentials) => Promise<boolean>;
   signUp: (credentials: Credentials) => Promise<boolean>;
   signOut: () => Promise<void>;
@@ -81,6 +86,7 @@ export function AuthProvider({ children, client }: { children: ReactNode; client
   const value = useMemo<AuthContextValue>(
     () => ({
       ...state,
+      client: authClient,
       signIn: (credentials) => run(() => authClient.signIn(credentials)),
       signUp: (credentials) => run(() => authClient.signUp(credentials)),
       signOut: async () => {

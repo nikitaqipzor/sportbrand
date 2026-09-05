@@ -52,7 +52,7 @@ func mustUser(t *testing.T, st store.Store, email string) store.User {
 
 func mustWorkout(t *testing.T, st store.Store, userID string) store.Workout {
 	t.Helper()
-	workout, err := st.CreateWorkout(context.Background(), store.Workout{
+	workout, _, err := st.CreateWorkout(context.Background(), store.Workout{
 		ID:     ids.NewUUID(),
 		UserID: userID,
 		Title:  "Push day",

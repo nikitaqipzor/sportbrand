@@ -2,6 +2,7 @@ import type { WorkoutAction, WorkoutSetInput } from "@athletica/domain";
 
 import type { OutboxRecord } from "../../platform/offline/outbox.ts";
 import type { SnapshotStore } from "../../platform/offline/snapshot-store.ts";
+import type { WorkoutRegistry } from "../../platform/offline/workout-registry.ts";
 import type { FlushSummary, OutboxSync, OutboxSyncStatus } from "../../platform/offline/sync.ts";
 import { registerSessionCleanup, type SessionCleanupEvent } from "../auth/session-cleanup.ts";
 import {
@@ -18,6 +19,8 @@ import { submitSet } from "./log-set.ts";
 export type WorkoutOfflineDeps = {
   sync: OutboxSync;
   snapshots: SnapshotStore<ActiveWorkout>;
+  /** Помнит название тренировки дольше, чем живёт её снимок. */
+  registry?: WorkoutRegistry;
   now?: () => Date;
 };
 
@@ -64,6 +67,7 @@ export function createWorkoutOffline(deps: WorkoutOfflineDeps): WorkoutOffline {
     sync: deps.sync,
 
     start: async (userId, input) => {
+      await deps.registry?.remember(userId, input.workoutId, input.title);
       const existing = await deps.snapshots.load(userId);
       if (existing && existing.workoutId === input.workoutId && existing.status !== "cancelled") return existing;
       return persist(userId, startActiveWorkout(input, now()));
@@ -86,6 +90,8 @@ export function createWorkoutOffline(deps: WorkoutOfflineDeps): WorkoutOffline {
       // неотправленные подходы. Завершённая, наоборот, обязана досинхронизироваться.
       const discarded =
         action === "cancel" ? await deps.sync.discardWorkout(userId, workout.workoutId) : 0;
+      // Отменённая тренировка не поедет на сервер — её незачем помнить.
+      if (action === "cancel") await deps.registry?.forget(userId, workout.workoutId);
       await deps.snapshots.clear(userId);
       return { ok: true, workout: transition.workout, discarded };
     },
@@ -103,6 +109,7 @@ export function createWorkoutOffline(deps: WorkoutOfflineDeps): WorkoutOffline {
       if (!event.userId) return;
       await deps.sync.purgeUser(event.userId);
       await deps.snapshots.clear(event.userId);
+      await deps.registry?.purgeUser(event.userId);
     },
 
     attach: () => registerSessionCleanup((event) => offline.onSessionEnded(event))

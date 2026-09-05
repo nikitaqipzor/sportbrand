@@ -194,11 +194,22 @@ func (s *Store) DeleteExpiredRefreshTokens(_ context.Context, before time.Time) 
 	return deleted, nil
 }
 
-// CreateWorkout stores a workout owned by workout.UserID.
-func (s *Store) CreateWorkout(_ context.Context, workout store.Workout) (store.Workout, error) {
+// CreateWorkout stores a workout owned by workout.UserID, idempotently: a
+// repeat of an ID this user already holds returns the stored row with
+// created=false, and an ID held by somebody else is ErrNotFound rather than a
+// signal that it exists.
+func (s *Store) CreateWorkout(_ context.Context, workout store.Workout) (store.Workout, bool, error) {
 	s.mu.Lock()
 	defer s.mu.Unlock()
 
+	if workout.ID != "" {
+		if existing, taken := s.workouts[workout.ID]; taken {
+			if existing.UserID != workout.UserID {
+				return store.Workout{}, false, store.ErrNotFound
+			}
+			return existing, false, nil
+		}
+	}
 	if workout.ID == "" {
 		workout.ID = ids.NewUUID()
 	}
@@ -222,7 +233,7 @@ func (s *Store) CreateWorkout(_ context.Context, workout store.Workout) (store.W
 	}
 	s.workouts[workout.ID] = workout
 	s.workoutOrder = append(s.workoutOrder, workout.ID)
-	return workout, nil
+	return workout, true, nil
 }
 
 func isTerminal(status string) bool {

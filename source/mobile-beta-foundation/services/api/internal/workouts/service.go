@@ -31,13 +31,26 @@ func NewService(st store.Store, now func() time.Time) *Service {
 }
 
 // CreateWorkout starts a session owned by userID.
-func (s *Service) CreateWorkout(ctx context.Context, userID, title string) (store.Workout, error) {
+// CreateWorkout starts a session, idempotently when the client names it.
+//
+// The ID may come from the client so a workout can be started with no
+// connection — the same reasoning that gives every set a clientMutationId.
+// Replaying an ID this user already holds returns the stored workout with
+// created=false, so a retried request never produces a second session; an ID
+// held by another user is store.ErrNotFound, which never admits it exists.
+func (s *Service) CreateWorkout(ctx context.Context, userID, id, title string) (store.Workout, bool, error) {
 	title = strings.TrimSpace(title)
 	if len(title) > MaxWorkoutTitle {
-		return store.Workout{}, &ValidationError{Issues: []Issue{{"title", fmt.Sprintf("must be at most %d characters", MaxWorkoutTitle)}}}
+		return store.Workout{}, false, &ValidationError{Issues: []Issue{{"title", fmt.Sprintf("must be at most %d characters", MaxWorkoutTitle)}}}
+	}
+	id = strings.TrimSpace(id)
+	if id == "" {
+		id = ids.NewUUID()
+	} else if !ids.IsUUID(id) {
+		return store.Workout{}, false, &ValidationError{Issues: []Issue{{"id", "must be a UUID"}}}
 	}
 	return s.store.CreateWorkout(ctx, store.Workout{
-		ID:     ids.NewUUID(),
+		ID:     id,
 		UserID: userID,
 		Title:  title,
 		Status: StatusActive,

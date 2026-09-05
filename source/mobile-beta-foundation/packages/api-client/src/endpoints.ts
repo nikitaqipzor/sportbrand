@@ -4,11 +4,17 @@ import type {
   Credentials,
   Health,
   LogSetOutcome,
+  Progress,
+  ProgressQuery,
   Session,
   User,
   Workout,
+  WorkoutDetail,
+  WorkoutListQuery,
+  WorkoutPage,
   WorkoutSet,
-  WorkoutSetInput
+  WorkoutSetInput,
+  WorkoutStatus
 } from "./types.ts";
 
 export type ApiClientOptions = HttpClientOptions;
@@ -40,10 +46,39 @@ export type ApiClient = {
   login: (credentials: Credentials) => Promise<ApiResult<Session>>;
   refresh: (refreshToken: string) => Promise<ApiResult<Session>>;
   me: (accessToken: string) => Promise<ApiResult<User>>;
-  createWorkout: (accessToken: string, input?: { title?: string }) => Promise<ApiResult<Workout>>;
+  /**
+   * Создание идемпотентно, когда клиент сам называет тренировку: повтор с тем
+   * же id возвращает сохранённую (200), а не заводит вторую сессию. Без этого
+   * тренировку нельзя начать без связи.
+   */
+  createWorkout: (accessToken: string, input?: { id?: string; title?: string }) => Promise<ApiResult<Workout>>;
   logSet: (accessToken: string, workoutId: string, input: WorkoutSetInput) => Promise<ApiResult<LogSetOutcome>>;
   listSets: (accessToken: string, workoutId: string) => Promise<ApiResult<WorkoutSet[]>>;
+  logout: (refreshToken: string, allSessions?: boolean) => Promise<ApiResult<void>>;
+  logoutAll: (accessToken: string) => Promise<ApiResult<void>>;
+  listWorkouts: (accessToken: string, query?: WorkoutListQuery) => Promise<ApiResult<WorkoutPage>>;
+  getWorkout: (accessToken: string, workoutId: string) => Promise<ApiResult<WorkoutDetail>>;
+  setWorkoutStatus: (accessToken: string, workoutId: string, status: WorkoutStatus) => Promise<ApiResult<Workout>>;
+  progress: (accessToken: string, query?: ProgressQuery) => Promise<ApiResult<Progress>>;
 };
+
+/**
+ * Строка запроса из необязательных параметров. Курсор проходит насквозь,
+ * закодированный, — клиент его не разбирает и не собирает.
+ */
+function queryString(params: Record<string, string | number | string[] | undefined>): string {
+  const search = new URLSearchParams();
+  for (const [key, value] of Object.entries(params)) {
+    if (value === undefined) continue;
+    if (Array.isArray(value)) {
+      for (const entry of value) search.append(key, entry);
+      continue;
+    }
+    search.append(key, String(value));
+  }
+  const rendered = search.toString();
+  return rendered ? `?${rendered}` : "";
+}
 
 /**
  * Методы контракта поверх HTTP-клиента. Токен передаётся явным аргументом:
@@ -89,7 +124,10 @@ export function createApiClient(options: ApiClientOptions): ApiClient {
           path: "/workouts",
           body: input,
           headers: bearer(accessToken),
-          retry: false
+          // Названная клиентом тренировка идемпотентна — повтор после обрыва
+          // вернёт ту же сессию, поэтому ретрай безопасен. Безымянная завела бы
+          // вторую тренировку, и ретраить её нельзя.
+          retry: input.id !== undefined
         })
       );
       return result.ok ? ok(result.value.body) : fail(result.error);
@@ -135,6 +173,112 @@ export function createApiClient(options: ApiClientOptions): ApiClient {
       );
       if (!result.ok) return fail(result.error);
       return ok(Array.isArray(result.value.body.items) ? result.value.body.items : []);
+    },
+
+    // Выход намеренно не требует access-токена: выходящий клиент вполне может
+    // держать протухший. Сервер отвечает 204 на любой вход, поэтому неизвестный
+    // и живой токен неотличимы — эндпоинт не работает оракулом.
+    logout: async (refreshToken, allSessions = false) => {
+      const result = await http.request({
+        method: "POST",
+        path: "/auth/logout",
+        body: { refreshToken, allSessions },
+        retry: false
+      });
+      return result.ok ? ok(undefined) : fail(result.error);
+    },
+
+    logoutAll: async (accessToken) => {
+      const result = await http.request({
+        method: "POST",
+        path: "/auth/logout-all",
+        headers: bearer(accessToken),
+        retry: false
+      });
+      return result.ok ? ok(undefined) : fail(result.error);
+    },
+
+    listWorkouts: async (accessToken, query = {}) => {
+      const result = asObject<WorkoutPage>(
+        await http.request({
+          method: "GET",
+          path: `/workouts${queryString({
+            status: query.status,
+            from: query.from,
+            to: query.to,
+            limit: query.limit,
+            cursor: query.cursor
+          })}`,
+          headers: bearer(accessToken)
+        })
+      );
+      if (!result.ok) return fail(result.error);
+      const body = result.value.body;
+      return ok({
+        items: Array.isArray(body.items) ? body.items : [],
+        nextCursor: typeof body.nextCursor === "string" ? body.nextCursor : null
+      });
+    },
+
+    getWorkout: async (accessToken, workoutId) => {
+      const result = asObject<WorkoutDetail>(
+        await http.request({
+          method: "GET",
+          path: `/workouts/${encodeURIComponent(workoutId)}`,
+          headers: bearer(accessToken)
+        })
+      );
+      if (!result.ok) return fail(result.error);
+      const body = result.value.body;
+      return ok({
+        ...body,
+        sets: Array.isArray(body.sets) ? body.sets : [],
+        totals: body.totals ?? { sets: 0, repetitions: 0, volumeKg: 0 }
+      });
+    },
+
+    // Недопустимый переход — 409 invalid_transition, обычная клиентская
+    // ошибка: экран показывает причину, а не считает это сбоем связи.
+    setWorkoutStatus: async (accessToken, workoutId, status) => {
+      const result = asObject<Workout>(
+        await http.request({
+          method: "POST",
+          path: `/workouts/${encodeURIComponent(workoutId)}/status`,
+          headers: bearer(accessToken),
+          body: { status },
+          retry: false
+        })
+      );
+      return result.ok ? ok(result.value.body) : fail(result.error);
+    },
+
+    progress: async (accessToken, query = {}) => {
+      const result = asObject<Progress>(
+        await http.request({
+          method: "GET",
+          path: `/progress${queryString({ from: query.from, to: query.to, exerciseLimit: query.exerciseLimit })}`,
+          headers: bearer(accessToken)
+        })
+      );
+      if (!result.ok) return fail(result.error);
+      const body = result.value.body;
+      return ok({
+        ...body,
+        strength: Array.isArray(body.strength) ? body.strength : [],
+        weeklyVolume: Array.isArray(body.weeklyVolume) ? body.weeklyVolume : [],
+        adherence: {
+          weeks: Array.isArray(body.adherence?.weeks) ? body.adherence.weeks : [],
+          totals: body.adherence?.totals ?? {
+            started: 0,
+            completed: 0,
+            cancelled: 0,
+            inProgress: 0,
+            completionRate: 0,
+            weeksInWindow: 0,
+            weeksWithTraining: 0
+          }
+        }
+      });
     }
   };
 }

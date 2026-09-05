@@ -1,4 +1,10 @@
-import { describeApiError, type ApiResult, type LogSetOutcome, type WorkoutSetInput as ApiSetInput } from "@athletica/api-client";
+import {
+  describeApiError,
+  type ApiError,
+  type ApiResult,
+  type LogSetOutcome,
+  type WorkoutSetInput as ApiSetInput
+} from "@athletica/api-client";
 import type { WorkoutSetInput } from "@athletica/domain";
 
 import {
@@ -13,13 +19,27 @@ import {
   type OutboxRecord
 } from "./outbox.ts";
 import type { OutboxStore } from "./outbox-store.ts";
+import type { WorkoutRegistry } from "./workout-registry.ts";
 
 /** Отправитель мутации. В приложении — AuthClient.logSet, в тестах — мок. */
 export type LogSetSender = (workoutId: string, input: ApiSetInput) => Promise<ApiResult<LogSetOutcome>>;
 
+/**
+ * Создание тренировки на сервере. Идемпотентно по клиентскому id: повтор
+ * возвращает ту же сессию, поэтому вызывать его перед подходами безопасно.
+ */
+export type WorkoutCreator = (workoutId: string, title: string) => Promise<ApiResult<unknown>>;
+
 export type OutboxSyncDeps = {
   store: OutboxStore<WorkoutSetInput>;
   send: LogSetSender;
+  /**
+   * Тренировка обязана существовать на сервере раньше своих подходов: иначе
+   * запись подхода получает 404 и уходит в «мёртвые». Без этой пары очередь
+   * молча теряла бы всё, что записано в начатой офлайн тренировке.
+   */
+  createWorkout?: WorkoutCreator;
+  registry?: WorkoutRegistry;
   now?: () => Date;
   backoff?: (attempts: number) => number;
 };
@@ -111,6 +131,23 @@ export function createOutboxSync(deps: OutboxSyncDeps): OutboxSync {
   let paused = false;
   let lastFailure: string | null = null;
 
+  /**
+   * Создаёт тренировку на сервере, если она ещё не подтверждена.
+   * Возвращает null, когда путь свободен, и ошибку — когда подходы этой
+   * тренировки отправлять пока нельзя.
+   */
+  async function ensureWorkout(userId: string, workoutId: string): Promise<{ ok: false; error: ApiError } | null> {
+    if (!deps.createWorkout || !deps.registry) return null;
+    const entry = await deps.registry.get(userId, workoutId);
+    if (entry?.created) return null;
+    const result = await deps.createWorkout(workoutId, entry?.title ?? "");
+    if (result.ok) {
+      await deps.registry.markCreated(userId, workoutId);
+      return null;
+    }
+    return result;
+  }
+
   async function run(userId: string): Promise<FlushSummary> {
     const summary = empty("done");
     const queue = bySeq(pendingRecords(await deps.store.listForUser(userId)));
@@ -123,7 +160,8 @@ export function createOutboxSync(deps: OutboxSyncDeps): OutboxSync {
         break;
       }
 
-      const result = await deps.send(record.payload.workoutId, toApiSetInput(record.payload));
+      const blocked = await ensureWorkout(userId, record.payload.workoutId);
+      const result = blocked ?? (await deps.send(record.payload.workoutId, toApiSetInput(record.payload)));
 
       if (result.ok) {
         await deps.store.remove(userId, record.id);

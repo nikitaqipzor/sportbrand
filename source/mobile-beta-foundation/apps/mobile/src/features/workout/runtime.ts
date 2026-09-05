@@ -2,7 +2,13 @@ import type { WorkoutSetInput } from "@athletica/domain";
 
 import type { OutboxStore } from "../../platform/offline/outbox-store.ts";
 import type { SnapshotStore } from "../../platform/offline/snapshot-store.ts";
-import { createSqliteOutboxStore, createSqliteSnapshotStore, openLocalDatabase } from "../../platform/offline/sqlite.ts";
+import {
+  createSqliteOutboxStore,
+  createSqliteSnapshotStore,
+  createSqliteWorkoutRegistry,
+  openLocalDatabase
+} from "../../platform/offline/sqlite.ts";
+import type { WorkoutRegistry } from "../../platform/offline/workout-registry.ts";
 import { createOutboxSync } from "../../platform/offline/sync.ts";
 import { getAuthClient } from "../auth/auth-client.ts";
 import type { ActiveWorkout } from "./active-workout.ts";
@@ -33,18 +39,35 @@ function lazySnapshotStore<T>(): SnapshotStore<T> {
   };
 }
 
+function lazyWorkoutRegistry(): WorkoutRegistry {
+  const store = async (): Promise<WorkoutRegistry> => createSqliteWorkoutRegistry(await openLocalDatabase());
+  return {
+    remember: async (userId, workoutId, title) => (await store()).remember(userId, workoutId, title),
+    get: async (userId, workoutId) => (await store()).get(userId, workoutId),
+    markCreated: async (userId, workoutId) => (await store()).markCreated(userId, workoutId),
+    forget: async (userId, workoutId) => (await store()).forget(userId, workoutId),
+    purgeUser: async (userId) => (await store()).purgeUser(userId)
+  };
+}
+
 let instance: WorkoutOffline | null = null;
 
 /** Единственный экземпляр на приложение: очередь обязана быть одна. */
 export function getWorkoutOffline(): WorkoutOffline {
   if (instance) return instance;
   const auth = getAuthClient();
+  const registry = lazyWorkoutRegistry();
   const offline = createWorkoutOffline({
     sync: createOutboxSync({
       store: lazyOutboxStore<WorkoutSetInput>(),
-      send: (workoutId, input) => auth.logSet(workoutId, input)
+      send: (workoutId, input) => auth.logSet(workoutId, input),
+      // Тренировка создаётся на сервере перед своими подходами; создание
+      // идемпотентно по клиентскому id, поэтому повтор безопасен.
+      createWorkout: (id, title) => auth.createWorkout({ id, title: title || undefined }),
+      registry
     }),
-    snapshots: lazySnapshotStore<ActiveWorkout>()
+    snapshots: lazySnapshotStore<ActiveWorkout>(),
+    registry
   });
   // Выход из аккаунта стирает очередь и снимок ушедшего пользователя (H1).
   offline.attach();

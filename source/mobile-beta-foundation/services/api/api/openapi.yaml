@@ -1,7 +1,7 @@
 openapi: 3.1.0
 info:
   title: Athletica AI API
-  version: 0.3.0
+  version: 0.4.0
   description: |
     Phase 1 surface of the Athletica AI backend: liveness, authentication with
     logout and token revocation, the idempotent workout-set write, the workout
@@ -224,7 +224,19 @@ paths:
   /workouts:
     post:
       tags: [workouts]
-      summary: Start a workout owned by the authenticated user
+      summary: Start a workout owned by the authenticated user, idempotently
+      description: |
+        The client may name the workout it is starting by sending `id`. That is
+        what makes an offline session possible: the phone can begin training
+        with no connection and still have one identity to hang its sets on —
+        the same reasoning that gives every set a `clientMutationId`.
+
+        Replaying a create with an `id` the caller already holds returns the
+        stored workout with `200`, never a second session, and never rewrites
+        its title. An `id` held by another account answers `409
+        workout_id_taken` without confirming that it exists.
+
+        Omit `id` and the server generates one, exactly as before.
       requestBody:
         required: false
         content:
@@ -232,6 +244,10 @@ paths:
             schema:
               type: object
               properties:
+                id:
+                  type: string
+                  format: uuid
+                  description: Client-chosen identity for this workout. Must be a UUID.
                 title: { type: string, maxLength: 200 }
       responses:
         '201':
@@ -239,8 +255,20 @@ paths:
           content:
             application/json:
               schema: { $ref: '#/components/schemas/Workout' }
+        '200':
+          description: |
+            This caller had already started a workout with that `id`; the stored
+            row is returned unchanged so a retry after a lost response settles.
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Workout' }
         '400': { $ref: '#/components/responses/BadRequest' }
         '401': { $ref: '#/components/responses/Unauthorized' }
+        '409':
+          description: The `id` is already in use by another account (`workout_id_taken`).
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Error' }
         '422': { $ref: '#/components/responses/ValidationFailed' }
 
     get:

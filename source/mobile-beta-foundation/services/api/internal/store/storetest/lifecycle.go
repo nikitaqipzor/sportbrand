@@ -29,7 +29,7 @@ func mustWorkoutAt(t *testing.T, st store.Store, userID, status string, createdA
 		ended := createdAt
 		workout.EndedAt = &ended
 	}
-	out, err := st.CreateWorkout(context.Background(), workout)
+	out, _, err := st.CreateWorkout(context.Background(), workout)
 	if err != nil {
 		t.Fatalf("create workout: %v", err)
 	}

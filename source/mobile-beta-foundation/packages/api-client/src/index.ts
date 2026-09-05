@@ -17,7 +17,20 @@ export type {
   Workout,
   WorkoutSet,
   WorkoutSetInput,
-  WorkoutStatus
+  WorkoutStatus,
+  AdherenceTotals,
+  BestEstimated1Rm,
+  BestWeight,
+  ExerciseRecord,
+  Progress,
+  ProgressQuery,
+  ProgressWindow,
+  WeeklyAdherence,
+  WeeklyVolume,
+  WorkoutDetail,
+  WorkoutListQuery,
+  WorkoutPage,
+  WorkoutTotals
 } from "./types.ts";
 
 export type { ApiError, ApiResult } from "./errors.ts";

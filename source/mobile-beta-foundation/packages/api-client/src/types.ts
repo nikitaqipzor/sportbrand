@@ -42,6 +42,10 @@ export type Workout = {
   title: string;
   status: WorkoutStatus;
   createdAt: string;
+  /** Добавлены в контракте 0.3.0 — аддитивно, старые ответы их не несли. */
+  updatedAt?: string;
+  /** Момент завершения; есть ровно у терминальных статусов. */
+  endedAt?: string | null;
 };
 
 /**
@@ -101,3 +105,86 @@ export type ErrorEnvelope = { error: ErrorPayload };
 export type LogSetOutcome =
   | { outcome: "created"; set: WorkoutSet }
   | { outcome: "duplicate"; set: WorkoutSet };
+
+/**
+ * Страница истории тренировок. nextCursor непрозрачен: клиент обязан вернуть
+ * его нетронутым и никогда не собирать свой — курсор лишь двигает позицию
+ * внутри строк владельца.
+ */
+export type WorkoutPage = { items: Workout[]; nextCursor: string | null };
+
+export type WorkoutListQuery = {
+  status?: WorkoutStatus[];
+  from?: string;
+  to?: string;
+  limit?: number;
+  cursor?: string;
+};
+
+/** Σ вес×повторы по подходам тренировки. */
+export type WorkoutTotals = { sets: number; repetitions: number; volumeKg: number };
+
+/** Тренировка со своими подходами — данные экрана «Итоги». */
+export type WorkoutDetail = Workout & { sets: WorkoutSet[]; totals: WorkoutTotals };
+
+/** Разрешённое окно, выровненное по целым ISO-неделям; to — верхняя граница исключительно. */
+export type ProgressWindow = { from: string; to: string };
+
+export type BestWeight = { weightKg: number; repetitions: number; achievedAt: string };
+
+/** Оценка Эпли: weightKg × (1 + repetitions / 30). */
+export type BestEstimated1Rm = {
+  estimated1RmKg: number;
+  weightKg: number;
+  repetitions: number;
+  achievedAt: string;
+};
+
+export type ExerciseRecord = {
+  exerciseId: string;
+  sets: number;
+  repetitions: number;
+  volumeKg: number;
+  bestWeight: BestWeight;
+  bestEstimated1Rm: BestEstimated1Rm;
+  lastPerformedAt: string;
+};
+
+export type WeeklyVolume = {
+  /** Понедельник 00:00 UTC соответствующей ISO-недели. */
+  weekStart: string;
+  sets: number;
+  repetitions: number;
+  volumeKg: number;
+  workouts: number;
+};
+
+/** Чем закончились тренировки, НАЧАТЫЕ в этой неделе. */
+export type WeeklyAdherence = {
+  weekStart: string;
+  started: number;
+  completed: number;
+  cancelled: number;
+  inProgress: number;
+  completionRate: number;
+};
+
+export type AdherenceTotals = {
+  started: number;
+  completed: number;
+  cancelled: number;
+  inProgress: number;
+  completionRate: number;
+  weeksInWindow: number;
+  weeksWithTraining: number;
+};
+
+/** Данные экрана «Прогресс» одним раунд-трипом. */
+export type Progress = {
+  window: ProgressWindow;
+  strength: ExerciseRecord[];
+  weeklyVolume: WeeklyVolume[];
+  adherence: { weeks: WeeklyAdherence[]; totals: AdherenceTotals };
+};
+
+export type ProgressQuery = { from?: string; to?: string; exerciseLimit?: number };

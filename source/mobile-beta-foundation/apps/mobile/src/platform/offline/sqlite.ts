@@ -3,6 +3,7 @@ import * as SQLite from "expo-sqlite";
 import { bySeq, type OutboxItem, type OutboxItemState, type OutboxRecord } from "./outbox.ts";
 import type { OutboxStore } from "./outbox-store.ts";
 import type { SnapshotStore } from "./snapshot-store.ts";
+import type { WorkoutRegistry, WorkoutRegistryEntry } from "./workout-registry.ts";
 
 /**
  * Локальная база устройства.
@@ -38,6 +39,13 @@ CREATE INDEX IF NOT EXISTS outbox_user_seq ON outbox (user_id, seq);
 CREATE TABLE IF NOT EXISTS active_workout (
   user_id TEXT PRIMARY KEY,
   snapshot TEXT NOT NULL
+);
+CREATE TABLE IF NOT EXISTS workout_registry (
+  user_id TEXT NOT NULL,
+  workout_id TEXT NOT NULL,
+  title TEXT NOT NULL,
+  created INTEGER NOT NULL DEFAULT 0,
+  PRIMARY KEY (user_id, workout_id)
 );
 `;
 
@@ -147,6 +155,54 @@ export function createSqliteSnapshotStore<T>(db: SQLite.SQLiteDatabase): Snapsho
     },
     clear: async (userId) => {
       await db.runAsync("DELETE FROM active_workout WHERE user_id = ?", userId);
+    }
+  };
+}
+
+
+type RegistryRow = { workout_id: string; title: string; created: number };
+
+/**
+ * Реестр начатых тренировок на диске. Переживает перезапуск ровно так же, как
+ * очередь: тренировка, проведённая целиком офлайн, обязана доехать до сервера
+ * со своим названием, а не безымянной.
+ */
+export function createSqliteWorkoutRegistry(db: SQLite.SQLiteDatabase): WorkoutRegistry {
+  return {
+    remember: async (userId, workoutId, title) => {
+      // Название принадлежит серверу с момента создания, поэтому повторный
+      // старт не переписывает уже сохранённую строку.
+      await db.runAsync(
+        "INSERT OR IGNORE INTO workout_registry (user_id, workout_id, title, created) VALUES (?, ?, ?, 0)",
+        userId,
+        workoutId,
+        title
+      );
+    },
+
+    get: async (userId, workoutId): Promise<WorkoutRegistryEntry | null> => {
+      const row = await db.getFirstAsync<RegistryRow>(
+        "SELECT workout_id, title, created FROM workout_registry WHERE user_id = ? AND workout_id = ?",
+        userId,
+        workoutId
+      );
+      return row ? { workoutId: row.workout_id, title: row.title, created: row.created !== 0 } : null;
+    },
+
+    markCreated: async (userId, workoutId) => {
+      await db.runAsync(
+        "UPDATE workout_registry SET created = 1 WHERE user_id = ? AND workout_id = ?",
+        userId,
+        workoutId
+      );
+    },
+
+    forget: async (userId, workoutId) => {
+      await db.runAsync("DELETE FROM workout_registry WHERE user_id = ? AND workout_id = ?", userId, workoutId);
+    },
+
+    purgeUser: async (userId) => {
+      await db.runAsync("DELETE FROM workout_registry WHERE user_id = ?", userId);
     }
   };
 }

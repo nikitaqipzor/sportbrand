@@ -26,6 +26,7 @@ const (
 	codeDuplicateMutation = "duplicate_client_mutation"
 	codeInvalidTransition = "invalid_transition"
 	codeInvalidCursor     = "invalid_cursor"
+	codeWorkoutIDTaken    = "workout_id_taken"
 	codeRateLimited       = "rate_limited"
 	codeInternal          = "internal_error"
 	codeUnavailable       = "service_unavailable"
