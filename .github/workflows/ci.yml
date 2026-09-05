@@ -61,18 +61,57 @@ jobs:
     defaults:
       run:
         working-directory: source/mobile-beta-foundation/services/api
+    # SQL-адаптеры невозможно проверить памятью: схема, запросы и сканирование
+    # строк живут только против настоящей базы. Именно этот пробел аудит
+    # записал как H3 — у store-адаптеров было 0% покрытия, и регрессии
+    # переживали unit-гейт.
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_DB: athletica
+          POSTGRES_USER: athletica
+          POSTGRES_PASSWORD: ci-only-not-a-secret
+        ports: ["5432:5432"]
+        options: >-
+          --health-cmd "pg_isready -U athletica -d athletica"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    env:
+      ATHLETICA_TEST_DATABASE_URL: postgres://athletica:ci-only-not-a-secret@localhost:5432/athletica?sslmode=disable
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-go@v5
         with:
           go-version: "1.24"
           cache-dependency-path: source/mobile-beta-foundation/services/api/go.sum
+      - name: Форматирование
+        run: |
+          unformatted=$(gofmt -l .)
+          if [ -n "$unformatted" ]; then
+            echo "gofmt требует правки:"; echo "$unformatted"; exit 1
+          fi
       - name: Сборка
         run: go build ./...
       - name: Vet
         run: go vet ./...
       - name: Тесты
         run: go test ./...
+      - name: Тесты с детектором гонок
+        run: go test -race ./...
+      - name: Conformance-набор против PostgreSQL действительно отработал
+        # Пропуск здесь опаснее падения: набор молча выключается отсутствием
+        # переменной окружения, и H3 осталась бы открытой, а CI — зелёным.
+        run: |
+          output=$(go test -run TestPostgresStoreConformance -v ./internal/store/postgres/)
+          echo "$output"
+          if echo "$output" | grep -q -- '--- SKIP'; then
+            echo "::error::Набор против PostgreSQL пропущен — H3 не закрыта"; exit 1
+          fi
+          echo "$output" | grep -q -- '--- PASS: TestPostgresStoreConformance' || {
+            echo "::error::Набор против PostgreSQL не отработал"; exit 1
+          }
 
   contract:
     name: OpenAPI-контракт
