@@ -31,6 +31,10 @@ func Run(t *testing.T, newStore Factory) {
 	t.Run("ForeignWorkoutIsRejected", func(t *testing.T) { testForeignWorkout(t, newStore) })
 	t.Run("ListIsUserScoped", func(t *testing.T) { testListScope(t, newStore) })
 	t.Run("ConcurrentReplayCreatesOneRow", func(t *testing.T) { testConcurrentReplay(t, newStore) })
+	t.Run("ExpiredRefreshTokensAreSwept", func(t *testing.T) { testRefreshTokenSweep(t, newStore) })
+	t.Run("StatusTransitionsAreAtomic", func(t *testing.T) { testStatusTransitions(t, newStore) })
+	t.Run("WorkoutListingIsScopedFilteredAndPaged", func(t *testing.T) { testWorkoutListing(t, newStore) })
+	t.Run("ProgressAggregatesAreScoped", func(t *testing.T) { testProgressAggregates(t, newStore) })
 }
 
 func mustUser(t *testing.T, st store.Store, email string) store.User {
@@ -130,7 +134,7 @@ func testRefreshTokens(t *testing.T, newStore Factory) {
 		t.Fatal("a fresh token must be active")
 	}
 
-	if err := st.RevokeRefreshToken(ctx, token.ID); err != nil {
+	if err := st.RevokeRefreshToken(ctx, token.ID, store.RevokeReasonLogout); err != nil {
 		t.Fatalf("revoke: %v", err)
 	}
 	loaded, err = st.RefreshTokenByHash(ctx, "hash-1")
@@ -139,6 +143,11 @@ func testRefreshTokens(t *testing.T, newStore Factory) {
 	}
 	if loaded.RevokedAt == nil || loaded.Active(now) {
 		t.Fatal("a revoked token must not be active")
+	}
+	// The reason must survive the round trip: auth.Refresh uses it to tell a
+	// logged-out token (refuse) from a replayed rotation (revoke the family).
+	if loaded.RevokedReason != store.RevokeReasonLogout {
+		t.Fatalf("revoked reason = %q, want %q", loaded.RevokedReason, store.RevokeReasonLogout)
 	}
 
 	if _, err := st.RefreshTokenByHash(ctx, "unknown"); !errors.Is(err, store.ErrNotFound) {
@@ -149,12 +158,15 @@ func testRefreshTokens(t *testing.T, newStore Factory) {
 	if err := st.CreateRefreshToken(ctx, second); err != nil {
 		t.Fatalf("create second token: %v", err)
 	}
-	if err := st.RevokeUserRefreshTokens(ctx, user.ID); err != nil {
+	if err := st.RevokeUserRefreshTokens(ctx, user.ID, store.RevokeReasonReuse); err != nil {
 		t.Fatalf("revoke all: %v", err)
 	}
 	loaded, _ = st.RefreshTokenByHash(ctx, "hash-2")
 	if loaded.RevokedAt == nil {
 		t.Fatal("revoking the family must revoke every token of the user")
+	}
+	if loaded.RevokedReason != store.RevokeReasonReuse {
+		t.Fatalf("family revocation reason = %q, want %q", loaded.RevokedReason, store.RevokeReasonReuse)
 	}
 }
 

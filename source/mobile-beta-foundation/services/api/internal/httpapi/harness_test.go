@@ -230,3 +230,54 @@ func validSetBody(mutationID string) map[string]any {
 		"clientMutationId": mutationID,
 	}
 }
+
+// login signs an existing account in again, producing an independent session.
+func (h *harness) login(email, password string) account {
+	h.t.Helper()
+
+	res := h.send(request{method: http.MethodPost, path: basePath + "/auth/login", body: map[string]any{
+		"email": email, "password": password,
+	}})
+	if res.status != http.StatusOK {
+		h.t.Fatalf("login %s: status %d, body %s", email, res.status, res.body)
+	}
+	return account{
+		id:           res.str(h.t, "user", "id"),
+		email:        email,
+		password:     password,
+		accessToken:  res.str(h.t, "accessToken"),
+		refreshToken: res.str(h.t, "refreshToken"),
+	}
+}
+
+// transition asks for a workout status change and returns the raw response.
+func (h *harness) transition(token, workoutID, status string) response {
+	h.t.Helper()
+	return h.send(request{
+		method: http.MethodPost,
+		path:   basePath + "/workouts/" + workoutID + "/status",
+		token:  token,
+		body:   map[string]any{"status": status},
+	})
+}
+
+// mustTransition fails the test unless the transition succeeds.
+func (h *harness) mustTransition(token, workoutID, status string) {
+	h.t.Helper()
+	if res := h.transition(token, workoutID, status); res.status != http.StatusOK {
+		h.t.Fatalf("transition to %s: status %d, body %s", status, res.status, res.body)
+	}
+}
+
+// logSet writes one set into a workout.
+func (h *harness) logSet(token, workoutID, exerciseID string, weightKg float64, reps int, mutationID string) {
+	h.t.Helper()
+	body := validSetBody(mutationID)
+	body["exerciseId"] = exerciseID
+	body["weightKg"] = weightKg
+	body["repetitions"] = reps
+	res := h.send(request{method: http.MethodPost, path: basePath + "/workouts/" + workoutID + "/sets", token: token, body: body})
+	if res.status != http.StatusCreated {
+		h.t.Fatalf("log set %s: status %d, body %s", mutationID, res.status, res.body)
+	}
+}

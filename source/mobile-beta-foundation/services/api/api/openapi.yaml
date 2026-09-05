@@ -1,17 +1,32 @@
 openapi: 3.1.0
 info:
   title: Athletica AI API
-  version: 0.2.0
+  version: 0.3.0
   description: |
-    Sprint 1 surface of the Athletica AI backend: liveness, authentication and
-    the idempotent workout-set write.
+    Phase 1 surface of the Athletica AI backend: liveness, authentication with
+    logout and token revocation, the idempotent workout-set write, the workout
+    lifecycle, the workout history behind the "Итоги" screen and the aggregates
+    behind the "Прогресс" screen.
 
-    Two rules hold across the whole contract:
+    Three rules hold across the whole contract:
 
     * the caller's user ID always comes from the bearer access token, never from
-      a request body or a query parameter;
+      a request body, a query parameter or a cursor;
     * a workout that belongs to another user answers exactly like a workout that
-      does not exist (`404`), so existence never leaks.
+      does not exist (`404`), so existence never leaks;
+    * a state change the lifecycle forbids answers `409 invalid_transition` —
+      never `500`, and never a silent no-op.
+
+    ### Changes in 0.3.0 (all additive, 0.2.0 clients keep working)
+
+    * `POST /auth/logout`, `POST /auth/logout-all`;
+    * `GET /workouts`, `GET /workouts/{workoutId}`,
+      `POST /workouts/{workoutId}/status`;
+    * `GET /progress`;
+    * `Workout` gained the optional `updatedAt` and `endedAt` fields;
+    * error codes `invalid_transition` and `invalid_cursor` were added;
+    * refreshing a *logged-out* token answers `401` without revoking the
+      account's other sessions (replaying a *rotated* token still does).
 
 servers:
   - url: http://10.0.2.2:8080/api/v1
@@ -23,6 +38,7 @@ tags:
   - name: health
   - name: auth
   - name: workouts
+  - name: progress
 
 security:
   - bearerAuth: []
@@ -104,9 +120,13 @@ paths:
       tags: [auth]
       summary: Rotate a refresh token
       description: |
-        The presented refresh token is always revoked. Replaying an already
-        spent token is treated as a compromise and revokes every session of that
-        user.
+        The presented refresh token is always revoked. Replaying a token that
+        rotation already spent is treated as a compromise and revokes every
+        session of that user.
+
+        A token that `/auth/logout` revoked is simply refused with `401` and
+        leaves the other sessions alone: a background refresh racing a logout on
+        the same device must not sign the athlete out everywhere.
       security: []
       requestBody:
         required: true
@@ -130,6 +150,64 @@ paths:
             application/json:
               schema: { $ref: '#/components/schemas/Error' }
         '429': { $ref: '#/components/responses/RateLimited' }
+
+  /auth/logout:
+    post:
+      tags: [auth]
+      summary: End the session behind a refresh token
+      description: |
+        Revokes the presented refresh token. No access token is required — a
+        client logging out may well be holding an expired one.
+
+        The answer is `204` whatever was presented: an unknown, expired or
+        already spent handle is indistinguishable from a live one, so the
+        endpoint cannot be used to probe which refresh tokens exist. Throttled
+        per source IP and per presented token, like `/auth/refresh`.
+
+        `allSessions: true` additionally revokes every refresh token of the
+        account the handle belongs to.
+
+        A later `/auth/refresh` with a logged-out handle answers `401` and
+        touches nothing else — unlike replaying a token rotation spent, which
+        still revokes the whole family.
+
+        **Known limitation:** the access token already in the client's hands
+        stays valid until it expires (`expiresIn`, at most one hour, 15 minutes
+        by default). The service keeps no access-token denylist. A client that
+        logs out must discard both tokens locally.
+      security: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [refreshToken]
+              properties:
+                refreshToken: { type: string }
+                allSessions:
+                  type: boolean
+                  default: false
+                  description: Also revoke every other session of this account.
+      responses:
+        '204':
+          description: The session is gone, or was never there. No body.
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '422': { $ref: '#/components/responses/ValidationFailed' }
+        '429': { $ref: '#/components/responses/RateLimited' }
+
+  /auth/logout-all:
+    post:
+      tags: [auth]
+      summary: Revoke every session of the authenticated account
+      description: |
+        Revokes every refresh token of the account behind the access token. The
+        subject comes from the verified token; a `userId` in the body is
+        ignored. Same access-token caveat as `/auth/logout`.
+      responses:
+        '204':
+          description: Every session of the caller has been revoked. No body.
+        '401': { $ref: '#/components/responses/Unauthorized' }
 
   /auth/me:
     get:
@@ -163,6 +241,144 @@ paths:
               schema: { $ref: '#/components/schemas/Workout' }
         '400': { $ref: '#/components/responses/BadRequest' }
         '401': { $ref: '#/components/responses/Unauthorized' }
+        '422': { $ref: '#/components/responses/ValidationFailed' }
+
+    get:
+      tags: [workouts]
+      summary: List the caller's workouts, newest first
+      description: |
+        The history behind the "Итоги" screen. Ordered by `createdAt` descending
+        with the workout ID as tiebreaker, and paged with an opaque keyset
+        cursor: pass the `nextCursor` of a page back as `cursor` to continue.
+
+        A cursor is opaque and carries no identity — it only ever moves a
+        position inside the caller's own rows, so one copied from another
+        account cannot widen the result.
+      parameters:
+        - name: status
+          in: query
+          required: false
+          description: |
+            Repeat the parameter or pass a comma-separated list. Omit for every
+            status.
+          schema:
+            type: array
+            items: { $ref: '#/components/schemas/WorkoutStatus' }
+          style: form
+          explode: true
+        - name: from
+          in: query
+          required: false
+          description: Inclusive lower bound on `createdAt` (RFC 3339 or `YYYY-MM-DD`, read as UTC).
+          schema: { type: string }
+        - name: to
+          in: query
+          required: false
+          description: Exclusive upper bound on `createdAt`.
+          schema: { type: string }
+        - name: limit
+          in: query
+          required: false
+          schema: { type: integer, minimum: 1, maximum: 100, default: 20 }
+        - name: cursor
+          in: query
+          required: false
+          description: Opaque `nextCursor` from a previous page.
+          schema: { type: string }
+      responses:
+        '200':
+          description: One page of the caller's workouts
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/WorkoutPage' }
+        '400':
+          description: |
+            A filter value is malformed — an unknown status, an unparsable date,
+            a limit out of range, or a cursor this API did not issue
+            (`invalid_cursor`).
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Error' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+
+  /workouts/{workoutId}:
+    parameters:
+      - name: workoutId
+        in: path
+        required: true
+        schema: { type: string, format: uuid }
+    get:
+      tags: [workouts]
+      summary: One of the caller's workouts with its sets
+      description: |
+        The detail behind the "Итоги" screen: the workout, every set it holds
+        ordered by set number, and their totals.
+      responses:
+        '200':
+          description: The workout and its sets
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/WorkoutDetail' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '404': { $ref: '#/components/responses/WorkoutNotFound' }
+
+  /workouts/{workoutId}/status:
+    parameters:
+      - name: workoutId
+        in: path
+        required: true
+        schema: { type: string, format: uuid }
+    post:
+      tags: [workouts]
+      summary: Move a workout through its lifecycle
+      description: |
+        The whole transition table:
+
+        | from | to |
+        | --- | --- |
+        | `active` | `paused`, `completed`, `cancelled` |
+        | `paused` | `active`, `completed`, `cancelled` |
+        | `completed` | — terminal |
+        | `cancelled` | — terminal |
+
+        Cancelling is reachable from every unfinished status, so a session can
+        always be abandoned (audit blocker QA-004).
+
+        Asking for the status the workout already holds is an accepted no-op
+        that answers `200` with the unchanged workout, so a client retrying a
+        request whose response it never saw is not punished with a `409`.
+
+        Anything else the table forbids — completing a cancelled workout,
+        resuming a completed one — answers `409 invalid_transition` and leaves
+        the workout exactly as it was. The check and the write happen in one
+        atomic statement, so two concurrent requests cannot both win.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [status]
+              properties:
+                status: { $ref: '#/components/schemas/WorkoutStatus' }
+      responses:
+        '200':
+          description: The workout is now in the requested status
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Workout' }
+        '400': { $ref: '#/components/responses/BadRequest' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '404': { $ref: '#/components/responses/WorkoutNotFound' }
+        '409':
+          description: The current status does not allow this transition
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Error' }
+              example:
+                error:
+                  code: invalid_transition
+                  message: this workout cannot move to completed from its current status
         '422': { $ref: '#/components/responses/ValidationFailed' }
 
   /workouts/{workoutId}/sets:
@@ -229,6 +445,56 @@ paths:
                     items: { $ref: '#/components/schemas/WorkoutSet' }
         '401': { $ref: '#/components/responses/Unauthorized' }
         '404': { $ref: '#/components/responses/WorkoutNotFound' }
+
+  /progress:
+    get:
+      tags: [progress]
+      summary: Strength records, weekly volume and plan adherence
+      description: |
+        Everything the "Прогресс" screen needs, in one round trip. Every figure
+        is aggregated by the database; set rows never travel into the service.
+
+        **What counts.** Sets of `cancelled` workouts are excluded from
+        `strength` and `weeklyVolume` — a session the athlete threw away must
+        not become a personal record. `adherence` counts workouts by the week
+        they were *started* in, whatever their status.
+
+        **The window.** `from`/`to` are snapped outwards to whole ISO weeks
+        (Monday 00:00 UTC) and clamped to at most 104 weeks; the resolved range
+        is echoed back in `window`, and `weekStart` values are those Mondays.
+        The default is the last 12 weeks including the current one.
+
+        **`estimated1RmKg`** is the Epley estimate of the performed set,
+        `weightKg × (1 + repetitions / 30)`. RIR is deliberately not folded in:
+        the number describes the set that was actually done.
+      parameters:
+        - name: from
+          in: query
+          required: false
+          description: Start of the window (RFC 3339 or `YYYY-MM-DD`, read as UTC).
+          schema: { type: string }
+        - name: to
+          in: query
+          required: false
+          description: End of the window; defaults to the current week.
+          schema: { type: string }
+        - name: exerciseLimit
+          in: query
+          required: false
+          description: How many exercises the `strength` table may hold.
+          schema: { type: integer, minimum: 1, maximum: 200, default: 50 }
+      responses:
+        '200':
+          description: The progress report over the resolved window
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Progress' }
+        '400':
+          description: A window bound or the limit is malformed
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Error' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
 
 components:
   securitySchemes:
@@ -318,14 +584,65 @@ components:
         refreshToken: { type: string }
         refreshExpiresIn: { type: integer, description: Refresh token lifetime in seconds }
 
+    WorkoutStatus:
+      type: string
+      enum: [active, paused, completed, cancelled]
+      description: |
+        `active` and `paused` are open states; `completed` and `cancelled` are
+        terminal and allow no further transition.
+
     Workout:
       type: object
-      required: [id, title, status, createdAt]
+      required: [id, title, status, createdAt, updatedAt, endedAt]
       properties:
         id: { type: string, format: uuid }
         title: { type: string }
-        status: { type: string, enum: [active, paused, cancelled, completed] }
+        status: { $ref: '#/components/schemas/WorkoutStatus' }
         createdAt: { type: string, format: date-time }
+        updatedAt:
+          type: string
+          format: date-time
+          description: When the status last changed. Added in 0.3.0.
+        endedAt:
+          type: [string, 'null']
+          format: date-time
+          description: |
+            When the workout reached a terminal status; `null` while it is still
+            active or paused. Added in 0.3.0.
+
+    WorkoutPage:
+      type: object
+      required: [items, nextCursor]
+      properties:
+        items:
+          type: array
+          items: { $ref: '#/components/schemas/Workout' }
+        nextCursor:
+          type: [string, 'null']
+          description: |
+            Opaque position to pass back as `cursor` for the next page; `null`
+            on the last page. Clients must echo it untouched and never build one.
+
+    WorkoutTotals:
+      type: object
+      required: [sets, repetitions, volumeKg]
+      properties:
+        sets: { type: integer }
+        repetitions: { type: integer }
+        volumeKg:
+          type: number
+          description: Sum of weightKg × repetitions over the workout's sets.
+
+    WorkoutDetail:
+      allOf:
+        - $ref: '#/components/schemas/Workout'
+        - type: object
+          required: [sets, totals]
+          properties:
+            sets:
+              type: array
+              items: { $ref: '#/components/schemas/WorkoutSet' }
+            totals: { $ref: '#/components/schemas/WorkoutTotals' }
 
     WorkoutSetInput:
       type: object
@@ -359,6 +676,119 @@ components:
         clientMutationId: { type: string }
         createdAt: { type: string, format: date-time }
 
+    ProgressWindow:
+      type: object
+      required: [from, to]
+      description: The resolved, ISO-week-aligned range every figure below covers.
+      properties:
+        from: { type: string, format: date-time }
+        to:
+          type: string
+          format: date-time
+          description: Exclusive upper bound — the Monday after the last covered week.
+
+    BestWeight:
+      type: object
+      required: [weightKg, repetitions, achievedAt]
+      description: The heaviest set performed for this exercise in the window.
+      properties:
+        weightKg: { type: number }
+        repetitions: { type: integer }
+        achievedAt: { type: string, format: date-time }
+
+    BestEstimated1Rm:
+      type: object
+      required: [estimated1RmKg, weightKg, repetitions, achievedAt]
+      description: |
+        The set with the highest Epley estimate, and the estimate itself:
+        `weightKg × (1 + repetitions / 30)`.
+      properties:
+        estimated1RmKg: { type: number }
+        weightKg: { type: number }
+        repetitions: { type: integer }
+        achievedAt: { type: string, format: date-time }
+
+    ExerciseRecord:
+      type: object
+      required: [exerciseId, sets, repetitions, volumeKg, bestWeight, bestEstimated1Rm, lastPerformedAt]
+      properties:
+        exerciseId: { type: string }
+        sets: { type: integer }
+        repetitions: { type: integer }
+        volumeKg: { type: number }
+        bestWeight: { $ref: '#/components/schemas/BestWeight' }
+        bestEstimated1Rm: { $ref: '#/components/schemas/BestEstimated1Rm' }
+        lastPerformedAt: { type: string, format: date-time }
+
+    WeeklyVolume:
+      type: object
+      required: [weekStart, sets, repetitions, volumeKg, workouts]
+      properties:
+        weekStart:
+          type: string
+          format: date-time
+          description: Monday 00:00 UTC of the ISO week.
+        sets: { type: integer }
+        repetitions: { type: integer }
+        volumeKg: { type: number }
+        workouts:
+          type: integer
+          description: Distinct workouts that contributed a set that week.
+
+    WeeklyAdherence:
+      type: object
+      required: [weekStart, started, completed, cancelled, inProgress, completionRate]
+      description: How the workouts *started* in this ISO week ended.
+      properties:
+        weekStart: { type: string, format: date-time }
+        started: { type: integer }
+        completed: { type: integer }
+        cancelled: { type: integer }
+        inProgress:
+          type: integer
+          description: Still active or paused.
+        completionRate:
+          type: number
+          minimum: 0
+          maximum: 1
+          description: completed / started, 0 when nothing was started.
+
+    AdherenceTotals:
+      type: object
+      required: [started, completed, cancelled, inProgress, completionRate, weeksInWindow, weeksWithTraining]
+      properties:
+        started: { type: integer }
+        completed: { type: integer }
+        cancelled: { type: integer }
+        inProgress: { type: integer }
+        completionRate: { type: number, minimum: 0, maximum: 1 }
+        weeksInWindow: { type: integer }
+        weeksWithTraining:
+          type: integer
+          description: Weeks in which at least one set was logged.
+
+    Progress:
+      type: object
+      required: [window, strength, weeklyVolume, adherence]
+      properties:
+        window: { $ref: '#/components/schemas/ProgressWindow' }
+        strength:
+          type: array
+          description: One row per exercise, strongest estimated 1RM first.
+          items: { $ref: '#/components/schemas/ExerciseRecord' }
+        weeklyVolume:
+          type: array
+          description: Ascending by week; weeks without training are absent.
+          items: { $ref: '#/components/schemas/WeeklyVolume' }
+        adherence:
+          type: object
+          required: [weeks, totals]
+          properties:
+            weeks:
+              type: array
+              items: { $ref: '#/components/schemas/WeeklyAdherence' }
+            totals: { $ref: '#/components/schemas/AdherenceTotals' }
+
     ErrorPayload:
       type: object
       required: [code, message]
@@ -373,6 +803,8 @@ components:
             - email_taken
             - not_found
             - duplicate_client_mutation
+            - invalid_transition
+            - invalid_cursor
             - rate_limited
             - internal_error
         message: { type: string }

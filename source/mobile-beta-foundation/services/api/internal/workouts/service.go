@@ -6,21 +6,29 @@ import (
 	"fmt"
 	"math"
 	"strings"
+	"time"
 
 	"athletica.ai/api/internal/ids"
 	"athletica.ai/api/internal/store"
 )
 
 // StatusActive is the state a freshly created workout starts in.
-const StatusActive = "active"
+const StatusActive = store.StatusActive
 
 // Service implements the workout-logging use cases.
 type Service struct {
 	store store.Store
+	now   func() time.Time
 }
 
-// NewService wires the workouts service.
-func NewService(st store.Store) *Service { return &Service{store: st} }
+// NewService wires the workouts service. now is injectable so tests can drive
+// the lifecycle timestamps deterministically.
+func NewService(st store.Store, now func() time.Time) *Service {
+	if now == nil {
+		now = time.Now
+	}
+	return &Service{store: st, now: now}
+}
 
 // CreateWorkout starts a session owned by userID.
 func (s *Service) CreateWorkout(ctx context.Context, userID, title string) (store.Workout, error) {

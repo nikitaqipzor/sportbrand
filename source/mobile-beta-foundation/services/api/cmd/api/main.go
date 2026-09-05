@@ -7,6 +7,7 @@
 //	api serve           same as above
 //	api migrate up      apply every pending migration and exit
 //	api migrate down    roll the newest migration back and exit
+//	api prune-tokens    delete expired/revoked refresh tokens once and exit
 //	api healthcheck     probe the local /health endpoint (used by Docker)
 //	api version         print the build version
 package main
@@ -71,10 +72,12 @@ func run(args []string) error {
 		return serve(cfg, log)
 	case "migrate":
 		return migrate(cfg, log, args[1:])
+	case "prune-tokens":
+		return pruneTokens(cfg, log)
 	case "healthcheck":
 		return healthcheck(cfg)
 	default:
-		return fmt.Errorf("unknown command %q (want serve, migrate, healthcheck or version)", command)
+		return fmt.Errorf("unknown command %q (want serve, migrate, prune-tokens, healthcheck or version)", command)
 	}
 }
 
@@ -103,6 +106,14 @@ func serve(cfg config.Config, log *slog.Logger) error {
 		ErrorLog:          slog.NewLogLogger(log.Handler(), slog.LevelWarn),
 	}
 
+	// Housekeeping: expired and revoked refresh rows are deleted in the
+	// background. It stops with the server, and a failure never blocks serving.
+	sweeperDone := make(chan struct{})
+	go func() {
+		defer close(sweeperDone)
+		api.RunRefreshTokenSweeper(ctx)
+	}()
+
 	errCh := make(chan error, 1)
 	go func() {
 		log.Info("http server listening", "addr", cfg.Addr, "base_path", cfg.BasePath, "store", cfg.Driver)
@@ -128,7 +139,32 @@ func serve(cfg config.Config, log *slog.Logger) error {
 	if err := srv.Shutdown(shutdownCtx); err != nil {
 		return fmt.Errorf("graceful shutdown: %w", err)
 	}
+	<-sweeperDone
 	log.Info("shutdown complete")
+	return nil
+}
+
+// pruneTokens runs one refresh-token sweep and exits, for deployments that
+// prefer a cron job over the in-process sweeper.
+func pruneTokens(cfg config.Config, log *slog.Logger) error {
+	ctx, cancel := context.WithTimeout(context.Background(), time.Minute)
+	defer cancel()
+
+	st, err := openStore(ctx, cfg, log, false)
+	if err != nil {
+		return err
+	}
+	defer st.Close()
+
+	api, err := httpapi.New(httpapi.Deps{Config: cfg, Store: st, Logger: log, Version: version})
+	if err != nil {
+		return err
+	}
+	deleted, err := api.PruneRefreshTokens(ctx)
+	if err != nil {
+		return err
+	}
+	log.Info("refresh-token sweep complete", "deleted", deleted, "retention", cfg.RefreshTokenRetention.String())
 	return nil
 }
 

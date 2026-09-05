@@ -135,9 +135,16 @@ func (s *Service) Refresh(ctx context.Context, refreshToken string) (store.User,
 
 	now := s.now().UTC()
 	if stored.RevokedAt != nil {
-		// Replay of a spent token: treat as compromise, drop every session.
-		if err := s.store.RevokeUserRefreshTokens(ctx, stored.UserID); err != nil {
-			return store.User{}, Tokens{}, err
+		// A token spent by rotation and then presented again is a compromise
+		// signal: drop every session of that user.
+		//
+		// A token the user themselves logged out is not. Treating it as a
+		// compromise would mean a background refresh racing a logout signs the
+		// athlete out of every other device — so it is simply refused.
+		if stored.RevokedReason != store.RevokeReasonLogout {
+			if err := s.store.RevokeUserRefreshTokens(ctx, stored.UserID, store.RevokeReasonReuse); err != nil {
+				return store.User{}, Tokens{}, err
+			}
 		}
 		return store.User{}, Tokens{}, ErrInvalidRefresh
 	}
@@ -152,7 +159,7 @@ func (s *Service) Refresh(ctx context.Context, refreshToken string) (store.User,
 		}
 		return store.User{}, Tokens{}, err
 	}
-	if err := s.store.RevokeRefreshToken(ctx, stored.ID); err != nil {
+	if err := s.store.RevokeRefreshToken(ctx, stored.ID, store.RevokeReasonRotated); err != nil {
 		return store.User{}, Tokens{}, err
 	}
 
@@ -220,4 +227,48 @@ func NormalizeEmail(email string) (string, error) {
 		return "", ErrInvalidEmail
 	}
 	return store.NormalizeEmail(addr.Address), nil
+}
+
+// Logout revokes the presented refresh token, ending that session.
+//
+// An unknown, already spent or expired handle is *not* an error: the endpoint
+// answers identically whatever was presented, so it cannot be used to probe
+// which refresh tokens exist. When allSessions is set and the handle does
+// resolve, every refresh token of that user is revoked as well.
+//
+// The already-issued access token keeps working until it expires (at most
+// ATHLETICA_ACCESS_TOKEN_TTL, 15 minutes by default): the service holds no
+// access-token denylist, and adding one is a deliberate later decision.
+func (s *Service) Logout(ctx context.Context, refreshToken string, allSessions bool) error {
+	refreshToken = strings.TrimSpace(refreshToken)
+	if refreshToken == "" {
+		return nil
+	}
+
+	stored, err := s.store.RefreshTokenByHash(ctx, HashToken(refreshToken))
+	if err != nil {
+		if errors.Is(err, store.ErrNotFound) {
+			return nil
+		}
+		return err
+	}
+	if allSessions {
+		return s.store.RevokeUserRefreshTokens(ctx, stored.UserID, store.RevokeReasonLogout)
+	}
+	return s.store.RevokeRefreshToken(ctx, stored.ID, store.RevokeReasonLogout)
+}
+
+// LogoutAll revokes every refresh token of one account. The user ID comes from
+// a verified access token, never from the request.
+func (s *Service) LogoutAll(ctx context.Context, userID string) error {
+	return s.store.RevokeUserRefreshTokens(ctx, userID, store.RevokeReasonLogout)
+}
+
+// PruneRefreshTokens deletes refresh rows that expired, or were revoked,
+// longer than retention ago. It reports how many rows disappeared.
+func (s *Service) PruneRefreshTokens(ctx context.Context, retention time.Duration) (int64, error) {
+	if retention < 0 {
+		retention = 0
+	}
+	return s.store.DeleteExpiredRefreshTokens(ctx, s.now().UTC().Add(-retention))
 }

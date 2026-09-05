@@ -2,7 +2,10 @@ package httpapi
 
 import (
 	"errors"
+	"math"
 	"net/http"
+	"strconv"
+	"strings"
 	"time"
 
 	"athletica.ai/api/internal/store"
@@ -13,11 +16,55 @@ type createWorkoutRequest struct {
 	Title *string `json:"title"`
 }
 
+// workoutResponse gained updatedAt and endedAt in contract 0.3.0. Both are
+// additive: a client built against 0.2.0 keeps working unchanged.
 type workoutResponse struct {
-	ID        string `json:"id"`
-	Title     string `json:"title"`
-	Status    string `json:"status"`
-	CreatedAt string `json:"createdAt"`
+	ID        string  `json:"id"`
+	Title     string  `json:"title"`
+	Status    string  `json:"status"`
+	CreatedAt string  `json:"createdAt"`
+	UpdatedAt string  `json:"updatedAt"`
+	EndedAt   *string `json:"endedAt"`
+}
+
+// workoutDetailResponse is a workout with its sets and their totals — the
+// payload behind the "Итоги" screen.
+type workoutDetailResponse struct {
+	workoutResponse
+	Sets   []setResponse         `json:"sets"`
+	Totals workoutTotalsResponse `json:"totals"`
+}
+
+type workoutTotalsResponse struct {
+	Sets        int     `json:"sets"`
+	Repetitions int     `json:"repetitions"`
+	VolumeKg    float64 `json:"volumeKg"`
+}
+
+type workoutListResponse struct {
+	Items []workoutResponse `json:"items"`
+	// NextCursor is null on the last page. It is opaque: clients must echo it
+	// back untouched rather than build one themselves.
+	NextCursor *string `json:"nextCursor"`
+}
+
+type workoutStatusRequest struct {
+	Status *string `json:"status"`
+}
+
+func toWorkoutResponse(w store.Workout) workoutResponse {
+	out := workoutResponse{
+		ID:        w.ID,
+		Title:     w.Title,
+		Status:    w.Status,
+		CreatedAt: w.CreatedAt.UTC().Format(time.RFC3339),
+		UpdatedAt: w.UpdatedAt.UTC().Format(time.RFC3339),
+	}
+	if w.EndedAt != nil {
+		ended := w.EndedAt.UTC().Format(time.RFC3339)
+		out.EndedAt = &ended
+	}
+	return out
 }
 
 // logSetRequest is the wire form of POST /workouts/{workoutId}/sets.
@@ -82,12 +129,7 @@ func (s *Server) handleCreateWorkout(w http.ResponseWriter, r *http.Request, use
 	var verr *workouts.ValidationError
 	switch {
 	case err == nil:
-		writeJSON(w, s.log, http.StatusCreated, workoutResponse{
-			ID:        workout.ID,
-			Title:     workout.Title,
-			Status:    workout.Status,
-			CreatedAt: workout.CreatedAt.UTC().Format(time.RFC3339),
-		})
+		writeJSON(w, s.log, http.StatusCreated, toWorkoutResponse(workout))
 	case errors.As(err, &verr):
 		writeValidationError(w, s.log, verr)
 	default:
@@ -188,3 +230,161 @@ func requiredSetFields(req logSetRequest) []workouts.Issue {
 	}
 	return issues
 }
+
+// handleListWorkouts pages the caller's workouts for the "Итоги" screen.
+//
+// Filters: `status` (repeatable or comma separated), `from`/`to` on the
+// creation timestamp, `limit` and an opaque `cursor`. The owner is the token
+// subject, so there is no query parameter that could widen the scope.
+func (s *Server) handleListWorkouts(w http.ResponseWriter, r *http.Request, user store.User) {
+	query := r.URL.Query()
+
+	statuses, err := workouts.ParseStatuses(query["status"])
+	if err != nil {
+		writeError(w, s.log, http.StatusBadRequest, codeInvalidRequest,
+			"status must be one of "+strings.Join(workouts.AllStatuses(), ", "))
+		return
+	}
+	from, err := optionalTime(query.Get("from"))
+	if err != nil {
+		writeError(w, s.log, http.StatusBadRequest, codeInvalidRequest,
+			"from must be an RFC 3339 timestamp or a YYYY-MM-DD date")
+		return
+	}
+	to, err := optionalTime(query.Get("to"))
+	if err != nil {
+		writeError(w, s.log, http.StatusBadRequest, codeInvalidRequest,
+			"to must be an RFC 3339 timestamp or a YYYY-MM-DD date")
+		return
+	}
+	limit, err := optionalInt(query.Get("limit"), 0)
+	if err != nil || limit < 0 || limit > workouts.MaxPageSize {
+		writeError(w, s.log, http.StatusBadRequest, codeInvalidRequest,
+			"limit must be an integer between 1 and "+strconv.Itoa(workouts.MaxPageSize))
+		return
+	}
+
+	listQuery := workouts.ListQuery{Statuses: statuses, From: from, To: to, Limit: limit}
+	if raw := strings.TrimSpace(query.Get("cursor")); raw != "" {
+		cursor, err := workouts.DecodeCursor(raw)
+		if err != nil {
+			writeError(w, s.log, http.StatusBadRequest, codeInvalidCursor,
+				"cursor is not one this API issued; start the list again without it")
+			return
+		}
+		listQuery.Cursor = &cursor
+	}
+
+	page, err := s.workouts.ListWorkouts(r.Context(), user.ID, listQuery)
+	if err != nil {
+		s.internal(w, r, "list workouts failed", err)
+		return
+	}
+
+	body := workoutListResponse{Items: make([]workoutResponse, 0, len(page.Items))}
+	for _, workout := range page.Items {
+		body.Items = append(body.Items, toWorkoutResponse(workout))
+	}
+	if page.NextCursor != "" {
+		next := page.NextCursor
+		body.NextCursor = &next
+	}
+	writeJSON(w, s.log, http.StatusOK, body)
+}
+
+// handleGetWorkout returns one of the caller's workouts with its sets.
+func (s *Server) handleGetWorkout(w http.ResponseWriter, r *http.Request, user store.User) {
+	detail, err := s.workouts.Workout(r.Context(), user.ID, r.PathValue("workoutId"))
+	switch {
+	case err == nil:
+	case errors.Is(err, store.ErrNotFound):
+		s.writeWorkoutNotFound(w)
+		return
+	default:
+		s.internal(w, r, "load workout failed", err)
+		return
+	}
+
+	body := workoutDetailResponse{
+		workoutResponse: toWorkoutResponse(detail.Workout),
+		Sets:            make([]setResponse, 0, len(detail.Sets)),
+	}
+	for _, set := range detail.Sets {
+		body.Sets = append(body.Sets, toSetResponse(set))
+		body.Totals.Sets++
+		body.Totals.Repetitions += set.Repetitions
+		body.Totals.VolumeKg += set.WeightKg * float64(set.Repetitions)
+	}
+	body.Totals.VolumeKg = round2(body.Totals.VolumeKg)
+	writeJSON(w, s.log, http.StatusOK, body)
+}
+
+// handleWorkoutStatus applies a lifecycle transition.
+//
+//   - 200 — the workout is now in the requested status (asking for the status
+//     it already holds is an accepted no-op, so a retried request is safe);
+//   - 404 — the workout is missing *or* belongs to another user;
+//   - 409 — the transition is not allowed from the current status, e.g.
+//     completing a cancelled workout. Never a 500;
+//   - 422 — the requested status is not part of the domain.
+func (s *Server) handleWorkoutStatus(w http.ResponseWriter, r *http.Request, user store.User) {
+	var req workoutStatusRequest
+	if err := decodeJSON(w, r, &req); err != nil {
+		writeError(w, s.log, http.StatusBadRequest, codeInvalidRequest,
+			"request body must be a JSON object with a status field")
+		return
+	}
+	if req.Status == nil {
+		writeValidationError(w, s.log, &workouts.ValidationError{
+			Issues: []workouts.Issue{{Field: "status", Message: "required"}},
+		})
+		return
+	}
+
+	workout, err := s.workouts.Transition(r.Context(), user.ID, r.PathValue("workoutId"), *req.Status)
+	switch {
+	case err == nil:
+		writeJSON(w, s.log, http.StatusOK, toWorkoutResponse(workout))
+	case errors.Is(err, workouts.ErrUnknownStatus):
+		writeValidationError(w, s.log, &workouts.ValidationError{Issues: []workouts.Issue{{
+			Field:   "status",
+			Message: "must be one of " + strings.Join(workouts.AllStatuses(), ", "),
+		}}})
+	case errors.Is(err, store.ErrNotFound):
+		s.writeWorkoutNotFound(w)
+	case errors.Is(err, workouts.ErrInvalidTransition):
+		writeError(w, s.log, http.StatusConflict, codeInvalidTransition,
+			"this workout cannot move to "+strings.ToLower(strings.TrimSpace(*req.Status))+" from its current status")
+	default:
+		s.internal(w, r, "workout transition failed", err)
+	}
+}
+
+// optionalTime parses an RFC 3339 timestamp or a bare YYYY-MM-DD date (read as
+// UTC midnight). An empty string means "not given".
+func optionalTime(raw string) (*time.Time, error) {
+	raw = strings.TrimSpace(raw)
+	if raw == "" {
+		return nil, nil
+	}
+	if parsed, err := time.Parse(time.RFC3339, raw); err == nil {
+		utc := parsed.UTC()
+		return &utc, nil
+	}
+	parsed, err := time.Parse("2006-01-02", raw)
+	if err != nil {
+		return nil, err
+	}
+	return &parsed, nil
+}
+
+func optionalInt(raw string, fallback int) (int, error) {
+	raw = strings.TrimSpace(raw)
+	if raw == "" {
+		return fallback, nil
+	}
+	return strconv.Atoi(raw)
+}
+
+func round2(v float64) float64 { return math.Round(v*100) / 100 }
+func round4(v float64) float64 { return math.Round(v*10000) / 10000 }

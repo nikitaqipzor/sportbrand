@@ -77,7 +77,7 @@ func New(deps Deps) (*Server, error) {
 		log:            deps.Logger,
 		store:          deps.Store,
 		auth:           auth.NewService(deps.Store, hasher, issuer, deps.Config.AccessTTL, deps.Config.RefreshTTL, deps.Now),
-		workouts:       workouts.NewService(deps.Store),
+		workouts:       workouts.NewService(deps.Store, deps.Now),
 		now:            deps.Now,
 		version:        deps.Version,
 		ipLimiter:      ratelimit.New(limitCfg, deps.Now),
@@ -109,9 +109,15 @@ func (s *Server) routes() http.Handler {
 	register("POST "+base+"/auth/register", http.HandlerFunc(s.handleRegister))
 	register("POST "+base+"/auth/login", http.HandlerFunc(s.handleLogin))
 	register("POST "+base+"/auth/refresh", http.HandlerFunc(s.handleRefresh))
+	register("POST "+base+"/auth/logout", http.HandlerFunc(s.handleLogout))
+	register("POST "+base+"/auth/logout-all", s.authenticated(s.handleLogoutAll))
 
 	register("GET "+base+"/auth/me", s.authenticated(s.handleMe))
 	register("POST "+base+"/workouts", s.authenticated(s.handleCreateWorkout))
+	register("GET "+base+"/workouts", s.authenticated(s.handleListWorkouts))
+	register("GET "+base+"/workouts/{workoutId}", s.authenticated(s.handleGetWorkout))
+	register("POST "+base+"/workouts/{workoutId}/status", s.authenticated(s.handleWorkoutStatus))
+	register("GET "+base+"/progress", s.authenticated(s.handleProgress))
 	register("POST "+base+"/workouts/{workoutId}/sets", s.authenticated(s.handleLogSet))
 	register("GET "+base+"/workouts/{workoutId}/sets", s.authenticated(s.handleListSets))
 

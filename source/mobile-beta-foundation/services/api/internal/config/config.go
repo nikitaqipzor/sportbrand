@@ -75,6 +75,13 @@ type Config struct {
 	AuthBackoffBase  time.Duration
 	AuthBackoffMax   time.Duration
 
+	// RefreshTokenSweepInterval is how often expired and revoked refresh rows
+	// are deleted in the background; zero disables the sweep.
+	RefreshTokenSweepInterval time.Duration
+	// RefreshTokenRetention keeps a spent row around for this long before the
+	// sweep may delete it, so a support question can still be answered.
+	RefreshTokenRetention time.Duration
+
 	TrustProxyHeaders bool
 	ShutdownTimeout   time.Duration
 }
@@ -152,6 +159,12 @@ func Load(look Lookup) (Config, error) {
 	if cfg.AuthBackoffMax, err = duration(look, "ATHLETICA_AUTH_BACKOFF_MAX", 15*time.Minute); err != nil {
 		return Config{}, err
 	}
+	if cfg.RefreshTokenSweepInterval, err = duration(look, "ATHLETICA_REFRESH_TOKEN_SWEEP_INTERVAL", time.Hour); err != nil {
+		return Config{}, err
+	}
+	if cfg.RefreshTokenRetention, err = duration(look, "ATHLETICA_REFRESH_TOKEN_RETENTION", 24*time.Hour); err != nil {
+		return Config{}, err
+	}
 
 	if err := cfg.validate(); err != nil {
 		return Config{}, err
@@ -182,6 +195,15 @@ func (c *Config) validate() error {
 	}
 	if c.AuthRateLimit < 1 || c.AuthRateWindow <= 0 {
 		return fmt.Errorf("config: auth rate limit must allow at least one request per positive window")
+	}
+	if c.RefreshTokenSweepInterval < 0 {
+		return fmt.Errorf("config: ATHLETICA_REFRESH_TOKEN_SWEEP_INTERVAL must not be negative (0 disables the sweep), got %s", c.RefreshTokenSweepInterval)
+	}
+	if c.RefreshTokenSweepInterval > 0 && c.RefreshTokenSweepInterval < time.Minute {
+		return fmt.Errorf("config: ATHLETICA_REFRESH_TOKEN_SWEEP_INTERVAL must be at least 1m, got %s", c.RefreshTokenSweepInterval)
+	}
+	if c.RefreshTokenRetention < 0 {
+		return fmt.Errorf("config: ATHLETICA_REFRESH_TOKEN_RETENTION must not be negative, got %s", c.RefreshTokenRetention)
 	}
 	if c.AuthFailureLimit < 1 {
 		return fmt.Errorf("config: ATHLETICA_AUTH_FAILURE_LIMIT must be >= 1, got %d", c.AuthFailureLimit)

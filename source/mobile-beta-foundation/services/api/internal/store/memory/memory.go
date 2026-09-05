@@ -31,7 +31,8 @@ type Store struct {
 	refresh       map[string]store.RefreshToken // by id
 	refreshByHash map[string]string             // hash -> id
 
-	workouts map[string]store.Workout // by id
+	workouts     map[string]store.Workout // by id
+	workoutOrder []string                 // insertion order, for stable listing
 
 	sets         map[string]store.WorkoutSet // by id
 	setsByMutKey map[mutationKey]string      // unique index (user_id, client_mutation_id)
@@ -139,8 +140,8 @@ func (s *Store) RefreshTokenByHash(_ context.Context, hash string) (store.Refres
 	return s.refresh[id], nil
 }
 
-// RevokeRefreshToken marks a single token as spent.
-func (s *Store) RevokeRefreshToken(_ context.Context, id string) error {
+// RevokeRefreshToken marks a single token as spent, recording why.
+func (s *Store) RevokeRefreshToken(_ context.Context, id, reason string) error {
 	s.mu.Lock()
 	defer s.mu.Unlock()
 
@@ -151,13 +152,14 @@ func (s *Store) RevokeRefreshToken(_ context.Context, id string) error {
 	if token.RevokedAt == nil {
 		now := s.now().UTC()
 		token.RevokedAt = &now
+		token.RevokedReason = reason
 		s.refresh[id] = token
 	}
 	return nil
 }
 
 // RevokeUserRefreshTokens revokes every refresh token of one user.
-func (s *Store) RevokeUserRefreshTokens(_ context.Context, userID string) error {
+func (s *Store) RevokeUserRefreshTokens(_ context.Context, userID, reason string) error {
 	s.mu.Lock()
 	defer s.mu.Unlock()
 
@@ -165,10 +167,31 @@ func (s *Store) RevokeUserRefreshTokens(_ context.Context, userID string) error 
 	for id, token := range s.refresh {
 		if token.UserID == userID && token.RevokedAt == nil {
 			token.RevokedAt = &now
+			token.RevokedReason = reason
 			s.refresh[id] = token
 		}
 	}
 	return nil
+}
+
+// DeleteExpiredRefreshTokens drops rows that expired or were revoked before
+// the cut-off, mirroring the SQL sweep.
+func (s *Store) DeleteExpiredRefreshTokens(_ context.Context, before time.Time) (int64, error) {
+	s.mu.Lock()
+	defer s.mu.Unlock()
+
+	var deleted int64
+	for id, token := range s.refresh {
+		expired := token.ExpiresAt.Before(before)
+		revoked := token.RevokedAt != nil && token.RevokedAt.Before(before)
+		if !expired && !revoked {
+			continue
+		}
+		delete(s.refresh, id)
+		delete(s.refreshByHash, token.TokenHash)
+		deleted++
+	}
+	return deleted, nil
 }
 
 // CreateWorkout stores a workout owned by workout.UserID.
@@ -182,8 +205,28 @@ func (s *Store) CreateWorkout(_ context.Context, workout store.Workout) (store.W
 	if workout.CreatedAt.IsZero() {
 		workout.CreatedAt = s.now().UTC()
 	}
+	if workout.Status == "" {
+		workout.Status = store.StatusActive
+	}
+	if workout.UpdatedAt.IsZero() {
+		workout.UpdatedAt = workout.CreatedAt
+	}
+	// Mirrors workouts_ended_at_matches_status: ended_at exists exactly for the
+	// terminal statuses.
+	if isTerminal(workout.Status) && workout.EndedAt == nil {
+		ended := workout.UpdatedAt
+		workout.EndedAt = &ended
+	}
+	if !isTerminal(workout.Status) {
+		workout.EndedAt = nil
+	}
 	s.workouts[workout.ID] = workout
+	s.workoutOrder = append(s.workoutOrder, workout.ID)
 	return workout, nil
+}
+
+func isTerminal(status string) bool {
+	return status == store.StatusCompleted || status == store.StatusCancelled
 }
 
 // WorkoutForUser returns ErrNotFound for both missing and foreign workouts.

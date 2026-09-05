@@ -24,6 +24,8 @@ const (
 	codeEmailTaken        = "email_taken"
 	codeNotFound          = "not_found"
 	codeDuplicateMutation = "duplicate_client_mutation"
+	codeInvalidTransition = "invalid_transition"
+	codeInvalidCursor     = "invalid_cursor"
 	codeRateLimited       = "rate_limited"
 	codeInternal          = "internal_error"
 	codeUnavailable       = "service_unavailable"

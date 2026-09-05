@@ -205,3 +205,67 @@ func deref(s *string) string {
 	}
 	return *s
 }
+
+type logoutRequest struct {
+	RefreshToken *string `json:"refreshToken"`
+	AllSessions  *bool   `json:"allSessions"`
+}
+
+// handleLogout ends the session behind the presented refresh token.
+//
+// It needs no access token — a client logging out may well be holding an
+// expired one — and always answers `204`, whatever was presented. An unknown or
+// already spent handle is indistinguishable from a valid one, so the endpoint
+// cannot be used to probe which refresh tokens exist. Throttled per IP and per
+// presented token, exactly like /auth/refresh.
+//
+// `allSessions: true` revokes every refresh token of the account the presented
+// handle belongs to; POST /auth/logout-all does the same from an access token.
+func (s *Server) handleLogout(w http.ResponseWriter, r *http.Request) {
+	ipKey := "logout:ip:" + s.clientIP(r)
+	if d := s.ipLimiter.Allow(ipKey); !d.Allowed {
+		s.logThrottle(r, "logout", "ip", d.Reason)
+		writeRateLimited(w, s.log, d.RetryAfter)
+		return
+	}
+
+	var req logoutRequest
+	if err := decodeJSON(w, r, &req); err != nil {
+		writeError(w, s.log, http.StatusBadRequest, codeInvalidRequest, "request body must be a JSON object with refreshToken")
+		return
+	}
+	token := strings.TrimSpace(deref(req.RefreshToken))
+	if token == "" {
+		writeValidationError(w, s.log, &workouts.ValidationError{
+			Issues: []workouts.Issue{{Field: "refreshToken", Message: "required"}},
+		})
+		return
+	}
+
+	// Key on the hash: the raw token never becomes a map key or a log field.
+	tokenKey := "logout:token:" + auth.HashToken(token)
+	if d := s.accountLimiter.Allow(tokenKey); !d.Allowed {
+		s.logThrottle(r, "logout", "token", d.Reason)
+		writeRateLimited(w, s.log, d.RetryAfter)
+		return
+	}
+
+	allSessions := req.AllSessions != nil && *req.AllSessions
+	if err := s.auth.Logout(r.Context(), token, allSessions); err != nil {
+		s.internal(w, r, "logout failed", err)
+		return
+	}
+	s.ipLimiter.Succeed(ipKey)
+	s.accountLimiter.Succeed(tokenKey)
+	w.WriteHeader(http.StatusNoContent)
+}
+
+// handleLogoutAll revokes every refresh token of the authenticated account.
+// The user ID comes from the verified access token and from nowhere else.
+func (s *Server) handleLogoutAll(w http.ResponseWriter, r *http.Request, user store.User) {
+	if err := s.auth.LogoutAll(r.Context(), user.ID); err != nil {
+		s.internal(w, r, "logout-all failed", err)
+		return
+	}
+	w.WriteHeader(http.StatusNoContent)
+}

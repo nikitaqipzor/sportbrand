@@ -122,9 +122,9 @@ func (s *Store) CreateRefreshToken(ctx context.Context, token store.RefreshToken
 	if token.IssuedAt.IsZero() {
 		token.IssuedAt = time.Now().UTC()
 	}
-	const q = `INSERT INTO refresh_tokens (id, user_id, token_hash, issued_at, expires_at, revoked_at)
-	           VALUES ($1, $2, $3, $4, $5, $6)`
-	if _, err := s.pool.Exec(ctx, q, token.ID, token.UserID, token.TokenHash, token.IssuedAt, token.ExpiresAt, token.RevokedAt); err != nil {
+	const q = `INSERT INTO refresh_tokens (id, user_id, token_hash, issued_at, expires_at, revoked_at, revoked_reason)
+	           VALUES ($1, $2, $3, $4, $5, $6, $7)`
+	if _, err := s.pool.Exec(ctx, q, token.ID, token.UserID, token.TokenHash, token.IssuedAt, token.ExpiresAt, token.RevokedAt, token.RevokedReason); err != nil {
 		return fmt.Errorf("postgres: create refresh token: %w", err)
 	}
 	return nil
@@ -132,11 +132,11 @@ func (s *Store) CreateRefreshToken(ctx context.Context, token store.RefreshToken
 
 // RefreshTokenByHash resolves a presented refresh token.
 func (s *Store) RefreshTokenByHash(ctx context.Context, hash string) (store.RefreshToken, error) {
-	const q = `SELECT id, user_id, token_hash, issued_at, expires_at, revoked_at
+	const q = `SELECT id, user_id, token_hash, issued_at, expires_at, revoked_at, revoked_reason
 	           FROM refresh_tokens WHERE token_hash = $1`
 	var token store.RefreshToken
 	err := s.pool.QueryRow(ctx, q, hash).
-		Scan(&token.ID, &token.UserID, &token.TokenHash, &token.IssuedAt, &token.ExpiresAt, &token.RevokedAt)
+		Scan(&token.ID, &token.UserID, &token.TokenHash, &token.IssuedAt, &token.ExpiresAt, &token.RevokedAt, &token.RevokedReason)
 	switch {
 	case errors.Is(err, pgx.ErrNoRows):
 		return store.RefreshToken{}, store.ErrNotFound
@@ -146,10 +146,11 @@ func (s *Store) RefreshTokenByHash(ctx context.Context, hash string) (store.Refr
 	return token, nil
 }
 
-// RevokeRefreshToken marks one token as spent.
-func (s *Store) RevokeRefreshToken(ctx context.Context, id string) error {
-	const q = `UPDATE refresh_tokens SET revoked_at = now() WHERE id = $1 AND revoked_at IS NULL`
-	tag, err := s.pool.Exec(ctx, q, id)
+// RevokeRefreshToken marks one token as spent, recording why.
+func (s *Store) RevokeRefreshToken(ctx context.Context, id, reason string) error {
+	const q = `UPDATE refresh_tokens SET revoked_at = now(), revoked_reason = $2
+	           WHERE id = $1 AND revoked_at IS NULL`
+	tag, err := s.pool.Exec(ctx, q, id, reason)
 	if err != nil {
 		return fmt.Errorf("postgres: revoke refresh token: %w", err)
 	}
@@ -161,12 +162,35 @@ func (s *Store) RevokeRefreshToken(ctx context.Context, id string) error {
 }
 
 // RevokeUserRefreshTokens revokes the whole family after a replay is detected.
-func (s *Store) RevokeUserRefreshTokens(ctx context.Context, userID string) error {
-	const q = `UPDATE refresh_tokens SET revoked_at = now() WHERE user_id = $1 AND revoked_at IS NULL`
-	if _, err := s.pool.Exec(ctx, q, userID); err != nil {
+func (s *Store) RevokeUserRefreshTokens(ctx context.Context, userID, reason string) error {
+	const q = `UPDATE refresh_tokens SET revoked_at = now(), revoked_reason = $2
+	           WHERE user_id = $1 AND revoked_at IS NULL`
+	if _, err := s.pool.Exec(ctx, q, userID, reason); err != nil {
 		return fmt.Errorf("postgres: revoke user refresh tokens: %w", err)
 	}
 	return nil
+}
+
+// DeleteExpiredRefreshTokens removes tokens that expired or were revoked
+// before the cut-off. It answers with a count and never with a row.
+func (s *Store) DeleteExpiredRefreshTokens(ctx context.Context, before time.Time) (int64, error) {
+	const q = `DELETE FROM refresh_tokens
+	           WHERE expires_at < $1 OR (revoked_at IS NOT NULL AND revoked_at < $1)`
+	tag, err := s.pool.Exec(ctx, q, before)
+	if err != nil {
+		return 0, fmt.Errorf("postgres: delete expired refresh tokens: %w", err)
+	}
+	return tag.RowsAffected(), nil
+}
+
+// workoutColumns is the projection every workout query shares.
+const workoutColumns = `id, user_id, title, status, created_at, updated_at, ended_at`
+
+func scanWorkout(row scanner) (store.Workout, error) {
+	var workout store.Workout
+	err := row.Scan(&workout.ID, &workout.UserID, &workout.Title, &workout.Status,
+		&workout.CreatedAt, &workout.UpdatedAt, &workout.EndedAt)
+	return workout, err
 }
 
 // CreateWorkout inserts a workout owned by workout.UserID.
@@ -175,18 +199,31 @@ func (s *Store) CreateWorkout(ctx context.Context, workout store.Workout) (store
 		workout.ID = ids.NewUUID()
 	}
 	if workout.Status == "" {
-		workout.Status = "active"
+		workout.Status = store.StatusActive
 	}
 	if workout.CreatedAt.IsZero() {
 		workout.CreatedAt = time.Now().UTC()
 	}
+	if workout.UpdatedAt.IsZero() {
+		workout.UpdatedAt = workout.CreatedAt
+	}
+	// workouts_ended_at_matches_status: ended_at exists exactly for a terminal
+	// status. Normalise here so a caller cannot trip the CHECK constraint.
+	switch {
+	case workout.Status == store.StatusCompleted || workout.Status == store.StatusCancelled:
+		if workout.EndedAt == nil {
+			ended := workout.UpdatedAt
+			workout.EndedAt = &ended
+		}
+	default:
+		workout.EndedAt = nil
+	}
 
-	const q = `INSERT INTO workouts (id, user_id, title, status, created_at)
-	           VALUES ($1, $2, $3, $4, $5)
-	           RETURNING id, user_id, title, status, created_at`
-	var out store.Workout
-	err := s.pool.QueryRow(ctx, q, workout.ID, workout.UserID, workout.Title, workout.Status, workout.CreatedAt).
-		Scan(&out.ID, &out.UserID, &out.Title, &out.Status, &out.CreatedAt)
+	const q = `INSERT INTO workouts (` + workoutColumns + `)
+	           VALUES ($1, $2, $3, $4, $5, $6, $7)
+	           RETURNING ` + workoutColumns
+	out, err := scanWorkout(s.pool.QueryRow(ctx, q, workout.ID, workout.UserID, workout.Title,
+		workout.Status, workout.CreatedAt, workout.UpdatedAt, workout.EndedAt))
 	if err != nil {
 		return store.Workout{}, fmt.Errorf("postgres: create workout: %w", err)
 	}
@@ -199,11 +236,8 @@ func (s *Store) WorkoutForUser(ctx context.Context, userID, workoutID string) (s
 	if !ids.IsUUID(workoutID) || !ids.IsUUID(userID) {
 		return store.Workout{}, store.ErrNotFound
 	}
-	const q = `SELECT id, user_id, title, status, created_at
-	           FROM workouts WHERE id = $1 AND user_id = $2`
-	var workout store.Workout
-	err := s.pool.QueryRow(ctx, q, workoutID, userID).
-		Scan(&workout.ID, &workout.UserID, &workout.Title, &workout.Status, &workout.CreatedAt)
+	const q = `SELECT ` + workoutColumns + ` FROM workouts WHERE id = $1 AND user_id = $2`
+	workout, err := scanWorkout(s.pool.QueryRow(ctx, q, workoutID, userID))
 	switch {
 	case errors.Is(err, pgx.ErrNoRows):
 		return store.Workout{}, store.ErrNotFound
