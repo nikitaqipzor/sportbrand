@@ -2,6 +2,8 @@ import { createHttpClient, type HttpClient, type HttpClientOptions, type HttpSuc
 import { fail, ok, type ApiResult } from "./errors.ts";
 import type {
   Credentials,
+  DeleteSetOutcome,
+  EditSetOutcome,
   Health,
   LogSetOutcome,
   Progress,
@@ -14,6 +16,7 @@ import type {
   WorkoutPage,
   WorkoutSet,
   WorkoutSetInput,
+  WorkoutSetPatch,
   WorkoutStatus
 } from "./types.ts";
 
@@ -60,6 +63,8 @@ export type ApiClient = {
   getWorkout: (accessToken: string, workoutId: string) => Promise<ApiResult<WorkoutDetail>>;
   setWorkoutStatus: (accessToken: string, workoutId: string, status: WorkoutStatus) => Promise<ApiResult<Workout>>;
   progress: (accessToken: string, query?: ProgressQuery) => Promise<ApiResult<Progress>>;
+  editSet: (accessToken: string, workoutId: string, setId: string, patch: WorkoutSetPatch) => Promise<ApiResult<EditSetOutcome>>;
+  deleteSet: (accessToken: string, workoutId: string, setId: string, clientMutationId: string) => Promise<ApiResult<DeleteSetOutcome>>;
 };
 
 /**
@@ -250,6 +255,74 @@ export function createApiClient(options: ApiClientOptions): ApiClient {
         })
       );
       return result.ok ? ok(result.value.body) : fail(result.error);
+    },
+
+    // Правка идемпотентна так же, как запись: сервер занимает clientMutationId
+    // и применяет изменение в одной транзакции. Поэтому 409 здесь — не сбой, а
+    // сообщение «уже применено», и очередь обязана снять элемент.
+    editSet: async (accessToken, workoutId, setId, patch) => {
+      const result = asObject<Record<string, unknown>>(
+        await http.request({
+          method: "PATCH",
+          path: `/workouts/${encodeURIComponent(workoutId)}/sets/${encodeURIComponent(setId)}`,
+          body: patch,
+          headers: bearer(accessToken),
+          acceptStatuses: [409],
+          // Ретрай безопасен ровно потому, что мутация названа и идемпотентна.
+          retry: true
+        })
+      );
+      if (!result.ok) return fail(result.error);
+
+      if (result.value.status === 409) {
+        const body = result.value.body;
+        const code = isObject(body["error"]) ? (body["error"] as Record<string, unknown>)["code"] : undefined;
+
+        // Подход уже удалён: править нечего, состояние сошлось. Показывать это
+        // пользователю как поломку нечестно — он ничего не сломал.
+        if (code === "set_deleted") return ok({ outcome: "gone" });
+
+        // Тренировка отменена — правка невозможна и никогда не станет
+        // возможной. Это постоянная ошибка, её обязан увидеть вызывающий.
+        if (code === "workout_not_editable") {
+          return fail({
+            kind: "client",
+            status: 409,
+            code: "workout_not_editable",
+            message: "workout is not editable",
+            details: []
+          });
+        }
+
+        const stored = body["set"];
+        if (!isObject(stored)) {
+          return fail({
+            kind: "server",
+            status: 409,
+            code: "duplicate_client_mutation",
+            message: "409 without the stored set",
+            attempts: 1
+          });
+        }
+        return ok({ outcome: "duplicate", set: stored as unknown as WorkoutSet });
+      }
+
+      return ok({ outcome: "updated", set: result.value.body as unknown as WorkoutSet });
+    },
+
+    // Повтор удаления отвечает 200, а не 409: запрошенное состояние уже
+    // наступило. Клиенту незачем различать первый раз и повтор — исход один.
+    deleteSet: async (accessToken, workoutId, setId, clientMutationId) => {
+      const result = asObject<WorkoutSet>(
+        await http.request({
+          method: "DELETE",
+          path: `/workouts/${encodeURIComponent(workoutId)}/sets/${encodeURIComponent(setId)}`,
+          body: { clientMutationId },
+          headers: bearer(accessToken),
+          retry: true
+        })
+      );
+      return result.ok ? ok({ outcome: "deleted", set: result.value.body }) : fail(result.error);
     },
 
     progress: async (accessToken, query = {}) => {

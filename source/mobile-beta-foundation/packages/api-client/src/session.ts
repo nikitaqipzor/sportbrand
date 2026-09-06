@@ -2,6 +2,8 @@ import { createApiClient, type ApiClient, type ApiClientOptions } from "./endpoi
 import { fail, ok, redactSecrets, type ApiError, type ApiResult } from "./errors.ts";
 import type {
   Credentials,
+  DeleteSetOutcome,
+  EditSetOutcome,
   LogSetOutcome,
   Progress,
   ProgressQuery,
@@ -13,6 +15,7 @@ import type {
   WorkoutPage,
   WorkoutSet,
   WorkoutSetInput,
+  WorkoutSetPatch,
   WorkoutStatus
 } from "./types.ts";
 
@@ -61,6 +64,8 @@ export type AuthClient = {
   getWorkout: (workoutId: string) => Promise<ApiResult<WorkoutDetail>>;
   setWorkoutStatus: (workoutId: string, status: WorkoutStatus) => Promise<ApiResult<Workout>>;
   progress: (query?: ProgressQuery) => Promise<ApiResult<Progress>>;
+  editSet: (workoutId: string, setId: string, patch: WorkoutSetPatch) => Promise<ApiResult<EditSetOutcome>>;
+  deleteSet: (workoutId: string, setId: string, clientMutationId: string) => Promise<ApiResult<DeleteSetOutcome>>;
 };
 
 const isUnauthorized = (error: ApiError): boolean => error.kind === "client" && error.status === 401;
@@ -190,6 +195,9 @@ export function createAuthClient(options: AuthClientOptions): AuthClient {
     listWorkouts: (query) => authorized((token) => api.listWorkouts(token, query)),
     getWorkout: (workoutId) => authorized((token) => api.getWorkout(token, workoutId)),
     setWorkoutStatus: (workoutId, status) => authorized((token) => api.setWorkoutStatus(token, workoutId, status)),
-    progress: (query) => authorized((token) => api.progress(token, query))
+    progress: (query) => authorized((token) => api.progress(token, query)),
+    editSet: (workoutId, setId, patch) => authorized((token) => api.editSet(token, workoutId, setId, patch)),
+    deleteSet: (workoutId, setId, mutationId) =>
+      authorized((token) => api.deleteSet(token, workoutId, setId, mutationId))
   };
 }

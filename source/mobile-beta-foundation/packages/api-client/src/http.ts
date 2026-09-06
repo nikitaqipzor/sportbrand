@@ -5,7 +5,7 @@ import type { ErrorCode, ErrorDetail, ErrorEnvelope } from "./types.ts";
 
 export type FetchLike = (input: string, init: RequestInit) => Promise<Response>;
 
-export type HttpMethod = "GET" | "POST";
+export type HttpMethod = "GET" | "POST" | "PATCH" | "DELETE";
 
 export type HttpRequest = {
   method: HttpMethod;

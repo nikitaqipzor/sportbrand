@@ -30,7 +30,10 @@ export type {
   WorkoutDetail,
   WorkoutListQuery,
   WorkoutPage,
-  WorkoutTotals
+  WorkoutTotals,
+  DeleteSetOutcome,
+  EditSetOutcome,
+  WorkoutSetPatch
 } from "./types.ts";
 
 export type { ApiError, ApiResult } from "./errors.ts";
