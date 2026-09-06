@@ -254,7 +254,17 @@ jobs:
           disable-animations: true
           script: |
             adb install -r source/mobile-beta-foundation/apps/mobile/android/app/build/outputs/apk/debug/app-debug.apk
+            # Логи пишем всегда: при падении сценария причина почти всегда в
+            # самом приложении, а Maestro видит только отсутствие элемента.
+            adb logcat -c
+            adb logcat > /tmp/logcat.txt 2>&1 &
+            set +e
             maestro test source/mobile-beta-foundation/apps/mobile/e2e/smoke.yaml
+            status=$?
+            set -e
+            echo "--- ReactNative / ошибки приложения ---"
+            grep -E 'ReactNative|ReactNativeJS|AndroidRuntime|FATAL|athletica' /tmp/logcat.txt | tail -80 || true
+            exit $status
 
       - name: Логи API при падении
         if: failure()
@@ -267,6 +277,7 @@ jobs:
           path: |
             ~/.maestro/tests/**
             /tmp/api.log
+            /tmp/logcat.txt
           if-no-files-found: ignore
           retention-days: 7
 

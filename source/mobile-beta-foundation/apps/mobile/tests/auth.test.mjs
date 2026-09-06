@@ -169,3 +169,32 @@ test("ошибка обработчика очистки не мешает вы�
   assert.deepEqual(order, ["падает", "второй"]);
   resetSessionCleanup();
 });
+
+test("недоступный Keystore не оставляет приложение на заставке навсегда", async () => {
+  // Симулируем то, что случилось на эмуляторе: чтение хранилища отклонилось.
+  const store = {
+    load: async () => {
+      throw new Error("Keystore недоступен");
+    },
+    save: async () => {},
+    clear: async () => {}
+  };
+
+  let settled = null;
+  await createAuthClient({
+    config: { environment: "development", baseUrl: "http://api.test/api/v1" },
+    store,
+    fetch: async () => new Response("{}", { status: 200, headers: { "content-type": "application/json" } })
+  })
+    .restore()
+    .then(() => {
+      settled = "resolved";
+    })
+    .catch(() => {
+      settled = "rejected";
+    });
+
+  assert.equal(settled, "rejected", "отказ обязан быть наблюдаемым, а не проглоченным");
+  // Экран обязан обработать этот отказ и показать вход: без catch статус
+  // остаётся "loading", заставка накрывает приложение, и войти нельзя.
+});

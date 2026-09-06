@@ -1,6 +1,7 @@
 import type { ApiError, AuthClient, Credentials, Session } from "@athletica/api-client";
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 
+import { getCrashReporter } from "../../platform/diagnostics/runtime.ts";
 import { getAuthClient } from "./auth-client.ts";
 
 export type AuthStatus = "loading" | "signed-out" | "signed-in";
@@ -42,11 +43,24 @@ export function AuthProvider({ children, client }: { children: ReactNode; client
   useEffect(() => {
     let alive = true;
     // Поднимаем сессию из Keystore до первого кадра навигации.
-    void authClient.restore().then((session) => {
-      if (alive) {
-        setState((prev) => ({ ...prev, status: session ? "signed-in" : "signed-out", session }));
-      }
-    });
+    //
+    // Отказ обязан быть обработан. Без catch любая ошибка чтения Keystore
+    // оставляла статус в "loading" навсегда: заставка «Восстанавливаем
+    // сессию…» накрывала приложение, и до экрана входа было не добраться —
+    // приложение выглядело намертво зависшим при запуске.
+    void authClient
+      .restore()
+      .then((session) => {
+        if (alive) {
+          setState((prev) => ({ ...prev, status: session ? "signed-in" : "signed-out", session }));
+        }
+      })
+      .catch((error: unknown) => {
+        if (!alive) return;
+        void getCrashReporter().capture("auth-restore", error);
+        // Нет доступа к хранилищу — значит сессии нет. Вход доступен.
+        setState((prev) => ({ ...prev, status: "signed-out", session: null }));
+      });
     // Сессия может закончиться и без действий пользователя: неудачный refresh
     // посреди тренировки обязан довести до экрана входа, а не молча упасть.
     const unsubscribe = authClient.subscribe((event) => {
