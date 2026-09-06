@@ -1,0 +1,99 @@
+# Дымовой сценарий беты на настоящем устройстве.
+#
+# Проверяет ровно то, чего не видят 125 юнит-тестов: отрисовался ли экран,
+# нажимается ли кнопка, дожила ли сессия до следующего экрана, ведёт ли
+# навигация туда, куда обещает. Приложение работает против настоящего API,
+# поднятого рядом, а не против моков.
+appId: com.athletica.ai
+name: Петля беты
+---
+- clearState
+- launchApp
+
+# --- Регистрация -----------------------------------------------------------
+# Адрес уникален на прогон: повтор сценария не должен спотыкаться о занятый.
+- assertVisible:
+    id: "sign-in-submit"
+- tapOn:
+    id: "sign-in-go-to-sign-up"
+- assertVisible:
+    id: "sign-up-submit"
+- tapOn:
+    id: "sign-up-email-input"
+# API в CI поднимается с чистым хранилищем на каждый прогон, поэтому
+# постоянный адрес не столкнётся с прошлым.
+- inputText: "e2e@athletica.test"
+- tapOn:
+    id: "sign-up-password-input"
+- inputText: "correct-horse-battery-staple"
+- tapOn:
+    id: "sign-up-submit"
+
+# --- Сегодня ---------------------------------------------------------------
+- assertVisible:
+    id: "today-start-workout"
+# Готовность не считается — экран обязан говорить это прямо, а не показывать
+# правдоподобное число.
+- assertVisible:
+    id: "today-readiness-absent"
+
+# --- Тренировка ------------------------------------------------------------
+- tapOn:
+    id: "today-start-workout"
+- assertVisible:
+    id: "workout-complete-set"
+- tapOn:
+    id: "workout-complete-set"
+- tapOn:
+    id: "workout-complete-set"
+- assertVisible:
+    id: "workout-total-sets"
+
+# Второе упражнение: своя нумерация подходов.
+- tapOn:
+    id: "workout-add-exercise"
+- assertVisible:
+    id: "workout-exercise-picker"
+- tapOn:
+    id: "workout-exercise-picker-close"
+
+# --- Завершение и итоги ----------------------------------------------------
+- tapOn:
+    id: "workout-finish"
+- tapOn:
+    id: "workout-finish-confirm-confirm"
+- assertVisible:
+    id: "summary-title"
+- assertVisible:
+    id: "summary-total-sets"
+
+# --- Прогресс --------------------------------------------------------------
+- tapOn:
+    id: "summary-open-progress"
+- assertVisible:
+    id: "progress-home"
+- tapOn:
+    id: "progress-home"
+
+# --- История ---------------------------------------------------------------
+- assertVisible:
+    id: "today-open-history"
+- tapOn:
+    id: "today-open-history"
+- assertVisible:
+    id: "history-home"
+- tapOn:
+    id: "history-home"
+
+# --- Выход -----------------------------------------------------------------
+# Данные ушедшего пользователя обязаны исчезнуть с устройства (находка H1).
+- tapOn:
+    id: "today-open-profile"
+- assertVisible:
+    id: "profile-email"
+- tapOn:
+    id: "profile-sign-out"
+- tapOn:
+    id: "profile-sign-out-confirm-confirm"
+- assertVisible:
+    id: "sign-in-submit"

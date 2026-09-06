@@ -169,6 +169,101 @@ jobs:
           if-no-files-found: error
           retention-days: 14
 
+  e2e:
+    name: E2E на эмуляторе
+    runs-on: ubuntu-latest
+    # Юнит-тесты не видят, отрисовался ли экран, нажимается ли кнопка и дожила
+    # ли сессия до следующего экрана. Этот job проходит петлю беты на настоящем
+    # Android против настоящего API — единственный способ узнать, что
+    # приложение работает как приложение.
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.33.0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+          cache-dependency-path: source/mobile-beta-foundation/pnpm-lock.yaml
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+      - uses: actions/setup-go@v5
+        with:
+          go-version: "1.24"
+          cache-dependency-path: source/mobile-beta-foundation/services/api/go.sum
+
+      - name: Запуск API
+        working-directory: source/mobile-beta-foundation/services/api
+        # Хранилище в памяти: сценарию нужен чистый сервер на каждый прогон, а
+        # не накопленные прошлые аккаунты.
+        env:
+          ATHLETICA_STORE_DRIVER: memory
+          ATHLETICA_HTTP_ADDR: "0.0.0.0:8080"
+        run: |
+          go build -o /tmp/athletica-api ./cmd/api
+          /tmp/athletica-api serve > /tmp/api.log 2>&1 &
+          for i in $(seq 1 30); do
+            curl -sf http://localhost:8080/health && break
+            sleep 1
+          done
+          curl -sf http://localhost:8080/health || { echo "::error::API не поднялся"; cat /tmp/api.log; exit 1; }
+
+      - name: Установка зависимостей
+        working-directory: source/mobile-beta-foundation
+        run: pnpm install --frozen-lockfile
+
+      - name: Сборка APK
+        working-directory: source/mobile-beta-foundation
+        # 10.0.2.2 — адрес хоста изнутри эмулятора Android.
+        env:
+          ATHLETICA_API_URL: http://10.0.2.2:8080/api/v1
+          ATHLETICA_ENV: development
+        run: |
+          pnpm --filter @athletica/mobile exec expo prebuild --platform android --no-install
+          cd apps/mobile/android && ./gradlew assembleDebug --no-daemon
+
+      - name: Maestro
+        run: |
+          curl -Ls "https://get.maestro.mobile.dev" | bash
+          echo "$HOME/.maestro/bin" >> "$GITHUB_PATH"
+
+      - name: Включить KVM
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' \
+            | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+
+      - name: Петля беты на эмуляторе
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 34
+          target: google_apis
+          arch: x86_64
+          profile: pixel_6
+          disable-animations: true
+          script: |
+            adb install -r source/mobile-beta-foundation/apps/mobile/android/app/build/outputs/apk/debug/app-debug.apk
+            maestro test source/mobile-beta-foundation/apps/mobile/e2e/smoke.yaml
+
+      - name: Логи API при падении
+        if: failure()
+        run: cat /tmp/api.log || true
+
+      - uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: maestro-debug
+          path: |
+            ~/.maestro/tests/**
+            /tmp/api.log
+          if-no-files-found: ignore
+          retention-days: 7
+
   contract:
     name: OpenAPI-контракт
     runs-on: ubuntu-latest
