@@ -414,7 +414,7 @@ func upsertExercise(ctx context.Context, tx pgx.Tx, e store.Exercise) (seedOutco
 	var inserted bool
 	err = tx.QueryRow(ctx, q,
 		e.ID, e.Slug, e.LegacyNumber, e.SchemaVersion, e.ContentVersion, e.ContentLocale,
-		e.ContentHash, e.NameRu, e.NameEn, e.Aliases,
+		e.ContentHash, e.NameRu, e.NameEn, nonNil(e.Aliases),
 		e.Sport, e.Section, e.Category, e.MovementPattern, e.Difficulty, e.Laterality,
 		e.SortKey, e.SearchText, blocks.technique, blocks.programming, blocks.safety, blocks.media, blocks.qa,
 		e.PublicationStatus, e.ReviewStatus, e.MediaStatus, now).Scan(&inserted)
@@ -430,6 +430,15 @@ func upsertExercise(ctx context.Context, tx pgx.Tx, e store.Exercise) (seedOutco
 	default:
 		return seedUpdated, nil
 	}
+}
+
+// nonNil turns a Go nil slice into the empty array the NOT NULL text[] column
+// demands; "the record has no aliases" is an empty list, never a missing value.
+func nonNil(in []string) []string {
+	if in == nil {
+		return []string{}
+	}
+	return in
 }
 
 type exerciseBlocks struct{ technique, programming, safety, media, qa []byte }

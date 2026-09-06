@@ -1,7 +1,8 @@
 # Athletica AI — API service
 
 Go service for the Phase 1 beta loop: **health, authentication with real logout, the
-workout lifecycle, idempotent set logging, workout history and progress aggregates** —
+workout lifecycle, idempotent set logging, workout history, progress aggregates and the
+exercise reference book** —
 everything behind `Сегодня → активная тренировка → лог подхода → офлайн → синхронизация →
 Итоги → Прогресс`. Nothing beyond that is implemented, on purpose (see
 [Deliberately deferred](#deliberately-deferred)).
@@ -30,6 +31,9 @@ how to run what the contract describes.
 | `PATCH /api/v1/workouts/{workoutId}/sets/{setId}` | **Corrects** a mistyped weight, repetitions or RIR — idempotently |
 | `DELETE /api/v1/workouts/{workoutId}/sets/{setId}` | **Removes** a set, softly; repeating it is safe |
 | `GET /api/v1/progress` | Strength records, weekly volume and adherence — the "Прогресс" screen |
+| `GET /api/v1/exercises` | The **exercise catalogue**: code filters, name search, keyset pagination |
+| `GET /api/v1/exercises/{exerciseId}` | One exercise card — the "Упражнение" and "Техника" screens |
+| `GET /api/v1/exercise-dictionaries` | Every machine code with its Russian name, so filters are not hard-coded |
 
 The base path is configurable and defaults to `/api/v1`, which is what the Android client
 expects at `http://10.0.2.2:8080/api/v1`.
@@ -107,6 +111,173 @@ curl -s -X DELETE $BASE/workouts/$WORKOUT/sets/$SET -H "authorization: Bearer $T
 # Name a session that was started offline
 curl -s -X PATCH $BASE/workouts/$WORKOUT -H "authorization: Bearer $TOKEN" \
   -H 'content-type: application/json' -d '{"title":"Pull day"}' | jq -r .title
+```
+
+## The exercise reference book
+
+918 exercises live in a Word file the app cannot read. Converting them into a versioned
+JSON contract is a separate job in `content/`; this service is what stores the result,
+serves it and — above all — refuses to break it.
+
+### The one rule everything else follows from
+
+**An `exerciseId` is immutable.** It already left the phone inside `clientMutationId`
+(`workoutId:exerciseId:setNumber`) and is stored in `workout_sets`. A catalogue that
+renamed an identifier would silently detach an athlete's recorded history from the
+exercise it was performed with — the numbers would still be there, attached to nothing.
+
+Three consequences, all of them deliberate:
+
+* **The importer refuses a rename.** If a file gives an existing `SLUG` or `LEGACY_NUMBER`
+  to a different `EXERCISE_ID`, the whole file is rejected and nothing is written — not
+  even the records that had nothing to do with the rename. The refusal names both
+  identifiers. `DetectRenames` in `internal/store` is where it lives, and both store
+  implementations call it *inside* the critical section that writes, so a concurrent
+  import cannot slip past the check.
+* **The importer deletes nothing.** A record already stored that a file does not mention
+  is counted as `absent` and left alone. A set may still name it.
+* **There is no foreign key from `workout_sets` to `exercise`.** A set logged against an
+  identifier the catalogue has not shipped yet — or has retired — still records. The
+  training history outranks the reference book, and `POST /workouts/{id}/sets` must never
+  fail because a curator has not got to that exercise yet.
+
+### Three independent statuses
+
+The master template keeps publication, expert review and media readiness apart, and so
+does the schema:
+
+| Column | Vocabulary |
+| --- | --- |
+| `publication_status` | `draft` → `in_review` → `ready` → `published` → `archived` |
+| `review_status` | `draft`, `in_review`, `approved`, `rejected` |
+| `media_status` | `draft`, `in_review`, `approved`, `rejected` |
+
+A record is visible to an ordinary user only at `published` + `approved` + `approved`.
+That is a generated column (`is_published`), so no query has to remember the rule, and a
+`CHECK` makes an unreviewed *published* row unrepresentable rather than merely unlikely —
+`ready` is the state a record holds before it flips, and both approvals must still stand
+after it has. Anything short of all three answers `404`, byte-identical to an identifier
+that never existed, so a draft cannot be probed for.
+
+### Empty is honest
+
+Step-by-step technique, common errors, stop signs and contraindications **are not in the
+source at all**. They are in the schema, they come back as empty arrays, and
+`hasTechnique` / `hasSafety` say so outright. Nothing fills them with something plausible,
+because a person follows what a contraindication field says. The same rule the audit
+applied to the invented "готовность 78" applies here, and it is pinned by a test.
+
+`difficulty` is `null` in the starter set for the same reason: the source has a level
+column, it has not been converted yet, and `null` is not "beginner". The `difficulty`
+dictionary still ships all three levels, so the client can build the filter today and it
+starts returning rows the moment the real content lands.
+
+### Loading content
+
+```bash
+go run ./cmd/api seed-exercises                        # the embedded starter set
+go run ./cmd/api seed-exercises --file content/export.json
+```
+
+The command prints `added=… updated=… skipped=… absent=… codes=…` and records the same
+counts, plus the file's SHA-256, in `exercise_import` — so "which content is live" has an
+answer that does not depend on somebody remembering.
+
+* **Idempotent.** Each record carries a `content_hash` — the SHA-256 of the record exactly
+  as the file stated it. A re-import compares equal, writes nothing, and does not move
+  `updated_at` or `revision`. Running it twice is a no-op; running it after one record
+  changed updates that one record.
+* **Atomic.** One transaction, under an advisory lock. A refused file leaves the catalogue
+  exactly as it was.
+* **Coded.** Every machine code an exercise uses must exist in a dictionary — the file's
+  own or one already stored — or the import is refused. In PostgreSQL the foreign keys
+  enforce it a second time.
+
+### The import contract
+
+The file is JSON. Field names are the master template's own machine names, and they are
+matched **case-insensitively with separators ignored**, so `EXERCISE_ID`, `exercise_id`
+and `exerciseId` are one field — the content pipeline is being written in parallel and
+must not be able to miss by a convention. Re-spelling a file does not change its content
+hashes, so a cosmetic diff does not rewrite every row.
+
+```json
+{
+  "SCHEMA_VERSION": 1,
+  "CONTENT_VERSION": 7,
+  "CONTENT_LOCALE": "ru-RU",
+  "DICTIONARIES": {
+    "sport":     [{ "CODE": "strength", "NAME_RU": "Силовая тренировка", "SORT_ORDER": 1 }],
+    "section":   [{ "CODE": "legs", "NAME_RU": "Ноги" }],
+    "equipment": [{ "CODE": "barbell", "NAME_RU": "Штанга" }],
+    "muscle":    [{ "CODE": "quadriceps", "NAME_RU": "Квадрицепс" }]
+  },
+  "EXERCISES": [
+    {
+      "EXERCISE_ID": "back-squat",
+      "SLUG": "back-squat",
+      "LEGACY_NUMBER": 1,
+      "NAME_RU": "Приседания со штангой",
+      "SPORT": "strength",
+      "SECTION": "legs",
+      "EQUIPMENT": ["barbell"],
+      "PRIMARY_MUSCLES": ["quadriceps"],
+      "PUBLICATION_STATUS": "published",
+      "REVIEW_STATUS": "approved",
+      "MEDIA_STATUS": "approved"
+    }
+  ]
+}
+```
+
+Blocks C–G of the template (`SETUP`, `EXECUTION_STEPS`, `COMMON_ERRORS`,
+`CONTRAINDICATIONS`, `MAIN_ASSET_ID`, `SOURCES`, `REVIEWERS` …) are all accepted and all
+optional; see `internal/exercises/seed.go` for the complete field list. Choices the brief
+left open, made here and written down so `content/` can match them:
+
+| Question | Decision |
+| --- | --- |
+| Where do dictionaries live? | In the same file, under `DICTIONARIES`, keyed by kind. One file is one atomic import. |
+| Is `SLUG` required? | No — it defaults to `EXERCISE_ID`. It is still a stable identity the rename guard watches. |
+| What if a record is omitted? | Left alone and reported as `absent`. Never deleted, never archived automatically. |
+| What identifies "unchanged"? | `content_hash`, the SHA-256 of the normalized record. Not a column-by-column diff. |
+| Where does `CONTENT_VERSION` come from? | The file, unless a record states its own. |
+| What is `sort_key`? | The folded Russian name plus the identifier, computed **in Go**. PostgreSQL's `lower()` under the `C` collation does not fold Cyrillic, so letting SQL do it would make the two store implementations disagree about where a page ends. |
+
+Blocks C–G are stored as `jsonb` documents rather than fifty columns: they are free text,
+and the contract forbids filtering on free text, so columns would buy nothing. Everything
+the catalogue filters or sorts on is a real column with a real foreign key.
+
+### The starter set
+
+`seed/exercises.starter.json` is embedded in the binary and holds **the twenty
+identifiers the app already ships**, taken verbatim from
+`apps/mobile/src/features/workout/exercise-catalog.ts`. Two tests keep it that way: one
+checks the identifiers against that list, the other checks that no methodology has crept
+in. Its records are published with `REVIEW_NOTES` stating exactly what was approved —
+the identifier, the Russian name and the classification, and nothing else, because
+nothing else is there.
+
+### Searching and filtering
+
+`q` is matched as a **literal, case-folded substring** of a precomputed field
+(`position($1 IN search_text)`), never as `LIKE` and never as a regular expression. `%`,
+`_`, `\` and a quote are ordinary characters; an empty or whitespace-only query is not a
+filter but the search box mid-deletion; an absurdly long one is truncated at a rune
+boundary rather than refused. Every other filter takes machine codes only — a code no
+dictionary defines matches nothing rather than answering `400`, because that is a client
+built against an older dictionary and an empty page is kinder than an error it cannot act
+on.
+
+Pagination is the same keyset scheme as `GET /workouts`, ordered by `(sort_key, id)` with
+both columns declared `COLLATE "C"` so PostgreSQL compares the bytes Go compares.
+
+```bash
+BASE=http://localhost:8080/api/v1
+curl -s "$BASE/exercises?section=back&equipment=cable" -H "authorization: Bearer $TOKEN" | jq '[.items[].id]'
+curl -s -G "$BASE/exercises" --data-urlencode 'q=присед' -H "authorization: Bearer $TOKEN" | jq '[.items[].nameRu]'
+curl -s "$BASE/exercises/back-squat" -H "authorization: Bearer $TOKEN" | jq '{id, nameRu, hasTechnique}'
+curl -s "$BASE/exercise-dictionaries" -H "authorization: Bearer $TOKEN" | jq '[.dictionaries[] | {kind, n: (.items|length)}]'
 ```
 
 ## Metrics
@@ -306,6 +477,18 @@ second change — and, for the observability half, that `/metrics` is a plain `4
 port, that the metrics listener refuses an anonymous scrape when a token is configured, and that
 no workout ID, set ID, user ID, e-mail, token or IP appears anywhere on the page.
 
+The reference book added six more groups to the same suite, and they are the ones worth
+naming: a repeated import that writes nothing at all, an import that would rename an
+identifier being refused **whole** (the innocent record beside the rename does not land
+either), a record short of any one of the three statuses being invisible to both the list
+and the card, the catalogue paged one row at a time producing exactly the unpaged answer
+under every filter, a search that treats `%`, `_`, `\`, a quote and a whole `DROP TABLE`
+as ordinary letters, every code in an answer existing in the dictionaries, and an import
+that omits a record leaving it alone rather than deleting it. Running that live against
+PostgreSQL is what caught two things the in-memory store had happily accepted: a `sort_key`
+containing a NUL byte, which `text` cannot store at all, and a nil alias list arriving as
+`NULL` in a `NOT NULL` column.
+
 ## Configuration
 
 Everything comes from the environment. Unknown or unsafe values fail the start, they never warn.
@@ -345,10 +528,11 @@ generate a real value. Staging is held to the same standard.
 ```
 services/api
 ├── api/openapi.yaml            contract (source of truth)
-├── cmd/api                     main: serve | migrate | prune-tokens | healthcheck | version
+├── cmd/api                     main: serve | migrate | prune-tokens | seed-exercises | healthcheck | version
 ├── internal/config             environment parsing + the start-up safety rules
 ├── internal/auth               bcrypt hashing, HS256 tokens, register/login/refresh
 ├── internal/workouts           domain bounds (mirrors packages/domain) + use cases
+├── internal/exercises          the reference book: filters, cursor, import parsing
 ├── internal/ratelimit          per-IP and per-account throttling with backoff
 ├── internal/metrics            Prometheus text registry (no dependencies, no user data)
 ├── internal/store              Store interface + models
@@ -357,6 +541,7 @@ services/api
 │   └── storetest               conformance suite both implementations must pass
 ├── internal/httpapi            router, middleware, handlers, the metrics listener
 ├── internal/ids                UUID and opaque-token generation
+├── seed                        the embedded starter catalogue (the app's own 20 IDs)
 ├── migrations                  NNNN_name.{up,down}.sql, embedded into the binary
 └── Dockerfile                  multi-stage, scratch, non-root (uid 10001)
 ```
@@ -368,6 +553,14 @@ ourselves).
 ## Deliberately deferred
 
 - Nutrition, recovery, the AI coach, wearables and media uploads — out of scope for the beta loop.
+- **The exercise content itself.** The schema, the importer and the endpoints are here;
+  the 918 records are produced in `content/` and arrive through `api seed-exercises`.
+  Until they do, the catalogue holds the twenty starter records and every technique and
+  safety field on them is empty.
+- Editing the catalogue over HTTP. It is imported, not authored: there is no write
+  endpoint, and the only way content changes is a reviewed file going through
+  `seed-exercises`.
+- Media itself. `mediaStatus` and the asset IDs exist; nothing serves or stores an image.
 - Access-token revocation. Logout revokes the refresh token immediately, but the access token in
   the client's hands stays valid for its remaining lifetime (≤ 15 minutes); a denylist or short
   server-side session check is the next step if that window turns out to matter.

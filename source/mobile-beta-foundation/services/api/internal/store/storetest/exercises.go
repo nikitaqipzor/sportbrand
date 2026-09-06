@@ -65,7 +65,7 @@ func fixtureExercise(id, nameRu, section string, opts ...func(*store.Exercise)) 
 		MediaStatus:       store.MediaApproved,
 		Published:         true,
 	}
-	e.SortKey = lowerFold(nameRu) + "\x00" + id
+	e.SortKey = lowerFold(nameRu) + store.SortKeySeparator + id
 	e.SearchText = "\n" + lowerFold(nameRu) + "\n" + id + "\n"
 	for _, opt := range opts {
 		opt(&e)
@@ -102,7 +102,7 @@ func withContent(hash, nameRu string) func(*store.Exercise) {
 	return func(e *store.Exercise) {
 		e.NameRu = nameRu
 		e.ContentHash = hashOf(hash)
-		e.SortKey = lowerFold(nameRu) + "\x00" + e.ID
+		e.SortKey = lowerFold(nameRu) + store.SortKeySeparator + e.ID
 		e.SearchText = "\n" + lowerFold(nameRu) + "\n" + e.ID + "\n"
 	}
 }

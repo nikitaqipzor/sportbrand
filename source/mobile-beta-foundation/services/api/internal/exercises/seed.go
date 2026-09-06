@@ -497,7 +497,7 @@ func convertExercise(index int, in seedExercise, encoded []byte) (store.Exercise
 // lower() under the C collation would leave Cyrillic untouched and the two
 // stores would then disagree about where a page ends.
 func SortKey(nameRu, id string) string {
-	return strings.ToLower(strings.TrimSpace(nameRu)) + "\x00" + id
+	return strings.ToLower(strings.TrimSpace(nameRu)) + store.SortKeySeparator + id
 }
 
 // SearchText is what `q` matches: every name a person might type, folded to

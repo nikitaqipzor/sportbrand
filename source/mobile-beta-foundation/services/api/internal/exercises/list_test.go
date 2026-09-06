@@ -11,7 +11,7 @@ import (
 func TestCursorRoundTrip(t *testing.T) {
 	// A sort key holds a NUL separator and Cyrillic; the encoding must survive
 	// both, and must survive being put in a URL.
-	original := store.ExerciseCursor{SortKey: "приседания со штангой\x00back-squat", ID: "back-squat"}
+	original := store.ExerciseCursor{SortKey: "приседания со штангой\x01back-squat", ID: "back-squat"}
 	encoded := exercises.EncodeCursor(original)
 	if strings.ContainsAny(encoded, "+/=") {
 		t.Fatalf("cursor %q is not URL-safe", encoded)

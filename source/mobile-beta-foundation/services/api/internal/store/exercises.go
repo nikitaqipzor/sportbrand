@@ -267,6 +267,13 @@ func PublicationAllowed(publication, review, media string) bool {
 		review == ReviewApproved && media == MediaApproved
 }
 
+// SortKeySeparator joins the folded name and the identifier inside a sort key.
+//
+// It is ASCII SOH, not NUL: PostgreSQL's text type cannot hold a NUL byte at
+// all (SQLSTATE 22021), and it sorts below every character that can appear in
+// an exercise name, so `name + SEP + id` orders exactly as `(name, id)` does.
+const SortKeySeparator = "\x01"
+
 // ExerciseCursor is the keyset position of the catalogue list. The order is
 // (sort_key, id) ascending, which is total, so no row can be skipped or
 // repeated while content is being re-imported underneath a paging client.

@@ -1,7 +1,7 @@
 openapi: 3.1.0
 info:
   title: Athletica AI API
-  version: 0.5.0
+  version: 0.6.0
   description: |
     Phase 1 surface of the Athletica AI backend: liveness, authentication with
     logout and token revocation, the idempotent workout-set write, the workout
@@ -16,6 +16,54 @@ info:
       does not exist (`404`), so existence never leaks;
     * a state change the lifecycle forbids answers `409 invalid_transition` —
       never `500`, and never a silent no-op.
+
+    ### Changes in 0.6.0 (all additive, 0.5.0 clients keep working)
+
+    The **exercise reference book** — the server half of the domain that opens
+    prototype screens 13 (Каталог), 14 (Упражнение) and 15 (Техника), and that
+    the workout constructor and the restrictions screen need underneath them.
+
+    * `GET /exercises` — the catalogue: filters by machine code (`sport`,
+      `section`, `equipment`, `muscle`, `difficulty`), a name search (`q`) and
+      the same opaque keyset pagination `GET /workouts` uses;
+    * `GET /exercises/{exerciseId}` — one card, with technique, programming,
+      safety and media;
+    * `GET /exercise-dictionaries` — every machine code with its localized name,
+      so the client builds its filter controls from the server's vocabulary
+      instead of a hard-coded list that drifts.
+
+    **The catalogue belongs to nobody.** It is shared content, not user data, so
+    unlike every other route here nothing about the answer depends on who asked
+    — two accounts see the same rows. It is authenticated all the same.
+
+    **`exerciseId` is immutable, and that is the whole point.** The identifier
+    already left the phone inside `clientMutationId`
+    (`workoutId:exerciseId:setNumber`) and is stored in recorded sets. The
+    importer (`api seed-exercises`) therefore **refuses** any file that would
+    move a `SLUG` or a `LEGACY_NUMBER` from one identifier to another, and
+    refuses it whole — a rename would silently detach an athlete's history from
+    the exercise it was performed with. Nothing is ever deleted either: a record
+    an import omits is reported and left alone.
+
+    There is deliberately **no foreign key** from a logged set to this
+    catalogue. A set naming an exercise the catalogue has not shipped yet, or
+    has retired, still records: the training history outranks the reference book.
+
+    **Three independent statuses decide visibility.** `publicationStatus`
+    (`draft → in_review → ready → published → archived`), `reviewStatus` (expert
+    review) and `mediaStatus` (visual material) are separate, and a record is
+    visible only at `published` + `approved` + `approved`. Anything short of
+    that answers `404`, byte-identical to an identifier that never existed.
+
+    **Empty is honest.** The source encyclopedia has no step-by-step technique,
+    no common errors and no contraindications. Those fields exist in the schema
+    and come back as empty arrays, with `hasTechnique` and `hasSafety` saying so
+    outright, because a plausible invention is worse than a blank: people train
+    on what this says.
+
+    **Search is a literal.** `q` is matched as a case-folded substring, never as
+    a pattern and never as a regular expression, so `%`, `_`, `\\` and a quote
+    are ordinary characters. An empty or whitespace-only `q` is not a filter.
 
     ### Changes in 0.5.0 (all additive, 0.4.0 clients keep working)
 
@@ -80,6 +128,7 @@ tags:
   - name: auth
   - name: workouts
   - name: progress
+  - name: exercises
 
 security:
   - bearerAuth: []
@@ -735,6 +784,150 @@ paths:
               schema: { $ref: '#/components/schemas/Error' }
         '401': { $ref: '#/components/responses/Unauthorized' }
 
+  /exercises:
+    get:
+      tags: [exercises]
+      summary: The exercise catalogue, filtered by machine code and paged
+      description: |
+        The list behind prototype screen 13 (Каталог). Ordered by the folded
+        Russian name with the identifier as tiebreaker, and paged with an opaque
+        keyset cursor: pass a page's `nextCursor` back as `cursor` to continue.
+
+        **Only published exercises are returned** — `publicationStatus`
+        `published` together with `reviewStatus` and `mediaStatus` `approved`.
+        There is no parameter that widens that.
+
+        Every filter takes machine codes from `GET /exercise-dictionaries`,
+        repeated or comma separated. A code no dictionary defines is not an
+        error: it simply matches nothing, so a client built against an older
+        dictionary gets an empty page rather than a failure it cannot act on.
+
+        The catalogue is shared content and carries no owner, so a cursor from
+        another account is not a leak — it is merely another position in the
+        same public list.
+      parameters:
+        - name: sport
+          in: query
+          required: false
+          description: Machine codes from the `sport` dictionary.
+          schema: { type: array, items: { type: string } }
+          style: form
+          explode: true
+        - name: section
+          in: query
+          required: false
+          description: Machine codes from the `section` dictionary.
+          schema: { type: array, items: { type: string } }
+          style: form
+          explode: true
+        - name: equipment
+          in: query
+          required: false
+          description: Machine codes from the `equipment` dictionary.
+          schema: { type: array, items: { type: string } }
+          style: form
+          explode: true
+        - name: muscle
+          in: query
+          required: false
+          description: |
+            Machine codes from the `muscle` dictionary. A record matches whether
+            the muscle is loaded primarily or secondarily.
+          schema: { type: array, items: { type: string } }
+          style: form
+          explode: true
+        - name: difficulty
+          in: query
+          required: false
+          description: Machine codes from the `difficulty` dictionary.
+          schema: { type: array, items: { type: string } }
+          style: form
+          explode: true
+        - name: q
+          in: query
+          required: false
+          description: |
+            Case-insensitive **literal** substring of the Russian name, the
+            English name, an alias or the identifier. Not a pattern and not a
+            regular expression: `%`, `_`, `\\` and a quote are ordinary
+            characters. Empty or whitespace-only means "no search"; anything
+            longer than 120 bytes is truncated rather than refused.
+          schema: { type: string, maxLength: 120 }
+        - name: limit
+          in: query
+          required: false
+          schema: { type: integer, minimum: 1, maximum: 200, default: 50 }
+        - name: cursor
+          in: query
+          required: false
+          description: Opaque `nextCursor` from a previous page.
+          schema: { type: string }
+      responses:
+        '200':
+          description: One page of the published catalogue
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ExercisePage' }
+        '400':
+          description: |
+            `limit` is out of range, or `cursor` is not one this API issued
+            (`invalid_cursor`).
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/Error' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+
+  /exercises/{exerciseId}:
+    get:
+      tags: [exercises]
+      summary: One exercise in full
+      description: |
+        The card behind prototype screens 14 (Упражнение) and 15 (Техника).
+
+        `exerciseId` is the immutable string the client also sends when logging
+        a set and inside `clientMutationId`. An exercise that is not published
+        answers `404` with a body byte-identical to an identifier that has never
+        existed, so a draft never leaks through the catalogue.
+
+        The `technique` and `safety` blocks come back as empty arrays for every
+        record until the encyclopedia is imported, and `hasTechnique` /
+        `hasSafety` say so plainly. A screen must show "нет данных" there, never
+        something plausible.
+      parameters:
+        - name: exerciseId
+          in: path
+          required: true
+          schema: { type: string, maxLength: 64, pattern: '^[a-z0-9]+(-[a-z0-9]+)*$' }
+      responses:
+        '200':
+          description: The exercise card
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ExerciseCard' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+        '404': { $ref: '#/components/responses/ExerciseNotFound' }
+
+  /exercise-dictionaries:
+    get:
+      tags: [exercises]
+      summary: Every machine code with its localized name
+      description: |
+        The vocabulary the catalogue is coded with, so the client builds its
+        filter controls from the server instead of a hard-coded list.
+
+        Every kind is present, empty ones included: a client must be able to
+        tell "this filter has no values yet" from "there is no such filter", and
+        an omitted key cannot say that. A vocabulary may also be larger than the
+        catalogue currently uses — `difficulty` ships its three levels before a
+        single record claims one — which is deliberate.
+      responses:
+        '200':
+          description: The dictionaries, in a fixed order
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ExerciseDictionaries' }
+        '401': { $ref: '#/components/responses/Unauthorized' }
+
 components:
   securitySchemes:
     bearerAuth:
@@ -782,6 +975,13 @@ components:
         The set does not exist, is not part of this workout, or belongs to
         another user — and the workout itself may be missing or foreign too.
         Every one of those answers with this identical body by design.
+      content:
+        application/json:
+          schema: { $ref: '#/components/schemas/Error' }
+    ExerciseNotFound:
+      description: |
+        The exercise does not exist, or is not published. The two cases are
+        indistinguishable by design, so a draft record never leaks.
       content:
         application/json:
           schema: { $ref: '#/components/schemas/Error' }
@@ -1114,3 +1314,228 @@ components:
       required: [error]
       properties:
         error: { $ref: '#/components/schemas/ErrorPayload' }
+
+    ExerciseCode:
+      type: object
+      required: [code, nameRu, nameEn, sortOrder]
+      description: |
+        One dictionary entry. The app filters on `code` and shows a person
+        `nameRu`; there is no filtering on free text anywhere in this contract.
+      properties:
+        code:
+          type: string
+          maxLength: 64
+          pattern: '^[a-z0-9]+([-_][a-z0-9]+)*$'
+        nameRu: { type: string }
+        nameEn: { type: string }
+        sortOrder: { type: integer }
+
+    ExerciseDictionary:
+      type: object
+      required: [kind, items]
+      properties:
+        kind:
+          type: string
+          enum:
+            - sport
+            - section
+            - category
+            - movement_pattern
+            - equipment
+            - muscle
+            - joint
+            - goal_tag
+            - difficulty
+            - laterality
+        items:
+          type: array
+          items: { $ref: '#/components/schemas/ExerciseCode' }
+
+    ExerciseDictionaries:
+      type: object
+      required: [dictionaries]
+      properties:
+        dictionaries:
+          type: array
+          items: { $ref: '#/components/schemas/ExerciseDictionary' }
+
+    ExerciseSummary:
+      type: object
+      description: |
+        One row of the catalogue: identity, localized names and every machine
+        code. Blocks A and B of the master template.
+      required:
+        [id, slug, nameRu, nameEn, aliases, sport, section, equipment,
+         primaryMuscles, secondaryMuscles, joints, goalTags, contentVersion,
+         revision, updatedAt, hasTechnique, hasSafety]
+      properties:
+        id:
+          type: string
+          maxLength: 64
+          pattern: '^[a-z0-9]+(-[a-z0-9]+)*$'
+          description: |
+            The immutable identifier. It is the same string the client sends as
+            `exerciseId` when logging a set and inside `clientMutationId`, and
+            no import may ever move it to another record.
+        slug: { type: string }
+        legacyNumber:
+          type: [integer, 'null']
+          description: Position 1–918 in the source encyclopedia, where the record has one.
+        nameRu: { type: string }
+        nameEn: { type: string }
+        aliases:
+          type: array
+          items: { type: string }
+        variantOf:
+          type: [string, 'null']
+          description: |
+            The record this one varies, per the master template's variant rule.
+            The source's repeated names are linked here, never deleted.
+        sport: { type: string }
+        section: { type: string }
+        category: { type: [string, 'null'] }
+        movementPattern: { type: [string, 'null'] }
+        difficulty:
+          type: [string, 'null']
+          description: |
+            `null` means the source has not stated a level. It is not "beginner"
+            and it must not be rendered as one.
+        laterality: { type: [string, 'null'] }
+        equipment:
+          type: array
+          items: { type: string }
+        primaryMuscles:
+          type: array
+          items: { type: string }
+        secondaryMuscles:
+          type: array
+          items: { type: string }
+        joints:
+          type: array
+          items: { type: string }
+        goalTags:
+          type: array
+          items: { type: string }
+        contentVersion:
+          type: integer
+          description: The content version of the import this record came from.
+        revision:
+          type: integer
+          description: |
+            How many times this record's content has actually changed. A
+            re-import of unchanged content does not move it.
+        updatedAt: { type: string, format: date-time }
+        hasTechnique:
+          type: boolean
+          description: |
+            Whether the technique block carries anything. It is `false` for every
+            record until the encyclopedia is imported, and a screen should say
+            "нет данных" rather than imply guidance it does not have.
+        hasSafety:
+          type: boolean
+          description: The same, for common errors, stop signs and contraindications.
+
+    ExercisePage:
+      type: object
+      required: [items, nextCursor]
+      properties:
+        items:
+          type: array
+          items: { $ref: '#/components/schemas/ExerciseSummary' }
+        nextCursor:
+          type: [string, 'null']
+          description: |
+            Opaque keyset position, `null` on the last page. Echo it back
+            untouched; do not construct one.
+
+    ExerciseTechnique:
+      type: object
+      description: |
+        Block C of the master template. Absent from the source encyclopedia and
+        therefore empty on every record today — deliberately blank rather than
+        plausibly invented, because a person follows what it says.
+      required: [setup, startPosition, executionSteps, keyCues, breathing, tempo, rangeOfMotion, finishReturn]
+      properties:
+        setup: { type: string }
+        startPosition: { type: string }
+        executionSteps: { type: array, items: { type: string } }
+        keyCues: { type: array, items: { type: string } }
+        breathing: { type: string }
+        tempo: { type: string }
+        rangeOfMotion: { type: string }
+        finishReturn: { type: string }
+
+    ExerciseProgramming:
+      type: object
+      description: Block D — how much of the exercise to prescribe.
+      properties:
+        volumeType: { type: string }
+        setsMin: { type: [integer, 'null'] }
+        setsMax: { type: [integer, 'null'] }
+        repsMin: { type: [integer, 'null'] }
+        repsMax: { type: [integer, 'null'] }
+        durationMinSeconds: { type: [integer, 'null'] }
+        durationMaxSeconds: { type: [integer, 'null'] }
+        distanceMinMeters: { type: [number, 'null'] }
+        distanceMaxMeters: { type: [number, 'null'] }
+        cyclesMin: { type: [integer, 'null'] }
+        cyclesMax: { type: [integer, 'null'] }
+        restSeconds: { type: [integer, 'null'] }
+        intensityType: { type: string }
+        intensityMin: { type: [number, 'null'] }
+        intensityMax: { type: [number, 'null'] }
+        stopCondition: { type: string }
+
+    ExerciseSafety:
+      type: object
+      description: |
+        Block E. Absent from the source and therefore empty, for the same reason
+        as the technique block: an invented contraindication is worse than none.
+      required: [commonErrors, stopSigns, contraindications, regressions, progressions, injuryNotes]
+      properties:
+        commonErrors: { type: array, items: { type: string } }
+        stopSigns: { type: array, items: { type: string } }
+        contraindications: { type: array, items: { type: string } }
+        regressions: { type: array, items: { type: string } }
+        progressions: { type: array, items: { type: string } }
+        injuryNotes: { type: string }
+
+    ExerciseMedia:
+      type: object
+      description: Block F — visual material. Empty until the media pipeline runs.
+      properties:
+        mainAssetId: { type: string }
+        phaseAssetIds: { type: array, items: { type: string } }
+        muscleLayerAssetId: { type: string }
+        animationAssetId: { type: string }
+        videoUrl: { type: string }
+        cameraView: { type: string }
+        altText: { type: string }
+        mediaRights: { type: string }
+        techniqueVersion: { type: string }
+
+    ExerciseCard:
+      allOf:
+        - $ref: '#/components/schemas/ExerciseSummary'
+        - type: object
+          required: [technique, programming, safety, media, publicationStatus, reviewStatus, mediaStatus, contentLocale, schemaVersion]
+          properties:
+            technique: { $ref: '#/components/schemas/ExerciseTechnique' }
+            programming: { $ref: '#/components/schemas/ExerciseProgramming' }
+            safety: { $ref: '#/components/schemas/ExerciseSafety' }
+            media: { $ref: '#/components/schemas/ExerciseMedia' }
+            publicationStatus:
+              type: string
+              enum: [draft, in_review, ready, published, archived]
+              description: |
+                Always `published` on a served card — the other values exist
+                because the client should be able to say *why* a block is empty
+                once editorial states become visible to it.
+            reviewStatus:
+              type: string
+              enum: [draft, in_review, approved, rejected]
+            mediaStatus:
+              type: string
+              enum: [draft, in_review, approved, rejected]
+            contentLocale: { type: string }
+            schemaVersion: { type: integer }
