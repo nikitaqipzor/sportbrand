@@ -26,3 +26,14 @@ export { createOutboxSync, toApiSetInput } from "./sync.ts";
 
 export type { WorkoutRegistry, WorkoutRegistryEntry, WorkoutRegistryMemoryDb } from "./workout-registry.ts";
 export { createMemoryWorkoutRegistry, createWorkoutRegistryMemoryDb } from "./workout-registry.ts";
+
+export type { CrashMemoryDb, CrashRecord, CrashReporter, CrashStore } from "../diagnostics/crash-log.ts";
+export {
+  appendCrash,
+  CRASH_LOG_LIMIT,
+  createCrashMemoryDb,
+  createCrashReporter,
+  createMemoryCrashStore,
+  redactCrashText,
+  toCrashRecord
+} from "../diagnostics/crash-log.ts";

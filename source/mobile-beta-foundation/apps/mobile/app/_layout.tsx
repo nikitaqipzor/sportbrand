@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { ActivityIndicator, StyleSheet, Text, View } from "react-native";
 
 import { AuthProvider, useAuth } from "../src/features/auth/auth-context.tsx";
+import { ErrorBoundary } from "../src/platform/diagnostics/error-boundary.tsx";
 
 /**
  * Гейт авторизации. Пока сессия поднимается из Keystore — заставка;
@@ -38,10 +39,14 @@ function AuthGate() {
 
 export default function RootLayout() {
   return (
-    <AuthProvider>
-      <StatusBar style="auto" />
-      <AuthGate />
-    </AuthProvider>
+    // Граница снаружи провайдера: падение самого провайдера тоже обязано быть
+    // поймано, иначе приложение просто исчезнет с экрана.
+    <ErrorBoundary scope="root">
+      <AuthProvider>
+        <StatusBar style="auto" />
+        <AuthGate />
+      </AuthProvider>
+    </ErrorBoundary>
   );
 }
 

@@ -3,6 +3,8 @@ import * as SQLite from "expo-sqlite";
 import { bySeq, type OutboxItem, type OutboxItemState, type OutboxRecord } from "./outbox.ts";
 import type { OutboxStore } from "./outbox-store.ts";
 import type { SnapshotStore } from "./snapshot-store.ts";
+import type { CrashRecord, CrashStore } from "../diagnostics/crash-log.ts";
+import { CRASH_LOG_LIMIT } from "../diagnostics/crash-log.ts";
 import type { WorkoutRegistry, WorkoutRegistryEntry } from "./workout-registry.ts";
 
 /**
@@ -39,6 +41,13 @@ CREATE INDEX IF NOT EXISTS outbox_user_seq ON outbox (user_id, seq);
 CREATE TABLE IF NOT EXISTS active_workout (
   user_id TEXT PRIMARY KEY,
   snapshot TEXT NOT NULL
+);
+CREATE TABLE IF NOT EXISTS crash_log (
+  id TEXT PRIMARY KEY,
+  at TEXT NOT NULL,
+  scope TEXT NOT NULL,
+  message TEXT NOT NULL,
+  stack TEXT
 );
 CREATE TABLE IF NOT EXISTS workout_registry (
   user_id TEXT NOT NULL,
@@ -203,6 +212,41 @@ export function createSqliteWorkoutRegistry(db: SQLite.SQLiteDatabase): WorkoutR
 
     purgeUser: async (userId) => {
       await db.runAsync("DELETE FROM workout_registry WHERE user_id = ?", userId);
+    }
+  };
+}
+
+
+type CrashRow = { id: string; at: string; scope: string; message: string; stack: string | null };
+
+/**
+ * Журнал падений на диске: он нужен именно после перезапуска, потому что
+ * приложение к этому моменту уже упало. Журнал не привязан к пользователю —
+ * падение может случиться и до входа, и после выхода.
+ */
+export function createSqliteCrashStore(db: SQLite.SQLiteDatabase, limit = CRASH_LOG_LIMIT): CrashStore {
+  return {
+    list: async (): Promise<CrashRecord[]> => {
+      const rows = await db.getAllAsync<CrashRow>("SELECT id, at, scope, message, stack FROM crash_log ORDER BY at DESC LIMIT ?", limit);
+      return rows.map((row) => ({ ...row, stack: row.stack ?? null }));
+    },
+    append: async (record) => {
+      await db.runAsync(
+        "INSERT OR REPLACE INTO crash_log (id, at, scope, message, stack) VALUES (?, ?, ?, ?, ?)",
+        record.id,
+        record.at,
+        record.scope,
+        record.message,
+        record.stack
+      );
+      // Держим журнал в границах: телефон не место для бесконечного лога.
+      await db.runAsync(
+        "DELETE FROM crash_log WHERE id NOT IN (SELECT id FROM crash_log ORDER BY at DESC LIMIT ?)",
+        limit
+      );
+    },
+    clear: async () => {
+      await db.runAsync("DELETE FROM crash_log");
     }
   };
 }

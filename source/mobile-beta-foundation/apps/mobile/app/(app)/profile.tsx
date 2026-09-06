@@ -1,11 +1,13 @@
 import { useRouter } from "expo-router";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
 
 import { readApiConfig } from "../../src/config/env.ts";
 import { useAuth } from "../../src/features/auth/auth-context.tsx";
 import { ConfirmDialog } from "../../src/features/workout/confirm-dialog.tsx";
 import { useSyncStatus } from "../../src/features/workout/use-workout.ts";
+import type { CrashRecord } from "../../src/platform/diagnostics/crash-log.ts";
+import { getCrashReporter } from "../../src/platform/diagnostics/runtime.ts";
 
 const api = readApiConfig();
 
@@ -14,6 +16,19 @@ export default function ProfileScreen() {
   const router = useRouter();
   const sync = useSyncStatus();
   const [confirmSignOut, setConfirmSignOut] = useState(false);
+  const [crashes, setCrashes] = useState<CrashRecord[]>([]);
+
+  useEffect(() => {
+    let alive = true;
+    void getCrashReporter()
+      .recent()
+      .then((records) => {
+        if (alive) setCrashes(records);
+      });
+    return () => {
+      alive = false;
+    };
+  }, []);
 
   const email = session?.user.email ?? "";
 
@@ -55,6 +70,40 @@ export default function ProfileScreen() {
 
       {/* Разделы прототипа, которых пока нет. Названы честно: пустое место
           лучше кнопки, которая ничего не делает. */}
+      {/* Журнал падений живёт здесь, потому что приёмника отчётов у проекта
+          пока нет: отправить некуда, но показать человеку — можно и нужно. */}
+      <View style={styles.card}>
+        <Text style={styles.kicker}>ЖУРНАЛ ОШИБОК</Text>
+        {crashes.length === 0 ? (
+          <Text testID="profile-crashes-empty" style={styles.muted}>
+            Падений не записано
+          </Text>
+        ) : (
+          <>
+            <Text testID="profile-crashes-count" style={styles.warn}>
+              Записано падений: {crashes.length}
+            </Text>
+            {crashes.slice(0, 3).map((crash) => (
+              <Text key={crash.id} testID={`profile-crash-${crash.id}`} style={styles.muted}>
+                {crash.at.slice(0, 16).replace("T", " ")} · {crash.scope} · {crash.message}
+              </Text>
+            ))}
+            <Pressable
+              testID="profile-crashes-clear"
+              accessibilityRole="button"
+              style={styles.secondary}
+              onPress={() => {
+                void getCrashReporter()
+                  .clear()
+                  .then(() => setCrashes([]));
+              }}
+            >
+              <Text style={styles.secondaryText}>Очистить журнал</Text>
+            </Pressable>
+          </>
+        )}
+      </View>
+
       <View style={styles.card}>
         <Text style={styles.kicker}>ПОКА НЕДОСТУПНО</Text>
         <Text testID="profile-pending-sections" style={styles.muted}>
