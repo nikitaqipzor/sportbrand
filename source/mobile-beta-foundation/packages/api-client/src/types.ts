@@ -235,3 +235,103 @@ export type Progress = {
 };
 
 export type ProgressQuery = { from?: string; to?: string; exerciseLimit?: number };
+
+/** Один код справочника: приложение фильтрует по code, человеку показывает nameRu. */
+export type ExerciseCode = { code: string; nameRu: string; nameEn: string; sortOrder: number };
+
+export type ExerciseDictionaryKind =
+  | "sport"
+  | "section"
+  | "category"
+  | "movement_pattern"
+  | "equipment"
+  | "muscle"
+  | "joint"
+  | "goal_tag"
+  | "difficulty"
+  | "laterality";
+
+export type ExerciseDictionary = { kind: ExerciseDictionaryKind; items: ExerciseCode[] };
+
+/**
+ * Строка каталога.
+ *
+ * `id` — тот же неизменяемый идентификатор, который клиент шлёт как
+ * exerciseId и внутри clientMutationId. Никакой импорт не вправе его сдвинуть.
+ */
+export type ExerciseSummary = {
+  id: string;
+  slug: string;
+  legacyNumber: number | null;
+  nameRu: string;
+  nameEn: string;
+  aliases: string[];
+  variantOf?: string | null;
+  sport: string;
+  section: string;
+  category?: string | null;
+  movementPattern?: string | null;
+  /** null означает «уровень не заявлен». Это НЕ «beginner» и так рисовать нельзя. */
+  difficulty?: string | null;
+  laterality?: string | null;
+  equipment: string[];
+  primaryMuscles: string[];
+  secondaryMuscles: string[];
+  joints: string[];
+  goalTags: string[];
+  contentVersion: number;
+  revision: number;
+  updatedAt: string;
+  /** Есть ли что показать в блоке техники. Пока false у всех записей. */
+  hasTechnique: boolean;
+  /** То же про ошибки, стоп-сигналы и противопоказания. */
+  hasSafety: boolean;
+};
+
+export type ExercisePage = { items: ExerciseSummary[]; nextCursor: string | null };
+
+export type ExerciseTechnique = {
+  setup: string;
+  startPosition: string;
+  executionSteps: string[];
+  keyCues: string[];
+  breathing: string;
+  tempo: string;
+  rangeOfMotion: string;
+  finishReturn: string;
+};
+
+export type ExerciseSafety = {
+  commonErrors: string[];
+  stopSigns: string[];
+  contraindications: string[];
+  regressions: string[];
+  progressions: string[];
+  injuryNotes: string;
+};
+
+export type ExerciseProgramming = Record<string, unknown>;
+export type ExerciseMedia = Record<string, unknown>;
+
+export type ExerciseCard = ExerciseSummary & {
+  technique: ExerciseTechnique;
+  programming: ExerciseProgramming;
+  safety: ExerciseSafety;
+  media: ExerciseMedia;
+  publicationStatus: string;
+  reviewStatus: string;
+  mediaStatus: string;
+  contentLocale: string;
+  schemaVersion: number;
+};
+
+export type ExerciseQuery = {
+  sport?: string;
+  section?: string;
+  equipment?: string;
+  muscle?: string;
+  difficulty?: string;
+  q?: string;
+  limit?: number;
+  cursor?: string;
+};

@@ -99,6 +99,15 @@ export default function TodayScreen() {
       </Pressable>
 
       <Pressable
+        testID="today-open-library"
+        accessibilityRole="button"
+        style={styles.secondary}
+        onPress={() => router.push("/library")}
+      >
+        <Text style={styles.secondaryText}>Энциклопедия упражнений</Text>
+      </Pressable>
+
+      <Pressable
         testID="today-open-progress"
         accessibilityRole="button"
         style={styles.secondary}

@@ -4,6 +4,10 @@ import type {
   Credentials,
   DeleteSetOutcome,
   EditSetOutcome,
+  ExerciseCard,
+  ExerciseDictionary,
+  ExercisePage,
+  ExerciseQuery,
   LogSetOutcome,
   Progress,
   ProgressQuery,
@@ -66,6 +70,9 @@ export type AuthClient = {
   progress: (query?: ProgressQuery) => Promise<ApiResult<Progress>>;
   editSet: (workoutId: string, setId: string, patch: WorkoutSetPatch) => Promise<ApiResult<EditSetOutcome>>;
   deleteSet: (workoutId: string, setId: string, clientMutationId: string) => Promise<ApiResult<DeleteSetOutcome>>;
+  listExercises: (query?: ExerciseQuery) => Promise<ApiResult<ExercisePage>>;
+  getExercise: (exerciseId: string) => Promise<ApiResult<ExerciseCard>>;
+  exerciseDictionaries: () => Promise<ApiResult<ExerciseDictionary[]>>;
 };
 
 const isUnauthorized = (error: ApiError): boolean => error.kind === "client" && error.status === 401;
@@ -198,6 +205,9 @@ export function createAuthClient(options: AuthClientOptions): AuthClient {
     progress: (query) => authorized((token) => api.progress(token, query)),
     editSet: (workoutId, setId, patch) => authorized((token) => api.editSet(token, workoutId, setId, patch)),
     deleteSet: (workoutId, setId, mutationId) =>
-      authorized((token) => api.deleteSet(token, workoutId, setId, mutationId))
+      authorized((token) => api.deleteSet(token, workoutId, setId, mutationId)),
+    listExercises: (query) => authorized((token) => api.listExercises(token, query)),
+    getExercise: (exerciseId) => authorized((token) => api.getExercise(token, exerciseId)),
+    exerciseDictionaries: () => authorized((token) => api.exerciseDictionaries(token))
   };
 }

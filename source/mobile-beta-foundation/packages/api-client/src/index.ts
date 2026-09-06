@@ -33,7 +33,18 @@ export type {
   WorkoutTotals,
   DeleteSetOutcome,
   EditSetOutcome,
-  WorkoutSetPatch
+  WorkoutSetPatch,
+  ExerciseCard,
+  ExerciseCode,
+  ExerciseDictionary,
+  ExerciseDictionaryKind,
+  ExerciseMedia,
+  ExercisePage,
+  ExerciseProgramming,
+  ExerciseQuery,
+  ExerciseSafety,
+  ExerciseSummary,
+  ExerciseTechnique
 } from "./types.ts";
 
 export type { ApiError, ApiResult } from "./errors.ts";

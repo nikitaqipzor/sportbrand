@@ -4,6 +4,10 @@ import type {
   Credentials,
   DeleteSetOutcome,
   EditSetOutcome,
+  ExerciseCard,
+  ExerciseDictionary,
+  ExercisePage,
+  ExerciseQuery,
   Health,
   LogSetOutcome,
   Progress,
@@ -65,6 +69,9 @@ export type ApiClient = {
   progress: (accessToken: string, query?: ProgressQuery) => Promise<ApiResult<Progress>>;
   editSet: (accessToken: string, workoutId: string, setId: string, patch: WorkoutSetPatch) => Promise<ApiResult<EditSetOutcome>>;
   deleteSet: (accessToken: string, workoutId: string, setId: string, clientMutationId: string) => Promise<ApiResult<DeleteSetOutcome>>;
+  listExercises: (accessToken: string, query?: ExerciseQuery) => Promise<ApiResult<ExercisePage>>;
+  getExercise: (accessToken: string, exerciseId: string) => Promise<ApiResult<ExerciseCard>>;
+  exerciseDictionaries: (accessToken: string) => Promise<ApiResult<ExerciseDictionary[]>>;
 };
 
 /**
@@ -323,6 +330,52 @@ export function createApiClient(options: ApiClientOptions): ApiClient {
         })
       );
       return result.ok ? ok({ outcome: "deleted", set: result.value.body }) : fail(result.error);
+    },
+
+    listExercises: async (accessToken, query = {}) => {
+      const result = asObject<ExercisePage>(
+        await http.request({
+          method: "GET",
+          path: `/exercises${queryString({
+            sport: query.sport,
+            section: query.section,
+            equipment: query.equipment,
+            muscle: query.muscle,
+            difficulty: query.difficulty,
+            q: query.q,
+            limit: query.limit,
+            cursor: query.cursor
+          })}`,
+          headers: bearer(accessToken)
+        })
+      );
+      if (!result.ok) return fail(result.error);
+      const body = result.value.body;
+      return ok({
+        items: Array.isArray(body.items) ? body.items : [],
+        nextCursor: typeof body.nextCursor === "string" ? body.nextCursor : null
+      });
+    },
+
+    getExercise: async (accessToken, exerciseId) => {
+      const result = asObject<ExerciseCard>(
+        await http.request({
+          method: "GET",
+          path: `/exercises/${encodeURIComponent(exerciseId)}`,
+          headers: bearer(accessToken)
+        })
+      );
+      return result.ok ? ok(result.value.body) : fail(result.error);
+    },
+
+    // Справочники отдаются целиком, включая пустые: экран обязан отличать
+    // «значений пока нет» от «такого фильтра не существует».
+    exerciseDictionaries: async (accessToken) => {
+      const result = asObject<{ dictionaries?: ExerciseDictionary[] }>(
+        await http.request({ method: "GET", path: "/exercise-dictionaries", headers: bearer(accessToken) })
+      );
+      if (!result.ok) return fail(result.error);
+      return ok(Array.isArray(result.value.body.dictionaries) ? result.value.body.dictionaries : []);
     },
 
     progress: async (accessToken, query = {}) => {
