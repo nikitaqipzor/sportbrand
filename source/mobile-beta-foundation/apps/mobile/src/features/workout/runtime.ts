@@ -61,6 +61,9 @@ export function getWorkoutOffline(): WorkoutOffline {
     sync: createOutboxSync({
       store: lazyOutboxStore<WorkoutMutation>(),
       send: (workoutId, input) => auth.logSet(workoutId, input),
+      editSet: (workoutId, setId, patch, clientMutationId) =>
+        auth.editSet(workoutId, setId, { ...patch, clientMutationId }),
+      deleteSet: (workoutId, setId, clientMutationId) => auth.deleteSet(workoutId, setId, clientMutationId),
       // Тренировка создаётся на сервере перед своими подходами; создание
       // идемпотентно по клиентскому id, поэтому повтор безопасен.
       createWorkout: (id, title) => auth.createWorkout({ id, title: title || undefined }),

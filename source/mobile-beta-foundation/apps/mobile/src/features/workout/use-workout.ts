@@ -230,3 +230,48 @@ export function useActiveWorkout(input: StartWorkoutInput): ActiveWorkoutView {
     syncNow: sync
   };
 }
+
+export type SetCorrections = {
+  editSet: (workoutId: string, setId: string, patch: SetMeasures, revision?: number) => Promise<string[]>;
+  deleteSet: (workoutId: string, setId: string) => Promise<void>;
+  busy: boolean;
+};
+
+/**
+ * Правка и удаление записанного подхода для экранов.
+ *
+ * Обе операции идут через офлайн-очередь, поэтому работают без сети: результат
+ * виден в «Итогах» после следующей синхронизации, а не мгновенно. Экран обязан
+ * это признавать, а не делать вид, что сервер уже согласился.
+ */
+export function useSetCorrections(): SetCorrections {
+  const { session } = useAuth();
+  const userId = session?.user.id ?? null;
+  const offline = useMemo(() => getWorkoutOffline(), []);
+  const [busy, setBusy] = useState(false);
+
+  const editSet = useCallback(
+    async (workoutId: string, setId: string, patch: SetMeasures, revision = 1): Promise<string[]> => {
+      if (!userId) return ["нет активной сессии"];
+      setBusy(true);
+      const result = await offline.editSet(userId, workoutId, setId, patch, revision);
+      await offline.flush(userId);
+      setBusy(false);
+      return result.ok ? [] : result.issues;
+    },
+    [offline, userId]
+  );
+
+  const deleteSet = useCallback(
+    async (workoutId: string, setId: string): Promise<void> => {
+      if (!userId) return;
+      setBusy(true);
+      await offline.deleteSet(userId, workoutId, setId);
+      await offline.flush(userId);
+      setBusy(false);
+    },
+    [offline, userId]
+  );
+
+  return { editSet, deleteSet, busy };
+}

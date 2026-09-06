@@ -1,4 +1,4 @@
-import type { WorkoutAction, WorkoutSetInput } from "@athletica/domain";
+import { validateSet, type WorkoutAction, type WorkoutSetInput } from "@athletica/domain";
 
 import type { WorkoutMutation } from "../../platform/offline/mutations.ts";
 
@@ -6,6 +6,7 @@ import type { OutboxRecord } from "../../platform/offline/outbox.ts";
 import type { SnapshotStore } from "../../platform/offline/snapshot-store.ts";
 import type { WorkoutRegistry } from "../../platform/offline/workout-registry.ts";
 import type { FlushSummary, OutboxSync, OutboxSyncStatus } from "../../platform/offline/sync.ts";
+import { deleteMutationId, editMutationId } from "../../platform/offline/mutations.ts";
 import { registerSessionCleanup, type SessionCleanupEvent } from "../auth/session-cleanup.ts";
 import {
   actOnWorkout,
@@ -36,6 +37,8 @@ export type RecordSetResult =
   | { ok: true; workout: ActiveWorkout; record: OutboxRecord<WorkoutMutation> }
   | { ok: false; issues: string[] };
 
+export type EditResult = { ok: true } | { ok: false; issues: string[] };
+
 export type FinishResult = { ok: true; workout: ActiveWorkout; discarded: number } | { ok: false; reason: string };
 
 export type WorkoutOffline = {
@@ -55,6 +58,22 @@ export type WorkoutOffline = {
   addExercise: (userId: string, workout: ActiveWorkout, seed: ExerciseSeed) => Promise<ActiveWorkout>;
   /** Незавершённая тренировка предыдущего запуска, если она есть (П3). */
   resumable: (userId: string | null) => Promise<ActiveWorkout | null>;
+  /**
+   * Правка записанного подхода. Уходит через ту же очередь, что и запись,
+   * поэтому работает без сети.
+   *
+   * revision различает две правки одного подхода: без него вторая получила бы
+   * идентификатор первой, сервер счёл бы её уже применённой и молча отбросил.
+   */
+  editSet: (
+    userId: string,
+    workoutId: string,
+    setId: string,
+    patch: SetMeasures,
+    revision?: number
+  ) => Promise<EditResult>;
+  /** Удаление записанного подхода. Одно намерение — один идентификатор. */
+  deleteSet: (userId: string, workoutId: string, setId: string) => Promise<void>;
   /** cancel и complete — разрушительные действия, экран спрашивает confirm. */
   finish: (userId: string, workout: ActiveWorkout, action: WorkoutAction) => Promise<FinishResult>;
   flush: (userId: string | null) => Promise<FlushSummary>;
@@ -124,6 +143,35 @@ export function createWorkoutOffline(deps: WorkoutOfflineDeps): WorkoutOffline {
       if (action === "cancel") await deps.registry?.forget(userId, workout.workoutId);
       await deps.snapshots.clear(userId);
       return { ok: true, workout: transition.workout, discarded };
+    },
+
+    editSet: async (userId, workoutId, setId, patch, revision = 1) => {
+      // Границы те же, что у записи: правка не должна быть обходным путём
+      // мимо домена. setNumber и exerciseId не меняются — они и есть
+      // идентичность записи, поэтому для проверки берём безопасные значения.
+      const issues = validateSet({
+        workoutId,
+        exerciseId: "check",
+        setNumber: 1,
+        clientMutationId: "check",
+        ...patch
+      });
+      if (issues.length > 0) return { ok: false, issues };
+
+      const id = editMutationId(setId, revision);
+      const amended = await deps.sync.amendPending(userId, id, patch);
+      if (!amended) {
+        await deps.sync.enqueueMutation(userId, id, { kind: "edit-set", workoutId, setId, patch });
+      }
+      return { ok: true };
+    },
+
+    deleteSet: async (userId, workoutId, setId) => {
+      await deps.sync.enqueueMutation(userId, deleteMutationId(setId), {
+        kind: "delete-set",
+        workoutId,
+        setId
+      });
     },
 
     flush: (userId) => deps.sync.flush(userId),
