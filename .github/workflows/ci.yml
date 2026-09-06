@@ -2,11 +2,17 @@ name: CI
 
 on:
   push:
-    branches: [main]
+    # Рабочие ветки проверяются по пушу, а не только через pull request:
+    # после слияния PR ветка остаётся, PR исчезает, и работа на ней шла бы
+    # вообще без проверки — что однажды уже случилось.
+    branches: [main, "claude/**"]
   pull_request:
+  workflow_dispatch:
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
+  # Ключ по типу события и ветке: пуш и pull request на одну голову — это два
+  # прогона одной работы, и второй незачем гонять.
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
 
 jobs:
