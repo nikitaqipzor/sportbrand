@@ -47,6 +47,17 @@ func Run(t *testing.T, newStore Factory) {
 	t.Run("CorrectionStateRules", func(t *testing.T) { testCorrectionStateRules(t, newStore) })
 	t.Run("SetNumbersSurviveADeletion", func(t *testing.T) { testSetNumbersSurviveADeletion(t, newStore) })
 	t.Run("WorkoutRename", func(t *testing.T) { testWorkoutRename(t, newStore) })
+
+	// The exercise reference book (Э3). Unlike everything above it, these rows
+	// belong to nobody — but the guarantees are just as load-bearing, because a
+	// renamed identifier would detach recorded sets from the exercise they were
+	// performed with.
+	t.Run("ExerciseSeedIsIdempotent", func(t *testing.T) { testExerciseSeedIsIdempotent(t, newStore) })
+	t.Run("ExerciseRenameIsRefused", func(t *testing.T) { testExerciseRenameIsRefused(t, newStore) })
+	t.Run("UnpublishedExercisesAreInvisible", func(t *testing.T) { testUnpublishedExercisesAreInvisible(t, newStore) })
+	t.Run("ExerciseFilteringAndPaging", func(t *testing.T) { testExerciseFilteringAndPaging(t, newStore) })
+	t.Run("ExerciseCodesExistInDictionaries", func(t *testing.T) { testExerciseCodesExistInDictionaries(t, newStore) })
+	t.Run("ExerciseImportNeverDeletes", func(t *testing.T) { testExerciseImportNeverDeletes(t, newStore) })
 }
 
 func mustUser(t *testing.T, st store.Store, email string) store.User {

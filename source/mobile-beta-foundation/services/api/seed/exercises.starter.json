@@ -1,0 +1,656 @@
+{
+  "SCHEMA_VERSION": 1,
+  "CONTENT_VERSION": 1,
+  "CONTENT_LOCALE": "ru-RU",
+  "GENERATED_AT": "2026-09-06T00:00:00Z",
+  "DICTIONARIES": {
+    "sport": [
+      {
+        "CODE": "strength",
+        "NAME_RU": "Силовая тренировка",
+        "NAME_EN": "Strength",
+        "SORT_ORDER": 1
+      }
+    ],
+    "section": [
+      {
+        "CODE": "legs",
+        "NAME_RU": "Ноги",
+        "SORT_ORDER": 1
+      },
+      {
+        "CODE": "chest",
+        "NAME_RU": "Грудь",
+        "SORT_ORDER": 2
+      },
+      {
+        "CODE": "back",
+        "NAME_RU": "Спина",
+        "SORT_ORDER": 3
+      },
+      {
+        "CODE": "shoulders",
+        "NAME_RU": "Плечи",
+        "SORT_ORDER": 4
+      },
+      {
+        "CODE": "arms",
+        "NAME_RU": "Руки",
+        "SORT_ORDER": 5
+      },
+      {
+        "CODE": "core",
+        "NAME_RU": "Корпус",
+        "SORT_ORDER": 6
+      }
+    ],
+    "equipment": [
+      {
+        "CODE": "barbell",
+        "NAME_RU": "Штанга",
+        "SORT_ORDER": 1
+      },
+      {
+        "CODE": "dumbbell",
+        "NAME_RU": "Гантели",
+        "SORT_ORDER": 2
+      },
+      {
+        "CODE": "machine",
+        "NAME_RU": "Тренажёр",
+        "SORT_ORDER": 3
+      },
+      {
+        "CODE": "cable",
+        "NAME_RU": "Блочный тренажёр",
+        "SORT_ORDER": 4
+      },
+      {
+        "CODE": "bodyweight",
+        "NAME_RU": "Собственный вес",
+        "SORT_ORDER": 5
+      }
+    ],
+    "muscle": [
+      {
+        "CODE": "quadriceps",
+        "NAME_RU": "Квадрицепс",
+        "SORT_ORDER": 1
+      },
+      {
+        "CODE": "hamstrings",
+        "NAME_RU": "Бицепс бедра",
+        "SORT_ORDER": 2
+      },
+      {
+        "CODE": "glutes",
+        "NAME_RU": "Ягодичные",
+        "SORT_ORDER": 3
+      },
+      {
+        "CODE": "spinal-erectors",
+        "NAME_RU": "Разгибатели спины",
+        "SORT_ORDER": 4
+      },
+      {
+        "CODE": "lats",
+        "NAME_RU": "Широчайшие",
+        "SORT_ORDER": 5
+      },
+      {
+        "CODE": "chest",
+        "NAME_RU": "Грудные",
+        "SORT_ORDER": 6
+      },
+      {
+        "CODE": "deltoids",
+        "NAME_RU": "Дельтовидные",
+        "SORT_ORDER": 7
+      },
+      {
+        "CODE": "triceps",
+        "NAME_RU": "Трицепс",
+        "SORT_ORDER": 8
+      },
+      {
+        "CODE": "biceps",
+        "NAME_RU": "Бицепс",
+        "SORT_ORDER": 9
+      },
+      {
+        "CODE": "abs",
+        "NAME_RU": "Мышцы живота",
+        "SORT_ORDER": 10
+      }
+    ],
+    "movement_pattern": [
+      {
+        "CODE": "squat",
+        "NAME_RU": "Приседание",
+        "SORT_ORDER": 1
+      },
+      {
+        "CODE": "hinge",
+        "NAME_RU": "Тазобедренный шарнир",
+        "SORT_ORDER": 2
+      },
+      {
+        "CODE": "lunge",
+        "NAME_RU": "Выпад",
+        "SORT_ORDER": 3
+      },
+      {
+        "CODE": "horizontal-push",
+        "NAME_RU": "Горизонтальный жим",
+        "SORT_ORDER": 4
+      },
+      {
+        "CODE": "vertical-push",
+        "NAME_RU": "Вертикальный жим",
+        "SORT_ORDER": 5
+      },
+      {
+        "CODE": "horizontal-pull",
+        "NAME_RU": "Горизонтальная тяга",
+        "SORT_ORDER": 6
+      },
+      {
+        "CODE": "vertical-pull",
+        "NAME_RU": "Вертикальная тяга",
+        "SORT_ORDER": 7
+      },
+      {
+        "CODE": "isolation",
+        "NAME_RU": "Изоляция",
+        "SORT_ORDER": 8
+      },
+      {
+        "CODE": "core-brace",
+        "NAME_RU": "Удержание корпуса",
+        "SORT_ORDER": 9
+      }
+    ],
+    "difficulty": [
+      {
+        "CODE": "beginner",
+        "NAME_RU": "Начальный",
+        "SORT_ORDER": 1
+      },
+      {
+        "CODE": "intermediate",
+        "NAME_RU": "Средний",
+        "SORT_ORDER": 2
+      },
+      {
+        "CODE": "advanced",
+        "NAME_RU": "Продвинутый",
+        "SORT_ORDER": 3
+      }
+    ],
+    "laterality": [
+      {
+        "CODE": "bilateral",
+        "NAME_RU": "Двустороннее",
+        "SORT_ORDER": 1
+      },
+      {
+        "CODE": "unilateral",
+        "NAME_RU": "Одностороннее",
+        "SORT_ORDER": 2
+      }
+    ]
+  },
+  "EXERCISES": [
+    {
+      "EXERCISE_ID": "back-squat",
+      "SLUG": "back-squat",
+      "NAME_RU": "Приседания со штангой",
+      "SPORT": "strength",
+      "SECTION": "legs",
+      "MOVEMENT_PATTERN": "squat",
+      "EQUIPMENT": [
+        "barbell"
+      ],
+      "PRIMARY_MUSCLES": [
+        "quadriceps",
+        "glutes"
+      ],
+      "LATERALITY": "bilateral",
+      "PUBLICATION_STATUS": "published",
+      "REVIEW_STATUS": "approved",
+      "MEDIA_STATUS": "approved",
+      "REVIEW_NOTES": "Стартовый набор: проверены только идентификатор, русское название и классификация (вид спорта, раздел, оборудование, основные мышцы, паттерн движения, сторона). Техники, типичных ошибок, противопоказаний и медиа в записи нет — они приедут из энциклопедии на 918 упражнений.",
+      "SOURCES": [
+        "apps/mobile/src/features/workout/exercise-catalog.ts"
+      ]
+    },
+    {
+      "EXERCISE_ID": "front-squat",
+      "SLUG": "front-squat",
+      "NAME_RU": "Фронтальные приседания",
+      "SPORT": "strength",
+      "SECTION": "legs",
+      "MOVEMENT_PATTERN": "squat",
+      "EQUIPMENT": [
+        "barbell"
+      ],
+      "PRIMARY_MUSCLES": [
+        "quadriceps",
+        "glutes"
+      ],
+      "LATERALITY": "bilateral",
+      "PUBLICATION_STATUS": "published",
+      "REVIEW_STATUS": "approved",
+      "MEDIA_STATUS": "approved",
+      "REVIEW_NOTES": "Стартовый набор: проверены только идентификатор, русское название и классификация (вид спорта, раздел, оборудование, основные мышцы, паттерн движения, сторона). Техники, типичных ошибок, противопоказаний и медиа в записи нет — они приедут из энциклопедии на 918 упражнений.",
+      "SOURCES": [
+        "apps/mobile/src/features/workout/exercise-catalog.ts"
+      ]
+    },
+    {
+      "EXERCISE_ID": "deadlift",
+      "SLUG": "deadlift",
+      "NAME_RU": "Становая тяга",
+      "SPORT": "strength",
+      "SECTION": "legs",
+      "MOVEMENT_PATTERN": "hinge",
+      "EQUIPMENT": [
+        "barbell"
+      ],
+      "PRIMARY_MUSCLES": [
+        "glutes",
+        "hamstrings",
+        "spinal-erectors"
+      ],
+      "LATERALITY": "bilateral",
+      "PUBLICATION_STATUS": "published",
+      "REVIEW_STATUS": "approved",
+      "MEDIA_STATUS": "approved",
+      "REVIEW_NOTES": "Стартовый набор: проверены только идентификатор, русское название и классификация (вид спорта, раздел, оборудование, основные мышцы, паттерн движения, сторона). Техники, типичных ошибок, противопоказаний и медиа в записи нет — они приедут из энциклопедии на 918 упражнений.",
+      "SOURCES": [
+        "apps/mobile/src/features/workout/exercise-catalog.ts"
+      ]
+    },
+    {
+      "EXERCISE_ID": "romanian-deadlift",
+      "SLUG": "romanian-deadlift",
+      "NAME_RU": "Румынская тяга",
+      "SPORT": "strength",
+      "SECTION": "legs",
+      "MOVEMENT_PATTERN": "hinge",
+      "EQUIPMENT": [
+        "barbell"
+      ],
+      "PRIMARY_MUSCLES": [
+        "hamstrings",
+        "glutes"
+      ],
+      "LATERALITY": "bilateral",
+      "PUBLICATION_STATUS": "published",
+      "REVIEW_STATUS": "approved",
+      "MEDIA_STATUS": "approved",
+      "REVIEW_NOTES": "Стартовый набор: проверены только идентификатор, русское название и классификация (вид спорта, раздел, оборудование, основные мышцы, паттерн движения, сторона). Техники, типичных ошибок, противопоказаний и медиа в записи нет — они приедут из энциклопедии на 918 упражнений.",
+      "SOURCES": [
+        "apps/mobile/src/features/workout/exercise-catalog.ts"
+      ]
+    },
+    {
+      "EXERCISE_ID": "bench-press",
+      "SLUG": "bench-press",
+      "NAME_RU": "Жим лёжа",
+      "SPORT": "strength",
+      "SECTION": "chest",
+      "MOVEMENT_PATTERN": "horizontal-push",
+      "EQUIPMENT": [
+        "barbell"
+      ],
+      "PRIMARY_MUSCLES": [
+        "chest",
+        "triceps"
+      ],
+      "LATERALITY": "bilateral",
+      "PUBLICATION_STATUS": "published",
+      "REVIEW_STATUS": "approved",
+      "MEDIA_STATUS": "approved",
+      "REVIEW_NOTES": "Стартовый набор: проверены только идентификатор, русское название и классификация (вид спорта, раздел, оборудование, основные мышцы, паттерн движения, сторона). Техники, типичных ошибок, противопоказаний и медиа в записи нет — они приедут из энциклопедии на 918 упражнений.",
+      "SOURCES": [
+        "apps/mobile/src/features/workout/exercise-catalog.ts"
+      ]
+    },
+    {
+      "EXERCISE_ID": "incline-bench-press",
+      "SLUG": "incline-bench-press",
+      "NAME_RU": "Жим лёжа на наклонной скамье",
+      "SPORT": "strength",
+      "SECTION": "chest",
+      "MOVEMENT_PATTERN": "horizontal-push",
+      "EQUIPMENT": [
+        "barbell"
+      ],
+      "PRIMARY_MUSCLES": [
+        "chest",
+        "deltoids"
+      ],
+      "LATERALITY": "bilateral",
+      "PUBLICATION_STATUS": "published",
+      "REVIEW_STATUS": "approved",
+      "MEDIA_STATUS": "approved",
+      "REVIEW_NOTES": "Стартовый набор: проверены только идентификатор, русское название и классификация (вид спорта, раздел, оборудование, основные мышцы, паттерн движения, сторона). Техники, типичных ошибок, противопоказаний и медиа в записи нет — они приедут из энциклопедии на 918 упражнений.",
+      "SOURCES": [
+        "apps/mobile/src/features/workout/exercise-catalog.ts"
+      ]
+    },
+    {
+      "EXERCISE_ID": "overhead-press",
+      "SLUG": "overhead-press",
+      "NAME_RU": "Жим стоя",
+      "SPORT": "strength",
+      "SECTION": "shoulders",
+      "MOVEMENT_PATTERN": "vertical-push",
+      "EQUIPMENT": [
+        "barbell"
+      ],
+      "PRIMARY_MUSCLES": [
+        "deltoids",
+        "triceps"
+      ],
+      "LATERALITY": "bilateral",
+      "PUBLICATION_STATUS": "published",
+      "REVIEW_STATUS": "approved",
+      "MEDIA_STATUS": "approved",
+      "REVIEW_NOTES": "Стартовый набор: проверены только идентификатор, русское название и классификация (вид спорта, раздел, оборудование, основные мышцы, паттерн движения, сторона). Техники, типичных ошибок, противопоказаний и медиа в записи нет — они приедут из энциклопедии на 918 упражнений.",
+      "SOURCES": [
+        "apps/mobile/src/features/workout/exercise-catalog.ts"
+      ]
+    },
+    {
+      "EXERCISE_ID": "barbell-row",
+      "SLUG": "barbell-row",
+      "NAME_RU": "Тяга штанги в наклоне",
+      "SPORT": "strength",
+      "SECTION": "back",
+      "MOVEMENT_PATTERN": "horizontal-pull",
+      "EQUIPMENT": [
+        "barbell"
+      ],
+      "PRIMARY_MUSCLES": [
+        "lats"
+      ],
+      "LATERALITY": "bilateral",
+      "PUBLICATION_STATUS": "published",
+      "REVIEW_STATUS": "approved",
+      "MEDIA_STATUS": "approved",
+      "REVIEW_NOTES": "Стартовый набор: проверены только идентификатор, русское название и классификация (вид спорта, раздел, оборудование, основные мышцы, паттерн движения, сторона). Техники, типичных ошибок, противопоказаний и медиа в записи нет — они приедут из энциклопедии на 918 упражнений.",
+      "SOURCES": [
+        "apps/mobile/src/features/workout/exercise-catalog.ts"
+      ]
+    },
+    {
+      "EXERCISE_ID": "lat-pulldown",
+      "SLUG": "lat-pulldown",
+      "NAME_RU": "Тяга верхнего блока",
+      "SPORT": "strength",
+      "SECTION": "back",
+      "MOVEMENT_PATTERN": "vertical-pull",
+      "EQUIPMENT": [
+        "cable"
+      ],
+      "PRIMARY_MUSCLES": [
+        "lats"
+      ],
+      "LATERALITY": "bilateral",
+      "PUBLICATION_STATUS": "published",
+      "REVIEW_STATUS": "approved",
+      "MEDIA_STATUS": "approved",
+      "REVIEW_NOTES": "Стартовый набор: проверены только идентификатор, русское название и классификация (вид спорта, раздел, оборудование, основные мышцы, паттерн движения, сторона). Техники, типичных ошибок, противопоказаний и медиа в записи нет — они приедут из энциклопедии на 918 упражнений.",
+      "SOURCES": [
+        "apps/mobile/src/features/workout/exercise-catalog.ts"
+      ]
+    },
+    {
+      "EXERCISE_ID": "seated-row",
+      "SLUG": "seated-row",
+      "NAME_RU": "Тяга горизонтального блока",
+      "SPORT": "strength",
+      "SECTION": "back",
+      "MOVEMENT_PATTERN": "horizontal-pull",
+      "EQUIPMENT": [
+        "cable"
+      ],
+      "PRIMARY_MUSCLES": [
+        "lats"
+      ],
+      "LATERALITY": "bilateral",
+      "PUBLICATION_STATUS": "published",
+      "REVIEW_STATUS": "approved",
+      "MEDIA_STATUS": "approved",
+      "REVIEW_NOTES": "Стартовый набор: проверены только идентификатор, русское название и классификация (вид спорта, раздел, оборудование, основные мышцы, паттерн движения, сторона). Техники, типичных ошибок, противопоказаний и медиа в записи нет — они приедут из энциклопедии на 918 упражнений.",
+      "SOURCES": [
+        "apps/mobile/src/features/workout/exercise-catalog.ts"
+      ]
+    },
+    {
+      "EXERCISE_ID": "pull-up",
+      "SLUG": "pull-up",
+      "NAME_RU": "Подтягивания",
+      "SPORT": "strength",
+      "SECTION": "back",
+      "MOVEMENT_PATTERN": "vertical-pull",
+      "EQUIPMENT": [
+        "bodyweight"
+      ],
+      "PRIMARY_MUSCLES": [
+        "lats"
+      ],
+      "LATERALITY": "bilateral",
+      "PUBLICATION_STATUS": "published",
+      "REVIEW_STATUS": "approved",
+      "MEDIA_STATUS": "approved",
+      "REVIEW_NOTES": "Стартовый набор: проверены только идентификатор, русское название и классификация (вид спорта, раздел, оборудование, основные мышцы, паттерн движения, сторона). Техники, типичных ошибок, противопоказаний и медиа в записи нет — они приедут из энциклопедии на 918 упражнений.",
+      "SOURCES": [
+        "apps/mobile/src/features/workout/exercise-catalog.ts"
+      ]
+    },
+    {
+      "EXERCISE_ID": "dip",
+      "SLUG": "dip",
+      "NAME_RU": "Отжимания на брусьях",
+      "SPORT": "strength",
+      "SECTION": "chest",
+      "MOVEMENT_PATTERN": "vertical-push",
+      "EQUIPMENT": [
+        "bodyweight"
+      ],
+      "PRIMARY_MUSCLES": [
+        "chest",
+        "triceps"
+      ],
+      "LATERALITY": "bilateral",
+      "PUBLICATION_STATUS": "published",
+      "REVIEW_STATUS": "approved",
+      "MEDIA_STATUS": "approved",
+      "REVIEW_NOTES": "Стартовый набор: проверены только идентификатор, русское название и классификация (вид спорта, раздел, оборудование, основные мышцы, паттерн движения, сторона). Техники, типичных ошибок, противопоказаний и медиа в записи нет — они приедут из энциклопедии на 918 упражнений.",
+      "SOURCES": [
+        "apps/mobile/src/features/workout/exercise-catalog.ts"
+      ]
+    },
+    {
+      "EXERCISE_ID": "leg-press",
+      "SLUG": "leg-press",
+      "NAME_RU": "Жим ногами",
+      "SPORT": "strength",
+      "SECTION": "legs",
+      "MOVEMENT_PATTERN": "squat",
+      "EQUIPMENT": [
+        "machine"
+      ],
+      "PRIMARY_MUSCLES": [
+        "quadriceps",
+        "glutes"
+      ],
+      "LATERALITY": "bilateral",
+      "PUBLICATION_STATUS": "published",
+      "REVIEW_STATUS": "approved",
+      "MEDIA_STATUS": "approved",
+      "REVIEW_NOTES": "Стартовый набор: проверены только идентификатор, русское название и классификация (вид спорта, раздел, оборудование, основные мышцы, паттерн движения, сторона). Техники, типичных ошибок, противопоказаний и медиа в записи нет — они приедут из энциклопедии на 918 упражнений.",
+      "SOURCES": [
+        "apps/mobile/src/features/workout/exercise-catalog.ts"
+      ]
+    },
+    {
+      "EXERCISE_ID": "leg-curl",
+      "SLUG": "leg-curl",
+      "NAME_RU": "Сгибание ног лёжа",
+      "SPORT": "strength",
+      "SECTION": "legs",
+      "MOVEMENT_PATTERN": "isolation",
+      "EQUIPMENT": [
+        "machine"
+      ],
+      "PRIMARY_MUSCLES": [
+        "hamstrings"
+      ],
+      "LATERALITY": "bilateral",
+      "PUBLICATION_STATUS": "published",
+      "REVIEW_STATUS": "approved",
+      "MEDIA_STATUS": "approved",
+      "REVIEW_NOTES": "Стартовый набор: проверены только идентификатор, русское название и классификация (вид спорта, раздел, оборудование, основные мышцы, паттерн движения, сторона). Техники, типичных ошибок, противопоказаний и медиа в записи нет — они приедут из энциклопедии на 918 упражнений.",
+      "SOURCES": [
+        "apps/mobile/src/features/workout/exercise-catalog.ts"
+      ]
+    },
+    {
+      "EXERCISE_ID": "lunge",
+      "SLUG": "lunge",
+      "NAME_RU": "Выпады",
+      "SPORT": "strength",
+      "SECTION": "legs",
+      "MOVEMENT_PATTERN": "lunge",
+      "EQUIPMENT": [
+        "bodyweight"
+      ],
+      "PRIMARY_MUSCLES": [
+        "quadriceps",
+        "glutes"
+      ],
+      "LATERALITY": "unilateral",
+      "PUBLICATION_STATUS": "published",
+      "REVIEW_STATUS": "approved",
+      "MEDIA_STATUS": "approved",
+      "REVIEW_NOTES": "Стартовый набор: проверены только идентификатор, русское название и классификация (вид спорта, раздел, оборудование, основные мышцы, паттерн движения, сторона). Техники, типичных ошибок, противопоказаний и медиа в записи нет — они приедут из энциклопедии на 918 упражнений.",
+      "SOURCES": [
+        "apps/mobile/src/features/workout/exercise-catalog.ts"
+      ]
+    },
+    {
+      "EXERCISE_ID": "hip-thrust",
+      "SLUG": "hip-thrust",
+      "NAME_RU": "Ягодичный мост",
+      "SPORT": "strength",
+      "SECTION": "legs",
+      "MOVEMENT_PATTERN": "hinge",
+      "EQUIPMENT": [
+        "barbell"
+      ],
+      "PRIMARY_MUSCLES": [
+        "glutes"
+      ],
+      "LATERALITY": "bilateral",
+      "PUBLICATION_STATUS": "published",
+      "REVIEW_STATUS": "approved",
+      "MEDIA_STATUS": "approved",
+      "REVIEW_NOTES": "Стартовый набор: проверены только идентификатор, русское название и классификация (вид спорта, раздел, оборудование, основные мышцы, паттерн движения, сторона). Техники, типичных ошибок, противопоказаний и медиа в записи нет — они приедут из энциклопедии на 918 упражнений.",
+      "SOURCES": [
+        "apps/mobile/src/features/workout/exercise-catalog.ts"
+      ]
+    },
+    {
+      "EXERCISE_ID": "biceps-curl",
+      "SLUG": "biceps-curl",
+      "NAME_RU": "Подъём на бицепс",
+      "SPORT": "strength",
+      "SECTION": "arms",
+      "MOVEMENT_PATTERN": "isolation",
+      "EQUIPMENT": [
+        "dumbbell"
+      ],
+      "PRIMARY_MUSCLES": [
+        "biceps"
+      ],
+      "LATERALITY": "bilateral",
+      "PUBLICATION_STATUS": "published",
+      "REVIEW_STATUS": "approved",
+      "MEDIA_STATUS": "approved",
+      "REVIEW_NOTES": "Стартовый набор: проверены только идентификатор, русское название и классификация (вид спорта, раздел, оборудование, основные мышцы, паттерн движения, сторона). Техники, типичных ошибок, противопоказаний и медиа в записи нет — они приедут из энциклопедии на 918 упражнений.",
+      "SOURCES": [
+        "apps/mobile/src/features/workout/exercise-catalog.ts"
+      ]
+    },
+    {
+      "EXERCISE_ID": "triceps-pushdown",
+      "SLUG": "triceps-pushdown",
+      "NAME_RU": "Разгибание на трицепс",
+      "SPORT": "strength",
+      "SECTION": "arms",
+      "MOVEMENT_PATTERN": "isolation",
+      "EQUIPMENT": [
+        "cable"
+      ],
+      "PRIMARY_MUSCLES": [
+        "triceps"
+      ],
+      "LATERALITY": "bilateral",
+      "PUBLICATION_STATUS": "published",
+      "REVIEW_STATUS": "approved",
+      "MEDIA_STATUS": "approved",
+      "REVIEW_NOTES": "Стартовый набор: проверены только идентификатор, русское название и классификация (вид спорта, раздел, оборудование, основные мышцы, паттерн движения, сторона). Техники, типичных ошибок, противопоказаний и медиа в записи нет — они приедут из энциклопедии на 918 упражнений.",
+      "SOURCES": [
+        "apps/mobile/src/features/workout/exercise-catalog.ts"
+      ]
+    },
+    {
+      "EXERCISE_ID": "lateral-raise",
+      "SLUG": "lateral-raise",
+      "NAME_RU": "Махи гантелями в стороны",
+      "SPORT": "strength",
+      "SECTION": "shoulders",
+      "MOVEMENT_PATTERN": "isolation",
+      "EQUIPMENT": [
+        "dumbbell"
+      ],
+      "PRIMARY_MUSCLES": [
+        "deltoids"
+      ],
+      "LATERALITY": "bilateral",
+      "PUBLICATION_STATUS": "published",
+      "REVIEW_STATUS": "approved",
+      "MEDIA_STATUS": "approved",
+      "REVIEW_NOTES": "Стартовый набор: проверены только идентификатор, русское название и классификация (вид спорта, раздел, оборудование, основные мышцы, паттерн движения, сторона). Техники, типичных ошибок, противопоказаний и медиа в записи нет — они приедут из энциклопедии на 918 упражнений.",
+      "SOURCES": [
+        "apps/mobile/src/features/workout/exercise-catalog.ts"
+      ]
+    },
+    {
+      "EXERCISE_ID": "plank",
+      "SLUG": "plank",
+      "NAME_RU": "Планка",
+      "SPORT": "strength",
+      "SECTION": "core",
+      "MOVEMENT_PATTERN": "core-brace",
+      "EQUIPMENT": [
+        "bodyweight"
+      ],
+      "PRIMARY_MUSCLES": [
+        "abs"
+      ],
+      "LATERALITY": "bilateral",
+      "PUBLICATION_STATUS": "published",
+      "REVIEW_STATUS": "approved",
+      "MEDIA_STATUS": "approved",
+      "REVIEW_NOTES": "Стартовый набор: проверены только идентификатор, русское название и классификация (вид спорта, раздел, оборудование, основные мышцы, паттерн движения, сторона). Техники, типичных ошибок, противопоказаний и медиа в записи нет — они приедут из энциклопедии на 918 упражнений.",
+      "SOURCES": [
+        "apps/mobile/src/features/workout/exercise-catalog.ts"
+      ]
+    }
+  ]
+}

@@ -323,6 +323,35 @@ type Store interface {
 	WeeklyVolume(ctx context.Context, userID string, window ProgressWindow) ([]WeeklyVolume, error)
 	// WeeklyAdherence counts how the caller's workouts of each ISO week ended.
 	WeeklyAdherence(ctx context.Context, userID string, window ProgressWindow) ([]WeeklyAdherence, error)
+
+	// The exercise catalogue. Its rows belong to nobody: they are shared
+	// content, so these are the only Store methods without a user argument that
+	// return rows. Access is still authenticated at the HTTP boundary; it is
+	// simply not scoped, and there is nothing here a caller could scope it by.
+
+	// ListExercises returns one page of the catalogue in (sort_key, id) order.
+	// Unpublished records are absent unless filter.IncludeUnpublished is set,
+	// which nothing on the HTTP surface can do.
+	ListExercises(ctx context.Context, filter ExerciseFilter) ([]Exercise, error)
+	// ExerciseByID returns one record. An unpublished record answers
+	// ErrNotFound unless includeUnpublished is set, so a draft is
+	// indistinguishable from an identifier that does not exist.
+	ExerciseByID(ctx context.Context, id string, includeUnpublished bool) (Exercise, error)
+	// ExerciseCodes returns every dictionary entry, ordered by (kind,
+	// sort_order, code), so the client builds its filters from the same
+	// vocabulary the records are coded with.
+	ExerciseCodes(ctx context.Context) ([]ExerciseCode, error)
+	// SeedExercises applies one import file atomically: either the whole file
+	// lands or none of it does.
+	//
+	// It refuses — with a *RenameError wrapping ErrExerciseRenamed, and writing
+	// nothing — a file that would move a slug or a legacy number from one
+	// exercise ID to another, because those IDs are already stored inside
+	// recorded sets. A record whose content hash is unchanged is skipped rather
+	// than rewritten, which is what makes a repeated import a no-op. A record
+	// already stored that the file does not mention is left alone and counted
+	// as absent; nothing is ever deleted.
+	SeedExercises(ctx context.Context, seed ExerciseSeed) (ExerciseSeedReport, error)
 }
 
 // NormalizeEmail lowercases and trims an address so that lookups and the

@@ -44,6 +44,13 @@ type Store struct {
 	setsByMutKey map[mutationKey]string      // unique index (user_id, client_mutation_id)
 	setOrder     []string
 
+	// The exercise catalogue. It belongs to nobody: shared content, keyed by
+	// the immutable identifier the phone already sends inside clientMutationId.
+	exercises       map[string]store.Exercise
+	exerciseOrder   []string
+	exerciseCodes   map[store.CodeKey]store.ExerciseCode
+	exerciseImports []store.ExerciseSeedReport
+
 	// mutations mirrors the client_mutations table: the unique index on
 	// (user_id, client_mutation_id) is what decides whether a queued edit,
 	// deletion or rename is new or a replay.
@@ -63,6 +70,8 @@ func New() *Store {
 		sets:          map[string]store.WorkoutSet{},
 		setsByMutKey:  map[mutationKey]string{},
 		mutations:     map[mutationKey]mutationRecord{},
+		exercises:     map[string]store.Exercise{},
+		exerciseCodes: map[store.CodeKey]store.ExerciseCode{},
 		now:           time.Now,
 	}
 }

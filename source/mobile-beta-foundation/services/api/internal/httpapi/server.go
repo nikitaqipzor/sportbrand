@@ -9,6 +9,7 @@ import (
 
 	"athletica.ai/api/internal/auth"
 	"athletica.ai/api/internal/config"
+	"athletica.ai/api/internal/exercises"
 	"athletica.ai/api/internal/metrics"
 	"athletica.ai/api/internal/ratelimit"
 	"athletica.ai/api/internal/store"
@@ -33,8 +34,11 @@ type Server struct {
 	store    store.Store
 	auth     *auth.Service
 	workouts *workouts.Service
-	now      func() time.Time
-	version  string
+	// exercises is the shared reference book. It is the one service with no
+	// user scope: its rows belong to nobody.
+	exercises *exercises.Service
+	now       func() time.Time
+	version   string
 
 	// metrics is recorded into by every route and rendered on a separate
 	// listener; it never holds a user identifier or a raw request path.
@@ -83,6 +87,7 @@ func New(deps Deps) (*Server, error) {
 		store:          deps.Store,
 		auth:           auth.NewService(deps.Store, hasher, issuer, deps.Config.AccessTTL, deps.Config.RefreshTTL, deps.Now),
 		workouts:       workouts.NewService(deps.Store, deps.Now),
+		exercises:      exercises.NewService(deps.Store),
 		now:            deps.Now,
 		version:        deps.Version,
 		metrics:        metrics.New(deps.Version),
@@ -127,6 +132,11 @@ func (s *Server) routes() http.Handler {
 	register("PATCH "+base+"/workouts/{workoutId}", s.authenticated(s.handleRenameWorkout))
 	register("POST "+base+"/workouts/{workoutId}/status", s.authenticated(s.handleWorkoutStatus))
 	register("GET "+base+"/progress", s.authenticated(s.handleProgress))
+
+	// The exercise reference book. Shared content, still behind the token.
+	register("GET "+base+"/exercises", s.authenticated(s.handleListExercises))
+	register("GET "+base+"/exercises/{exerciseId}", s.authenticated(s.handleGetExercise))
+	register("GET "+base+"/exercise-dictionaries", s.authenticated(s.handleExerciseDictionaries))
 	register("POST "+base+"/workouts/{workoutId}/sets", s.authenticated(s.handleLogSet))
 	register("GET "+base+"/workouts/{workoutId}/sets", s.authenticated(s.handleListSets))
 	register("PATCH "+base+"/workouts/{workoutId}/sets/{setId}", s.authenticated(s.handleUpdateSet))

@@ -8,6 +8,8 @@
 //	api migrate up      apply every pending migration and exit
 //	api migrate down    roll the newest migration back and exit
 //	api prune-tokens    delete expired/revoked refresh tokens once and exit
+//	api seed-exercises  import the exercise reference book and exit
+//	                    (--file <path>, or the embedded starter set when omitted)
 //	api healthcheck     probe the local /health endpoint (used by Docker)
 //	api version         print the build version
 package main
@@ -15,6 +17,7 @@ package main
 import (
 	"context"
 	"errors"
+	"flag"
 	"fmt"
 	"io"
 	"log/slog"
@@ -28,11 +31,13 @@ import (
 	"time"
 
 	"athletica.ai/api/internal/config"
+	"athletica.ai/api/internal/exercises"
 	"athletica.ai/api/internal/httpapi"
 	"athletica.ai/api/internal/metrics"
 	"athletica.ai/api/internal/store"
 	"athletica.ai/api/internal/store/memory"
 	"athletica.ai/api/internal/store/postgres"
+	"athletica.ai/api/seed"
 )
 
 // version is overridden at build time with -ldflags "-X main.version=...".
@@ -76,10 +81,12 @@ func run(args []string) error {
 		return migrate(cfg, log, args[1:])
 	case "prune-tokens":
 		return pruneTokens(cfg, log)
+	case "seed-exercises":
+		return seedExercises(cfg, log, args[1:])
 	case "healthcheck":
 		return healthcheck(cfg)
 	default:
-		return fmt.Errorf("unknown command %q (want serve, migrate, prune-tokens, healthcheck or version)", command)
+		return fmt.Errorf("unknown command %q (want serve, migrate, prune-tokens, seed-exercises, healthcheck or version)", command)
 	}
 }
 
@@ -176,6 +183,78 @@ func pruneTokens(cfg config.Config, log *slog.Logger) error {
 		return err
 	}
 	log.Info("refresh-token sweep complete", "deleted", deleted, "retention", cfg.RefreshTokenRetention.String())
+	return nil
+}
+
+// seedExercises imports one exercise reference-book file, or the embedded
+// starter set when --file is omitted.
+//
+// Three properties matter more than the command's convenience:
+//
+//   - **it is idempotent** — a record whose content is unchanged is skipped, so
+//     running it twice writes nothing the second time;
+//   - **it refuses a rename** — a file that would move a SLUG or a LEGACY_NUMBER
+//     from one EXERCISE_ID to another is rejected whole, because those IDs are
+//     already stored inside recorded sets;
+//   - **it deletes nothing** — a record the file omits is counted and left
+//     alone, for the same reason.
+func seedExercises(cfg config.Config, log *slog.Logger, args []string) error {
+	flags := flag.NewFlagSet("seed-exercises", flag.ContinueOnError)
+	path := flags.String("file", "", "path to the JSON import file produced in content/; omit to load the embedded starter set")
+	if err := flags.Parse(args); err != nil {
+		return err
+	}
+
+	source := seed.StarterSource
+	payload := seed.StarterExercises
+	if strings.TrimSpace(*path) != "" {
+		raw, err := os.ReadFile(*path)
+		if err != nil {
+			return fmt.Errorf("seed-exercises: read %s: %w", *path, err)
+		}
+		source, payload = *path, raw
+	}
+
+	parsed, err := exercises.ParseSeed(source, payload)
+	if err != nil {
+		return err
+	}
+
+	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Minute)
+	defer cancel()
+
+	st, err := openStore(ctx, cfg, log, false)
+	if err != nil {
+		return err
+	}
+	defer st.Close()
+
+	report, err := st.SeedExercises(ctx, parsed)
+	if err != nil {
+		// A refused rename is not a crash and must not read like one: it is the
+		// importer doing its job, and the message names both identifiers.
+		var renamed *store.RenameError
+		if errors.As(err, &renamed) {
+			log.Error("exercise import refused: it would rename an identifier already stored in recorded sets",
+				"source", source, "conflicts", len(renamed.Conflicts))
+			for _, conflict := range renamed.Conflicts {
+				log.Error("refused rename", "detail", conflict.String())
+			}
+		}
+		return err
+	}
+
+	log.Info("exercise import complete",
+		"source", source,
+		"contentVersion", parsed.ContentVersion,
+		"fileSha256", parsed.FileSHA256,
+		"added", report.Added,
+		"updated", report.Updated,
+		"skipped", report.Skipped,
+		"absent", report.Absent,
+		"dictionaryEntriesWritten", report.CodesWritten)
+	fmt.Printf("added=%d updated=%d skipped=%d absent=%d codes=%d\n",
+		report.Added, report.Updated, report.Skipped, report.Absent, report.CodesWritten)
 	return nil
 }
 
