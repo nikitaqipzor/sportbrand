@@ -1,10 +1,8 @@
 import { useRouter } from "expo-router";
-import { useState } from "react";
 import { Pressable, StyleSheet, Text, View } from "react-native";
 
 import { readApiConfig } from "../../src/config/env.ts";
 import { useAuth } from "../../src/features/auth/auth-context.tsx";
-import { ConfirmDialog } from "../../src/features/workout/confirm-dialog.tsx";
 import { newWorkoutId } from "../../src/features/workout/new-workout-id.ts";
 import { totalCompletedSets } from "../../src/features/workout/active-workout.ts";
 import { useResumableWorkout, useSyncStatus } from "../../src/features/workout/use-workout.ts";
@@ -12,13 +10,12 @@ import { useResumableWorkout, useSyncStatus } from "../../src/features/workout/u
 const api = readApiConfig();
 
 export default function TodayScreen() {
-  const { session, signOut } = useAuth();
+  const { session } = useAuth();
   const router = useRouter();
   const status = useSyncStatus();
   // Приложение могли закрыть посреди тренировки: снимок пережил перезапуск,
   // и вернуться в неё важнее, чем начать новую поверх (П3).
   const { workout: unfinished } = useResumableWorkout();
-  const [confirmSignOut, setConfirmSignOut] = useState(false);
 
   const email = session?.user.email ?? "";
 
@@ -30,10 +27,16 @@ export default function TodayScreen() {
         {email}
       </Text>
 
+      {/* Здесь была «ГОТОВНОСТЬ 78» и «сон снизил интенсивность на 5%» —
+          числа, которых никто не считал: домена готовности на сервере нет.
+          Правдоподобная подделка в фитнес-приложении опаснее пустого места:
+          по такому числу человек планирует нагрузку. Вернётся настоящей,
+          когда появится домен готовности и восстановления. */}
       <View style={styles.card}>
         <Text style={styles.kicker}>ГОТОВНОСТЬ</Text>
-        <Text style={styles.score}>78</Text>
-        <Text>Сон снизил интенсивность на 5%</Text>
+        <Text testID="today-readiness-absent" style={styles.muted}>
+          Пока не считаем. Появится, когда подключим сон и восстановление.
+        </Text>
       </View>
 
       <View style={styles.card}>
@@ -105,30 +108,18 @@ export default function TodayScreen() {
       </Pressable>
 
       <Pressable
-        testID="today-sign-out"
+        testID="today-open-profile"
         accessibilityRole="button"
         style={styles.secondary}
-        onPress={() => setConfirmSignOut(true)}
+        onPress={() => router.push("/profile")}
       >
-        <Text style={styles.secondaryText}>Выйти из аккаунта</Text>
+        <Text style={styles.secondaryText}>Профиль</Text>
       </Pressable>
 
       <Text style={styles.kicker}>
         API · {api.environment.toUpperCase()} · {api.baseUrl}
       </Text>
 
-      <ConfirmDialog
-        testIDPrefix="today-sign-out-confirm"
-        visible={confirmSignOut}
-        title="Выйти из аккаунта?"
-        message="Неотправленные подходы и активная тренировка будут удалены с устройства."
-        confirmLabel="Выйти"
-        onConfirm={() => {
-          setConfirmSignOut(false);
-          void signOut();
-        }}
-        onDismiss={() => setConfirmSignOut(false)}
-      />
     </View>
   );
 }
@@ -141,6 +132,7 @@ const styles = StyleSheet.create({
   score: { fontSize: 56, fontWeight: "800", color: "#151918" },
   resumeTitle: { fontSize: 22, fontWeight: "800", color: "#151918" },
   warn: { fontWeight: "700", color: "#C64B2C" },
+  muted: { color: "#59615D" },
   action: {
     minHeight: 52,
     alignItems: "center",

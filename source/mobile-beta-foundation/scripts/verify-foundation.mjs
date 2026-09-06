@@ -120,6 +120,21 @@ if (existsSync(path("services/api/api/openapi.yaml"))) {
   check(contract.includes("/workouts/{workoutId}/sets"), "OpenAPI must expose set logging");
 }
 
+// 7. Экран не показывает выдуманное число.
+//
+// «Готовность 78» и «сон снизил интенсивность на 5%» жили на экране «Сегодня»,
+// хотя домена готовности не существует. В фитнес-приложении правдоподобная
+// подделка опаснее пустого места: по такому числу человек планирует нагрузку.
+// Проверка держит правило, пока домен не появится по-настоящему.
+const fabricated = [
+  { file: "apps/mobile/app/(app)/index.tsx", pattern: /<Text style={styles.score}>\s*\d/, what: "готовность подставным числом" },
+  { file: "apps/mobile/app/(app)/index.tsx", pattern: /Сон снизил/, what: "выдуманное объяснение готовности" }
+];
+for (const { file, pattern, what } of fabricated) {
+  if (!existsSync(path(file))) continue;
+  check(!pattern.test(read(file)), `${file} must not render ${what}`);
+}
+
 if (failures.length > 0) {
   for (const failure of failures) console.error(`FAIL ${failure}`);
   throw new Error(`Foundation verification failed: ${failures.length} problem(s).`);
