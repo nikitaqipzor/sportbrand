@@ -71,6 +71,27 @@ export type WorkoutSet = {
   rir: number;
   clientMutationId: string;
   createdAt: string;
+  /** Момент последней правки; равен createdAt у подхода, который не правили. Контракт 0.5.0. */
+  updatedAt?: string;
+  /**
+   * Момент мягкого удаления. null у каждого подхода, который клиент ещё
+   * видит; непустой — только в ответе на удаление и в 409 на повтор СОЗДАНИЯ
+   * удалённого подхода. Контракт 0.5.0.
+   */
+  deletedAt?: string | null;
+};
+
+/**
+ * Тело PATCH /workouts/{workoutId}/sets/{setId}. Три числа, которые человек
+ * ошибочно набирает, и ничего больше: exerciseId и setNumber не правятся —
+ * они и есть идентичность записи в очереди (контракт 0.5.0).
+ */
+export type WorkoutSetPatch = {
+  weightKg: number;
+  repetitions: number;
+  rir: number;
+  /** НОВЫЙ id мутации, отличный от того, что создал подход. */
+  clientMutationId: string;
 };
 
 /** Коды ошибок из контракта. Неизвестный код не ломает клиент. */
@@ -82,6 +103,10 @@ export type KnownErrorCode =
   | "email_taken"
   | "not_found"
   | "duplicate_client_mutation"
+  | "set_deleted"
+  | "workout_not_editable"
+  | "invalid_transition"
+  | "invalid_cursor"
   | "rate_limited"
   | "internal_error";
 
@@ -105,6 +130,28 @@ export type ErrorEnvelope = { error: ErrorPayload };
 export type LogSetOutcome =
   | { outcome: "created"; set: WorkoutSet }
   | { outcome: "duplicate"; set: WorkoutSet };
+
+/**
+ * Исход правки подхода. Как и у записи, 409 duplicate_client_mutation — не
+ * ошибка: сервер уже применил эту правку и вернул сохранённый подход, поэтому
+ * очередь обязана снять элемент, а не перепосылать применённую правку вечно.
+ *
+ * gone — 409 set_deleted: подход уже удалён, править нечего. Состояние
+ * сошлось, элемент тоже снимается: перепосылать правку в удалённую строку
+ * бессмысленно, а «мёртвой» её показывать нечестно — пользователь ничего не
+ * сломал.
+ */
+export type EditSetOutcome =
+  | { outcome: "updated"; set: WorkoutSet }
+  | { outcome: "duplicate"; set: WorkoutSet }
+  | { outcome: "gone" };
+
+/**
+ * Исход удаления. Повтор удаления отвечает 200, а не 409, — единственное
+ * место контракта, где повтор не конфликт: запрошенное состояние уже
+ * наступило. Клиенту незачем их различать, исход один.
+ */
+export type DeleteSetOutcome = { outcome: "deleted"; set: WorkoutSet };
 
 /**
  * Страница истории тренировок. nextCursor непрозрачен: клиент обязан вернуть

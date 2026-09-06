@@ -113,6 +113,56 @@ jobs:
             echo "::error::Набор против PostgreSQL не отработал"; exit 1
           }
 
+  android:
+    name: Android APK
+    runs-on: ubuntu-latest
+    # Сборка бандла Metro доказывает только, что JavaScript собирается. Всё
+    # остальное — Gradle, нативные модули (SQLite, Keystore, crypto), права,
+    # манифест — проверяется исключительно настоящей сборкой. До этого job'а
+    # приложение ни разу не собиралось как приложение.
+    defaults:
+      run:
+        working-directory: source/mobile-beta-foundation
+    steps:
+      - uses: actions/checkout@v4
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.33.0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: pnpm
+          cache-dependency-path: source/mobile-beta-foundation/pnpm-lock.yaml
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+      - name: Установка зависимостей
+        run: pnpm install --frozen-lockfile
+      - name: Генерация нативного проекта
+        # android/ намеренно не в репозитории: источник истины — app.json,
+        # нативный проект генерируется из него (Expo CNG). Так конфигурация не
+        # может разъехаться с тем, что реально собирается.
+        run: pnpm --filter @athletica/mobile exec expo prebuild --platform android --no-install
+      - name: Сборка debug APK
+        working-directory: source/mobile-beta-foundation/apps/mobile/android
+        run: ./gradlew assembleDebug --no-daemon --stacktrace
+      - name: APK существует и не пустой
+        working-directory: source/mobile-beta-foundation/apps/mobile
+        run: |
+          apk=android/app/build/outputs/apk/debug/app-debug.apk
+          test -f "$apk" || { echo "::error::APK не собран"; exit 1; }
+          size=$(stat -c%s "$apk")
+          echo "APK: $apk ($size байт)"
+          # Пустой или крошечный APK означает, что бандл не доехал внутрь.
+          test "$size" -gt 3000000 || { echo "::error::APK подозрительно мал: $size байт"; exit 1; }
+      - uses: actions/upload-artifact@v4
+        with:
+          name: athletica-debug-apk
+          path: source/mobile-beta-foundation/apps/mobile/android/app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
+          retention-days: 14
+
   contract:
     name: OpenAPI-контракт
     runs-on: ubuntu-latest
