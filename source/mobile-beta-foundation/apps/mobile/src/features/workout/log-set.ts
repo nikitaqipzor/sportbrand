@@ -1,6 +1,7 @@
 import { validateSet, type WorkoutSetInput } from "@athletica/domain";
 
 import { enqueue, type OutboxItem, type OutboxRecord } from "../../platform/offline/outbox.ts";
+import type { WorkoutMutation } from "../../platform/offline/mutations.ts";
 import type { OutboxSync } from "../../platform/offline/sync.ts";
 
 export type LogSetResult =
@@ -31,7 +32,7 @@ export function logSet(
 }
 
 export type SubmitSetResult =
-  | { ok: true; record: OutboxRecord<WorkoutSetInput> }
+  | { ok: true; record: OutboxRecord<WorkoutMutation> }
   | { ok: false; issues: string[] };
 
 /**

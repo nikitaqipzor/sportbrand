@@ -7,6 +7,8 @@ import {
 } from "@athletica/api-client";
 import type { WorkoutSetInput } from "@athletica/domain";
 
+import { needsWorkout, workoutIdOf, type WorkoutMutation } from "./mutations.ts";
+
 import {
   bySeq,
   deadRecords,
@@ -24,6 +26,21 @@ import type { WorkoutRegistry } from "./workout-registry.ts";
 /** Отправитель мутации. В приложении — AuthClient.logSet, в тестах — мок. */
 export type LogSetSender = (workoutId: string, input: ApiSetInput) => Promise<ApiResult<LogSetOutcome>>;
 
+/** Правка подхода. duplicate и gone — успешные исходы, см. EditSetOutcome. */
+export type EditSetSender = (
+  workoutId: string,
+  setId: string,
+  patch: { weightKg: number; repetitions: number; rir: number },
+  clientMutationId: string
+) => Promise<ApiResult<{ outcome: "updated" | "duplicate" | "gone" }>>;
+
+/** Удаление подхода. Повтор отвечает тем же исходом, различать незачем. */
+export type DeleteSetSender = (
+  workoutId: string,
+  setId: string,
+  clientMutationId: string
+) => Promise<ApiResult<{ outcome: "deleted" }>>;
+
 /**
  * Создание тренировки на сервере. Идемпотентно по клиентскому id: повтор
  * возвращает ту же сессию, поэтому вызывать его перед подходами безопасно.
@@ -31,8 +48,11 @@ export type LogSetSender = (workoutId: string, input: ApiSetInput) => Promise<Ap
 export type WorkoutCreator = (workoutId: string, title: string) => Promise<ApiResult<unknown>>;
 
 export type OutboxSyncDeps = {
-  store: OutboxStore<WorkoutSetInput>;
+  store: OutboxStore<WorkoutMutation>;
   send: LogSetSender;
+  /** Без них очередь несёт только записи — правки останутся лежать. */
+  editSet?: EditSetSender;
+  deleteSet?: DeleteSetSender;
   /**
    * Тренировка обязана существовать на сервере раньше своих подходов: иначе
    * запись подхода получает 404 и уходит в «мёртвые». Без этой пары очередь
@@ -60,7 +80,7 @@ export type FlushSummary = {
   sent: number;
   /** Приняты сервером ранее: 409 duplicate — тоже успех, элемент снимается. */
   duplicates: number;
-  /** Уведены в «мёртвые» на этом проходе (4xx кроме 409). */
+  /** Уведены в «мёртвые» на этом проходе: клиентская ошибка, которая не пройдёт и после повтора. */
   dead: number;
   /** Оставлены в очереди с отложенным повтором. */
   retried: number;
@@ -76,11 +96,25 @@ export type OutboxSyncStatus = {
 };
 
 export type OutboxSync = {
-  enqueue: (userId: string, input: WorkoutSetInput, now?: Date) => Promise<OutboxRecord<WorkoutSetInput>>;
+  /** Запись подхода — самый частый случай, поэтому у него своя дверь. */
+  enqueue: (userId: string, input: WorkoutSetInput, now?: Date) => Promise<OutboxRecord<WorkoutMutation>>;
+  /** Любая мутация: правка и удаление приходят сюда. */
+  enqueueMutation: (
+    userId: string,
+    id: string,
+    mutation: WorkoutMutation,
+    now?: Date
+  ) => Promise<OutboxRecord<WorkoutMutation>>;
+  /** Меняет ещё не отправленную запись прямо в очереди. */
+  amendPending: (
+    userId: string,
+    id: string,
+    patch: { weightKg: number; repetitions: number; rir: number }
+  ) => Promise<boolean>;
   flush: (userId: string | null) => Promise<FlushSummary>;
   status: (userId: string | null) => Promise<OutboxSyncStatus>;
   /** Очередь и «мёртвые» элементы пользователя в порядке записи. */
-  list: (userId: string | null) => Promise<OutboxRecord<WorkoutSetInput>[]>;
+  list: (userId: string | null) => Promise<OutboxRecord<WorkoutMutation>[]>;
   isPaused: () => boolean;
   pause: () => void;
   /** Снимает паузу после успешного входа. */
@@ -92,6 +126,15 @@ export type OutboxSync = {
   discardWorkout: (userId: string, workoutId: string) => Promise<number>;
   purgeUser: (userId: string) => Promise<void>;
 };
+
+/**
+ * Вид мутации, который некому отправить. Это ошибка проводки приложения, а не
+ * сервера: элемент уходит в «мёртвые», чтобы не крутиться в очереди вечно.
+ */
+const unsupported = (kind: string): ApiResult<never> => ({
+  ok: false,
+  error: { kind: "client", status: 501, code: "internal_error", message: `no sender for ${kind}`, details: [] }
+});
 
 const empty = (reason: FlushReason): FlushSummary => ({ reason, sent: 0, duplicates: 0, dead: 0, retried: 0 });
 
@@ -148,6 +191,27 @@ export function createOutboxSync(deps: OutboxSyncDeps): OutboxSync {
     return result;
   }
 
+  /**
+   * Отправляет одну мутацию. Все успешные исходы — created, duplicate,
+   * updated, gone, deleted — означают одно: сервер сошёлся с нами, элемент
+   * снимается. Различать их важно только для отчёта, не для решения.
+   */
+  async function dispatch(
+    mutation: WorkoutMutation,
+    mutationId: string
+  ): Promise<ApiResult<{ outcome: string }>> {
+    switch (mutation.kind) {
+      case "log-set":
+        return deps.send(mutation.workoutId, toApiSetInput(mutation.input));
+      case "edit-set":
+        if (!deps.editSet) return unsupported("edit-set");
+        return deps.editSet(mutation.workoutId, mutation.setId, mutation.patch, mutationId);
+      case "delete-set":
+        if (!deps.deleteSet) return unsupported("delete-set");
+        return deps.deleteSet(mutation.workoutId, mutation.setId, mutationId);
+    }
+  }
+
   async function run(userId: string): Promise<FlushSummary> {
     const summary = empty("done");
     const queue = bySeq(pendingRecords(await deps.store.listForUser(userId)));
@@ -160,12 +224,18 @@ export function createOutboxSync(deps: OutboxSyncDeps): OutboxSync {
         break;
       }
 
-      const blocked = await ensureWorkout(userId, record.payload.workoutId);
-      const result = blocked ?? (await deps.send(record.payload.workoutId, toApiSetInput(record.payload)));
+      const mutation = record.payload;
+
+      // Тренировку нужно создать только перед записью подхода: правка и
+      // удаление ссылаются на подход, который на сервере уже есть.
+      const blocked = needsWorkout(mutation) ? await ensureWorkout(userId, workoutIdOf(mutation)) : null;
+      const result = blocked ?? (await dispatch(mutation, record.id));
 
       if (result.ok) {
         await deps.store.remove(userId, record.id);
-        if (result.value.outcome === "duplicate") summary.duplicates += 1;
+        // duplicate и gone: сервер уже в нужном состоянии. Это успех, а не
+        // повод перепосылать — иначе очередь не опустеет никогда.
+        if (result.value.outcome === "duplicate" || result.value.outcome === "gone") summary.duplicates += 1;
         else summary.sent += 1;
         continue;
       }
@@ -180,9 +250,14 @@ export function createOutboxSync(deps: OutboxSyncDeps): OutboxSync {
         break;
       }
 
-      // 4xx (кроме 409, который клиент уже разобрал как duplicate) —
-      // мутация невалидна навсегда. Повторять её вечно нельзя.
-      if (error.kind === "client" && error.status !== 409) {
+      // Любая клиентская ошибка — мутация не станет валидной от повтора.
+      //
+      // 409 здесь исключать нельзя: успешные конфликты (запись, которую сервер
+      // уже принял; правка, которая уже применена; подход, который уже удалён)
+      // клиент разбирает раньше и отдаёт как успех. Значит 409, доехавший
+      // сюда, — настоящий отказ вроде отменённой тренировки, и ретраить его
+      // означает крутить элемент в очереди вечно.
+      if (error.kind === "client") {
         await deps.store.update(withDeath(record, description));
         lastFailure = description;
         summary.dead += 1;
@@ -202,7 +277,28 @@ export function createOutboxSync(deps: OutboxSyncDeps): OutboxSync {
 
   return {
     enqueue: (userId, input, at = now()) =>
-      deps.store.append({ id: input.clientMutationId, userId, createdAt: at.toISOString(), payload: input } satisfies OutboxItem<WorkoutSetInput>),
+      deps.store.append({
+        id: input.clientMutationId,
+        userId,
+        createdAt: at.toISOString(),
+        payload: { kind: "log-set", workoutId: input.workoutId, input }
+      } satisfies OutboxItem<WorkoutMutation>),
+
+    enqueueMutation: (userId, id, mutation, at = now()) =>
+      deps.store.append({ id, userId, createdAt: at.toISOString(), payload: mutation } satisfies OutboxItem<WorkoutMutation>),
+
+    // Правка записи, которая ещё не уехала: серверу нечего править — он этого
+    // подхода не видел, идентификатора не существует. Меняем то, что лежит.
+    amendPending: async (userId, id, patch) => {
+      const records = await deps.store.listForUser(userId);
+      const target = records.find((record) => record.id === id && record.state === "pending");
+      if (!target || target.payload.kind !== "log-set") return false;
+      await deps.store.update({
+        ...target,
+        payload: { ...target.payload, input: { ...target.payload.input, ...patch } }
+      });
+      return true;
+    },
 
     flush: (userId) => {
       if (!userId) return Promise.resolve(empty("no-user"));
@@ -240,7 +336,7 @@ export function createOutboxSync(deps: OutboxSyncDeps): OutboxSync {
     },
     discardWorkout: async (userId, workoutId) => {
       const records = await deps.store.listForUser(userId);
-      const doomed = records.filter((record) => record.payload.workoutId === workoutId);
+      const doomed = records.filter((record) => workoutIdOf(record.payload) === workoutId);
       for (const record of doomed) await deps.store.remove(userId, record.id);
       return doomed.length;
     },

@@ -55,7 +55,11 @@ test("подход переживает перезапуск процесса: �
   const survived = await revived.list(ALICE);
 
   assert.equal(survived.length, 2, "оба подхода обязаны пережить перезапуск");
-  assert.deepEqual(survived.map((r) => r.payload.setNumber), [1, 2]);
+  assert.deepEqual(
+    survived.map((r) => r.payload.input.setNumber),
+    [1, 2]
+  );
+  assert.deepEqual(survived.map((r) => r.payload.kind), ["log-set", "log-set"]);
 });
 
 test("повторная постановка того же clientMutationId не создаёт второй строки", async () => {

@@ -1,6 +1,7 @@
 import type { WorkoutAction, WorkoutSetInput } from "@athletica/domain";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 
+import type { WorkoutMutation } from "../../platform/offline/mutations.ts";
 import type { OutboxRecord } from "../../platform/offline/outbox.ts";
 import type { OutboxSyncStatus } from "../../platform/offline/sync.ts";
 import { useAuth } from "../auth/auth-context.tsx";
@@ -32,7 +33,7 @@ export type ActiveWorkoutView = {
   /** Номер следующего подхода ОТКРЫТОГО упражнения. */
   setNumber: number;
   status: OutboxSyncStatus;
-  queue: OutboxRecord<WorkoutSetInput>[];
+  queue: OutboxRecord<WorkoutMutation>[];
   issues: string[];
   busy: boolean;
   recordSet: (measures: SetMeasures) => Promise<void>;
@@ -108,7 +109,7 @@ export function useActiveWorkout(input: StartWorkoutInput): ActiveWorkoutView {
   const offline = useMemo(() => getWorkoutOffline(), []);
   const [workout, setWorkout] = useState<ActiveWorkout | null>(null);
   const [status, setStatus] = useState<OutboxSyncStatus>(IDLE_STATUS);
-  const [queue, setQueue] = useState<OutboxRecord<WorkoutSetInput>[]>([]);
+  const [queue, setQueue] = useState<OutboxRecord<WorkoutMutation>[]>([]);
   const [issues, setIssues] = useState<string[]>([]);
   const [busy, setBusy] = useState(false);
   const alive = useRef(true);

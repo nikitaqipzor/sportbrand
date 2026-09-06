@@ -1,5 +1,7 @@
 import type { WorkoutAction, WorkoutSetInput } from "@athletica/domain";
 
+import type { WorkoutMutation } from "../../platform/offline/mutations.ts";
+
 import type { OutboxRecord } from "../../platform/offline/outbox.ts";
 import type { SnapshotStore } from "../../platform/offline/snapshot-store.ts";
 import type { WorkoutRegistry } from "../../platform/offline/workout-registry.ts";
@@ -31,7 +33,7 @@ export type WorkoutOfflineDeps = {
 };
 
 export type RecordSetResult =
-  | { ok: true; workout: ActiveWorkout; record: OutboxRecord<WorkoutSetInput> }
+  | { ok: true; workout: ActiveWorkout; record: OutboxRecord<WorkoutMutation> }
   | { ok: false; issues: string[] };
 
 export type FinishResult = { ok: true; workout: ActiveWorkout; discarded: number } | { ok: false; reason: string };
@@ -57,7 +59,7 @@ export type WorkoutOffline = {
   finish: (userId: string, workout: ActiveWorkout, action: WorkoutAction) => Promise<FinishResult>;
   flush: (userId: string | null) => Promise<FlushSummary>;
   status: (userId: string | null) => Promise<OutboxSyncStatus>;
-  list: (userId: string | null) => Promise<OutboxRecord<WorkoutSetInput>[]>;
+  list: (userId: string | null) => Promise<OutboxRecord<WorkoutMutation>[]>;
   /** Новая сессия: отправка снова разрешена. */
   signedIn: (userId: string) => void;
   /**

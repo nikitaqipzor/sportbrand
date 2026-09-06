@@ -1,4 +1,4 @@
-import type { WorkoutSetInput } from "@athletica/domain";
+import type { WorkoutMutation } from "../../platform/offline/mutations.ts";
 
 import type { OutboxStore } from "../../platform/offline/outbox-store.ts";
 import type { SnapshotStore } from "../../platform/offline/snapshot-store.ts";
@@ -59,7 +59,7 @@ export function getWorkoutOffline(): WorkoutOffline {
   const registry = lazyWorkoutRegistry();
   const offline = createWorkoutOffline({
     sync: createOutboxSync({
-      store: lazyOutboxStore<WorkoutSetInput>(),
+      store: lazyOutboxStore<WorkoutMutation>(),
       send: (workoutId, input) => auth.logSet(workoutId, input),
       // Тренировка создаётся на сервере перед своими подходами; создание
       // идемпотентно по клиентскому id, поэтому повтор безопасен.
