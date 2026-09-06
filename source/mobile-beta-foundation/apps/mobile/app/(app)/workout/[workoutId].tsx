@@ -1,10 +1,11 @@
 import { useLocalSearchParams, useRouter } from "expo-router";
 import { useEffect, useMemo, useState } from "react";
-import { Modal, Pressable, ScrollView, StyleSheet, Text, View } from "react-native";
+import { Modal, Pressable, ScrollView, StyleSheet, Text, TextInput, View } from "react-native";
 
 import { formatClock, restSeconds, totalCompletedSets } from "../../../src/features/workout/active-workout.ts";
 import { ConfirmDialog } from "../../../src/features/workout/confirm-dialog.tsx";
-import { DEFAULT_EXERCISE_ID, EXERCISE_CATALOG } from "../../../src/features/workout/exercise-catalog.ts";
+import { DEFAULT_EXERCISE_ID } from "../../../src/features/workout/exercise-catalog.ts";
+import { useExercisePicker } from "../../../src/features/catalog/use-picker.ts";
 import { useActiveWorkout, type SetMeasures } from "../../../src/features/workout/use-workout.ts";
 
 const WORKOUT_TITLE = "Силовая тренировка";
@@ -41,6 +42,7 @@ export default function WorkoutScreen() {
 
   const [measures, setMeasures] = useState<SetMeasures>({ weightKg: 62.5, repetitions: 10, rir: 2 });
   const [pending, setPending] = useState<Pending>(null);
+  const exercisePicker = useExercisePicker();
   const [picker, setPicker] = useState(false);
   const [tick, setTick] = useState(0);
 
@@ -201,13 +203,27 @@ export default function WorkoutScreen() {
         <Text style={styles.secondaryText}>Отменить тренировку</Text>
       </Pressable>
 
-      {/* Временный список упражнений: настоящий справочник приедет отдельно. */}
+      {/* Каталог читается с диска: упражнение выбирают в зале, где связи может
+          не быть, и ждать загрузку справочника посреди тренировки нельзя. */}
       <Modal visible={picker} transparent animationType="slide" onRequestClose={() => setPicker(false)}>
         <View testID="workout-exercise-picker" style={styles.pickerBackdrop}>
           <View style={styles.pickerCard}>
             <Text style={styles.pickerTitle}>Добавить упражнение</Text>
+            <TextInput
+              testID="workout-exercise-search"
+              style={styles.pickerSearch}
+              value={exercisePicker.query}
+              onChangeText={exercisePicker.setQuery}
+              placeholder="Поиск"
+              accessibilityLabel="Поиск упражнения"
+            />
+            {exercisePicker.fallback ? (
+              <Text testID="workout-exercise-fallback" style={styles.pickerRowDisabled}>
+                Каталог ещё не загружен — показан базовый список
+              </Text>
+            ) : null}
             <ScrollView style={styles.pickerList}>
-              {EXERCISE_CATALOG.map((entry) => {
+              {exercisePicker.options.map((entry) => {
                 const already = added.has(entry.id);
                 return (
                   <Pressable
@@ -371,6 +387,13 @@ const styles = StyleSheet.create({
   pickerBackdrop: { flex: 1, padding: 24, justifyContent: "flex-end", backgroundColor: "rgba(10,12,11,0.6)" },
   pickerCard: { padding: 20, gap: 12, borderRadius: 24, backgroundColor: "#1A201E", maxHeight: "80%" },
   pickerTitle: { fontSize: 20, fontWeight: "800", color: "#F8F7F3" },
+  pickerSearch: {
+    minHeight: 48,
+    borderRadius: 14,
+    paddingHorizontal: 14,
+    backgroundColor: "#E5ECE9",
+    color: "#151918"
+  },
   pickerList: { flexGrow: 0 },
   pickerRow: { minHeight: 48, justifyContent: "center", paddingHorizontal: 4 },
   pickerRowText: { fontWeight: "700", color: "#F8F7F3" },

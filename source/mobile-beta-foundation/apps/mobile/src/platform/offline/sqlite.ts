@@ -3,6 +3,8 @@ import * as SQLite from "expo-sqlite";
 import { bySeq, type OutboxItem, type OutboxItemState, type OutboxRecord } from "./outbox.ts";
 import type { OutboxStore } from "./outbox-store.ts";
 import type { SnapshotStore } from "./snapshot-store.ts";
+import type { CachedExercise, ExerciseCache } from "../../features/catalog/exercise-cache.ts";
+import { matches, toCached } from "../../features/catalog/exercise-cache.ts";
 import type { CrashRecord, CrashStore } from "../diagnostics/crash-log.ts";
 import { CRASH_LOG_LIMIT } from "../diagnostics/crash-log.ts";
 import type { WorkoutRegistry, WorkoutRegistryEntry } from "./workout-registry.ts";
@@ -41,6 +43,12 @@ CREATE INDEX IF NOT EXISTS outbox_user_seq ON outbox (user_id, seq);
 CREATE TABLE IF NOT EXISTS active_workout (
   user_id TEXT PRIMARY KEY,
   snapshot TEXT NOT NULL
+);
+CREATE TABLE IF NOT EXISTS exercise_cache (
+  id TEXT PRIMARY KEY,
+  title TEXT NOT NULL,
+  section TEXT NOT NULL,
+  equipment TEXT NOT NULL
 );
 CREATE TABLE IF NOT EXISTS crash_log (
   id TEXT PRIMARY KEY,
@@ -247,6 +255,38 @@ export function createSqliteCrashStore(db: SQLite.SQLiteDatabase, limit = CRASH_
     },
     clear: async () => {
       await db.runAsync("DELETE FROM crash_log");
+    }
+  };
+}
+
+
+type CachedRow = { id: string; title: string; section: string; equipment: string };
+
+/**
+ * Каталог упражнений на диске. Читается при выборе упражнения — в том числе
+ * без связи, — и обновляется, когда каталог удаётся загрузить с сервера.
+ */
+export function createSqliteExerciseCache(db: SQLite.SQLiteDatabase): ExerciseCache {
+  return {
+    list: async (query = ""): Promise<CachedExercise[]> => {
+      const rows = await db.getAllAsync<CachedRow>("SELECT id, title, section, equipment FROM exercise_cache ORDER BY title");
+      return rows.filter((row) => matches(row, query));
+    },
+    put: async (exercises) => {
+      for (const exercise of exercises) {
+        const cached = toCached(exercise);
+        await db.runAsync(
+          "INSERT OR REPLACE INTO exercise_cache (id, title, section, equipment) VALUES (?, ?, ?, ?)",
+          cached.id,
+          cached.title,
+          cached.section,
+          cached.equipment
+        );
+      }
+    },
+    count: async () => {
+      const row = await db.getFirstAsync<{ n: number }>("SELECT COUNT(*) AS n FROM exercise_cache");
+      return row?.n ?? 0;
     }
   };
 }
